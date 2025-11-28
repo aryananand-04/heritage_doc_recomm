@@ -191,28 +191,42 @@ def balance_with_smote(embeddings, cluster_labels, target_size):
             for _ in range(deficit):
                 # Pick random sample and add Gaussian noise
                 orig_idx = random.choice(indices)
-                noisy_embedding = embeddings[orig_idx] + np.random.normal(0, 0.01, embeddings.shape[1])
+                noisy_embedding = embeddings[orig_idx] + np.random.normal(0, 0.02, embeddings.shape[1])
+                # Normalize to maintain unit norm
+                noisy_embedding = noisy_embedding / np.linalg.norm(noisy_embedding)
                 synthetic_embeddings.append(noisy_embedding)
                 synthetic_labels.append(cluster_id)
                 synthetic_sources.append(orig_idx)
         else:
-            # Use SMOTE
+            # Use SMOTE with more aggressive sampling
             try:
-                # Create binary labels for SMOTE (needs at least 2 classes)
-                y_dummy = np.zeros(current_size)
-                y_dummy[:max(1, current_size//2)] = 1
+                # For small clusters, use all neighbors available
+                k_neighbors = min(5, current_size - 1)
                 
-                # Calculate sampling strategy
-                n_samples = current_size + deficit
-                smote = SMOTE(sampling_strategy='auto', k_neighbors=min(3, current_size-1), random_state=42)
+                # Create more synthetic samples than needed, then sample
+                oversample_ratio = min(3.0, deficit / current_size)
+                
+                smote = SMOTE(
+                    sampling_strategy={1: int(current_size * (1 + oversample_ratio))},
+                    k_neighbors=k_neighbors, 
+                    random_state=42
+                )
+                
+                # Create binary labels for SMOTE
+                y_dummy = np.zeros(current_size)
+                y_dummy[:1] = 1  # Just need one positive class
                 
                 # Resample
                 X_resampled, _ = smote.fit_resample(cluster_embeddings, y_dummy)
                 
-                # Take only the new synthetic samples
-                new_samples = X_resampled[current_size:][:deficit]
+                # Take synthetic samples (skip original ones)
+                synthetic_batch = X_resampled[current_size:]
                 
-                for synthetic_emb in new_samples:
+                # Take up to deficit samples
+                num_to_take = min(len(synthetic_batch), deficit)
+                selected_samples = synthetic_batch[:num_to_take]
+                
+                for synthetic_emb in selected_samples:
                     synthetic_embeddings.append(synthetic_emb)
                     synthetic_labels.append(cluster_id)
                     # Assign to nearest original document
@@ -220,13 +234,26 @@ def balance_with_smote(embeddings, cluster_labels, target_size):
                     nearest_idx = indices[np.argmin(distances)]
                     synthetic_sources.append(nearest_idx)
                 
-                logger.info(f"      ✓ Generated {len(new_samples)} synthetic samples via SMOTE")
+                logger.info(f"      ✓ Generated {len(selected_samples)} synthetic samples via SMOTE")
+                
+                # If still need more, duplicate with noise
+                remaining = deficit - len(selected_samples)
+                if remaining > 0:
+                    logger.info(f"      Adding {remaining} more via duplication...")
+                    for _ in range(remaining):
+                        orig_idx = random.choice(indices)
+                        noisy_embedding = embeddings[orig_idx] + np.random.normal(0, 0.02, embeddings.shape[1])
+                        noisy_embedding = noisy_embedding / np.linalg.norm(noisy_embedding)
+                        synthetic_embeddings.append(noisy_embedding)
+                        synthetic_labels.append(cluster_id)
+                        synthetic_sources.append(orig_idx)
             
             except Exception as e:
                 logger.warning(f"      SMOTE failed: {e}, using duplication")
                 for _ in range(deficit):
                     orig_idx = random.choice(indices)
-                    noisy_embedding = embeddings[orig_idx] + np.random.normal(0, 0.01, embeddings.shape[1])
+                    noisy_embedding = embeddings[orig_idx] + np.random.normal(0, 0.02, embeddings.shape[1])
+                    noisy_embedding = noisy_embedding / np.linalg.norm(noisy_embedding)
                     synthetic_embeddings.append(noisy_embedding)
                     synthetic_labels.append(cluster_id)
                     synthetic_sources.append(orig_idx)
@@ -392,9 +419,9 @@ def main():
     logger.info(f"✅ Augmented documents: {len(augmented_docs)}")
     logger.info(f"✅ Total balanced dataset: {len(all_docs)}")
     logger.info(f"\n📊 New cluster distribution:")
-    for cluster_id in sorted(report['cluster_distribution'].keys()):
-        count = report['cluster_distribution'][str(cluster_id)]
-        logger.info(f"   Cluster {cluster_id}: {count} documents")
+    for cluster_id_str in sorted(report['cluster_distribution'].keys(), key=lambda x: int(x)):
+        count = report['cluster_distribution'][cluster_id_str]
+        logger.info(f"   Cluster {cluster_id_str}: {count} documents")
     logger.info("="*70)
 
 if __name__ == "__main__":
