@@ -32,8 +32,9 @@ KG_VIZ_FILE = os.path.join(KG_DIR, "kg_visualization.png")
 # ========== CONFIGURATION ==========
 CONFIG = {
     'similarity_threshold': 0.6,  # Cosine similarity threshold for doc-doc edges
-    'concept_similarity_threshold': 0.3,  # LOWERED from 0.5 for Lesk
-    'top_k_cluster_connections': 10,  # Only connect to top-K similar docs in cluster
+    'concept_similarity_threshold': 0.5,  # Increased from 0.3 - fixed Lesk threshold
+    'top_k_cluster_connections': 5,  # Reduced from 10 - connect to top-5 only
+    'cluster_edge_threshold': 0.4,  # Optimized threshold (was 0.7) - yields ~532 edges
     'max_entities_per_doc': 5,  # Max entities to extract per document
 }
 
@@ -41,34 +42,40 @@ CONFIG = {
 
 def lesk_similarity(word1, word2):
     """
-    Compute semantic similarity using Lesk algorithm
+    Compute semantic similarity using Lesk algorithm with Wu-Palmer backup
     """
     try:
         # Clean inputs
         word1_clean = word1.lower().replace(' ', '_').replace('-', '_')
         word2_clean = word2.lower().replace(' ', '_').replace('-', '_')
-        
+
         # Get synsets for both words
         synsets1 = wn.synsets(word1_clean)
         synsets2 = wn.synsets(word2_clean)
-        
+
         if not synsets1 or not synsets2:
             return 0.0
-        
+
         # Find maximum similarity between any pair of synsets
         max_sim = 0.0
-        for s1 in synsets1[:5]:  # Increased from 3 to 5 senses
+        for s1 in synsets1[:5]:  # Top 5 senses
             for s2 in synsets2[:5]:
                 try:
-                    # Use path similarity (0 to 1)
+                    # Try path similarity first (0 to 1)
                     sim = s1.path_similarity(s2)
                     if sim and sim > max_sim:
                         max_sim = sim
+
+                    # Try Wu-Palmer as backup if path_similarity fails or is low
+                    if not sim or sim < 0.3:
+                        wup_sim = s1.wup_similarity(s2)
+                        if wup_sim and wup_sim > max_sim:
+                            max_sim = wup_sim
                 except:
                     continue
-        
+
         return max_sim
-    
+
     except Exception as e:
         return 0.0
 
@@ -358,21 +365,22 @@ def add_concept_similarity_edges(G):
 def add_cluster_edges(G, documents, embeddings):
     """
     Add edges connecting documents in the same cluster - IMPROVED
-    Only connect to top-K most similar documents within cluster
+    Only connect to top-K most similar documents within cluster (with threshold)
     """
-    print(f"\n[Phase 7] Adding cluster relationships (top-{CONFIG['top_k_cluster_connections']} per cluster)...")
-    
+    print(f"\n[Phase 7] Adding cluster relationships (top-{CONFIG['top_k_cluster_connections']} per cluster, threshold={CONFIG['cluster_edge_threshold']})...")
+
     # Compute similarity matrix
     similarity_matrix = cosine_similarity(embeddings)
-    
+
     # Group documents by cluster
     clusters = defaultdict(list)
-    
+
     for idx, doc in enumerate(documents):
         clusters[doc['cluster_id']].append(idx)
-    
+
     edges_added = 0
-    
+    skipped_low_sim = 0
+
     for cluster_id, doc_indices in clusters.items():
         # For each document in the cluster
         for doc_idx in doc_indices:
@@ -381,17 +389,21 @@ def add_cluster_edges(G, documents, embeddings):
             for other_idx in doc_indices:
                 if other_idx != doc_idx:
                     sim = similarity_matrix[doc_idx][other_idx]
-                    similarities.append((other_idx, sim))
-            
+                    # Only consider docs above threshold
+                    if sim >= CONFIG['cluster_edge_threshold']:
+                        similarities.append((other_idx, sim))
+                    else:
+                        skipped_low_sim += 1
+
             # Sort by similarity and keep top-K
             similarities.sort(key=lambda x: x[1], reverse=True)
             top_k = similarities[:CONFIG['top_k_cluster_connections']]
-            
+
             # Add edges to top-K similar documents
             for other_idx, sim in top_k:
                 doc_id_1 = f"doc_{doc_idx}"
                 doc_id_2 = f"doc_{other_idx}"
-                
+
                 # Only add if edge doesn't exist (avoid duplicates)
                 if not G.has_edge(doc_id_1, doc_id_2):
                     G.add_edge(
@@ -402,8 +414,10 @@ def add_cluster_edges(G, documents, embeddings):
                         cluster_id=cluster_id
                     )
                     edges_added += 1
-    
-    print(f"  ✓ Added {edges_added} cluster edges (reduced from {sum(len(docs)*(len(docs)-1)//2 for docs in clusters.values())})")
+
+    total_possible = sum(len(docs)*(len(docs)-1)//2 for docs in clusters.values())
+    print(f"  ✓ Added {edges_added} cluster edges (reduced from {total_possible} possible)")
+    print(f"  ✓ Skipped {skipped_low_sim//2} low-similarity pairs (< {CONFIG['cluster_edge_threshold']})")
 
 def compute_graph_statistics(G):
     """Compute and save graph statistics"""

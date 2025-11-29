@@ -69,3 +69,6 @@ Thumbs.db
 # Logs (keep recent)
 logs/**/*.log
 !logs/README.md
+
+.claude
+tasks/
