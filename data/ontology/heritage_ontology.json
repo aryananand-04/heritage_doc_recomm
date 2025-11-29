@@ -1,0 +1,1018 @@
+{
+  "entities": {
+    "monument": {
+      "canonical_name": "monument",
+      "entity_type": "heritage_type",
+      "aliases": [
+        "monuments",
+        "memorial",
+        "memorials",
+        "structure",
+        "edifice"
+      ],
+      "description": "Physical built heritage structure",
+      "attributes": {
+        "tangibility": "tangible",
+        "category": "built"
+      },
+      "related_entities": [
+        "architecture",
+        "site",
+        "artifact"
+      ]
+    },
+    "site": {
+      "canonical_name": "site",
+      "entity_type": "heritage_type",
+      "aliases": [
+        "sites",
+        "location",
+        "place",
+        "area",
+        "complex"
+      ],
+      "description": "Heritage site or archaeological area",
+      "attributes": {
+        "tangibility": "tangible",
+        "category": "area"
+      },
+      "related_entities": [
+        "monument",
+        "landscape"
+      ]
+    },
+    "architecture": {
+      "canonical_name": "architecture",
+      "entity_type": "heritage_type",
+      "aliases": [
+        "architectural",
+        "building",
+        "construction"
+      ],
+      "description": "Architectural heritage",
+      "attributes": {
+        "tangibility": "tangible",
+        "category": "built"
+      },
+      "related_entities": [
+        "monument",
+        "style"
+      ]
+    },
+    "artifact": {
+      "canonical_name": "artifact",
+      "entity_type": "heritage_type",
+      "aliases": [
+        "artifacts",
+        "relic",
+        "relics",
+        "object",
+        "item"
+      ],
+      "description": "Movable heritage object",
+      "attributes": {
+        "tangibility": "tangible",
+        "category": "movable"
+      },
+      "related_entities": [
+        "art",
+        "monument"
+      ]
+    },
+    "art": {
+      "canonical_name": "art",
+      "entity_type": "heritage_type",
+      "aliases": [
+        "artwork",
+        "artistic",
+        "sculpture",
+        "painting",
+        "carving"
+      ],
+      "description": "Artistic heritage",
+      "attributes": {
+        "tangibility": "tangible",
+        "category": "creative"
+      },
+      "related_entities": [
+        "artifact",
+        "architecture"
+      ]
+    },
+    "tradition": {
+      "canonical_name": "tradition",
+      "entity_type": "heritage_type",
+      "aliases": [
+        "traditions",
+        "custom",
+        "customs",
+        "practice",
+        "ritual"
+      ],
+      "description": "Intangible cultural heritage",
+      "attributes": {
+        "tangibility": "intangible",
+        "category": "living"
+      },
+      "related_entities": [
+        "culture",
+        "religion"
+      ]
+    },
+    "indo-islamic": {
+      "canonical_name": "indo-islamic",
+      "entity_type": "architectural_style",
+      "aliases": [
+        "indo islamic",
+        "indo saracenic",
+        "muslim architecture"
+      ],
+      "description": "Fusion of Indian and Islamic architectural elements",
+      "attributes": {
+        "period": "medieval",
+        "region": "india"
+      },
+      "related_entities": [
+        "mughal",
+        "sultanate"
+      ]
+    },
+    "mughal": {
+      "canonical_name": "mughal",
+      "entity_type": "architectural_style",
+      "aliases": [
+        "mughal architecture",
+        "moghul"
+      ],
+      "description": "Mughal Empire architectural style",
+      "attributes": {
+        "period": "medieval",
+        "region": "india",
+        "dynasty": "mughal"
+      },
+      "related_entities": [
+        "indo-islamic",
+        "persian"
+      ]
+    },
+    "dravidian": {
+      "canonical_name": "dravidian",
+      "entity_type": "architectural_style",
+      "aliases": [
+        "dravidian architecture",
+        "south indian style"
+      ],
+      "description": "South Indian temple architecture",
+      "attributes": {
+        "period": "ancient-medieval",
+        "region": "south"
+      },
+      "related_entities": [
+        "hindu",
+        "temple"
+      ]
+    },
+    "nagara": {
+      "canonical_name": "nagara",
+      "entity_type": "architectural_style",
+      "aliases": [
+        "nagara architecture",
+        "north indian style"
+      ],
+      "description": "North Indian temple architecture",
+      "attributes": {
+        "period": "ancient-medieval",
+        "region": "north"
+      },
+      "related_entities": [
+        "hindu",
+        "temple"
+      ]
+    },
+    "vesara": {
+      "canonical_name": "vesara",
+      "entity_type": "architectural_style",
+      "aliases": [
+        "vesara architecture",
+        "hybrid style"
+      ],
+      "description": "Mixed Dravidian-Nagara style",
+      "attributes": {
+        "period": "medieval",
+        "region": "central"
+      },
+      "related_entities": [
+        "dravidian",
+        "nagara"
+      ]
+    },
+    "buddhist": {
+      "canonical_name": "buddhist",
+      "entity_type": "architectural_style",
+      "aliases": [
+        "buddhist architecture",
+        "stupa",
+        "vihara",
+        "chaitya"
+      ],
+      "description": "Buddhist architectural tradition",
+      "attributes": {
+        "period": "ancient",
+        "religion": "buddhism"
+      },
+      "related_entities": [
+        "rock-cut",
+        "monastery"
+      ]
+    },
+    "colonial": {
+      "canonical_name": "colonial",
+      "entity_type": "architectural_style",
+      "aliases": [
+        "colonial architecture",
+        "british architecture",
+        "european style"
+      ],
+      "description": "Colonial period architecture",
+      "attributes": {
+        "period": "modern",
+        "region": "india"
+      },
+      "related_entities": [
+        "indo-saracenic",
+        "victorian"
+      ]
+    },
+    "rock-cut": {
+      "canonical_name": "rock-cut",
+      "entity_type": "architectural_style",
+      "aliases": [
+        "rock cut",
+        "cave architecture",
+        "cave temple"
+      ],
+      "description": "Architecture carved from rock",
+      "attributes": {
+        "technique": "carving"
+      },
+      "related_entities": [
+        "buddhist",
+        "hindu",
+        "jain"
+      ]
+    },
+    "ancient": {
+      "canonical_name": "ancient",
+      "entity_type": "time_period",
+      "aliases": [
+        "prehistoric",
+        "early historic",
+        "classical"
+      ],
+      "description": "Ancient period (pre-600 CE)",
+      "attributes": {
+        "start": "-3000",
+        "end": "600"
+      },
+      "related_entities": [
+        "mauryan",
+        "gupta",
+        "indus-valley"
+      ]
+    },
+    "medieval": {
+      "canonical_name": "medieval",
+      "entity_type": "time_period",
+      "aliases": [
+        "middle ages",
+        "sultanate period",
+        "mughal period"
+      ],
+      "description": "Medieval period (600-1800 CE)",
+      "attributes": {
+        "start": "600",
+        "end": "1800"
+      },
+      "related_entities": [
+        "mughal",
+        "delhi-sultanate",
+        "vijayanagara"
+      ]
+    },
+    "modern": {
+      "canonical_name": "modern",
+      "entity_type": "time_period",
+      "aliases": [
+        "colonial period",
+        "british period",
+        "contemporary"
+      ],
+      "description": "Modern period (1800 CE onwards)",
+      "attributes": {
+        "start": "1800",
+        "end": "2025"
+      },
+      "related_entities": [
+        "colonial",
+        "independence"
+      ]
+    },
+    "north india": {
+      "canonical_name": "north india",
+      "entity_type": "region",
+      "aliases": [
+        "northern india",
+        "north",
+        "indo-gangetic plain"
+      ],
+      "description": "Northern India region",
+      "attributes": {
+        "states": "punjab,haryana,delhi,up,uttarakhand,hp,j&k"
+      },
+      "related_entities": [
+        "mughal",
+        "delhi-sultanate"
+      ]
+    },
+    "south india": {
+      "canonical_name": "south india",
+      "entity_type": "region",
+      "aliases": [
+        "southern india",
+        "south",
+        "deccan"
+      ],
+      "description": "Southern India region",
+      "attributes": {
+        "states": "tamil-nadu,karnataka,kerala,andhra-pradesh,telangana"
+      },
+      "related_entities": [
+        "dravidian",
+        "chola",
+        "vijayanagara"
+      ]
+    },
+    "east india": {
+      "canonical_name": "east india",
+      "entity_type": "region",
+      "aliases": [
+        "eastern india",
+        "east"
+      ],
+      "description": "Eastern India region",
+      "attributes": {
+        "states": "west-bengal,odisha,bihar,jharkhand"
+      },
+      "related_entities": [
+        "pala",
+        "bengal-sultanate"
+      ]
+    },
+    "west india": {
+      "canonical_name": "west india",
+      "entity_type": "region",
+      "aliases": [
+        "western india",
+        "west"
+      ],
+      "description": "Western India region",
+      "attributes": {
+        "states": "gujarat,maharashtra,rajasthan,goa"
+      },
+      "related_entities": [
+        "maratha",
+        "rajput"
+      ]
+    },
+    "central india": {
+      "canonical_name": "central india",
+      "entity_type": "region",
+      "aliases": [
+        "central",
+        "madhya pradesh"
+      ],
+      "description": "Central India region",
+      "attributes": {
+        "states": "madhya-pradesh,chhattisgarh"
+      },
+      "related_entities": [
+        "chandela",
+        "gond"
+      ]
+    },
+    "mughal empire": {
+      "canonical_name": "mughal empire",
+      "entity_type": "dynasty",
+      "aliases": [
+        "mughal",
+        "moghul empire",
+        "timurid"
+      ],
+      "description": "Mughal Dynasty (1526-1857)",
+      "attributes": {
+        "period": "medieval",
+        "religion": "islam",
+        "region": "india"
+      },
+      "related_entities": [
+        "akbar",
+        "shah-jahan",
+        "taj-mahal"
+      ]
+    },
+    "mauryan empire": {
+      "canonical_name": "mauryan empire",
+      "entity_type": "dynasty",
+      "aliases": [
+        "maurya",
+        "mauryan"
+      ],
+      "description": "Mauryan Dynasty (322-185 BCE)",
+      "attributes": {
+        "period": "ancient",
+        "religion": "buddhism",
+        "region": "india"
+      },
+      "related_entities": [
+        "ashoka",
+        "sanchi",
+        "pataliputra"
+      ]
+    },
+    "gupta empire": {
+      "canonical_name": "gupta empire",
+      "entity_type": "dynasty",
+      "aliases": [
+        "gupta",
+        "guptas"
+      ],
+      "description": "Gupta Dynasty (320-550 CE)",
+      "attributes": {
+        "period": "ancient",
+        "region": "north"
+      },
+      "related_entities": [
+        "chandragupta",
+        "nalanda"
+      ]
+    },
+    "chola dynasty": {
+      "canonical_name": "chola dynasty",
+      "entity_type": "dynasty",
+      "aliases": [
+        "chola",
+        "cholas"
+      ],
+      "description": "Chola Dynasty (300 BCE-1279 CE)",
+      "attributes": {
+        "period": "ancient-medieval",
+        "region": "south"
+      },
+      "related_entities": [
+        "brihadeeswara",
+        "thanjavur",
+        "dravidian"
+      ]
+    },
+    "vijayanagara empire": {
+      "canonical_name": "vijayanagara empire",
+      "entity_type": "dynasty",
+      "aliases": [
+        "vijayanagar",
+        "vijayanagara"
+      ],
+      "description": "Vijayanagara Empire (1336-1646)",
+      "attributes": {
+        "period": "medieval",
+        "region": "south"
+      },
+      "related_entities": [
+        "hampi",
+        "krishnadevaraya"
+      ]
+    },
+    "delhi sultanate": {
+      "canonical_name": "delhi sultanate",
+      "entity_type": "dynasty",
+      "aliases": [
+        "sultanate",
+        "delhi sultans"
+      ],
+      "description": "Delhi Sultanate (1206-1526)",
+      "attributes": {
+        "period": "medieval",
+        "religion": "islam",
+        "region": "north"
+      },
+      "related_entities": [
+        "qutub-minar",
+        "alauddin-khilji"
+      ]
+    },
+    "maratha empire": {
+      "canonical_name": "maratha empire",
+      "entity_type": "dynasty",
+      "aliases": [
+        "maratha",
+        "marathas"
+      ],
+      "description": "Maratha Empire (1674-1818)",
+      "attributes": {
+        "period": "medieval",
+        "region": "west"
+      },
+      "related_entities": [
+        "shivaji",
+        "raigad"
+      ]
+    },
+    "hinduism": {
+      "canonical_name": "hinduism",
+      "entity_type": "religion",
+      "aliases": [
+        "hindu",
+        "sanatana dharma"
+      ],
+      "description": "Hindu religious tradition",
+      "attributes": {},
+      "related_entities": [
+        "temple",
+        "dravidian",
+        "nagara"
+      ]
+    },
+    "buddhism": {
+      "canonical_name": "buddhism",
+      "entity_type": "religion",
+      "aliases": [
+        "buddhist",
+        "buddha dharma"
+      ],
+      "description": "Buddhist religious tradition",
+      "attributes": {},
+      "related_entities": [
+        "stupa",
+        "vihara",
+        "monastery"
+      ]
+    },
+    "jainism": {
+      "canonical_name": "jainism",
+      "entity_type": "religion",
+      "aliases": [
+        "jain"
+      ],
+      "description": "Jain religious tradition",
+      "attributes": {},
+      "related_entities": [
+        "temple",
+        "tirthankara"
+      ]
+    },
+    "islam": {
+      "canonical_name": "islam",
+      "entity_type": "religion",
+      "aliases": [
+        "islamic",
+        "muslim"
+      ],
+      "description": "Islamic religious tradition",
+      "attributes": {},
+      "related_entities": [
+        "mosque",
+        "dargah",
+        "tomb"
+      ]
+    },
+    "sikhism": {
+      "canonical_name": "sikhism",
+      "entity_type": "religion",
+      "aliases": [
+        "sikh"
+      ],
+      "description": "Sikh religious tradition",
+      "attributes": {},
+      "related_entities": [
+        "gurdwara",
+        "golden-temple"
+      ]
+    },
+    "taj mahal": {
+      "canonical_name": "taj mahal",
+      "entity_type": "monument",
+      "aliases": [
+        "tajmahal",
+        "taj"
+      ],
+      "description": "Mughal mausoleum in Agra",
+      "attributes": {
+        "location": "agra",
+        "state": "uttar pradesh",
+        "period": "medieval",
+        "style": "mughal",
+        "type": "tomb",
+        "unesco": "yes"
+      },
+      "related_entities": [
+        "shah-jahan",
+        "agra",
+        "mughal empire"
+      ]
+    },
+    "qutub minar": {
+      "canonical_name": "qutub minar",
+      "entity_type": "monument",
+      "aliases": [
+        "qutb minar",
+        "qutab minar"
+      ],
+      "description": "Minaret in Delhi",
+      "attributes": {
+        "location": "delhi",
+        "period": "medieval",
+        "style": "indo-islamic",
+        "type": "tower",
+        "unesco": "yes"
+      },
+      "related_entities": [
+        "delhi sultanate",
+        "delhi"
+      ]
+    },
+    "red fort": {
+      "canonical_name": "red fort",
+      "entity_type": "monument",
+      "aliases": [
+        "lal qila",
+        "red fort delhi"
+      ],
+      "description": "Mughal fort in Delhi",
+      "attributes": {
+        "location": "delhi",
+        "period": "medieval",
+        "style": "mughal",
+        "type": "fort",
+        "unesco": "yes"
+      },
+      "related_entities": [
+        "shah-jahan",
+        "delhi",
+        "mughal empire"
+      ]
+    },
+    "golden temple": {
+      "canonical_name": "golden temple",
+      "entity_type": "monument",
+      "aliases": [
+        "harmandir sahib",
+        "darbar sahib"
+      ],
+      "description": "Sikh gurdwara in Amritsar",
+      "attributes": {
+        "location": "amritsar",
+        "state": "punjab",
+        "period": "medieval",
+        "religion": "sikhism",
+        "type": "gurdwara"
+      },
+      "related_entities": [
+        "sikhism",
+        "amritsar"
+      ]
+    },
+    "ajanta caves": {
+      "canonical_name": "ajanta caves",
+      "entity_type": "site",
+      "aliases": [
+        "ajanta",
+        "ajanta ellora"
+      ],
+      "description": "Buddhist rock-cut caves",
+      "attributes": {
+        "location": "maharashtra",
+        "period": "ancient",
+        "style": "rock-cut",
+        "religion": "buddhism",
+        "unesco": "yes"
+      },
+      "related_entities": [
+        "buddhism",
+        "ellora caves"
+      ]
+    },
+    "ellora caves": {
+      "canonical_name": "ellora caves",
+      "entity_type": "site",
+      "aliases": [
+        "ellora"
+      ],
+      "description": "Rock-cut caves (Buddhist, Hindu, Jain)",
+      "attributes": {
+        "location": "maharashtra",
+        "period": "ancient-medieval",
+        "style": "rock-cut",
+        "unesco": "yes"
+      },
+      "related_entities": [
+        "buddhism",
+        "hinduism",
+        "jainism",
+        "ajanta caves"
+      ]
+    },
+    "sanchi stupa": {
+      "canonical_name": "sanchi stupa",
+      "entity_type": "monument",
+      "aliases": [
+        "sanchi",
+        "great stupa"
+      ],
+      "description": "Buddhist stupa complex",
+      "attributes": {
+        "location": "madhya pradesh",
+        "period": "ancient",
+        "religion": "buddhism",
+        "type": "stupa",
+        "unesco": "yes"
+      },
+      "related_entities": [
+        "ashoka",
+        "mauryan empire",
+        "buddhism"
+      ]
+    },
+    "hampi": {
+      "canonical_name": "hampi",
+      "entity_type": "site",
+      "aliases": [
+        "vijayanagara",
+        "hampi ruins"
+      ],
+      "description": "Vijayanagara Empire capital ruins",
+      "attributes": {
+        "location": "karnataka",
+        "state": "karnataka",
+        "period": "medieval",
+        "unesco": "yes"
+      },
+      "related_entities": [
+        "vijayanagara empire",
+        "krishnadevaraya"
+      ]
+    },
+    "khajuraho": {
+      "canonical_name": "khajuraho",
+      "entity_type": "site",
+      "aliases": [
+        "khajuraho temples"
+      ],
+      "description": "Temple complex with erotic sculptures",
+      "attributes": {
+        "location": "madhya pradesh",
+        "period": "medieval",
+        "style": "nagara",
+        "religion": "hinduism",
+        "unesco": "yes"
+      },
+      "related_entities": [
+        "chandela dynasty",
+        "nagara"
+      ]
+    },
+    "ashoka": {
+      "canonical_name": "ashoka",
+      "entity_type": "person",
+      "aliases": [
+        "ashoka the great",
+        "emperor ashoka"
+      ],
+      "description": "Mauryan Emperor (304-232 BCE)",
+      "attributes": {
+        "dynasty": "mauryan",
+        "period": "ancient",
+        "religion": "buddhism"
+      },
+      "related_entities": [
+        "mauryan empire",
+        "sanchi stupa"
+      ]
+    },
+    "shah jahan": {
+      "canonical_name": "shah jahan",
+      "entity_type": "person",
+      "aliases": [
+        "shahjahan",
+        "shah jehan"
+      ],
+      "description": "Mughal Emperor (1592-1666)",
+      "attributes": {
+        "dynasty": "mughal",
+        "period": "medieval"
+      },
+      "related_entities": [
+        "taj mahal",
+        "red fort",
+        "mughal empire"
+      ]
+    },
+    "akbar": {
+      "canonical_name": "akbar",
+      "entity_type": "person",
+      "aliases": [
+        "akbar the great",
+        "emperor akbar"
+      ],
+      "description": "Mughal Emperor (1542-1605)",
+      "attributes": {
+        "dynasty": "mughal",
+        "period": "medieval"
+      },
+      "related_entities": [
+        "fatehpur sikri",
+        "mughal empire"
+      ]
+    },
+    "gautama buddha": {
+      "canonical_name": "gautama buddha",
+      "entity_type": "person",
+      "aliases": [
+        "buddha",
+        "siddhartha",
+        "the buddha"
+      ],
+      "description": "Founder of Buddhism",
+      "attributes": {
+        "religion": "buddhism",
+        "period": "ancient"
+      },
+      "related_entities": [
+        "buddhism",
+        "bodh gaya"
+      ]
+    }
+  },
+  "alias_map": {
+    "monument": "monument",
+    "monuments": "monument",
+    "memorial": "monument",
+    "memorials": "monument",
+    "structure": "monument",
+    "edifice": "monument",
+    "site": "site",
+    "sites": "site",
+    "location": "site",
+    "place": "site",
+    "area": "site",
+    "complex": "site",
+    "architecture": "architecture",
+    "architectural": "architecture",
+    "building": "architecture",
+    "construction": "architecture",
+    "artifact": "artifact",
+    "artifacts": "artifact",
+    "relic": "artifact",
+    "relics": "artifact",
+    "object": "artifact",
+    "item": "artifact",
+    "art": "art",
+    "artwork": "art",
+    "artistic": "art",
+    "sculpture": "art",
+    "painting": "art",
+    "carving": "art",
+    "tradition": "tradition",
+    "traditions": "tradition",
+    "custom": "tradition",
+    "customs": "tradition",
+    "practice": "tradition",
+    "ritual": "tradition",
+    "indo-islamic": "indo-islamic",
+    "indo islamic": "indo-islamic",
+    "indo saracenic": "indo-islamic",
+    "muslim architecture": "indo-islamic",
+    "mughal": "mughal empire",
+    "mughal architecture": "mughal",
+    "moghul": "mughal",
+    "dravidian": "dravidian",
+    "dravidian architecture": "dravidian",
+    "south indian style": "dravidian",
+    "nagara": "nagara",
+    "nagara architecture": "nagara",
+    "north indian style": "nagara",
+    "vesara": "vesara",
+    "vesara architecture": "vesara",
+    "hybrid style": "vesara",
+    "buddhist": "buddhism",
+    "buddhist architecture": "buddhist",
+    "stupa": "buddhist",
+    "vihara": "buddhist",
+    "chaitya": "buddhist",
+    "colonial": "colonial",
+    "colonial architecture": "colonial",
+    "british architecture": "colonial",
+    "european style": "colonial",
+    "rock-cut": "rock-cut",
+    "rock cut": "rock-cut",
+    "cave architecture": "rock-cut",
+    "cave temple": "rock-cut",
+    "ancient": "ancient",
+    "prehistoric": "ancient",
+    "early historic": "ancient",
+    "classical": "ancient",
+    "medieval": "medieval",
+    "middle ages": "medieval",
+    "sultanate period": "medieval",
+    "mughal period": "medieval",
+    "modern": "modern",
+    "colonial period": "modern",
+    "british period": "modern",
+    "contemporary": "modern",
+    "north india": "north india",
+    "northern india": "north india",
+    "north": "north india",
+    "indo-gangetic plain": "north india",
+    "south india": "south india",
+    "southern india": "south india",
+    "south": "south india",
+    "deccan": "south india",
+    "east india": "east india",
+    "eastern india": "east india",
+    "east": "east india",
+    "west india": "west india",
+    "western india": "west india",
+    "west": "west india",
+    "central india": "central india",
+    "central": "central india",
+    "madhya pradesh": "central india",
+    "mughal empire": "mughal empire",
+    "moghul empire": "mughal empire",
+    "timurid": "mughal empire",
+    "mauryan empire": "mauryan empire",
+    "maurya": "mauryan empire",
+    "mauryan": "mauryan empire",
+    "gupta empire": "gupta empire",
+    "gupta": "gupta empire",
+    "guptas": "gupta empire",
+    "chola dynasty": "chola dynasty",
+    "chola": "chola dynasty",
+    "cholas": "chola dynasty",
+    "vijayanagara empire": "vijayanagara empire",
+    "vijayanagar": "vijayanagara empire",
+    "vijayanagara": "hampi",
+    "delhi sultanate": "delhi sultanate",
+    "sultanate": "delhi sultanate",
+    "delhi sultans": "delhi sultanate",
+    "maratha empire": "maratha empire",
+    "maratha": "maratha empire",
+    "marathas": "maratha empire",
+    "hinduism": "hinduism",
+    "hindu": "hinduism",
+    "sanatana dharma": "hinduism",
+    "buddhism": "buddhism",
+    "buddha dharma": "buddhism",
+    "jainism": "jainism",
+    "jain": "jainism",
+    "islam": "islam",
+    "islamic": "islam",
+    "muslim": "islam",
+    "sikhism": "sikhism",
+    "sikh": "sikhism",
+    "taj mahal": "taj mahal",
+    "tajmahal": "taj mahal",
+    "taj": "taj mahal",
+    "qutub minar": "qutub minar",
+    "qutb minar": "qutub minar",
+    "qutab minar": "qutub minar",
+    "red fort": "red fort",
+    "lal qila": "red fort",
+    "red fort delhi": "red fort",
+    "golden temple": "golden temple",
+    "harmandir sahib": "golden temple",
+    "darbar sahib": "golden temple",
+    "ajanta caves": "ajanta caves",
+    "ajanta": "ajanta caves",
+    "ajanta ellora": "ajanta caves",
+    "ellora caves": "ellora caves",
+    "ellora": "ellora caves",
+    "sanchi stupa": "sanchi stupa",
+    "sanchi": "sanchi stupa",
+    "great stupa": "sanchi stupa",
+    "hampi": "hampi",
+    "hampi ruins": "hampi",
+    "khajuraho": "khajuraho",
+    "khajuraho temples": "khajuraho",
+    "ashoka": "ashoka",
+    "ashoka the great": "ashoka",
+    "emperor ashoka": "ashoka",
+    "shah jahan": "shah jahan",
+    "shahjahan": "shah jahan",
+    "shah jehan": "shah jahan",
+    "akbar": "akbar",
+    "akbar the great": "akbar",
+    "emperor akbar": "akbar",
+    "gautama buddha": "gautama buddha",
+    "buddha": "gautama buddha",
+    "siddhartha": "gautama buddha",
+    "the buddha": "gautama buddha"
+  }
+}
