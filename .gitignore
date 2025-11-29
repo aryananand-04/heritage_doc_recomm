@@ -9,7 +9,14 @@ venv/
 ENV/
 build/
 develop-eggs/
-dist/
+dist/# Knowledge Graph binaries (regenerate instead of committing)
+knowledge_graph/*.gpickle
+knowledge_graph/*.pkl
+
+# But keep statistics and visualizations
+!knowledge_graph/*.json
+!knowledge_graph/*.png
+!knowledge_graph/*.gml
 downloads/
 eggs/
 .eggs/
