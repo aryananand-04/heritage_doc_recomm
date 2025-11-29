@@ -1,0 +1,140 @@
+{
+  "monument_taj_mahal": {
+    "entity_id": "monument_taj_mahal",
+    "entity_type": "monument",
+    "historical_significance": 1.0,
+    "scholarly_impact": 0.9186648412253018,
+    "cultural_impact": 0.9825749016304716,
+    "structural_importance": 1.0,
+    "overall_score": 0.9802479485711546,
+    "evidence": {
+      "historical": {
+        "unesco_status": true,
+        "unesco_weight": 3.0
+      },
+      "scholarly": {
+        "scholarly_references": 2500,
+        "scholarly_score": 0.9186648412253018
+      },
+      "cultural": {
+        "wikipedia_views": 15000,
+        "wikipedia_length": 25000,
+        "wikipedia_score": 0.9825749016304716
+      },
+      "structural": {
+        "degree": 3,
+        "degree_centrality": 1.0,
+        "betweenness_centrality": 0.5238095238095237,
+        "pagerank": 0.2084562012707732,
+        "structural_score": 1.0
+      }
+    }
+  },
+  "monument_red_fort": {
+    "entity_id": "monument_red_fort",
+    "entity_type": "monument",
+    "historical_significance": 1.0,
+    "scholarly_impact": 0.4,
+    "cultural_impact": 0.7560238628807727,
+    "structural_importance": 1.0,
+    "overall_score": 0.8312047725761547,
+    "evidence": {
+      "historical": {
+        "unesco_status": true,
+        "unesco_weight": 3.0
+      },
+      "scholarly": {
+        "fallback_type_baseline": 0.4
+      },
+      "cultural": {
+        "wikipedia_views": 5000,
+        "wikipedia_length": 15000,
+        "wikipedia_score": 0.7560238628807727
+      },
+      "structural": {
+        "degree": 2,
+        "degree_centrality": 0.6666666666666666,
+        "betweenness_centrality": 0.5714285714285714,
+        "pagerank": 0.13494885211383378,
+        "structural_score": 1.0
+      }
+    }
+  },
+  "person_shah_jahan": {
+    "entity_id": "person_shah_jahan",
+    "entity_type": "person",
+    "historical_significance": 0.6,
+    "scholarly_impact": 0.45,
+    "cultural_impact": 0.3,
+    "structural_importance": 1.0,
+    "overall_score": 0.63,
+    "evidence": {
+      "historical": {
+        "historical_figure": 0.9
+      },
+      "scholarly": {
+        "fallback_type_baseline": 0.45
+      },
+      "cultural": {
+        "fallback_type_baseline": 0.3
+      },
+      "structural": {
+        "degree": 2,
+        "degree_centrality": 0.6666666666666666,
+        "betweenness_centrality": 0.5714285714285714,
+        "pagerank": 0.13525725354545087,
+        "structural_score": 1.0
+      }
+    }
+  },
+  "org_mughal_empire": {
+    "entity_id": "org_mughal_empire",
+    "entity_type": "organization",
+    "historical_significance": 1.0,
+    "scholarly_impact": 0.9581564885928915,
+    "cultural_impact": 0.25,
+    "structural_importance": 1.0,
+    "overall_score": 0.8416312977185783,
+    "evidence": {
+      "historical": {
+        "dynasty_importance": 0.95,
+        "architectural_style": 0.9
+      },
+      "scholarly": {
+        "scholarly_references": 3500,
+        "scholarly_score": 0.9581564885928915
+      },
+      "cultural": {
+        "fallback_type_baseline": 0.25
+      },
+      "structural": {
+        "degree": 1,
+        "degree_centrality": 0.3333333333333333,
+        "betweenness_centrality": 0.0,
+        "pagerank": 0.0778584423227251,
+        "structural_score": 1.0
+      }
+    }
+  },
+  "monument_unknown_temple": {
+    "entity_id": "monument_unknown_temple",
+    "entity_type": "monument",
+    "historical_significance": 0.0,
+    "scholarly_impact": 0.4,
+    "cultural_impact": 0.4,
+    "structural_importance": 0.0,
+    "overall_score": 0.16000000000000003,
+    "evidence": {
+      "historical": {},
+      "scholarly": {
+        "fallback_type_baseline": 0.4
+      },
+      "cultural": {
+        "fallback_type_baseline": 0.4
+      },
+      "structural": {
+        "not_in_graph": true
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "unesco_world_heritage": [
+    "taj mahal",
+    "qutub minar",
+    "red fort",
+    "humayun tomb",
+    "agra fort",
+    "fatehpur sikri",
+    "ajanta caves",
+    "ellora caves",
+    "mahabalipuram",
+    "konark sun temple",
+    "khajuraho",
+    "hampi",
+    "sanchi stupa",
+    "elephanta caves",
+    "pattadakal",
+    "bodh gaya",
+    "great living chola temples",
+    "champaner-pavagadh",
+    "chhatrapati shivaji terminus",
+    "jantar mantar",
+    "rani ki vav",
+    "hill forts of rajasthan",
+    "nalanda mahavihara",
+    "kakatiya rudreshwara temple"
+  ],
+  "asi_national_monuments": [
+    "india gate",
+    "gateway of india",
+    "lotus temple",
+    "charminar",
+    "victoria memorial",
+    "golconda fort",
+    "mysore palace",
+    "amber fort",
+    "mehrangarh fort",
+    "jaisalmer fort",
+    "junagarh fort",
+    "chittorgarh fort",
+    "gwalior fort",
+    "jaigarh fort",
+    "ranthambore fort",
+    "daulatabad fort",
+    "bidar fort",
+    "kangra fort"
+  ],
+  "state_protected": [
+    "hawa mahal",
+    "city palace jaipur",
+    "umaid bhawan palace",
+    "jahaz mahal",
+    "rani padmini palace",
+    "kumbhalgarh fort",
+    "jal mahal",
+    "nahargarh fort",
+    "bhangarh fort"
+  ],
+  "major_dynasties": {
+    "mughal empire": 0.95,
+    "mauryan empire": 0.9,
+    "gupta empire": 0.85,
+    "chola dynasty": 0.9,
+    "vijayanagara empire": 0.85,
+    "delhi sultanate": 0.8,
+    "maratha empire": 0.8,
+    "pala empire": 0.7,
+    "rashtrakuta dynasty": 0.75,
+    "hoysala empire": 0.7
+  },
+  "major_emperors": {
+    "ashoka": 0.95,
+    "akbar": 0.95,
+    "shah jahan": 0.9,
+    "aurangzeb": 0.85,
+    "chandragupta maurya": 0.85,
+    "samudra gupta": 0.8,
+    "raja raja chola": 0.85,
+    "krishnadevaraya": 0.8,
+    "shivaji": 0.9
+  },
+  "architectural_styles": {
+    "mughal": 0.9,
+    "indo-islamic": 0.85,
+    "dravidian": 0.9,
+    "nagara": 0.85,
+    "vesara": 0.75,
+    "rock-cut": 0.8,
+    "buddhist": 0.85,
+    "colonial": 0.7
+  },
+  "rare_heritage_types": {
+    "stupa": 0.8,
+    "vihara": 0.75,
+    "stepwell": 0.8,
+    "chaitya": 0.75,
+    "rathas": 0.8,
+    "gopuram": 0.75
+  },
+  "wikipedia_importance": {
+    "taj mahal": {
+      "views_per_day": 15000,
+      "article_length": 25000
+    },
+    "red fort": {
+      "views_per_day": 5000,
+      "article_length": 15000
+    },
+    "golden temple": {
+      "views_per_day": 8000,
+      "article_length": 18000
+    },
+    "qutub minar": {
+      "views_per_day": 4000,
+      "article_length": 12000
+    },
+    "ajanta caves": {
+      "views_per_day": 3000,
+      "article_length": 16000
+    }
+  },
+  "scholarly_references": {
+    "taj mahal": 2500,
+    "mughal empire": 3500,
+    "mauryan empire": 2000,
+    "ashoka": 1800,
+    "chola dynasty": 1500
+  }
+}
