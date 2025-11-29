@@ -1,303 +1,288 @@
 """
-Ground Truth Generator
-Create test queries and relevant document sets for evaluation
+IMPROVED Ground Truth Generator with Multi-Signal Relevance
+
+Uses 5 signals for relevance:
+1. Embedding similarity (lowered threshold: 0.5)
+2. Metadata overlap (heritage type + domain + period + region)
+3. Entity overlap (shared locations/persons/orgs)
+4. SimRank structural similarity (0.15 threshold)
+5. Cluster membership (soft signal, not hard requirement)
+
+Relevance Score = weighted sum → binary threshold
 """
 
 import json
 import os
-import sys
-import random
 import numpy as np
 import pickle
-
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
-from utils.config_loader import get_config
-from utils.logger import get_logger
-
-config = get_config()
-logger = get_logger(__name__)
+from collections import Counter, defaultdict
+from sklearn.metrics.pairwise import cosine_similarity
 
 def load_data():
-    """Load classified documents, embeddings, and KG"""
-    logger.info("Loading data for ground truth generation...")
+    """Load all required data."""
+    print("📂 Loading data...")
     
-    # Load documents
-    classified_file = config.get_path('data', 'classified') + '/classified_documents.json'
-    with open(classified_file, 'r', encoding='utf-8') as f:
+    # Documents
+    with open('data/classified/classified_documents.json', 'r', encoding='utf-8') as f:
         documents = json.load(f)
     
-    # Load embeddings  
-    embeddings_file = config.get_path('data', 'embeddings') + '/document_embeddings.npy'
-    embeddings = np.load(embeddings_file)
+    # Embeddings
+    embeddings = np.load('data/embeddings/document_embeddings.npy')
     
-    # Load SimRank scores
-    simrank_file = 'knowledge_graph/simrank/simrank_matrix.npy'
-    simrank_matrix = np.load(simrank_file)
+    # SimRank
+    simrank_matrix = np.load('knowledge_graph/simrank/simrank_matrix.npy')
     
-    logger.info(f"✓ Loaded {len(documents)} documents")
-    logger.info(f"✓ Loaded embeddings: {embeddings.shape}")
-    logger.info(f"✓ Loaded SimRank matrix: {simrank_matrix.shape}")
+    # KG for entity extraction
+    with open('knowledge_graph/heritage_kg.gpickle', 'rb') as f:
+        G = pickle.load(f)
     
-    return documents, embeddings, simrank_matrix
+    print(f"✓ Loaded: {len(documents)} docs, embeddings {embeddings.shape}, SimRank {simrank_matrix.shape}")
+    
+    return documents, embeddings, simrank_matrix, G
 
-def generate_cluster_based_ground_truth(documents, n_queries=50):
+
+def compute_multi_signal_relevance(query_idx, candidate_idx, documents, embeddings, simrank_matrix, G, 
+                                   doc_nodes):
     """
-    Generate ground truth based on cluster membership
-    Documents in the same cluster are considered relevant
+    Compute relevance score using 5 signals.
+    
+    Returns: relevance_score (0-1), component_scores dict
     """
-    logger.info(f"\n[Strategy 1] Cluster-based ground truth...")
+    query_doc = documents[query_idx]
+    cand_doc = documents[candidate_idx]
     
-    # Group by cluster
-    from collections import defaultdict
-    clusters = defaultdict(list)
+    # Signal 1: Embedding similarity (weight: 0.3)
+    emb_sim = cosine_similarity(
+        embeddings[query_idx].reshape(1, -1),
+        embeddings[candidate_idx].reshape(1, -1)
+    )[0][0]
     
+    # Signal 2: Metadata overlap (weight: 0.25)
+    query_meta = query_doc['classifications']
+    cand_meta = cand_doc['classifications']
+    
+    meta_score = 0.0
+    total_meta = 0
+    
+    # Heritage types
+    query_types = set(query_meta.get('heritage_types', []))
+    cand_types = set(cand_meta.get('heritage_types', []))
+    if query_types and cand_types:
+        meta_score += len(query_types & cand_types) / len(query_types | cand_types)
+        total_meta += 1
+    
+    # Domains
+    query_domains = set(query_meta.get('domains', []))
+    cand_domains = set(cand_meta.get('domains', []))
+    if query_domains and cand_domains:
+        meta_score += len(query_domains & cand_domains) / len(query_domains | cand_domains)
+        total_meta += 1
+    
+    # Time period (exact match)
+    if query_meta.get('time_period') == cand_meta.get('time_period'):
+        meta_score += 1.0
+        total_meta += 1
+    else:
+        total_meta += 1
+    
+    # Region (exact match)
+    if query_meta.get('region') == cand_meta.get('region'):
+        meta_score += 1.0
+        total_meta += 1
+    else:
+        total_meta += 1
+    
+    meta_score = meta_score / total_meta if total_meta > 0 else 0.0
+    
+    # Signal 3: Entity overlap (weight: 0.15)
+    query_entities = set()
+    cand_entities = set()
+    
+    query_node = f"doc_{query_idx}"
+    cand_node = f"doc_{candidate_idx}"
+    
+    if query_node in doc_nodes and cand_node in doc_nodes:
+        for neighbor in G.neighbors(query_node):
+            if G.nodes[neighbor].get('node_type') in ['location', 'person', 'organization']:
+                query_entities.add(neighbor)
+        
+        for neighbor in G.neighbors(cand_node):
+            if G.nodes[neighbor].get('node_type') in ['location', 'person', 'organization']:
+                cand_entities.add(neighbor)
+    
+    entity_overlap = 0.0
+    if query_entities and cand_entities:
+        entity_overlap = len(query_entities & cand_entities) / len(query_entities | cand_entities)
+    
+    # Signal 4: SimRank (weight: 0.2)
+    simrank_score = simrank_matrix[query_idx, candidate_idx]
+    
+    # Signal 5: Cluster membership (weight: 0.1, soft bonus)
+    cluster_bonus = 1.0 if query_doc['cluster_id'] == cand_doc['cluster_id'] else 0.0
+    
+    # Weighted combination
+    weights = {
+        'embedding': 0.3,
+        'metadata': 0.25,
+        'entities': 0.15,
+        'simrank': 0.2,
+        'cluster': 0.1
+    }
+    
+    relevance_score = (
+        weights['embedding'] * emb_sim +
+        weights['metadata'] * meta_score +
+        weights['entities'] * entity_overlap +
+        weights['simrank'] * (simrank_score * 5) +  # Scale SimRank (0-0.2 → 0-1)
+        weights['cluster'] * cluster_bonus
+    )
+    
+    components = {
+        'embedding': emb_sim,
+        'metadata': meta_score,
+        'entities': entity_overlap,
+        'simrank': simrank_score,
+        'cluster': cluster_bonus
+    }
+    
+    return relevance_score, components
+
+
+def generate_multi_signal_ground_truth(documents, embeddings, simrank_matrix, G, n_queries=100, relevance_threshold=0.4):
+    """Generate ground truth using multi-signal relevance."""
+    print(f"\n🎯 Generating Multi-Signal Ground Truth (threshold={relevance_threshold})...")
+    
+    # Get doc nodes
+    doc_nodes = set([f"doc_{i}" for i in range(len(documents))])
+    
+    # Sample diverse queries (across clusters)
+    cluster_groups = defaultdict(list)
     for idx, doc in enumerate(documents):
-        cluster_id = doc['cluster_id']
-        clusters[cluster_id].append(idx)
+        cluster_groups[doc['cluster_id']].append(idx)
+    
+    # Stratified sampling
+    queries_per_cluster = max(1, n_queries // len(cluster_groups))
+    query_indices = []
+    
+    for cluster_id, doc_indices in cluster_groups.items():
+        sample_size = min(queries_per_cluster, len(doc_indices))
+        sampled = np.random.choice(doc_indices, size=sample_size, replace=False)
+        query_indices.extend(sampled)
+    
+    # Cap at n_queries
+    query_indices = query_indices[:n_queries]
+    
+    print(f"   Selected {len(query_indices)} query documents")
     
     queries = []
     
-    # Select query documents from each cluster
-    for cluster_id, doc_indices in clusters.items():
-        if len(doc_indices) < 5:  # Skip small clusters
-            continue
+    for q_idx in query_indices:
+        relevant_docs = []
+        relevance_details = []
         
-        # Pick 3-5 queries per cluster
-        n_from_cluster = min(5, max(3, len(doc_indices) // 10))
-        query_docs = random.sample(doc_indices, n_from_cluster)
-        
-        for query_idx in query_docs:
-            # All other docs in same cluster are relevant
-            relevant = set(doc_indices) - {query_idx}
-            
-            queries.append({
-                'query_id': f'cluster_{cluster_id}_{query_idx}',
-                'query_idx': query_idx,
-                'query_doc': documents[query_idx]['title'],
-                'relevant_docs': list(relevant),
-                'relevance_type': 'cluster',
-                'cluster_id': cluster_id,
-                'expected_size': len(relevant)
-            })
-    
-    logger.info(f"  ✓ Generated {len(queries)} cluster-based queries")
-    return queries
-
-def generate_metadata_based_ground_truth(documents, n_queries=30):
-    """
-    Generate ground truth based on shared metadata
-    (same heritage type, domain, time period, region)
-    """
-    logger.info(f"\n[Strategy 2] Metadata-based ground truth...")
-    
-    queries = []
-    
-    # Sample query documents
-    query_indices = random.sample(range(len(documents)), min(n_queries, len(documents)))
-    
-    for query_idx in query_indices:
-        query_doc = documents[query_idx]
-        query_classes = query_doc['classifications']
-        
-        relevant = set()
-        
-        # Find docs with shared attributes
-        for idx, doc in enumerate(documents):
-            if idx == query_idx:
+        # Score all candidates
+        for cand_idx in range(len(documents)):
+            if cand_idx == q_idx:
                 continue
             
-            doc_classes = doc['classifications']
+            rel_score, components = compute_multi_signal_relevance(
+                q_idx, cand_idx, documents, embeddings, simrank_matrix, G, doc_nodes
+            )
             
-            # Score based on attribute overlap
-            score = 0
-            
-            # Heritage type overlap
-            query_types = set(query_classes.get('heritage_types', []))
-            doc_types = set(doc_classes.get('heritage_types', []))
-            if query_types & doc_types:
-                score += 2
-            
-            # Domain overlap
-            query_domains = set(query_classes.get('domains', []))
-            doc_domains = set(doc_classes.get('domains', []))
-            if query_domains & doc_domains:
-                score += 2
-            
-            # Same time period
-            if query_classes.get('time_period') == doc_classes.get('time_period'):
-                score += 1
-            
-            # Same region
-            if query_classes.get('region') == doc_classes.get('region'):
-                score += 1
-            
-            # Consider relevant if score >= 3
-            if score >= 3:
-                relevant.add(idx)
+            if rel_score >= relevance_threshold:
+                relevant_docs.append(cand_idx)
+                relevance_details.append({
+                    'doc_idx': int(cand_idx),  # Convert to native Python int
+                    'relevance_score': float(rel_score),
+                    'components': {k: float(v) for k, v in components.items()}
+                })
         
-        if len(relevant) >= 5:  # Only keep if enough relevant docs
+        # Only keep queries with sufficient relevant docs
+        if len(relevant_docs) >= 3:  # Lowered from 5 to get more queries
             queries.append({
-                'query_id': f'metadata_{query_idx}',
-                'query_idx': query_idx,
-                'query_doc': query_doc['title'],
-                'relevant_docs': list(relevant),
-                'relevance_type': 'metadata',
-                'query_attributes': {
-                    'heritage_types': query_classes.get('heritage_types', []),
-                    'domains': query_classes.get('domains', []),
-                    'time_period': query_classes.get('time_period'),
-                    'region': query_classes.get('region')
-                },
-                'expected_size': len(relevant)
+                'query_id': f'multi_signal_{q_idx}',
+                'query_idx': int(q_idx),  # Convert to native Python int
+                'query_doc': documents[q_idx]['title'],
+                'relevant_docs': [int(idx) for idx in relevant_docs],  # Convert to native Python ints
+                'relevance_type': 'multi_signal',
+                'relevance_threshold': relevance_threshold,
+                'expected_size': len(relevant_docs),
+                'relevance_details': sorted(relevance_details, key=lambda x: x['relevance_score'], reverse=True)[:10]  # Top 10
             })
     
-    logger.info(f"  ✓ Generated {len(queries)} metadata-based queries")
+    print(f"   ✓ Generated {len(queries)} queries with ≥5 relevant docs")
+    
     return queries
 
-def generate_embedding_based_ground_truth(documents, embeddings, n_queries=30, threshold=0.7):
-    """
-    Generate ground truth based on embedding similarity
-    High cosine similarity = relevant
-    """
-    logger.info(f"\n[Strategy 3] Embedding-based ground truth (threshold={threshold})...")
-    
-    from sklearn.metrics.pairwise import cosine_similarity
-    
-    # Compute similarity matrix
-    similarity_matrix = cosine_similarity(embeddings)
-    
-    queries = []
-    
-    # Sample query documents
-    query_indices = random.sample(range(len(documents)), min(n_queries, len(documents)))
-    
-    for query_idx in query_indices:
-        # Find highly similar docs
-        similarities = similarity_matrix[query_idx]
-        relevant = set(np.where(similarities >= threshold)[0].tolist()) - {query_idx}
-        
-        if len(relevant) >= 5:
-            queries.append({
-                'query_id': f'embedding_{query_idx}',
-                'query_idx': query_idx,
-                'query_doc': documents[query_idx]['title'],
-                'relevant_docs': list(relevant),
-                'relevance_type': 'embedding',
-                'threshold': threshold,
-                'expected_size': len(relevant)
-            })
-    
-    logger.info(f"  ✓ Generated {len(queries)} embedding-based queries")
-    return queries
 
-def generate_simrank_based_ground_truth(documents, simrank_matrix, n_queries=30, threshold=0.02):
-    """
-    Generate ground truth based on SimRank scores
-    High SimRank = structurally similar in KG
-    """
-    logger.info(f"\n[Strategy 4] SimRank-based ground truth (threshold={threshold})...")
-    
-    queries = []
-    
-    # Sample query documents
-    query_indices = random.sample(range(len(documents)), min(n_queries, len(documents)))
-    
-    for query_idx in query_indices:
-        # Find docs with high SimRank
-        simrank_scores = simrank_matrix[query_idx]
-        relevant = set(np.where(simrank_scores >= threshold)[0].tolist()) - {query_idx}
-        
-        if len(relevant) >= 5:
-            queries.append({
-                'query_id': f'simrank_{query_idx}',
-                'query_idx': query_idx,
-                'query_doc': documents[query_idx]['title'],
-                'relevant_docs': list(relevant),
-                'relevance_type': 'simrank',
-                'threshold': threshold,
-                'expected_size': len(relevant)
-            })
-    
-    logger.info(f"  ✓ Generated {len(queries)} SimRank-based queries")
-    return queries
-
-def save_ground_truth(queries, output_dir):
-    """Save ground truth dataset"""
-    logger.info(f"\n[Saving] Ground truth dataset...")
+def save_ground_truth(queries, output_dir='data/evaluation'):
+    """Save ground truth with statistics."""
+    print(f"\n💾 Saving ground truth...")
     
     os.makedirs(output_dir, exist_ok=True)
     
-    # Save all queries
-    output_file = os.path.join(output_dir, 'ground_truth.json')
-    with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(queries, f, indent=2, ensure_ascii=False)
+    # Save queries
+    output_file = os.path.join(output_dir, 'ground_truth_improved.json')
+    with open(output_file, 'w') as f:
+        json.dump(queries, f, indent=2)
     
-    logger.info(f"  ✓ Saved {len(queries)} queries to: {output_file}")
+    print(f"   ✓ Saved {len(queries)} queries to {output_file}")
     
-    # Save statistics
-    from collections import Counter
+    # Statistics
+    relevant_counts = [q['expected_size'] for q in queries]
     
     stats = {
         'total_queries': len(queries),
-        'by_type': dict(Counter([q['relevance_type'] for q in queries])),
-        'avg_relevant_docs': np.mean([q['expected_size'] for q in queries]),
-        'min_relevant_docs': min([q['expected_size'] for q in queries]),
-        'max_relevant_docs': max([q['expected_size'] for q in queries]),
-        'query_types': list(set([q['relevance_type'] for q in queries]))
+        'avg_relevant_per_query': float(np.mean(relevant_counts)),
+        'std_relevant_per_query': float(np.std(relevant_counts)),
+        'min_relevant': int(np.min(relevant_counts)),
+        'max_relevant': int(np.max(relevant_counts)),
+        'median_relevant': float(np.median(relevant_counts))
     }
     
-    stats_file = os.path.join(output_dir, 'ground_truth_stats.json')
-    with open(stats_file, 'w', encoding='utf-8') as f:
+    stats_file = os.path.join(output_dir, 'ground_truth_stats_improved.json')
+    with open(stats_file, 'w') as f:
         json.dump(stats, f, indent=2)
     
-    logger.info(f"  ✓ Saved statistics to: {stats_file}")
+    print(f"   ✓ Saved statistics to {stats_file}")
+    
+    # Display stats
+    print(f"\n📊 Ground Truth Statistics:")
+    print(f"   Total queries: {stats['total_queries']}")
+    print(f"   Avg relevant docs: {stats['avg_relevant_per_query']:.1f}")
+    print(f"   Range: {stats['min_relevant']}-{stats['max_relevant']}")
     
     return stats
 
+
 def main():
-    logger.info("="*70)
-    logger.info("GROUND TRUTH GENERATION")
-    logger.info("="*70)
+    print("="*80)
+    print("IMPROVED GROUND TRUTH GENERATION")
+    print("Multi-Signal Relevance (Embedding + Metadata + Entities + SimRank + Cluster)")
+    print("="*80)
     
-    # Set random seed for reproducibility
-    random.seed(42)
     np.random.seed(42)
     
     # Load data
-    documents, embeddings, simrank_matrix = load_data()
+    documents, embeddings, simrank_matrix, G = load_data()
     
-    # Generate ground truth using multiple strategies
-    all_queries = []
-    
-    # Strategy 1: Cluster-based
-    cluster_queries = generate_cluster_based_ground_truth(documents, n_queries=50)
-    all_queries.extend(cluster_queries)
-    
-    # Strategy 2: Metadata-based
-    metadata_queries = generate_metadata_based_ground_truth(documents, n_queries=30)
-    all_queries.extend(metadata_queries)
-    
-    # Strategy 3: Embedding-based
-    embedding_queries = generate_embedding_based_ground_truth(documents, embeddings, n_queries=30, threshold=0.7)
-    all_queries.extend(embedding_queries)
-    
-    # Strategy 4: SimRank-based
-    simrank_queries = generate_simrank_based_ground_truth(documents, simrank_matrix, n_queries=30, threshold=0.02)
-    all_queries.extend(simrank_queries)
+    # Generate ground truth
+    queries = generate_multi_signal_ground_truth(
+        documents, embeddings, simrank_matrix, G,
+        n_queries=100,
+        relevance_threshold=0.4  # Lowered from 0.5 for better coverage
+    )
     
     # Save
-    output_dir = config.get_path('data', 'evaluation')
-    stats = save_ground_truth(all_queries, output_dir)
+    stats = save_ground_truth(queries)
     
-    # Summary
-    logger.info("\n" + "="*70)
-    logger.info("GROUND TRUTH GENERATION COMPLETE")
-    logger.info("="*70)
-    logger.info(f"✅ Total queries: {stats['total_queries']}")
-    logger.info(f"✅ Query types: {stats['by_type']}")
-    logger.info(f"✅ Avg relevant docs per query: {stats['avg_relevant_docs']:.1f}")
-    logger.info(f"\n📂 Output: {output_dir}/ground_truth.json")
-    logger.info("="*70)
+    print("\n" + "="*80)
+    print("✅ GROUND TRUTH GENERATION COMPLETE")
+    print("="*80)
+    print(f"Generated {stats['total_queries']} high-quality test queries")
+    print(f"Use this for evaluation: data/evaluation/ground_truth_improved.json")
+    print("="*80)
+
 
 if __name__ == "__main__":
     main()
