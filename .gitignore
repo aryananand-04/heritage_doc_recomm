@@ -72,3 +72,5 @@ logs/**/*.log
 
 .claude
 tasks/
+"tests/test_results/*" 
+"!tests/test_results/.gitkeep" 
