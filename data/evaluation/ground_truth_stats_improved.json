@@ -1,0 +1,8 @@
+{
+  "total_queries": 82,
+  "avg_relevant_per_query": 9.341463414634147,
+  "std_relevant_per_query": 5.1210219830714,
+  "min_relevant": 3,
+  "max_relevant": 27,
+  "median_relevant": 8.0
+}
