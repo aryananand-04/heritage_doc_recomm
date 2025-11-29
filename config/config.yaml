@@ -1,0 +1,103 @@
+# Heritage Document Recommendation System Configuration
+
+# Project Paths
+paths:
+  data:
+    raw: "data/raw"
+    cleaned: "data/cleaned"
+    metadata: "data/metadata"
+    embeddings: "data/embeddings"
+    classified: "data/classified"
+    balanced: "data/balanced"
+    evaluation: "data/evaluation"
+  
+  knowledge_graph:
+    base: "knowledge_graph"
+    kg_file: "knowledge_graph/heritage_kg.gpickle"
+    simrank_scores: "knowledge_graph/simrank_scores.pkl"
+    horn_weights: "knowledge_graph/horn_weights.json"
+  
+  models:
+    autoencoder: "models/autoencoder"
+    ranker: "models/ranker"
+    firework: "models/firework"
+  
+  results:
+    base: "results"
+    evaluation: "results/evaluation_report.json"
+    visualizations: "results/visualizations"
+
+# Model Hyperparameters
+models:
+  sentence_transformer:
+    model_name: "all-MiniLM-L6-v2"
+    embedding_dim: 384
+    batch_size: 32
+  
+  autoencoder:
+    input_dim: 384
+    hidden_dim: 128
+    encoding_dim: 64
+    epochs: 50
+    batch_size: 32
+    learning_rate: 0.001
+  
+  clustering:
+    n_clusters: 12
+    random_state: 42
+  
+  simrank:
+    max_iterations: 10
+    decay_factor: 0.8
+    convergence_threshold: 0.001
+  
+  firework:
+    n_fireworks: 20
+    n_sparks: 50
+    max_iterations: 30
+    explosion_amplitude: 0.8
+
+# Data Balancing
+balancing:
+  target_samples_per_cluster: 35
+  augmentation_methods:
+    - "synonym_replacement"
+    - "back_translation"
+    - "paraphrase"
+  min_cluster_size: 15
+
+# Ranking Configuration
+ranking:
+  simrank_weight: 0.4
+  horn_index_weight: 0.3
+  embedding_similarity_weight: 0.3
+  top_k: 10
+
+# Evaluation
+evaluation:
+  test_split: 0.2
+  metrics:
+    - "precision@k"
+    - "recall@k"
+    - "ndcg@k"
+    - "map"
+  k_values: [5, 10, 20]
+
+# Query Processing
+query:
+  max_results: 20
+  rerank_top_k: 50
+  explain_results: true
+
+# UI Configuration
+ui:
+  title: "Heritage Document Recommender"
+  theme: "light"
+  max_display_results: 10
+  show_graph_visualization: true
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/system.log"

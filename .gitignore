@@ -9,7 +9,14 @@ venv/
 ENV/
 build/
 develop-eggs/
-dist/
+dist/# Knowledge Graph binaries (regenerate instead of committing)
+knowledge_graph/*.gpickle
+knowledge_graph/*.pkl
+
+# But keep statistics and visualizations
+!knowledge_graph/*.json
+!knowledge_graph/*.png
+!knowledge_graph/*.gml
 downloads/
 eggs/
 .eggs/
@@ -23,22 +30,24 @@ wheels/
 .installed.cfg
 *.egg
 
-# Data files (don't commit large datasets)
-data
+# Data files (don't commit large datasets - but keep structure)
 data/raw/**/*.json
-data/cleaned/
+data/cleaned/**/*.txt
+# Keep metadata and balanced data
 data/metadata/
-knowledge_graph
+data/balanced/
+
+# Models (keep small model files, exclude large binaries)
+models/**/*.h5
+models/**/*.pth
+# Keep FAISS indices and configs
+# models/ranker/faiss/*.faiss
+# models/ranker/faiss/*.json
+
+# Knowledge Graph (keep some files)
 knowledge_graph/heritage_kg.gpickle
 knowledge_graph/heritage_kg.gml
-knowledge_graph/kg_visualization
-
-# Models (large files)
-models/
-*.h5
-*.pkl
-*.pth
-
+# Keep statistics and smaller files
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -57,5 +66,6 @@ config/api_keys.txt
 .DS_Store
 Thumbs.db
 
-# Logs
-*.log
+# Logs (keep recent)
+logs/**/*.log
+!logs/README.md

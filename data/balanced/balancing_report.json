@@ -1,0 +1,28 @@
+{
+  "timestamp": "2025-11-28T21:02:08.205115",
+  "original_size": 369,
+  "augmented_size": 80,
+  "total_size": 449,
+  "cluster_distribution": {
+    "11": 37,
+    "4": 35,
+    "1": 35,
+    "7": 41,
+    "3": 36,
+    "6": 54,
+    "0": 35,
+    "5": 35,
+    "8": 35,
+    "9": 36,
+    "10": 35,
+    "2": 35
+  },
+  "augmentation_summary": {
+    "synthetic_samples": 80,
+    "methods_used": [
+      "SMOTE",
+      "synonym_replacement",
+      "contextual_substitution"
+    ]
+  }
+}

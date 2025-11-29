@@ -1,0 +1,18 @@
+{
+  "total_queries": 100,
+  "by_type": {
+    "cluster": 39,
+    "metadata": 30,
+    "embedding": 1,
+    "simrank": 30
+  },
+  "avg_relevant_docs": 117.24,
+  "min_relevant_docs": 7,
+  "max_relevant_docs": 352,
+  "query_types": [
+    "metadata",
+    "cluster",
+    "simrank",
+    "embedding"
+  ]
+}

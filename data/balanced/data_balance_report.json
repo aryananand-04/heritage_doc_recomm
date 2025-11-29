@@ -1,0 +1,172 @@
+{
+  "analysis_date": "2025-11-28T16:49:04.510617",
+  "total_documents": 369,
+  "cluster_statistics": {
+    "num_clusters": 12,
+    "mean_size": 30.75,
+    "std_size": 11.061381770225033,
+    "min_size": 15,
+    "max_size": 54,
+    "imbalance_ratio": 3.6
+  },
+  "cluster_distribution": {
+    "11": 37,
+    "4": 15,
+    "1": 35,
+    "7": 41,
+    "3": 36,
+    "6": 54,
+    "0": 33,
+    "5": 23,
+    "8": 18,
+    "9": 36,
+    "10": 17,
+    "2": 24
+  },
+  "source_distribution": {
+    "Unknown": 193,
+    "Indian Heritage": 21,
+    "UNESCO": 1,
+    "Heritage Documentation (Wikipedia)": 17,
+    "Indian Heritage (Auto-discovered)": 137
+  },
+  "heritage_type_distribution": {
+    "site": 166,
+    "monument": 191,
+    "architecture": 137,
+    "art": 155,
+    "tradition": 37,
+    "artifact": 41
+  },
+  "domain_distribution": {
+    "cultural": 315,
+    "architectural": 160,
+    "religious": 192,
+    "military": 156,
+    "archaeological": 102,
+    "royal": 141
+  },
+  "cluster_info": {
+    "0": {
+      "label": "Cultural Architecture, Site",
+      "size": 33,
+      "percentage": 8.94308943089431
+    },
+    "1": {
+      "label": "Cultural Monument, Site",
+      "size": 35,
+      "percentage": 9.48509485094851
+    },
+    "2": {
+      "label": "Cultural Art, Monument",
+      "size": 24,
+      "percentage": 6.504065040650407
+    },
+    "3": {
+      "label": "Cultural Monument, Site",
+      "size": 36,
+      "percentage": 9.75609756097561
+    },
+    "4": {
+      "label": "Architectural Monument, Site",
+      "size": 15,
+      "percentage": 4.0650406504065035
+    },
+    "5": {
+      "label": "Cultural Art, Architecture",
+      "size": 23,
+      "percentage": 6.233062330623306
+    },
+    "6": {
+      "label": "Cultural Architecture, Monument",
+      "size": 54,
+      "percentage": 14.634146341463413
+    },
+    "7": {
+      "label": "Cultural Monument, Art",
+      "size": 41,
+      "percentage": 11.11111111111111
+    },
+    "8": {
+      "label": "Religious Monument, Architecture",
+      "size": 18,
+      "percentage": 4.878048780487805
+    },
+    "9": {
+      "label": "Cultural Art, Site",
+      "size": 36,
+      "percentage": 9.75609756097561
+    },
+    "10": {
+      "label": "Cultural Art, Monument",
+      "size": 17,
+      "percentage": 4.607046070460704
+    },
+    "11": {
+      "label": "Cultural Monument, Site",
+      "size": 37,
+      "percentage": 10.02710027100271
+    }
+  },
+  "imbalance_analysis": {
+    "target_size": 35,
+    "underrepresented": [
+      {
+        "cluster_id": 4,
+        "count": 15,
+        "needed": 20
+      },
+      {
+        "cluster_id": 8,
+        "count": 18,
+        "needed": 17
+      },
+      {
+        "cluster_id": 10,
+        "count": 17,
+        "needed": 18
+      }
+    ],
+    "overrepresented": [
+      {
+        "cluster_id": 6,
+        "count": 54,
+        "excess": 19
+      }
+    ],
+    "balanced": [
+      {
+        "cluster_id": 11,
+        "count": 37
+      },
+      {
+        "cluster_id": 1,
+        "count": 35
+      },
+      {
+        "cluster_id": 7,
+        "count": 41
+      },
+      {
+        "cluster_id": 3,
+        "count": 36
+      },
+      {
+        "cluster_id": 0,
+        "count": 33
+      },
+      {
+        "cluster_id": 5,
+        "count": 23
+      },
+      {
+        "cluster_id": 9,
+        "count": 36
+      },
+      {
+        "cluster_id": 2,
+        "count": 24
+      }
+    ]
+  }
+}

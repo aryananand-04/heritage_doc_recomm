@@ -1,0 +1,9 @@
+{
+  "index_type": "flat",
+  "num_vectors": 369,
+  "dimension": 384,
+  "metric": "inner_product",
+  "normalized": true,
+  "created_at": "2025-11-28T21:21:54.619813",
+  "index_params": {}
+}

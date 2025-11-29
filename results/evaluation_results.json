@@ -1,0 +1,197 @@
+{
+  "embedding_only": {
+    "name": "Embedding-Only (FAISS)",
+    "config": {
+      "weight": 1.0,
+      "name": "Embedding-Only (FAISS)"
+    },
+    "metrics": {
+      "accuracy": {
+        "precision@5": 0.27599999999999997,
+        "recall@5": 0.015305162755420796,
+        "f1@5": 0.026425646718416837,
+        "ndcg@5": 0.2781433989522425,
+        "precision@10": 0.29200000000000004,
+        "recall@10": 0.04079909303773013,
+        "f1@10": 0.05966937828683906,
+        "ndcg@10": 0.2878756311576657,
+        "precision@20": 0.28800000000000003,
+        "recall@20": 0.08023300968597487,
+        "f1@20": 0.09564500701450314,
+        "ndcg@20": 0.2913843077386356,
+        "MAP": 0.032145877435553465
+      },
+      "diversity": {
+        "intra_list_diversity": 0.6421401288898073,
+        "coverage": 0.7940379403794038
+      },
+      "heritage_specific": {
+        "temporal_accuracy": 0.5760000000000001,
+        "spatial_relevance": 0.382,
+        "cultural_domain_alignment": 0.4588333333333334
+      },
+      "explainability": {},
+      "efficiency": {
+        "total_time_seconds": 0.014192581176757812,
+        "avg_query_latency_ms": 0.28385162353515625,
+        "queries_per_second": 3522.967343099046
+      }
+    }
+  },
+  "simrank_only": {
+    "name": "SimRank-Only",
+    "config": {
+      "weight": 0.0,
+      "name": "SimRank-Only"
+    },
+    "metrics": {
+      "accuracy": {
+        "precision@5": 0.8240000000000001,
+        "recall@5": 0.11508881749315295,
+        "f1@5": 0.1903022299020476,
+        "ndcg@5": 0.8572552802898872,
+        "precision@10": 0.59,
+        "recall@10": 0.15462169890144434,
+        "f1@10": 0.21775173544895626,
+        "ndcg@10": 0.683550436983767,
+        "precision@20": 0.4099999999999999,
+        "recall@20": 0.17321273041673674,
+        "f1@20": 0.1947318369365979,
+        "ndcg@20": 0.5387243289823056,
+        "MAP": 0.1700268716433675
+      },
+      "diversity": {
+        "intra_list_diversity": 0.598786381168634,
+        "coverage": 0.8699186991869918
+      },
+      "heritage_specific": {
+        "temporal_accuracy": 0.606,
+        "spatial_relevance": 0.44800000000000006,
+        "cultural_domain_alignment": 0.547047619047619
+      },
+      "explainability": {},
+      "efficiency": {
+        "total_time_seconds": 0.01201772689819336,
+        "avg_query_latency_ms": 0.2403545379638672,
+        "queries_per_second": 4160.520572947665
+      }
+    }
+  },
+  "hybrid_balanced": {
+    "name": "Hybrid (50-50)",
+    "config": {
+      "weight": 0.5,
+      "name": "Hybrid (50-50)"
+    },
+    "metrics": {
+      "accuracy": {
+        "precision@5": 0.8280000000000001,
+        "recall@5": 0.1156443730487085,
+        "f1@5": 0.19127783965814518,
+        "ndcg@5": 0.859879381840134,
+        "precision@10": 0.5939999999999999,
+        "recall@10": 0.1538874684233614,
+        "f1@10": 0.21722261155221062,
+        "ndcg@10": 0.6867732464836953,
+        "precision@20": 0.4109999999999999,
+        "recall@20": 0.17377318668572303,
+        "f1@20": 0.19545482215819038,
+        "ndcg@20": 0.5401911744420049,
+        "MAP": 0.17086283787243825
+      },
+      "diversity": {
+        "intra_list_diversity": 0.6103853230199433,
+        "coverage": 0.8780487804878049
+      },
+      "heritage_specific": {
+        "temporal_accuracy": 0.5919999999999999,
+        "spatial_relevance": 0.43000000000000005,
+        "cultural_domain_alignment": 0.5253888888888888
+      },
+      "explainability": {},
+      "efficiency": {
+        "total_time_seconds": 0.010723114013671875,
+        "avg_query_latency_ms": 0.2144622802734375,
+        "queries_per_second": 4662.824617573817
+      }
+    }
+  },
+  "hybrid_emb_heavy": {
+    "name": "Hybrid (70% Embedding)",
+    "config": {
+      "weight": 0.7,
+      "name": "Hybrid (70% Embedding)"
+    },
+    "metrics": {
+      "accuracy": {
+        "precision@5": 0.812,
+        "recall@5": 0.11344502664347975,
+        "f1@5": 0.18741209023142016,
+        "ndcg@5": 0.8480209442434428,
+        "precision@10": 0.592,
+        "recall@10": 0.1538938308503381,
+        "f1@10": 0.21718704975509404,
+        "ndcg@10": 0.6832062505378019,
+        "precision@20": 0.4039999999999999,
+        "recall@20": 0.1651217341908495,
+        "f1@20": 0.1882473779695154,
+        "ndcg@20": 0.5325215093655111,
+        "MAP": 0.1620955650202801
+      },
+      "diversity": {
+        "intra_list_diversity": 0.6173737576962204,
+        "coverage": 0.8699186991869918
+      },
+      "heritage_specific": {
+        "temporal_accuracy": 0.598,
+        "spatial_relevance": 0.42200000000000004,
+        "cultural_domain_alignment": 0.5116999999999999
+      },
+      "explainability": {},
+      "efficiency": {
+        "total_time_seconds": 0.010354757308959961,
+        "avg_query_latency_ms": 0.20709514617919922,
+        "queries_per_second": 4828.698395155534
+      }
+    }
+  },
+  "hybrid_sr_heavy": {
+    "name": "Hybrid (70% SimRank)",
+    "config": {
+      "weight": 0.3,
+      "name": "Hybrid (70% SimRank)"
+    },
+    "metrics": {
+      "accuracy": {
+        "precision@5": 0.8240000000000001,
+        "recall@5": 0.11508881749315295,
+        "f1@5": 0.1903022299020476,
+        "ndcg@5": 0.8572552802898872,
+        "precision@10": 0.594,
+        "recall@10": 0.15523407263881808,
+        "f1@10": 0.21873179790391664,
+        "ndcg@10": 0.6861479372168339,
+        "precision@20": 0.4109999999999999,
+        "recall@20": 0.17377318668572303,
+        "f1@20": 0.19545482215819038,
+        "ndcg@20": 0.5396437074790345,
+        "MAP": 0.17066988636661132
+      },
+      "diversity": {
+        "intra_list_diversity": 0.6045028863073277,
+        "coverage": 0.8699186991869918
+      },
+      "heritage_specific": {
+        "temporal_accuracy": 0.588,
+        "spatial_relevance": 0.43800000000000006,
+        "cultural_domain_alignment": 0.5336333333333333
+      },
+      "explainability": {},
+      "efficiency": {
+        "total_time_seconds": 0.01649308204650879,
+        "avg_query_latency_ms": 0.3298616409301758,
+        "queries_per_second": 3031.5740780895385
+      }
+    }
+  }
+}

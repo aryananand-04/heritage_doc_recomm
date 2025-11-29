@@ -1,0 +1,194 @@
+{
+  "0": {
+    "label": "Cultural Architecture, Site",
+    "heritage_types": [
+      "architecture",
+      "site"
+    ],
+    "dominant_domain": "cultural",
+    "dominant_period": "ancient",
+    "dominant_region": "unknown",
+    "size": 33,
+    "sample_titles": [
+      "Oxfordshire Architectural and Historical Society",
+      "Bucharest",
+      "List of oldest buildings in Canada"
+    ]
+  },
+  "1": {
+    "label": "Cultural Monument, Site",
+    "heritage_types": [
+      "monument",
+      "site"
+    ],
+    "dominant_domain": "cultural",
+    "dominant_period": "ancient",
+    "dominant_region": "unknown",
+    "size": 35,
+    "sample_titles": [
+      "Lists of World Heritage Sites",
+      "Lists of World Heritage Sites",
+      "List of World Heritage Sites in China"
+    ]
+  },
+  "2": {
+    "label": "Cultural Art, Monument",
+    "heritage_types": [
+      "art",
+      "monument"
+    ],
+    "dominant_domain": "cultural",
+    "dominant_period": "ancient",
+    "dominant_region": "unknown",
+    "size": 24,
+    "sample_titles": [
+      "Spitbank Fort",
+      "Spitbank Fort",
+      "The Match Seller"
+    ]
+  },
+  "3": {
+    "label": "Cultural Monument, Site",
+    "heritage_types": [
+      "monument",
+      "site"
+    ],
+    "dominant_domain": "cultural",
+    "dominant_period": "ancient",
+    "dominant_region": "north",
+    "size": 36,
+    "sample_titles": [
+      "Former World Heritage Sites",
+      "World Heritage Sites by country",
+      "Archaeological Survey of India"
+    ]
+  },
+  "4": {
+    "label": "Architectural Monument, Site",
+    "heritage_types": [
+      "monument",
+      "site"
+    ],
+    "dominant_domain": "architectural",
+    "dominant_period": "ancient",
+    "dominant_region": "india",
+    "size": 15,
+    "sample_titles": [
+      "List of World Heritage Sites in India",
+      "List of World Heritage Sites in India",
+      "Monuments of National Importance"
+    ]
+  },
+  "5": {
+    "label": "Cultural Art, Architecture",
+    "heritage_types": [
+      "art",
+      "architecture"
+    ],
+    "dominant_domain": "cultural",
+    "dominant_period": "ancient",
+    "dominant_region": "unknown",
+    "size": 23,
+    "sample_titles": [
+      "Postmodern architecture",
+      "List of forts in Florida",
+      "California Historical Landmarks in Alameda County"
+    ]
+  },
+  "6": {
+    "label": "Cultural Architecture, Monument",
+    "heritage_types": [
+      "architecture",
+      "monument"
+    ],
+    "dominant_domain": "cultural",
+    "dominant_period": "ancient",
+    "dominant_region": "unknown",
+    "size": 54,
+    "sample_titles": [
+      "The Golden Road: How Ancient India Transformed the World",
+      "The Golden Road: How Ancient India Transformed the World",
+      "New Classical architecture"
+    ]
+  },
+  "7": {
+    "label": "Cultural Monument, Art",
+    "heritage_types": [
+      "monument",
+      "art"
+    ],
+    "dominant_domain": "cultural",
+    "dominant_period": "ancient",
+    "dominant_region": "north",
+    "size": 41,
+    "sample_titles": [
+      "List of World Heritage Sites in the United States",
+      "History of India",
+      "UNESCO Intangible Cultural Heritage Lists"
+    ]
+  },
+  "8": {
+    "label": "Religious Monument, Architecture",
+    "heritage_types": [
+      "monument",
+      "architecture"
+    ],
+    "dominant_domain": "religious",
+    "dominant_period": "ancient",
+    "dominant_region": "north",
+    "size": 18,
+    "sample_titles": [
+      "Sikh architecture",
+      "Makli Necropolis",
+      "Historical monuments in Pristina"
+    ]
+  },
+  "9": {
+    "label": "Cultural Art, Site",
+    "heritage_types": [
+      "art",
+      "site"
+    ],
+    "dominant_domain": "cultural",
+    "dominant_period": "ancient",
+    "dominant_region": "unknown",
+    "size": 36,
+    "sample_titles": [
+      "Attic (architecture)",
+      "Moundville Archaeological Site",
+      "Listed building"
+    ]
+  },
+  "10": {
+    "label": "Cultural Art, Monument",
+    "heritage_types": [
+      "art",
+      "monument"
+    ],
+    "dominant_domain": "cultural",
+    "dominant_period": "ancient",
+    "dominant_region": "india",
+    "size": 17,
+    "sample_titles": [
+      "List of forts in the United States",
+      "Fort William Historical Park",
+      "Ancient Aliens"
+    ]
+  },
+  "11": {
+    "label": "Cultural Monument, Site",
+    "heritage_types": [
+      "monument",
+      "site"
+    ],
+    "dominant_domain": "cultural",
+    "dominant_period": "ancient",
+    "dominant_region": "north",
+    "size": 37,
+    "sample_titles": [
+      "World Heritage Site",
+      "Intangible cultural heritage",
+      "Archaeological site"
+    ]
+  }
+}

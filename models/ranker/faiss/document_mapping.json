@@ -1,0 +1,5480 @@
+{
+  "total_documents": 369,
+  "documents": [
+    {
+      "index": 0,
+      "title": "World Heritage Site",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 1,
+      "title": "List of World Heritage Sites in India",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "military"
+      ],
+      "cluster_label": "Architectural Monument, Site",
+      "source": "Indian Heritage"
+    },
+    {
+      "index": 2,
+      "title": "Lists of World Heritage Sites",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 3,
+      "title": "List of World Heritage Sites in India",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "military"
+      ],
+      "cluster_label": "Architectural Monument, Site",
+      "source": "Indian Heritage"
+    },
+    {
+      "index": 4,
+      "title": "Lists of World Heritage Sites",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 5,
+      "title": "List of World Heritage Sites in the United States",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Unknown"
+    },
+    {
+      "index": 6,
+      "title": "List of World Heritage Sites in China",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "royal",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 7,
+      "title": "Former World Heritage Sites",
+      "heritage_types": [
+        "site",
+        "architecture"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 8,
+      "title": "World Heritage Sites by country",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 9,
+      "title": "List of World Heritage Sites in Japan",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 10,
+      "title": "Monuments of National Importance",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "architectural"
+      ],
+      "cluster_label": "Architectural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 11,
+      "title": "Ancient monument",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Architectural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 12,
+      "title": "Ancient Monuments Preservation Act 1904",
+      "heritage_types": [
+        "monument",
+        "art"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 13,
+      "title": "Ancient monuments in Ujjain",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "religious",
+        "royal",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 14,
+      "title": "Archaeological Survey of India",
+      "heritage_types": [
+        "art",
+        "monument"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage"
+    },
+    {
+      "index": 15,
+      "title": "AMASR Act",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 16,
+      "title": "The Golden Road: How Ancient India Transformed the World",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "archaeological",
+        "religious",
+        "military"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage"
+    },
+    {
+      "index": 17,
+      "title": "History of India",
+      "heritage_types": [
+        "art",
+        "monument"
+      ],
+      "domains": [
+        "royal",
+        "religious",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Indian Heritage"
+    },
+    {
+      "index": 18,
+      "title": "The Golden Road: How Ancient India Transformed the World",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "archaeological",
+        "religious",
+        "military"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage"
+    },
+    {
+      "index": 19,
+      "title": "New Classical architecture",
+      "heritage_types": [
+        "architecture",
+        "tradition"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 20,
+      "title": "Architecture",
+      "heritage_types": [
+        "architecture",
+        "art"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 21,
+      "title": "Oxfordshire Architectural and Historical Society",
+      "heritage_types": [
+        "architecture",
+        "site"
+      ],
+      "domains": [
+        "archaeological",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 22,
+      "title": "Korean architecture",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "religious",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 23,
+      "title": "Postmodern architecture",
+      "heritage_types": [
+        "architecture",
+        "art"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 24,
+      "title": "Bucharest",
+      "heritage_types": [
+        "site",
+        "architecture"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 25,
+      "title": "Sikh architecture",
+      "heritage_types": [
+        "architecture",
+        "site"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Religious Monument, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 26,
+      "title": "Attic (architecture)",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 27,
+      "title": "Cultural heritage",
+      "heritage_types": [
+        "art",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 28,
+      "title": "UNESCO Intangible Cultural Heritage Lists",
+      "heritage_types": [
+        "tradition",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "UNESCO"
+    },
+    {
+      "index": 29,
+      "title": "Intangible cultural heritage",
+      "heritage_types": [
+        "tradition",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 30,
+      "title": "List of Intangible Cultural Heritage elements in India",
+      "heritage_types": [
+        "tradition",
+        "site"
+      ],
+      "domains": [
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 31,
+      "title": "Destruction of cultural heritage during the Israeli invasion of the Gaza Strip",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 32,
+      "title": "Cultural heritage in Pakistan",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 33,
+      "title": "Destruction of cultural heritage by the Islamic State",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 34,
+      "title": "Archaeological site",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage"
+    },
+    {
+      "index": 35,
+      "title": "List of archaeological sites in Albania",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "archaeological",
+        "royal"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage"
+    },
+    {
+      "index": 36,
+      "title": "List of Indus Valley Civilisation sites",
+      "heritage_types": [
+        "site",
+        "artifact"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 37,
+      "title": "List of archaeological sites by country",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage"
+    },
+    {
+      "index": 38,
+      "title": "List of Indus Valley Civilisation sites",
+      "heritage_types": [
+        "site",
+        "artifact"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 39,
+      "title": "List of archaeological sites by country",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage"
+    },
+    {
+      "index": 40,
+      "title": "List of archaeological sites in Albania",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "archaeological",
+        "royal"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage"
+    },
+    {
+      "index": 41,
+      "title": "List of archaeological sites in Peru",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage"
+    },
+    {
+      "index": 42,
+      "title": "Moundville Archaeological Site",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Indian Heritage"
+    },
+    {
+      "index": 43,
+      "title": "Archaeological sites in Naples",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage"
+    },
+    {
+      "index": 44,
+      "title": "Brahmagiri archaeological site",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage"
+    },
+    {
+      "index": 45,
+      "title": "Archaeological sites in Naples",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage"
+    },
+    {
+      "index": 46,
+      "title": "List of archaeological sites in Iran",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage"
+    },
+    {
+      "index": 47,
+      "title": "Monument historique",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 48,
+      "title": "Monument",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "military"
+      ],
+      "cluster_label": "Architectural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 49,
+      "title": "Monument historique",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 50,
+      "title": "Monument",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "military"
+      ],
+      "cluster_label": "Architectural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 51,
+      "title": "List of most-visited palaces and monuments",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "royal",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 52,
+      "title": "Makli Necropolis",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "royal"
+      ],
+      "cluster_label": "Religious Monument, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 53,
+      "title": "Mtskheta",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "religious",
+        "military",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Unknown"
+    },
+    {
+      "index": 54,
+      "title": "Historical monuments in Pristina",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Religious Monument, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 55,
+      "title": "List of monumente istorice in Romania",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Unknown"
+    },
+    {
+      "index": 56,
+      "title": "List of Historic Monuments (Poland)",
+      "heritage_types": [
+        "monument"
+      ],
+      "domains": [
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 57,
+      "title": "List of monumente istorice in Romania",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Unknown"
+    },
+    {
+      "index": 58,
+      "title": "Historical monuments in Pristina",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Religious Monument, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 59,
+      "title": "List of Historic Monuments (Poland)",
+      "heritage_types": [
+        "monument"
+      ],
+      "domains": [
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 60,
+      "title": "List of heritage registers",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 61,
+      "title": "List of heritage buildings in Vancouver",
+      "heritage_types": [
+        "architecture",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 62,
+      "title": "Heritage buildings of Department of Posts",
+      "heritage_types": [
+        "architecture",
+        "art"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Unknown"
+    },
+    {
+      "index": 63,
+      "title": "List of oldest buildings in Canada",
+      "heritage_types": [
+        "architecture",
+        "site"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 64,
+      "title": "Heritage buildings of Department of Posts",
+      "heritage_types": [
+        "architecture",
+        "art"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Unknown"
+    },
+    {
+      "index": 65,
+      "title": "List of oldest buildings in Canada",
+      "heritage_types": [
+        "architecture",
+        "site"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 66,
+      "title": "Heritage structures in Chennai",
+      "heritage_types": [
+        "architecture",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "religious"
+      ],
+      "cluster_label": "Religious Monument, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 67,
+      "title": "Heritage Bank",
+      "heritage_types": [
+        "architecture",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "royal",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 68,
+      "title": "List of destroyed heritage",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 69,
+      "title": "Listed building",
+      "heritage_types": [
+        "architecture",
+        "art"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 70,
+      "title": "Temple",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 71,
+      "title": "List of Ancient Greek temples",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "archaeological",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 72,
+      "title": "Roman temple",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 73,
+      "title": "Megalithic Temples of Malta",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 74,
+      "title": "Egyptian temple",
+      "heritage_types": [
+        "monument",
+        "tradition"
+      ],
+      "domains": [
+        "religious",
+        "royal",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 75,
+      "title": "List of ancient Roman temples",
+      "heritage_types": [
+        "monument",
+        "art"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 76,
+      "title": "Ancient Greek temple",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 77,
+      "title": "Hindu temple",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "architectural"
+      ],
+      "cluster_label": "Religious Monument, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 78,
+      "title": "Ancient Greek temple",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 79,
+      "title": "Hindu temple",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "architectural"
+      ],
+      "cluster_label": "Religious Monument, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 80,
+      "title": "List of forts in Florida",
+      "heritage_types": [
+        "monument",
+        "art"
+      ],
+      "domains": [
+        "military",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 81,
+      "title": "List of forts",
+      "heritage_types": [
+        "monument",
+        "art"
+      ],
+      "domains": [
+        "military",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 82,
+      "title": "List of forts in the United States",
+      "heritage_types": [
+        "monument",
+        "art"
+      ],
+      "domains": [
+        "military",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 83,
+      "title": "Hill Forts of Rajasthan",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "military",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 84,
+      "title": "List of forts in Pakistan",
+      "heritage_types": [
+        "monument",
+        "art"
+      ],
+      "domains": [
+        "military",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Unknown"
+    },
+    {
+      "index": 85,
+      "title": "Spitbank Fort",
+      "heritage_types": [
+        "monument",
+        "art"
+      ],
+      "domains": [
+        "military",
+        "cultural",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 86,
+      "title": "Tourism in Rajasthan",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "military",
+        "religious",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 87,
+      "title": "Spitbank Fort",
+      "heritage_types": [
+        "monument",
+        "art"
+      ],
+      "domains": [
+        "military",
+        "cultural",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 88,
+      "title": "Tourism in Rajasthan",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "military",
+        "religious",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 89,
+      "title": "Fort William Historical Park",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "military",
+        "cultural",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 90,
+      "title": "Falaknuma Palace",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "royal",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 91,
+      "title": "Alhambra",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "royal",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 92,
+      "title": "Lakshmi Vilas Palace, Vadodara",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "royal",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 93,
+      "title": "Architecture of Russia",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "religious",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 94,
+      "title": "Alhambra",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "royal",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 95,
+      "title": "Riad (architecture)",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "royal",
+        "cultural",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 96,
+      "title": "Architecture of Indonesia",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "religious",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 97,
+      "title": "Riad (architecture)",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "royal",
+        "cultural",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 98,
+      "title": "Lakshmi Vilas Palace, Vadodara",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "royal",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 99,
+      "title": "Moorish architecture",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 100,
+      "title": "Architecture of Indonesia",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "religious",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 101,
+      "title": "Moorish architecture",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 102,
+      "title": "Vestibule (architecture)",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "religious",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 103,
+      "title": "Civilization",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 104,
+      "title": "Four Great Ancient Civilizations",
+      "heritage_types": [
+        "artifact",
+        "tradition"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 105,
+      "title": "Cradle of civilization",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "royal",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 106,
+      "title": "Andean civilizations",
+      "heritage_types": [
+        "site",
+        "tradition"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 107,
+      "title": "Lost Civilizations (book series)",
+      "heritage_types": [
+        "art",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 108,
+      "title": "Ancient technology",
+      "heritage_types": [
+        "architecture",
+        "art"
+      ],
+      "domains": [
+        "archaeological",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 109,
+      "title": "Ancient Aliens",
+      "heritage_types": [
+        "art",
+        "architecture"
+      ],
+      "domains": [
+        "archaeological",
+        "religious",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 110,
+      "title": "Graham Hancock",
+      "heritage_types": [
+        "art",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 111,
+      "title": "California Historical Landmark",
+      "heritage_types": [
+        "architecture",
+        "site"
+      ],
+      "domains": [
+        "architectural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 112,
+      "title": "California Historical Landmarks in Alameda County",
+      "heritage_types": [],
+      "domains": [],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 113,
+      "title": "List of California Historical Landmarks",
+      "heritage_types": [
+        "site"
+      ],
+      "domains": [],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 114,
+      "title": "National Historic Landmark",
+      "heritage_types": [
+        "architecture",
+        "site"
+      ],
+      "domains": [
+        "architectural",
+        "military",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 115,
+      "title": "List of California Historical Landmarks",
+      "heritage_types": [
+        "site"
+      ],
+      "domains": [],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 116,
+      "title": "National Historic Landmark",
+      "heritage_types": [
+        "architecture",
+        "site"
+      ],
+      "domains": [
+        "architectural",
+        "military",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 117,
+      "title": "California Historical Landmarks in Los Angeles County",
+      "heritage_types": [],
+      "domains": [],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 118,
+      "title": "Philippines National Historical Landmarks",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "religious",
+        "military",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 119,
+      "title": "Wyoming Historical Landmarks",
+      "heritage_types": [
+        "site",
+        "architecture"
+      ],
+      "domains": [
+        "architectural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 120,
+      "title": "List of San Diego Historical Landmarks in La Jolla",
+      "heritage_types": [
+        "architecture",
+        "site"
+      ],
+      "domains": [
+        "architectural"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 121,
+      "title": "Historic preservation",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Unknown"
+    },
+    {
+      "index": 122,
+      "title": "Conservation and restoration of cultural property",
+      "heritage_types": [
+        "art",
+        "architecture"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Unknown"
+    },
+    {
+      "index": 123,
+      "title": "Heritage conservation in Hong Kong",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Unknown"
+    },
+    {
+      "index": 124,
+      "title": "Heritage conservation in Canada",
+      "heritage_types": [
+        "architecture",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Unknown"
+    },
+    {
+      "index": 125,
+      "title": "Historic district",
+      "heritage_types": [
+        "architecture",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Unknown"
+    },
+    {
+      "index": 126,
+      "title": "Trinity Royal Heritage Conservation Area",
+      "heritage_types": [
+        "site",
+        "architecture"
+      ],
+      "domains": [
+        "royal",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 127,
+      "title": "The arts",
+      "heritage_types": [
+        "art",
+        "tradition"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 128,
+      "title": "Arts of Kerala",
+      "heritage_types": [
+        "art",
+        "tradition"
+      ],
+      "domains": [
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Unknown"
+    },
+    {
+      "index": 129,
+      "title": "Madhubani art",
+      "heritage_types": [
+        "art",
+        "artifact"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Unknown"
+    },
+    {
+      "index": 130,
+      "title": "Culture of Japan",
+      "heritage_types": [
+        "tradition",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 131,
+      "title": "Culture of Samoa",
+      "heritage_types": [
+        "tradition",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 132,
+      "title": "Culture of Japan",
+      "heritage_types": [
+        "tradition",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 133,
+      "title": "Nilima Sheikh",
+      "heritage_types": [
+        "art",
+        "tradition"
+      ],
+      "domains": [
+        "cultural",
+        "royal",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 134,
+      "title": "Mola (art form)",
+      "heritage_types": [
+        "art",
+        "architecture"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 135,
+      "title": "Nilima Sheikh",
+      "heritage_types": [
+        "art",
+        "tradition"
+      ],
+      "domains": [
+        "cultural",
+        "royal",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 136,
+      "title": "Folk art",
+      "heritage_types": [
+        "art",
+        "tradition"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "military"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 137,
+      "title": "Mola (art form)",
+      "heritage_types": [
+        "art",
+        "architecture"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 138,
+      "title": "Ancient Greek sculpture",
+      "heritage_types": [
+        "artifact",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 139,
+      "title": "The Match Seller",
+      "heritage_types": [
+        "art",
+        "artifact"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 140,
+      "title": "Ancient Greek sculpture",
+      "heritage_types": [
+        "artifact",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 141,
+      "title": "Sculpture",
+      "heritage_types": [
+        "artifact",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 142,
+      "title": "Ancient Egyptian architecture",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "royal",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 143,
+      "title": "Sculpture",
+      "heritage_types": [
+        "artifact",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 144,
+      "title": "Ancient Egyptian architecture",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "royal",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 145,
+      "title": "Elgin Marbles",
+      "heritage_types": [
+        "art",
+        "artifact"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 146,
+      "title": "Sperlonga sculptures",
+      "heritage_types": [
+        "artifact",
+        "architecture"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 147,
+      "title": "Classical sculpture",
+      "heritage_types": [
+        "artifact",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "religious"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 148,
+      "title": "Elgin Marbles",
+      "heritage_types": [
+        "art",
+        "artifact"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 149,
+      "title": "Classical sculpture",
+      "heritage_types": [
+        "artifact",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "religious"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 150,
+      "title": "Mangalkot (ancient sculpture)",
+      "heritage_types": [
+        "artifact",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Unknown"
+    },
+    {
+      "index": 151,
+      "title": "Apollo of Cyrene",
+      "heritage_types": [
+        "artifact",
+        "site"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 152,
+      "title": "Mangalkot (ancient sculpture)",
+      "heritage_types": [
+        "artifact",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Unknown"
+    },
+    {
+      "index": 153,
+      "title": "Apollo of Cyrene",
+      "heritage_types": [
+        "artifact",
+        "site"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 154,
+      "title": "Artifact (archaeology)",
+      "heritage_types": [
+        "art",
+        "artifact"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Indian Heritage"
+    },
+    {
+      "index": 155,
+      "title": "Artifact (archaeology)",
+      "heritage_types": [
+        "art",
+        "artifact"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Indian Heritage"
+    },
+    {
+      "index": 156,
+      "title": "Unity Park",
+      "heritage_types": [
+        "art",
+        "artifact"
+      ],
+      "domains": [
+        "cultural",
+        "royal",
+        "religious"
+      ],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 157,
+      "title": "Metal detector",
+      "heritage_types": [
+        "art",
+        "architecture"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 158,
+      "title": "Unity Park",
+      "heritage_types": [
+        "art",
+        "artifact"
+      ],
+      "domains": [
+        "cultural",
+        "royal",
+        "religious"
+      ],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 159,
+      "title": "Korea under Japanese rule",
+      "heritage_types": [
+        "art",
+        "monument"
+      ],
+      "domains": [
+        "military",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 160,
+      "title": "Miniature Pinscher",
+      "heritage_types": [
+        "artifact",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 161,
+      "title": "Miniature Pinscher",
+      "heritage_types": [
+        "artifact",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 162,
+      "title": "National Museum of History",
+      "heritage_types": [
+        "artifact",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 163,
+      "title": "Metal detector",
+      "heritage_types": [
+        "art",
+        "architecture"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 164,
+      "title": "Out-of-place artifact",
+      "heritage_types": [
+        "art",
+        "artifact"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 165,
+      "title": "Korea under Japanese rule",
+      "heritage_types": [
+        "art",
+        "monument"
+      ],
+      "domains": [
+        "military",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 166,
+      "title": "Out-of-place artifact",
+      "heritage_types": [
+        "art",
+        "artifact"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 167,
+      "title": "Istanbul Archaeology Museums",
+      "heritage_types": [
+        "art",
+        "artifact"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage"
+    },
+    {
+      "index": 168,
+      "title": "National Museum of History",
+      "heritage_types": [
+        "artifact",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 169,
+      "title": "Istanbul Archaeology Museums",
+      "heritage_types": [
+        "art",
+        "artifact"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage"
+    },
+    {
+      "index": 170,
+      "title": "Medieval architecture",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "religious",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 171,
+      "title": "Medieval architecture",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "religious",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 172,
+      "title": "Medieval Scandinavian architecture",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "military",
+        "religious"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 173,
+      "title": "Medieval Scandinavian architecture",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "military",
+        "religious"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 174,
+      "title": "Medieval Serbian architecture",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "religious",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 175,
+      "title": "Architecture of England",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 176,
+      "title": "Middle Ages",
+      "heritage_types": [
+        "art",
+        "monument"
+      ],
+      "domains": [
+        "royal",
+        "religious",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 177,
+      "title": "Architecture of the medieval cathedrals of England",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "religious",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 178,
+      "title": "Medieval Serbian architecture",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "religious",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 179,
+      "title": "Architecture of the medieval cathedrals of England",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "religious",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 180,
+      "title": "Revivalism (architecture)",
+      "heritage_types": [
+        "architecture",
+        "tradition"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 181,
+      "title": "Architecture of Africa",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 182,
+      "title": "Revivalism (architecture)",
+      "heritage_types": [
+        "architecture",
+        "tradition"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 183,
+      "title": "Architecture of Africa",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 184,
+      "title": "Colonial architecture",
+      "heritage_types": [
+        "architecture",
+        "site"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 185,
+      "title": "Colonial architecture",
+      "heritage_types": [
+        "architecture",
+        "site"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 186,
+      "title": "Spanish Colonial Revival architecture",
+      "heritage_types": [
+        "architecture",
+        "art"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 187,
+      "title": "American colonial architecture",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "military",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 188,
+      "title": "Spanish Colonial Revival architecture",
+      "heritage_types": [
+        "architecture",
+        "art"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 189,
+      "title": "Colonial Revival architecture",
+      "heritage_types": [
+        "architecture",
+        "tradition"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 190,
+      "title": "American colonial architecture",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "military",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 191,
+      "title": "Dutch colonial architecture",
+      "heritage_types": [
+        "architecture",
+        "site"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 192,
+      "title": "Spanish Colonial architecture",
+      "heritage_types": [
+        "site",
+        "architecture"
+      ],
+      "domains": [
+        "architectural",
+        "religious",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 193,
+      "title": "Dutch colonial architecture",
+      "heritage_types": [
+        "architecture",
+        "site"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 194,
+      "title": "French colonial architecture",
+      "heritage_types": [
+        "architecture",
+        "site"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 195,
+      "title": "Dutch Colonial Revival architecture",
+      "heritage_types": [
+        "architecture",
+        "site"
+      ],
+      "domains": [
+        "architectural",
+        "military",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 196,
+      "title": "French colonial architecture",
+      "heritage_types": [
+        "architecture",
+        "site"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 197,
+      "title": "List of World Heritage Sites in Arab States",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 198,
+      "title": "Portuguese colonial architecture",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "religious",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 199,
+      "title": "List of World Heritage Sites in Arab States",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 200,
+      "title": "List of World Heritage Sites in Pakistan",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "military"
+      ],
+      "cluster_label": "Architectural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 201,
+      "title": "List of World Heritage Sites in Pakistan",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "military"
+      ],
+      "cluster_label": "Architectural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 202,
+      "title": "List of World Heritage Sites in Turkey",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "archaeological"
+      ],
+      "cluster_label": "Religious Monument, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 203,
+      "title": "List of destroyed heritage",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 204,
+      "title": "List of World Heritage Sites in Turkey",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "archaeological"
+      ],
+      "cluster_label": "Religious Monument, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 205,
+      "title": "Silk Roads: the Routes Network of Chang'an-Tianshan Corridor",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 206,
+      "title": "Ruins",
+      "heritage_types": [
+        "site",
+        "architecture"
+      ],
+      "domains": [
+        "archaeological",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Religious Monument, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 207,
+      "title": "Artificial ruins",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 208,
+      "title": "The Ruins (novel)",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 209,
+      "title": "Taxila",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "religious",
+        "archaeological",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 210,
+      "title": "Casa Grande Ruins National Monument",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "archaeological",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 211,
+      "title": "Torre Argentina Cat Sanctuary",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "archaeological",
+        "military",
+        "religious"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 212,
+      "title": "Modern ruins",
+      "heritage_types": [
+        "site",
+        "architecture"
+      ],
+      "domains": [
+        "archaeological",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Unknown"
+    },
+    {
+      "index": 213,
+      "title": "Ancient Corinth",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "military",
+        "archaeological",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Unknown"
+    },
+    {
+      "index": 214,
+      "title": "Ancient Indian architecture",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "archaeological"
+      ],
+      "cluster_label": "Architectural Monument, Site",
+      "source": "Heritage Documentation (Wikipedia)"
+    },
+    {
+      "index": 215,
+      "title": "Archaeological Survey of India",
+      "heritage_types": [
+        "art",
+        "monument"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Heritage Documentation (Wikipedia)"
+    },
+    {
+      "index": 216,
+      "title": "Conservation and restoration of cultural property",
+      "heritage_types": [
+        "art",
+        "architecture"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Heritage Documentation (Wikipedia)"
+    },
+    {
+      "index": 217,
+      "title": "Cultural heritage",
+      "heritage_types": [
+        "art",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Heritage Documentation (Wikipedia)"
+    },
+    {
+      "index": 218,
+      "title": "Ancient Indian architecture",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "archaeological"
+      ],
+      "cluster_label": "Architectural Monument, Site",
+      "source": "Heritage Documentation (Wikipedia)"
+    },
+    {
+      "index": 219,
+      "title": "Medieval India",
+      "heritage_types": [
+        "art",
+        "site"
+      ],
+      "domains": [
+        "royal",
+        "religious",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Heritage Documentation (Wikipedia)"
+    },
+    {
+      "index": 220,
+      "title": "Overhang (architecture)",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "religious",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Heritage Documentation (Wikipedia)"
+    },
+    {
+      "index": 221,
+      "title": "Mughal architecture",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "architectural",
+        "religious",
+        "royal"
+      ],
+      "cluster_label": "Religious Monument, Architecture",
+      "source": "Heritage Documentation (Wikipedia)"
+    },
+    {
+      "index": 222,
+      "title": "Buddhist architecture",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Heritage Documentation (Wikipedia)"
+    },
+    {
+      "index": 223,
+      "title": "Hindu temple architecture",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Heritage Documentation (Wikipedia)"
+    },
+    {
+      "index": 224,
+      "title": "Indo-Islamic architecture",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "royal"
+      ],
+      "cluster_label": "Architectural Monument, Site",
+      "source": "Heritage Documentation (Wikipedia)"
+    },
+    {
+      "index": 225,
+      "title": "Rock-cut architecture",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "religious",
+        "cultural"
+      ],
+      "cluster_label": "Religious Monument, Architecture",
+      "source": "Heritage Documentation (Wikipedia)"
+    },
+    {
+      "index": 226,
+      "title": "List of World Heritage Sites in India",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "military"
+      ],
+      "cluster_label": "Architectural Monument, Site",
+      "source": "Heritage Documentation (Wikipedia)"
+    },
+    {
+      "index": 227,
+      "title": "Monuments of National Importance",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "architectural"
+      ],
+      "cluster_label": "Architectural Monument, Site",
+      "source": "Heritage Documentation (Wikipedia)"
+    },
+    {
+      "index": 228,
+      "title": "Ancient Indian architecture",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "archaeological"
+      ],
+      "cluster_label": "Architectural Monument, Site",
+      "source": "Heritage Documentation (Wikipedia)"
+    },
+    {
+      "index": 229,
+      "title": "List of most-visited palaces and monuments",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "royal",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Heritage Documentation (Wikipedia)"
+    },
+    {
+      "index": 230,
+      "title": "Monuments of National Importance",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "architectural"
+      ],
+      "cluster_label": "Architectural Monument, Site",
+      "source": "Heritage Documentation (Wikipedia)"
+    },
+    {
+      "index": 231,
+      "title": "Untitled",
+      "heritage_types": [],
+      "domains": [],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Unknown"
+    },
+    {
+      "index": 232,
+      "title": "Badami cave temples",
+      "heritage_types": [
+        "art",
+        "monument"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 233,
+      "title": "Grand Trunk Road",
+      "heritage_types": [
+        "art",
+        "artifact"
+      ],
+      "domains": [
+        "military",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 234,
+      "title": "Hawa Mahal",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "royal",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 235,
+      "title": "Hunter-gatherer",
+      "heritage_types": [
+        "architecture",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 236,
+      "title": "Jognakhera",
+      "heritage_types": [
+        "site"
+      ],
+      "domains": [
+        "military",
+        "cultural",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 237,
+      "title": "Paddy field",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 238,
+      "title": "Babar Kot",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "archaeological",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 239,
+      "title": "Jama Mosque, Ahmedabad",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "royal",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 240,
+      "title": "Unakoti",
+      "heritage_types": [
+        "art",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 241,
+      "title": "Salt marsh",
+      "heritage_types": [
+        "art",
+        "tradition"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 242,
+      "title": "Snow leopard",
+      "heritage_types": [
+        "art",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 243,
+      "title": "Victorian Gothic and Art Deco Ensembles of Mumbai",
+      "heritage_types": [
+        "architecture",
+        "art"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 244,
+      "title": "Debendranath Tagore",
+      "heritage_types": [
+        "art",
+        "tradition"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "military"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 245,
+      "title": "Hanumangarh district",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "military",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 246,
+      "title": "Konkan",
+      "heritage_types": [
+        "art",
+        "site"
+      ],
+      "domains": [
+        "military",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 247,
+      "title": "Baraut",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 248,
+      "title": "Humayun",
+      "heritage_types": [
+        "monument",
+        "art"
+      ],
+      "domains": [
+        "royal",
+        "military",
+        "religious"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 249,
+      "title": "Pancha Rathas",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Religious Monument, Architecture",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 250,
+      "title": "Ahmad Shah I",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "royal",
+        "military",
+        "religious"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 251,
+      "title": "Brahmaputra River",
+      "heritage_types": [
+        "art",
+        "architecture"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 252,
+      "title": "Pallava dynasty",
+      "heritage_types": [
+        "monument",
+        "art"
+      ],
+      "domains": [
+        "royal",
+        "religious",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 253,
+      "title": "Charaideo",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "royal",
+        "religious",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 254,
+      "title": "Descent of the Ganges (Mahabalipuram)",
+      "heritage_types": [
+        "art",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 255,
+      "title": "Kolkata",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "religious"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 256,
+      "title": "Civet",
+      "heritage_types": [
+        "art",
+        "monument"
+      ],
+      "domains": [
+        "royal",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 257,
+      "title": "Mangrove",
+      "heritage_types": [
+        "art",
+        "architecture"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 258,
+      "title": "Sawai Jai Singh",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "military",
+        "royal",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 259,
+      "title": "Bhimbetka rock shelters",
+      "heritage_types": [
+        "site",
+        "artifact"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 260,
+      "title": "Churches and convents of Goa",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "architectural"
+      ],
+      "cluster_label": "Religious Monument, Architecture",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 261,
+      "title": "Snow leopard",
+      "heritage_types": [
+        "art",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 262,
+      "title": "Bhiwani district",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 263,
+      "title": "Hisar district",
+      "heritage_types": [
+        "art",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 264,
+      "title": "Shaivism",
+      "heritage_types": [
+        "tradition",
+        "art"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 265,
+      "title": "Buddhist art",
+      "heritage_types": [
+        "art",
+        "artifact"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 266,
+      "title": "Kutch district",
+      "heritage_types": [
+        "art",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "military"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 267,
+      "title": "Sikkim",
+      "heritage_types": [
+        "art",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "royal",
+        "religious"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 268,
+      "title": "Bah\u00e1\u02bc\u00ed House of Worship",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 269,
+      "title": "Sri Ganganagar district",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 270,
+      "title": "Western Ghats",
+      "heritage_types": [
+        "art",
+        "site"
+      ],
+      "domains": [
+        "military",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 271,
+      "title": "Bah\u00e1\u02bc\u00ed House of Worship",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 272,
+      "title": "Mamallapuram",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "religious",
+        "royal",
+        "cultural"
+      ],
+      "cluster_label": "Religious Monument, Architecture",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 273,
+      "title": "Surya",
+      "heritage_types": [
+        "monument",
+        "art"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 274,
+      "title": "Kalaburagi",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "royal",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 275,
+      "title": "Shore Temple",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 276,
+      "title": "Silt",
+      "heritage_types": [
+        "art",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "architectural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 277,
+      "title": "Catholic Church",
+      "heritage_types": [
+        "monument",
+        "art"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 278,
+      "title": "Charbagh",
+      "heritage_types": [
+        "monument",
+        "tradition"
+      ],
+      "domains": [
+        "cultural",
+        "royal",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 279,
+      "title": "Manas River",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "royal",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 280,
+      "title": "Burzahom archaeological site",
+      "heritage_types": [
+        "site",
+        "artifact"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 281,
+      "title": "Lingaraja Temple",
+      "heritage_types": [
+        "monument",
+        "tradition"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 282,
+      "title": "Sheri Khan Tarakai",
+      "heritage_types": [
+        "site",
+        "artifact"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 283,
+      "title": "Ekambareswarar Temple (Kanchipuram)",
+      "heritage_types": [
+        "monument",
+        "tradition"
+      ],
+      "domains": [
+        "religious",
+        "military",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 284,
+      "title": "India",
+      "heritage_types": [
+        "art",
+        "tradition"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 285,
+      "title": "Khasi people",
+      "heritage_types": [
+        "art",
+        "tradition"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 286,
+      "title": "Bhojeshwar Temple",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 287,
+      "title": "Indus Valley Civilisation",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 288,
+      "title": "Mangrove forest",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "royal",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 289,
+      "title": "Catholic Church",
+      "heritage_types": [
+        "monument",
+        "art"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 290,
+      "title": "Civil rights movement",
+      "heritage_types": [
+        "art",
+        "monument"
+      ],
+      "domains": [
+        "royal",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 291,
+      "title": "Tamil Nadu",
+      "heritage_types": [
+        "art",
+        "tradition"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "military"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 292,
+      "title": "Chennakeshava Temple, Belur",
+      "heritage_types": [
+        "monument",
+        "art"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 293,
+      "title": "Dera Ismail Khan",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "religious",
+        "military",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 294,
+      "title": "Karanpura",
+      "heritage_types": [
+        "site",
+        "artifact"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 295,
+      "title": "Ahom people",
+      "heritage_types": [
+        "tradition",
+        "art"
+      ],
+      "domains": [
+        "royal",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 296,
+      "title": "Mandu, Madhya Pradesh",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "royal",
+        "military",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 297,
+      "title": "Punjab, Pakistan",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "religious",
+        "royal",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 298,
+      "title": "Orchha",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "royal",
+        "military",
+        "religious"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 299,
+      "title": "Rani ki Vav",
+      "heritage_types": [
+        "artifact",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 300,
+      "title": "Red Fort",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "military",
+        "royal",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 301,
+      "title": "Bagpat district",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 302,
+      "title": "Dera Ismail Khan",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "religious",
+        "military",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 303,
+      "title": "Tomb of Salim Chishti",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "architectural",
+        "religious",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 304,
+      "title": "Chambal River",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "royal",
+        "religious"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 305,
+      "title": "Himachal Pradesh",
+      "heritage_types": [
+        "art",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "royal"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 306,
+      "title": "Kaveri",
+      "heritage_types": [
+        "art",
+        "tradition"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 307,
+      "title": "Enlightenment in Buddhism",
+      "heritage_types": [
+        "tradition",
+        "art"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 308,
+      "title": "Mangrove forest",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "royal",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 309,
+      "title": "West Bengal",
+      "heritage_types": [
+        "art",
+        "tradition"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 310,
+      "title": "Company rule in India",
+      "heritage_types": [
+        "art",
+        "site"
+      ],
+      "domains": [
+        "military",
+        "royal",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 311,
+      "title": "Delhi Gate, Red Fort",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "military",
+        "royal",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 312,
+      "title": "Panopticon",
+      "heritage_types": [
+        "architecture",
+        "art"
+      ],
+      "domains": [
+        "architectural",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 313,
+      "title": "Allahdino",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "military",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 314,
+      "title": "Dzong architecture",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "architectural",
+        "religious",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 315,
+      "title": "Simple suspension bridge",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "royal",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 316,
+      "title": "Cellular Jail",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "military",
+        "cultural",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 317,
+      "title": "Java",
+      "heritage_types": [
+        "art",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 318,
+      "title": "Kerala-no-dhoro",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 319,
+      "title": "Great Oxidation Event",
+      "heritage_types": [
+        "art",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 320,
+      "title": "Historic City of Ahmadabad",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "military",
+        "cultural",
+        "architectural"
+      ],
+      "cluster_label": "Religious Monument, Architecture",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 321,
+      "title": "Nakhatrana taluka",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "religious",
+        "military"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 322,
+      "title": "Daimabad",
+      "heritage_types": [
+        "site",
+        "artifact"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 323,
+      "title": "Surkotada",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "military",
+        "archaeological",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 324,
+      "title": "Tamil Nadu",
+      "heritage_types": [
+        "art",
+        "tradition"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "military"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 325,
+      "title": "Arikamedu",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 326,
+      "title": "Hinduism",
+      "heritage_types": [
+        "tradition",
+        "art"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 327,
+      "title": "Kot Diji",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 328,
+      "title": "Nilgiri tahr",
+      "heritage_types": [
+        "art",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 329,
+      "title": "Patan, Gujarat",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "religious",
+        "royal",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 330,
+      "title": "Timurid Empire",
+      "heritage_types": [
+        "art",
+        "architecture"
+      ],
+      "domains": [
+        "cultural",
+        "royal",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 331,
+      "title": "Delhi",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "royal",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 332,
+      "title": "Palace of Assembly",
+      "heritage_types": [
+        "architecture",
+        "site"
+      ],
+      "domains": [
+        "architectural",
+        "royal",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 333,
+      "title": "Rajput architecture",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "military",
+        "royal",
+        "religious"
+      ],
+      "cluster_label": "Religious Monument, Architecture",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 334,
+      "title": "Historic City of Ahmadabad",
+      "heritage_types": [
+        "site",
+        "monument"
+      ],
+      "domains": [
+        "military",
+        "cultural",
+        "architectural"
+      ],
+      "cluster_label": "Religious Monument, Architecture",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 335,
+      "title": "Sidi Bashir Mosque",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "royal",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 336,
+      "title": "Vih\u0101ra",
+      "heritage_types": [
+        "monument",
+        "art"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 337,
+      "title": "Bhimbetka rock shelters",
+      "heritage_types": [
+        "site",
+        "artifact"
+      ],
+      "domains": [
+        "cultural",
+        "archaeological",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 338,
+      "title": "Civet",
+      "heritage_types": [
+        "art",
+        "monument"
+      ],
+      "domains": [
+        "royal",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 339,
+      "title": "Xerophyte",
+      "heritage_types": [
+        "art",
+        "architecture"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 340,
+      "title": "Indo-Greek Kingdom",
+      "heritage_types": [
+        "artifact",
+        "art"
+      ],
+      "domains": [
+        "royal",
+        "cultural",
+        "religious"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 341,
+      "title": "Mehrauli",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "religious",
+        "royal",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 342,
+      "title": "Sidi Saiyyed Mosque",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "royal",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 343,
+      "title": "Ficus elastica",
+      "heritage_types": [
+        "art",
+        "monument"
+      ],
+      "domains": [
+        "cultural"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 344,
+      "title": "Stepwell",
+      "heritage_types": [
+        "architecture",
+        "monument"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 345,
+      "title": "Tripura",
+      "heritage_types": [
+        "art",
+        "tradition"
+      ],
+      "domains": [
+        "cultural",
+        "royal",
+        "religious"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 346,
+      "title": "Golconda",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "military",
+        "royal",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 347,
+      "title": "Indo-Persian culture",
+      "heritage_types": [
+        "tradition",
+        "architecture"
+      ],
+      "domains": [
+        "cultural",
+        "royal",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 348,
+      "title": "Jahangiri Mahal",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "royal",
+        "religious",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 349,
+      "title": "Andesite",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 350,
+      "title": "Baroque architecture",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "royal",
+        "religious",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 351,
+      "title": "Gagron Fort",
+      "heritage_types": [
+        "monument",
+        "art"
+      ],
+      "domains": [
+        "military",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Monument, Art",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 352,
+      "title": "Bengal Renaissance",
+      "heritage_types": [
+        "art",
+        "tradition"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "military"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 353,
+      "title": "Gujarat",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "royal",
+        "religious"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 354,
+      "title": "Lakshmana Temple, Khajuraho",
+      "heritage_types": [
+        "monument",
+        "artifact"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 355,
+      "title": "Himalayas",
+      "heritage_types": [
+        "art",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "military"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 356,
+      "title": "Matheran Hill Railway",
+      "heritage_types": [
+        "art",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 357,
+      "title": "Raigad Fort",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "military",
+        "royal",
+        "architectural"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 358,
+      "title": "Bar-headed goose",
+      "heritage_types": [
+        "art",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "royal",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 359,
+      "title": "Garo Hills",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "royal",
+        "religious"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 360,
+      "title": "Minaret",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "religious",
+        "architectural",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 361,
+      "title": "Christianity",
+      "heritage_types": [
+        "monument",
+        "tradition"
+      ],
+      "domains": [
+        "religious",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Art, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 362,
+      "title": "Gujarat Sultanate",
+      "heritage_types": [
+        "monument",
+        "architecture"
+      ],
+      "domains": [
+        "royal",
+        "military",
+        "religious"
+      ],
+      "cluster_label": "Cultural Architecture, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 363,
+      "title": "Indian wild ass",
+      "heritage_types": [
+        "art",
+        "site"
+      ],
+      "domains": [
+        "cultural",
+        "military",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 364,
+      "title": "Bhiwani district",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "religious",
+        "archaeological"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 365,
+      "title": "Patan, Gujarat",
+      "heritage_types": [
+        "monument",
+        "site"
+      ],
+      "domains": [
+        "religious",
+        "royal",
+        "cultural"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 366,
+      "title": "Ancient Rome",
+      "heritage_types": [
+        "art",
+        "site"
+      ],
+      "domains": [
+        "military",
+        "cultural",
+        "royal"
+      ],
+      "cluster_label": "Cultural Art, Architecture",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 367,
+      "title": "Kalibangan",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "archaeological",
+        "cultural",
+        "military"
+      ],
+      "cluster_label": "Cultural Monument, Site",
+      "source": "Indian Heritage (Auto-discovered)"
+    },
+    {
+      "index": 368,
+      "title": "Mumbai",
+      "heritage_types": [
+        "site",
+        "art"
+      ],
+      "domains": [
+        "cultural",
+        "royal",
+        "religious"
+      ],
+      "cluster_label": "Cultural Architecture, Monument",
+      "source": "Indian Heritage (Auto-discovered)"
+    }
+  ]
+}
