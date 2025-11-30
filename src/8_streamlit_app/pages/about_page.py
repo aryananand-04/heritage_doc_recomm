@@ -385,10 +385,9 @@ def render():
     # Footer
     st.markdown("---")
     st.markdown("""
-    <div style="text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 8px;">
-        <p style="font-size: 1.2rem; font-weight: bold;">Questions or Feedback?</p>
-        <p>Contact: <a href="mailto:akchhya1108@gmail.com">akchhya1108@gmail.com</a></p>
-        <p style="color: #666; margin-top: 1rem;">Built with ❤️ for Heritage Preservation</p>
+    <div style="text-align: center; padding: 2rem; background: #1e293b; border-radius: 8px; border: 1px solid #334155;">
+        <p style="font-size: 1.2rem; font-weight: bold; color: #f1f5f9;">Questions or Feedback?</p>
+        <p style="color: #f1f5f9;">Contact: <a href="mailto:akchhya1108@gmail.com" style="color: #60a5fa;">akchhya1108@gmail.com</a></p>
     </div>
     """, unsafe_allow_html=True)
 

@@ -28,22 +28,23 @@ st.set_page_config(
 sys.path.append(str(Path(__file__).parent.parent / '6_query_system'))
 
 # ========== MODERN CSS STYLING ==========
+# Note: Main styling is in style.css, this is just for compatibility
 st.markdown("""
 <style>
     /* ===== Global Styles ===== */
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
     
     html, body, [class*="css"] {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        color: #f1f5f9;
+        background-color: #0f172a;
     }
     
     /* ===== Main Header ===== */
     .main-header {
         font-size: 3rem;
         font-weight: 700;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: #f1f5f9;
         text-align: center;
         margin: 2rem 0;
         padding: 1rem;
@@ -57,8 +58,9 @@ st.markdown("""
     
     /* ===== Sidebar ===== */
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
-        border-right: 2px solid #dee2e6;
+        background: #1e293b;
+        border-right: 1px solid #334155;
+        color: #f1f5f9;
     }
     
     [data-testid="stSidebar"] .css-1d391kg {
@@ -67,51 +69,57 @@ st.markdown("""
     
     /* ===== Cards & Containers ===== */
     .metric-card {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: #1e293b;
         padding: 1.5rem;
         border-radius: 12px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        color: white;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        color: #f1f5f9;
         margin: 1rem 0;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border: 1px solid #334155;
     }
     
     .metric-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        background: #334155;
     }
     
     .result-card {
-        background: white;
+        background: #1e293b;
         padding: 1.5rem;
         border-radius: 12px;
-        border-left: 4px solid #667eea;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+        border-left: 4px solid #2563eb;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.3);
         margin: 1rem 0;
-        transition: all 0.3s ease;
+        transition: all 0.2s ease;
+        border: 1px solid #334155;
+        color: #f1f5f9;
     }
     
     .result-card:hover {
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        border-left-color: #764ba2;
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        border-left-color: #0d9488;
+        background: #334155;
     }
     
     /* ===== Buttons ===== */
     .stButton > button {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: #2563eb;
         color: white;
         border: none;
         border-radius: 8px;
         padding: 0.75rem 2rem;
         font-weight: 600;
         font-size: 1rem;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: all 0.2s ease;
+        box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
     }
     
     .stButton > button:hover {
-        transform: scale(1.05);
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        background: #1d4ed8;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
     }
     
     /* ===== Score Badges ===== */
@@ -125,111 +133,124 @@ st.markdown("""
     }
     
     .score-high {
-        background: #d4edda;
-        color: #155724;
-        border: 1px solid #c3e6cb;
+        background: #ecfdf5;
+        color: #065f46;
+        border: 1px solid #a7f3d0;
     }
     
     .score-medium {
-        background: #fff3cd;
-        color: #856404;
-        border: 1px solid #ffeeba;
+        background: #fffbeb;
+        color: #92400e;
+        border: 1px solid #fde68a;
     }
     
     .score-low {
-        background: #f8d7da;
-        color: #721c24;
-        border: 1px solid #f5c6cb;
+        background: #fef2f2;
+        color: #991b1b;
+        border: 1px solid #fecaca;
     }
     
     /* ===== KG Path Styling ===== */
     .kg-path {
-        background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+        background: #1e293b;
         padding: 1rem;
-        border-left: 4px solid #2196f3;
+        border-left: 4px solid #2563eb;
         border-radius: 8px;
         margin: 0.8rem 0;
         font-family: 'Courier New', monospace;
         font-size: 0.9rem;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        border: 1px solid #334155;
+        color: #f1f5f9;
     }
     
     /* ===== Info Boxes ===== */
     .info-box {
-        background: #e3f2fd;
-        border-left: 4px solid #2196f3;
+        background: #1e3a5f;
+        border-left: 4px solid #2563eb;
         padding: 1rem;
         border-radius: 8px;
         margin: 1rem 0;
+        border: 1px solid #3b82f6;
+        color: #e0e7ff;
     }
     
     .success-box {
-        background: #d4edda;
-        border-left: 4px solid #28a745;
+        background: #064e3b;
+        border-left: 4px solid #10b981;
         padding: 1rem;
         border-radius: 8px;
         margin: 1rem 0;
+        border: 1px solid #10b981;
+        color: #a7f3d0;
     }
     
     .warning-box {
-        background: #fff3cd;
-        border-left: 4px solid #ffc107;
+        background: #78350f;
+        border-left: 4px solid #f59e0b;
         padding: 1rem;
         border-radius: 8px;
         margin: 1rem 0;
+        border: 1px solid #f59e0b;
+        color: #fde68a;
     }
     
     /* ===== Tabs ===== */
     .stTabs [data-baseweb="tab-list"] {
         gap: 8px;
-        background: white;
-        border-radius: 12px;
+        background: #1e293b;
+        border-radius: 8px;
         padding: 0.5rem;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        border: 1px solid #334155;
     }
     
     .stTabs [data-baseweb="tab"] {
-        border-radius: 8px;
+        border-radius: 6px;
         padding: 0.75rem 1.5rem;
         font-weight: 600;
-        transition: all 0.3s ease;
+        transition: all 0.2s ease;
+        color: #94a3b8;
     }
     
     .stTabs [aria-selected="true"] {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: #2563eb;
         color: white;
     }
     
     /* ===== Expanders ===== */
     .streamlit-expanderHeader {
-        background: #f8f9fa;
+        background: #1e293b;
         border-radius: 8px;
         font-weight: 600;
         padding: 1rem;
-        transition: all 0.3s ease;
+        transition: all 0.2s ease;
+        border: 1px solid #334155;
+        color: #f1f5f9;
     }
     
     .streamlit-expanderHeader:hover {
-        background: #e9ecef;
+        background: #334155;
+        border-color: #2563eb;
     }
     
     /* ===== Progress Bars ===== */
     .stProgress > div > div {
-        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        background: #2563eb;
     }
     
     /* ===== Metrics ===== */
     [data-testid="stMetricValue"] {
         font-size: 2rem;
         font-weight: 700;
-        color: #667eea;
+        color: #f1f5f9;
     }
     
     /* ===== Dividers ===== */
     hr {
         margin: 2rem 0;
         border: none;
-        border-top: 2px solid #e9ecef;
+        border-top: 1px solid #334155;
     }
     
     /* ===== Animations ===== */
@@ -272,15 +293,6 @@ st.sidebar.metric("Documents", "369")
 st.sidebar.metric("Best Precision", "82.8%")
 st.sidebar.metric("Avg Latency", "<0.3ms")
 
-# Sidebar footer
-st.sidebar.markdown("---")
-st.sidebar.markdown("""
-<div style="text-align: center; font-size: 0.8rem; color: #666;">
-    <p>Heritage Document Recommender v2.0</p>
-    <p>© 2025 Akchhya Singh</p>
-</div>
-""", unsafe_allow_html=True)
-
 # Import and render pages
 if page == "🏠 Home":
     from pages import home_page
@@ -300,89 +312,3 @@ elif page == "📈 Evaluation":
 elif page == "ℹ️ About":
     from pages import about_page
     about_page.render()
-with st.sidebar:
-    st.markdown("""
-    <div style='text-align: center; padding: 2rem 0;'>
-        <h1 style='font-size: 2.5rem; margin: 0;'>🏛️</h1>
-        <h2 style='color: #667eea; font-weight: 700; margin: 0.5rem 0;'>Heritage</h2>
-        <p style='color: #6c757d; font-size: 0.9rem;'>Document Recommender v2.0</p>
-    </div>
-    """, unsafe_allow_html=True)
-    
-    st.markdown("---")
-    
-    # Navigation with icons
-    page = st.radio(
-        "Navigate to:",
-        [
-            "🔍 Search & Discover",
-            "🕸️ Knowledge Graph",
-            "📊 Results & Analysis",
-            "📈 Performance Metrics"
-        ],
-        label_visibility="collapsed"
-    )
-    
-    st.markdown("---")
-    
-    # Quick Stats
-    st.markdown("### 📈 System Stats")
-    
-    try:
-        import json
-        with open('knowledge_graph/kg_statistics.json', 'r') as f:
-            kg_stats = json.load(f)
-        
-        col1, col2 = st.columns(2)
-        with col1:
-            st.metric("Nodes", f"{kg_stats['total_nodes']:,}")
-        with col2:
-            st.metric("Edges", f"{kg_stats['total_edges']:,}")
-    except:
-        st.info("KG stats unavailable")
-    
-    st.markdown("---")
-    
-    # Help section
-    with st.expander("ℹ️ Need Help?"):
-        st.markdown("""
-        **Quick Guide:**
-        1. Start with **Search** page
-        2. Enter a natural language query
-        3. View recommendations
-        4. Explore **Knowledge Graph** connections
-        5. Analyze **Results** in detail
-        
-        **Example Queries:**
-        - "Mughal temples in North India"
-        - "Ancient Buddhist stupas"
-        - "Rajput forts in Rajasthan"
-        """)
-
-# ========== MAIN CONTENT ==========
-
-# Route to pages
-if page == "🔍 Search & Discover":
-    from pages import search_page
-    search_page.render()
-    
-elif page == "🕸️ Knowledge Graph":
-    from pages import kg_viz_page
-    kg_viz_page.render()
-    
-elif page == "📊 Results & Analysis":
-    from pages import results_page
-    results_page.render()
-    
-elif page == "📈 Performance Metrics":
-    from pages import evaluation_page
-    evaluation_page.render()
-
-# ========== FOOTER ==========
-st.markdown("---")
-st.markdown("""
-<div style='text-align: center; color: #6c757d; padding: 2rem 0; font-size: 0.9rem;'>
-    <p>Built with ❤️ using Streamlit • Knowledge Graph-based Recommendations</p>
-    <p>📧 Contact: akchhya1108@gmail.com | 🎓 Research Project 2025</p>
-</div>
-""", unsafe_allow_html=True)

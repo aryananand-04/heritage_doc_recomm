@@ -1,0 +1,889 @@
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.68.104:8501
+  External URL: http://106.51.223.139:8501
+
+  For better performance, install the Watchdog module:
+
+  $ xcode-select --install
+  $ pip install watchdog
+            
+2025-11-30 14:26:07.847 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:26:07.854 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:26:10.196 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:26:10.202 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:26:28.153 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:26:28.170 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:34:23.016 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:34:23.114 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:35:11.591 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:35:11.618 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:35:38.285 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:35:38.305 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:35:42.596 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:35:42.620 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:36:54.922 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:36:55.188 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:36:56.346 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:36:56.549 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:36:57.568 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:36:57.823 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:36:58.992 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:36:59.201 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:00.225 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:00.467 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:01.650 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:01.856 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:02.873 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:03.133 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:04.296 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:04.499 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:06.932 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:07.135 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:08.151 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:08.412 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:09.577 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:09.783 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:10.802 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:11.059 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:12.228 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:12.432 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:13.456 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:13.709 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:14.882 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:15.083 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:16.102 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:16.356 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:17.528 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:17.669 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:37:17.672 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:37:17.914 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:26.248 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:26.461 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:26.864 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:27.883 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:28.085 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:29.111 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:37:29.510 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:38:16.231 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:38:16.242 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:38:53.648 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:38:53.654 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:38:58.077 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:38:58.085 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:39:00.332 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:39:00.335 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:41:36.474 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:41:36.495 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:41:36.503 Uncaught app execution
+Traceback (most recent call last):
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+    _mpa_v1(self._main_script_path)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+    page.run()
+    ~~~~~~~~^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 303, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/streamlit_app.py", line 400, in <module>
+    evaluation_page.render()
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'pages.evaluation_page' has no attribute 'render'
+2025-11-30 14:41:40.528 Uncaught app execution
+Traceback (most recent call last):
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+    _mpa_v1(self._main_script_path)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+    page.run()
+    ~~~~~~~~^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 303, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/streamlit_app.py", line 400, in <module>
+    evaluation_page.render()
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'pages.evaluation_page' has no attribute 'render'
+2025-11-30 14:41:51.757 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:41:52.577 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:41:52.613 Uncaught app execution
+Traceback (most recent call last):
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+    _mpa_v1(self._main_script_path)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+    page.run()
+    ~~~~~~~~^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 303, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/streamlit_app.py", line 311, in <module>
+    evaluation_page.render()
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'pages.evaluation_page' has no attribute 'render'
+2025-11-30 14:41:52.996 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:41:53.607 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:41:53.809 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:41:54.050 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:41:54.457 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:41:54.457 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:41:56.489 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:41:56.896 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:41:57.102 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:41:57.940 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:41:58.527 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:41:58.760 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/about_page.py
+2025-11-30 14:41:59.141 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:41:59.156 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:41:59.162 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/about_page.py
+2025-11-30 14:41:59.343 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:42:00.156 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/about_page.py
+2025-11-30 14:42:00.388 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/about_page.py
+2025-11-30 14:42:00.594 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/about_page.py
+2025-11-30 14:42:00.993 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/about_page.py
+2025-11-30 14:42:02.217 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/about_page.py
+2025-11-30 14:42:02.412 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/about_page.py
+2025-11-30 14:42:32.908 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:42:32.923 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:42:48.128 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:42:48.149 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:43:22.762 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:43:22.766 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:43:37.564 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:43:37.576 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:43:51.485 Uncaught app execution
+Traceback (most recent call last):
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+    _mpa_v1(self._main_script_path)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+    page.run()
+    ~~~~~~~~^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 303, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py", line 351, in <module>
+    render()
+    ~~~~~~^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py", line 126, in render
+    st.session_state.main_query = query_text
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 447, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/state/session_state_proxy.py", line 136, in __setattr__
+    self[key] = value
+    ~~~~^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 447, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/state/session_state_proxy.py", line 114, in __setitem__
+    get_session_state()[key] = value
+    ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/state/safe_session_state.py", line 109, in __setitem__
+    self._state[key] = value
+    ~~~~~~~~~~~^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/state/session_state.py", line 540, in __setitem__
+    raise StreamlitAPIException(
+    ...<2 lines>...
+    )
+streamlit.errors.StreamlitAPIException: `st.session_state.main_query` cannot be modified after the widget with key `main_query` is instantiated.
+2025-11-30 14:43:56.368 Uncaught app execution
+Traceback (most recent call last):
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+    _mpa_v1(self._main_script_path)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+    page.run()
+    ~~~~~~~~^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 303, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py", line 351, in <module>
+    render()
+    ~~~~~~^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py", line 126, in render
+    st.session_state.main_query = query_text
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 447, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/state/session_state_proxy.py", line 136, in __setattr__
+    self[key] = value
+    ~~~~^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 447, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/state/session_state_proxy.py", line 114, in __setitem__
+    get_session_state()[key] = value
+    ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/state/safe_session_state.py", line 109, in __setitem__
+    self._state[key] = value
+    ~~~~~~~~~~~^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/state/session_state.py", line 540, in __setitem__
+    raise StreamlitAPIException(
+    ...<2 lines>...
+    )
+streamlit.errors.StreamlitAPIException: `st.session_state.main_query` cannot be modified after the widget with key `main_query` is instantiated.
+2025-11-30 14:43:58.753 Uncaught app execution
+Traceback (most recent call last):
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+    _mpa_v1(self._main_script_path)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+    page.run()
+    ~~~~~~~~^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 303, in run
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py", line 351, in <module>
+    render()
+    ~~~~~~^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py", line 126, in render
+    st.session_state.main_query = query_text
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 447, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/state/session_state_proxy.py", line 136, in __setattr__
+    self[key] = value
+    ~~~~^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 447, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/state/session_state_proxy.py", line 114, in __setitem__
+    get_session_state()[key] = value
+    ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/state/safe_session_state.py", line 109, in __setitem__
+    self._state[key] = value
+    ~~~~~~~~~~~^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/state/session_state.py", line 540, in __setitem__
+    raise StreamlitAPIException(
+    ...<2 lines>...
+    )
+streamlit.errors.StreamlitAPIException: `st.session_state.main_query` cannot be modified after the widget with key `main_query` is instantiated.
+2025-11-30 14:44:17.085 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:44:17.096 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:47:16.607 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:16.807 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:16.894 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:17.303 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:17.419 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:18.529 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:19.533 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:20.159 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:20.573 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:20.698 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:20.781 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:21.187 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:21.306 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:22.405 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:24.037 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:24.442 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:24.573 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:24.651 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:25.062 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:25.188 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:26.282 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:27.291 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:34.030 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:35.052 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:35.659 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:36.067 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:36.170 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:36.274 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:36.682 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:36.781 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:57.255 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:58.271 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:58.881 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:59.286 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:59.387 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:59.489 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:59.892 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:47:59.998 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:48:18.724 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:48:18.906 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:49:10.753 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:49:10.763 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:49:17.363 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:49:17.368 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:49:23.087 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:49:23.095 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:49:32.832 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:49:32.838 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-11-30 14:52:23.475 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:52:23.880 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:52:24.078 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:52:24.480 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:52:24.527 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:52:24.891 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:52:24.898 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:52:25.701 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:52:26.320 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:52:27.733 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:52:27.991 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:52:28.151 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:53:04.490 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/evaluation_page.py
+2025-11-30 14:53:04.607 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/evaluation_page.py
+2025-11-30 14:53:05.021 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/evaluation_page.py
+2025-11-30 14:53:05.225 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/evaluation_page.py
+2025-11-30 14:53:05.431 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/evaluation_page.py
+2025-11-30 14:53:05.714 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/evaluation_page.py
+2025-11-30 14:53:06.030 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/evaluation_page.py
+2025-11-30 14:53:07.539 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/evaluation_page.py
+2025-11-30 14:53:08.080 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/evaluation_page.py
+2025-11-30 14:53:08.258 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:53:08.273 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:53:09.303 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:53:09.587 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:53:10.106 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:53:10.528 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:53:11.010 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:53:11.514 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:53:12.036 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/home_page.py
+2025-11-30 14:54:39.298 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:54:40.117 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:54:41.143 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:54:41.747 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:54:41.749 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:54:41.953 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:54:42.268 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:54:42.361 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:42.474 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:54:42.565 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:42.767 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:54:42.971 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:54:43.781 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:43.782 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:43.984 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:43.985 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:44.387 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:44.597 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:45.403 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:46.233 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:46.831 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:47.037 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:48.249 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:48.257 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:48.373 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:48.450 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:48.780 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:49.072 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:49.800 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:50.711 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:51.301 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:51.506 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:52.658 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:52.722 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:52.749 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:52.864 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:53.161 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:53.540 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:54.183 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:54.485 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:54:54.991 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:54:54.992 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:54:55.178 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/search_page.py
+2025-11-30 14:54:55.197 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:54:55.590 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:54:55.792 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:54:56.117 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:54:56.322 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:54:57.023 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:54:57.838 Received event for non-watched path: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/src/8_streamlit_app/pages/kg_viz_page.py
+2025-11-30 14:56:50.630 Script compilation error
+Traceback (most recent call last):
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 571, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 68, in get_bytecode
+    with open_python_file(script_path) as f:
+         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/source_util.py", line 54, in open_python_file
+    return tokenize.open(filename)
+           ~~~~~~~~~~~~~^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/tokenize.py", line 447, in open
+    buffer = _builtin_open(filename, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/aryananand/Desktop/Projects/heritage_doc_recomm/streamlit_app.py'
+2025-11-30 14:56:50.643 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2025-11-30 14:57:42.927 Script compilation error
+Traceback (most recent call last):
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 571, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 68, in get_bytecode
+    with open_python_file(script_path) as f:
+         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/source_util.py", line 54, in open_python_file
+    return tokenize.open(filename)
+           ~~~~~~~~~~~~~^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/tokenize.py", line 447, in open
+    buffer = _builtin_open(filename, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/aryananand/Desktop/Projects/heritage_doc_recomm/streamlit_app.py'
+2025-11-30 14:57:42.931 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+--- Logging error ---
+Traceback (most recent call last):
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/watcher/util.py", line 176, in _do_with_retries
+    return orig_fn()
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/watcher/util.py", line 95, in <lambda>
+    lambda: os.stat(path).st_mtime,
+            ~~~~~~~^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/aryananand/Desktop/Projects/heritage_doc_recomm/streamlit_app.py'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/watcher/local_sources_watcher.py", line 183, in _register_watcher
+    watcher=PathWatcher(  # ty: ignore
+            ~~~~~~~~~~~^^^^^^^^^^^^^^^
+        filepath,
+        ^^^^^^^^^
+    ...<2 lines>...
+        allow_nonexistent=False,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    ),
+    ^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/watcher/polling_path_watcher.py", line 75, in __init__
+    self._modification_time = util.path_modification_time(
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        str(self._path), self._allow_nonexistent
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/watcher/util.py", line 94, in path_modification_time
+    return _do_with_retries(
+        lambda: os.stat(path).st_mtime,
+        (FileNotFoundError, PermissionError),
+        path,
+    )
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/watcher/util.py", line 179, in _do_with_retries
+    raise StreamlitMaxRetriesError(
+        f"Unable to access file or folder: {path}"
+    ) from ex
+streamlit.errors.StreamlitMaxRetriesError: Unable to access file or folder: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/streamlit_app.py
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/logging/__init__.py", line 1150, in emit
+    msg = self.format(record)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/logging/__init__.py", line 998, in format
+    return fmt.format(record)
+           ~~~~~~~~~~^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/logging/__init__.py", line 711, in format
+    record.message = record.getMessage()
+                     ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/logging/__init__.py", line 400, in getMessage
+    msg = msg % self.args
+          ~~~~^~~~~~~~~~~
+TypeError: not enough arguments for format string
+Call stack:
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/bin/streamlit", line 8, in <module>
+    sys.exit(main())
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/click/core.py", line 1485, in __call__
+    return self.main(*args, **kwargs)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/click/core.py", line 1406, in main
+    rv = self.invoke(ctx)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/click/core.py", line 1873, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/click/core.py", line 1269, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/click/core.py", line 824, in invoke
+    return callback(*args, **kwargs)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/web/cli.py", line 251, in main_run
+    _main_run(path_str, args, flag_options=kwargs)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/web/cli.py", line 308, in _main_run
+    bootstrap.run(file, is_hello, args, flag_options)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/web/bootstrap.py", line 332, in run
+    asyncio.run(main())
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 708, in run_until_complete
+    self.run_forever()
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 679, in run_forever
+    self._run_once()
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 2027, in _run_once
+    handle._run()
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/tornado/web.py", line 1848, in _execute
+    result = await result
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/tornado/websocket.py", line 277, in get
+    await self.ws_connection.accept_connection(self)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/tornado/websocket.py", line 890, in accept_connection
+    await self._accept_connection(handler)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/tornado/websocket.py", line 965, in _accept_connection
+    open_result = handler.open(*handler.open_args, **handler.open_kwargs)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/web/server/browser_websocket_handler.py", line 198, in open
+    self._session_id = self._runtime.connect_session(
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/runtime.py", line 405, in connect_session
+    session_id = self._session_mgr.connect_session(
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/websocket_session_manager.py", line 103, in connect_session
+    session = AppSession(
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/app_session.py", line 161, in __init__
+    self.register_file_watchers()
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/app_session.py", line 198, in register_file_watchers
+    self._local_sources_watcher = LocalSourcesWatcher(self._pages_manager)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/watcher/local_sources_watcher.py", line 76, in __init__
+    self.update_watched_pages()
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/watcher/local_sources_watcher.py", line 89, in update_watched_pages
+    self._register_watcher(
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/watcher/local_sources_watcher.py", line 195, in _register_watcher
+    _LOGGER.warning("Failed to watch file %s: %s", filepath, exc_info=ex)
+Message: 'Failed to watch file %s: %s'
+Arguments: ('/Users/aryananand/Desktop/Projects/heritage_doc_recomm/streamlit_app.py',)
+2025-11-30 14:59:26.349 Script compilation error
+Traceback (most recent call last):
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 571, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 68, in get_bytecode
+    with open_python_file(script_path) as f:
+         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/source_util.py", line 54, in open_python_file
+    return tokenize.open(filename)
+           ~~~~~~~~~~~~~^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/tokenize.py", line 447, in open
+    buffer = _builtin_open(filename, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/aryananand/Desktop/Projects/heritage_doc_recomm/streamlit_app.py'
+2025-11-30 14:59:26.350 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+--- Logging error ---
+Traceback (most recent call last):
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/watcher/util.py", line 176, in _do_with_retries
+    return orig_fn()
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/watcher/util.py", line 95, in <lambda>
+    lambda: os.stat(path).st_mtime,
+            ~~~~~~~^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/aryananand/Desktop/Projects/heritage_doc_recomm/streamlit_app.py'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/watcher/local_sources_watcher.py", line 183, in _register_watcher
+    watcher=PathWatcher(  # ty: ignore
+            ~~~~~~~~~~~^^^^^^^^^^^^^^^
+        filepath,
+        ^^^^^^^^^
+    ...<2 lines>...
+        allow_nonexistent=False,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    ),
+    ^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/watcher/polling_path_watcher.py", line 75, in __init__
+    self._modification_time = util.path_modification_time(
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        str(self._path), self._allow_nonexistent
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/watcher/util.py", line 94, in path_modification_time
+    return _do_with_retries(
+        lambda: os.stat(path).st_mtime,
+        (FileNotFoundError, PermissionError),
+        path,
+    )
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/watcher/util.py", line 179, in _do_with_retries
+    raise StreamlitMaxRetriesError(
+        f"Unable to access file or folder: {path}"
+    ) from ex
+streamlit.errors.StreamlitMaxRetriesError: Unable to access file or folder: /Users/aryananand/Desktop/Projects/heritage_doc_recomm/streamlit_app.py
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/logging/__init__.py", line 1150, in emit
+    msg = self.format(record)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/logging/__init__.py", line 998, in format
+    return fmt.format(record)
+           ~~~~~~~~~~^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/logging/__init__.py", line 711, in format
+    record.message = record.getMessage()
+                     ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/logging/__init__.py", line 400, in getMessage
+    msg = msg % self.args
+          ~~~~^~~~~~~~~~~
+TypeError: not enough arguments for format string
+Call stack:
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/bin/streamlit", line 8, in <module>
+    sys.exit(main())
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/click/core.py", line 1485, in __call__
+    return self.main(*args, **kwargs)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/click/core.py", line 1406, in main
+    rv = self.invoke(ctx)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/click/core.py", line 1873, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/click/core.py", line 1269, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/click/core.py", line 824, in invoke
+    return callback(*args, **kwargs)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/web/cli.py", line 251, in main_run
+    _main_run(path_str, args, flag_options=kwargs)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/web/cli.py", line 308, in _main_run
+    bootstrap.run(file, is_hello, args, flag_options)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/web/bootstrap.py", line 332, in run
+    asyncio.run(main())
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 708, in run_until_complete
+    self.run_forever()
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 679, in run_forever
+    self._run_once()
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 2027, in _run_once
+    handle._run()
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/tornado/web.py", line 1848, in _execute
+    result = await result
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/tornado/websocket.py", line 277, in get
+    await self.ws_connection.accept_connection(self)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/tornado/websocket.py", line 890, in accept_connection
+    await self._accept_connection(handler)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/tornado/websocket.py", line 965, in _accept_connection
+    open_result = handler.open(*handler.open_args, **handler.open_kwargs)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/web/server/browser_websocket_handler.py", line 198, in open
+    self._session_id = self._runtime.connect_session(
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/runtime.py", line 405, in connect_session
+    session_id = self._session_mgr.connect_session(
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/websocket_session_manager.py", line 103, in connect_session
+    session = AppSession(
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/app_session.py", line 161, in __init__
+    self.register_file_watchers()
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/app_session.py", line 198, in register_file_watchers
+    self._local_sources_watcher = LocalSourcesWatcher(self._pages_manager)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/watcher/local_sources_watcher.py", line 76, in __init__
+    self.update_watched_pages()
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/watcher/local_sources_watcher.py", line 89, in update_watched_pages
+    self._register_watcher(
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/watcher/local_sources_watcher.py", line 195, in _register_watcher
+    _LOGGER.warning("Failed to watch file %s: %s", filepath, exc_info=ex)
+Message: 'Failed to watch file %s: %s'
+Arguments: ('/Users/aryananand/Desktop/Projects/heritage_doc_recomm/streamlit_app.py',)
+2025-11-30 14:59:30.929 Script compilation error
+Traceback (most recent call last):
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 571, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 68, in get_bytecode
+    with open_python_file(script_path) as f:
+         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/aryananand/Desktop/Projects/heritage_doc_recomm/venv/lib/python3.13/site-packages/streamlit/source_util.py", line 54, in open_python_file
+    return tokenize.open(filename)
+           ~~~~~~~~~~~~~^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.0_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/tokenize.py", line 447, in open
+    buffer = _builtin_open(filename, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/aryananand/Desktop/Projects/heritage_doc_recomm/streamlit_app.py'
+2025-11-30 14:59:30.931 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+Loading spaCy model...
+Loading embedding model: all-MiniLM-L6-v2...
+Query processor initialized successfully!
+Loading knowledge graph...
+Loading spaCy model...
+Loading embedding model: all-MiniLM-L6-v2...
+Query processor initialized successfully!
+Loading knowledge graph...
+Loading spaCy model...
+Loading embedding model: all-MiniLM-L6-v2...
+Query processor initialized successfully!
+Loading knowledge graph...
+Loading SimRank matrix...
+Loading embeddings...
+Loading metadata...
+Loading FAISS index...
+Loading Horn's Index weights...
+Recommender initialized with 369 documents!
+Weights: SimRank=0.4, Horn=0.3, Embedding=0.3
+  Stopping...

@@ -1,0 +1,1029 @@
+/**
+ * Heritage Document Recommender - Modern CSS Framework
+ * Professional Color Palette with High Contrast:
+ * - Primary: #2563eb (Deep Blue)
+ * - Secondary: #475569 (Slate Gray)
+ * - Accent: #0d9488 (Teal)
+ * - Background: #f8fafc (Light Gray)
+ * - Text: #1e293b (Dark Slate)
+ * - Success: #10b981 (Green)
+ * - Warning: #f59e0b (Amber)
+ * - Error: #ef4444 (Red)
+ *
+ * Design: Clean, Modern, Accessible
+ */
+
+/* ===== FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ===== GLOBAL RESET & BASE ===== */
+html, body, [class*="css"] {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #f1f5f9;
+    background-color: #0f172a;
+}
+
+* {
+    transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+/* ===== HIDE STREAMLIT BRANDING ===== */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+/* ===== OVERRIDE STREAMLIT DEFAULT WHITE BACKGROUNDS ===== */
+.stDataFrame, .stDataFrame > div {
+    background-color: #1e293b !important;
+    color: #f1f5f9 !important;
+}
+
+.stMarkdown {
+    color: #f1f5f9;
+}
+
+.stMarkdown p, .stMarkdown li, .stMarkdown ul, .stMarkdown ol {
+    color: #f1f5f9;
+}
+
+.stMarkdown h1, .stMarkdown h2, .stMarkdown h3, .stMarkdown h4, .stMarkdown h5, .stMarkdown h6 {
+    color: #f1f5f9;
+}
+
+.stSelectbox label, .stTextInput label, .stNumberInput label, .stTextArea label {
+    color: #f1f5f9;
+}
+
+.stRadio label, .stCheckbox label {
+    color: #f1f5f9;
+}
+
+[data-testid="stMarkdownContainer"] {
+    color: #f1f5f9;
+}
+
+/* Streamlit dataframe styling */
+.dataframe {
+    background-color: #1e293b !important;
+    color: #f1f5f9 !important;
+}
+
+.dataframe thead th {
+    background-color: #334155 !important;
+    color: #f1f5f9 !important;
+}
+
+.dataframe tbody tr {
+    background-color: #1e293b !important;
+    color: #f1f5f9 !important;
+}
+
+.dataframe tbody tr:nth-child(even) {
+    background-color: #334155 !important;
+}
+
+/* Streamlit info/warning/error/success messages */
+.stAlert {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+}
+
+.stAlert p, .stAlert div, .stAlert span {
+    color: #f1f5f9 !important;
+}
+
+.stAlert strong, .stAlert b {
+    color: #f1f5f9 !important;
+}
+
+/* Streamlit code blocks */
+.stCodeBlock {
+    background-color: #0f172a !important;
+    color: #f1f5f9 !important;
+}
+
+code {
+    background-color: #334155 !important;
+    color: #f1f5f9 !important;
+}
+
+/* All text elements should be light colored */
+p, span, div, h1, h2, h3, h4, h5, h6, li, ul, ol, td, th, label {
+    color: #f1f5f9 !important;
+}
+
+/* Links */
+a {
+    color: #60a5fa !important;
+}
+
+a:hover {
+    color: #93c5fd !important;
+}
+
+/* Streamlit specific text elements */
+.stMarkdown p, .stMarkdown span, .stMarkdown div, .stMarkdown li {
+    color: #f1f5f9 !important;
+}
+
+/* Sidebar text */
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] span,
+[data-testid="stSidebar"] div,
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3,
+[data-testid="stSidebar"] h4,
+[data-testid="stSidebar"] h5,
+[data-testid="stSidebar"] h6 {
+    color: #f1f5f9 !important;
+}
+
+/* Radio buttons and checkboxes text */
+.stRadio label,
+.stCheckbox label,
+.stSelectbox label {
+    color: #f1f5f9 !important;
+}
+
+/* Empty containers - hide them */
+.element-container:empty,
+[data-testid="stVerticalBlock"]:empty {
+    display: none !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Override Streamlit default text colors globally */
+.stApp * {
+    color: #f1f5f9 !important;
+}
+
+/* But allow specific overrides for colored elements */
+.stButton > button,
+.stTabs [aria-selected="true"],
+.badge-primary,
+.badge-accent,
+.badge-gold {
+    color: white !important;
+}
+
+/* Metric values can have accent colors */
+.stMetric [data-testid="stMetricValue"] {
+    color: #f1f5f9 !important;
+}
+
+/* Info box text colors (already set, but ensure) */
+.info-box, .success-box, .warning-box, .error-box {
+    color: inherit !important;
+}
+
+/* Ensure all Streamlit widget labels are visible */
+.stSelectbox label,
+.stTextInput label,
+.stNumberInput label,
+.stTextArea label,
+.stSlider label,
+.stRadio label,
+.stCheckbox label,
+.stMultiselect label {
+    color: #f1f5f9 !important;
+}
+
+/* Streamlit metric labels */
+.stMetric label {
+    color: #94a3b8 !important;
+}
+
+/* Streamlit metric delta */
+.stMetric [data-testid="stMetricDelta"] {
+    color: #94a3b8 !important;
+}
+
+/* ===== APP BACKGROUND ===== */
+.stApp {
+    background: #0f172a;
+    background-attachment: fixed;
+    color: #f1f5f9;
+}
+
+.main .block-container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    max-width: 1400px;
+}
+
+/* ===== BUTTONS ===== */
+.stButton > button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.stButton > button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+}
+
+.stButton > button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Primary button variant */
+.stButton > button[kind="primary"] {
+    background: #2563eb;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+.stButton > button[kind="primary"]:hover {
+    background: #1d4ed8;
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+}
+
+/* ===== CARDS & CONTAINERS ===== */
+.element-container {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+    color: #f1f5f9;
+}
+
+/* Modern Glass Card */
+.glass-card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+    color: #f1f5f9;
+}
+
+/* Result Card */
+.result-card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 16px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    border-left: 4px solid #2563eb;
+    transition: all 0.2s ease;
+    border: 1px solid #334155;
+    color: #f1f5f9;
+}
+
+.result-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    border-left-color: #0d9488;
+    background: #334155;
+}
+
+/* Metric Card */
+.metric-card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 28px;
+    text-align: center;
+    border: 2px solid #334155;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    color: #f1f5f9;
+}
+
+.metric-card:hover {
+    transform: translateY(-2px);
+    border-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    background: #334155;
+}
+
+/* ===== INPUT FIELDS ===== */
+.stTextInput > div > div > input,
+.stNumberInput > div > div > input,
+.stTextArea > div > div > textarea {
+    border: 1px solid #475569;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 15px;
+    background: #1e293b;
+    color: #f1f5f9;
+    transition: all 0.2s ease;
+}
+
+.stTextInput > div > div > input:focus,
+.stNumberInput > div > div > input:focus,
+.stTextArea > div > div > textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    outline: none;
+    background: #334155;
+}
+
+.stTextInput > div > div > input::placeholder,
+.stTextArea > div > div > textarea::placeholder {
+    color: #64748b;
+    opacity: 1;
+}
+
+/* ===== SELECT BOXES ===== */
+.stSelectbox > div > div,
+.stMultiSelect > div > div {
+    border: 1px solid #475569;
+    border-radius: 8px;
+    background: #1e293b;
+    transition: all 0.2s ease;
+    color: #f1f5f9;
+}
+
+.stSelectbox > div > div:hover,
+.stMultiSelect > div > div:hover {
+    border-color: #64748b;
+    background: #334155;
+}
+
+.stSelectbox > div > div:focus-within,
+.stMultiSelect > div > div:focus-within {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    background: #334155;
+}
+
+/* ===== SLIDERS ===== */
+.stSlider > div > div > div > div {
+    background: #334155;
+    height: 6px;
+    border-radius: 3px;
+}
+
+.stSlider > div > div > div > div > div {
+    background: #1e293b;
+    border: 2px solid #2563eb;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
+}
+
+.stSlider > div > div > div > div > div:hover {
+    transform: scale(1.1);
+}
+
+/* ===== METRICS ===== */
+.stMetric {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    border-left: 4px solid #2563eb;
+    border: 1px solid #334155;
+}
+
+.stMetric label {
+    color: #94a3b8;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stMetric [data-testid="stMetricValue"] {
+    font-size: 32px;
+    font-weight: 700;
+    color: #f1f5f9;
+}
+
+.stMetric [data-testid="stMetricDelta"] {
+    font-size: 14px;
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+/* ===== EXPANDERS ===== */
+.streamlit-expanderHeader {
+    background: #1e293b;
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-weight: 600;
+    color: #f1f5f9;
+    border: 1px solid #334155;
+    transition: all 0.2s ease;
+}
+
+.streamlit-expanderHeader:hover {
+    background: #334155;
+    border-color: #2563eb;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+.streamlit-expanderContent {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    padding: 20px;
+    color: #f1f5f9;
+}
+
+/* ===== TABS ===== */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+    background: #1e293b;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+}
+
+.stTabs [data-baseweb="tab"] {
+    border-radius: 6px;
+    padding: 12px 20px;
+    font-weight: 600;
+    color: #94a3b8;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    background: #334155;
+    color: #f1f5f9;
+}
+
+.stTabs [aria-selected="true"] {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
+}
+
+/* ===== PROGRESS BARS ===== */
+.stProgress > div > div {
+    background: #2563eb;
+    border-radius: 4px;
+    height: 8px;
+}
+
+/* ===== BADGES / TAGS ===== */
+.badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+.badge-primary {
+    background: #2563eb;
+    color: white;
+    border: 1px solid #2563eb;
+}
+
+.badge-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.badge-secondary {
+    background: #334155;
+    color: #cbd5e1;
+    border: 1px solid #475569;
+}
+
+.badge-secondary:hover {
+    background: #475569;
+    color: #f1f5f9;
+}
+
+.badge-accent {
+    background: #0d9488;
+    color: white;
+    border: 1px solid #0d9488;
+}
+
+.badge-accent:hover {
+    background: #0f766e;
+    transform: translateY(-1px);
+}
+
+.badge-gold {
+    background: #f59e0b;
+    color: white;
+    border: 1px solid #f59e0b;
+}
+
+.badge-gold:hover {
+    background: #d97706;
+    transform: translateY(-1px);
+}
+
+/* ===== SCORE VISUALIZATION ===== */
+.score-container {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin: 16px 0;
+}
+
+.score-label {
+    min-width: 100px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #f1f5f9;
+}
+
+.score-bar {
+    height: 10px;
+    background: #334155;
+    border-radius: 5px;
+    overflow: hidden;
+    flex: 1;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.score-fill {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.score-fill-simrank {
+    background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%);
+}
+
+.score-fill-horn {
+    background: linear-gradient(90deg, #0d9488 0%, #0f766e 100%);
+}
+
+.score-fill-embedding {
+    background: linear-gradient(90deg, #475569 0%, #334155 100%);
+}
+
+.score-fill-hybrid {
+    background: linear-gradient(90deg, #2563eb 0%, #0d9488 50%, #475569 100%);
+}
+
+.score-value {
+    min-width: 60px;
+    text-align: right;
+    font-weight: 700;
+    font-size: 14px;
+    color: #f1f5f9;
+}
+
+/* ===== KG PATH VISUALIZATION ===== */
+.kg-path {
+    background: #1e293b;
+    border-left: 4px solid #2563eb;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.8;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+    color: #f1f5f9;
+    font-weight: 500;
+    border: 1px solid #334155;
+}
+
+.kg-path:hover {
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+    transform: translateX(3px);
+    border-left-color: #0d9488;
+    background: #334155;
+}
+
+.kg-path-node {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin: 2px;
+    font-weight: 600;
+}
+
+/* ===== SIDEBAR ===== */
+[data-testid="stSidebar"] {
+    background: #1e293b;
+    border-right: 1px solid #334155;
+    color: #f1f5f9;
+}
+
+[data-testid="stSidebar"] .css-1d391kg {
+    padding-top: 2rem;
+}
+
+/* Fix sidebar collapse button visibility - ALWAYS VISIBLE */
+/* Target the Streamlit sidebar toggle button */
+.stApp button[kind="header"],
+.stApp [data-testid="baseButton-header"],
+.stApp [data-testid="stSidebar"] button[kind="header"],
+button[aria-label*="Close"],
+button[aria-label*="Open"],
+button[aria-label*="sidebar"] {
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+    border: 2px solid #60a5fa !important;
+    z-index: 99999 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+    position: fixed !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4) !important;
+}
+
+button[kind="header"]:hover,
+[data-testid="baseButton-header"]:hover,
+button[aria-label*="Close"]:hover,
+button[aria-label*="Open"]:hover {
+    background-color: #1d4ed8 !important;
+    border-color: #93c5fd !important;
+    transform: scale(1.05) !important;
+}
+
+/* Sidebar header area */
+[data-testid="stHeader"] {
+    z-index: 100000 !important;
+    background-color: transparent !important;
+}
+
+[data-testid="stHeader"] button {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+}
+
+/* Sidebar buttons */
+[data-testid="stSidebar"] .stButton > button {
+    width: 100%;
+    background: #1e293b;
+    color: #f1f5f9;
+    border: 1px solid #334155;
+    box-shadow: none;
+}
+
+[data-testid="stSidebar"] .stButton > button:hover {
+    background: #334155;
+    color: #60a5fa;
+    border-color: #2563eb;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.5s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    animation: slideInRight 0.5s ease-out;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+}
+
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.shimmer {
+    background: linear-gradient(90deg, #f0f0f0 0px, #f8f8f8 40px, #f0f0f0 80px);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* ===== LOADING SPINNER ===== */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    border: 4px solid #334155;
+    border-top-color: #2563eb;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+/* ===== TOOLTIPS ===== */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background: #333;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px 14px;
+    position: absolute;
+    z-index: 1000;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ===== INFO BOXES ===== */
+.info-box {
+    background: #1e3a5f;
+    border-left: 4px solid #2563eb;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 16px 0;
+    font-size: 15px;
+    color: #e0e7ff;
+    font-weight: 500;
+    border: 1px solid #3b82f6;
+}
+
+.success-box {
+    background: #064e3b;
+    border-left: 4px solid #10b981;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 16px 0;
+    font-size: 15px;
+    color: #a7f3d0;
+    font-weight: 600;
+    border: 1px solid #10b981;
+}
+
+.warning-box {
+    background: #78350f;
+    border-left: 4px solid #f59e0b;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 16px 0;
+    font-size: 15px;
+    color: #fde68a;
+    font-weight: 500;
+    border: 1px solid #f59e0b;
+}
+
+.error-box {
+    background: #7f1d1d;
+    border-left: 4px solid #ef4444;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 16px 0;
+    font-size: 15px;
+    color: #fecaca;
+    font-weight: 700;
+    border: 1px solid #ef4444;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #2563eb 0%, #0d9488 100%);
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    color: white;
+    margin-top: 16px;
+    font-weight: 600;
+    opacity: 0.95;
+}
+
+.hero-description {
+    font-size: 1rem;
+    color: white;
+    margin-top: 8px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .stButton > button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .result-card {
+        padding: 16px;
+    }
+
+    .stMetric [data-testid="stMetricValue"] {
+        font-size: 24px;
+    }
+
+    .score-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .score-bar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main .block-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hero-section {
+        padding: 40px 15px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e293b;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 5px;
+    border: 2px solid #1e293b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+/* ===== DIVIDERS ===== */
+hr {
+    margin: 2.5rem 0;
+    border: none;
+    height: 1px;
+    background: #334155;
+    border-radius: 1px;
+}
+
+/* ===== SECTION HEADERS ===== */
+.section-header {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #334155;
+}
+
+/* ===== FEATURE CARDS ===== */
+.feature-card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+    border-top: 4px solid #2563eb;
+    border: 1px solid #334155;
+    color: #f1f5f9;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    border-top-color: #0d9488;
+    background: #334155;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin-bottom: 12px;
+}
+
+.feature-description {
+    color: #cbd5e1;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 500;
+}

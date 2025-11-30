@@ -30,8 +30,8 @@ def create_score_breakdown_chart(rec, weights):
     ]
 
     fig = go.Figure(data=[
-        go.Bar(name='Raw Score', x=components, y=scores, marker_color='lightblue'),
-        go.Bar(name='Weighted Score', x=components, y=weighted_scores, marker_color='darkblue')
+        go.Bar(name='Raw Score', x=components, y=scores, marker_color='#93c5fd'),
+        go.Bar(name='Weighted Score', x=components, y=weighted_scores, marker_color='#2563eb')
     ])
 
     fig.update_layout(
@@ -67,21 +67,21 @@ def create_comparison_chart(recommendations, top_n=10):
         name='SimRank',
         x=df['Document'],
         y=df['SimRank'],
-        marker_color='#1f77b4'
+        marker_color='#2563eb'
     ))
 
     fig.add_trace(go.Bar(
         name="Horn's Index",
         x=df['Document'],
         y=df["Horn's Index"],
-        marker_color='#ff7f0e'
+        marker_color='#0d9488'
     ))
 
     fig.add_trace(go.Bar(
         name='Embedding',
         x=df['Document'],
         y=df['Embedding'],
-        marker_color='#2ca02c'
+        marker_color='#475569'
     ))
 
     fig.update_layout(
@@ -101,7 +101,7 @@ def create_hybrid_score_distribution(recommendations):
     """Create histogram of hybrid scores."""
     scores = [rec['hybrid_score'] for rec in recommendations]
 
-    fig = go.Figure(data=[go.Histogram(x=scores, nbinsx=20, marker_color='#1f77b4')])
+    fig = go.Figure(data=[go.Histogram(x=scores, nbinsx=20, marker_color='#2563eb')])
 
     fig.update_layout(
         title="Hybrid Score Distribution",

@@ -3,7 +3,9 @@ import sys
 from pathlib import Path
 import plotly.graph_objects as go
 
-sys.path.append(str(Path(__file__).parent.parent.parent / '6_query_system'))
+# Get project root (4 levels up from this file)
+PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
+sys.path.append(str(PROJECT_ROOT / 'src' / '6_query_system'))
 
 from query_processor import QueryProcessor
 from recommender import HeritageRecommender
@@ -13,11 +15,24 @@ from recommender import HeritageRecommender
 def load_system():
     """Load system (cached)."""
     try:
-        processor = QueryProcessor()
-        recommender = HeritageRecommender()
-        return processor, recommender, None
+        # Change to project root temporarily for file access
+        import os
+        original_cwd = os.getcwd()
+        
+        try:
+            # Try to change to project root if files not found in current dir
+            if not Path('knowledge_graph/heritage_kg.gpickle').exists():
+                os.chdir(PROJECT_ROOT)
+            
+            processor = QueryProcessor()
+            recommender = HeritageRecommender()
+            return processor, recommender, None
+        finally:
+            os.chdir(original_cwd)
     except Exception as e:
-        return None, None, str(e)
+        import traceback
+        error_msg = f"{str(e)}\n\nTraceback:\n{traceback.format_exc()}"
+        return None, None, error_msg
 
 
 def create_score_gauge(score, title, color):
@@ -25,20 +40,21 @@ def create_score_gauge(score, title, color):
     fig = go.Figure(go.Indicator(
         mode="gauge+number",
         value=score,
-        title={'text': title, 'font': {'size': 14}},
+        title={'text': title, 'font': {'size': 14, 'color': '#f1f5f9'}},
+        number={'font': {'size': 20, 'color': '#f1f5f9'}},
         gauge={
-            'axis': {'range': [0, 1], 'tickwidth': 1},
+            'axis': {'range': [0, 1], 'tickwidth': 1, 'tickcolor': '#94a3b8'},
             'bar': {'color': color},
-            'bgcolor': "white",
+            'bgcolor': "#1e293b",
             'borderwidth': 2,
-            'bordercolor': "gray",
+            'bordercolor': "#334155",
             'steps': [
-                {'range': [0, 0.33], 'color': 'rgba(255,0,0,0.1)'},
-                {'range': [0.33, 0.67], 'color': 'rgba(255,255,0,0.1)'},
-                {'range': [0.67, 1], 'color': 'rgba(0,255,0,0.1)'}
+                {'range': [0, 0.33], 'color': 'rgba(239, 68, 68, 0.2)'},
+                {'range': [0.33, 0.67], 'color': 'rgba(245, 158, 11, 0.2)'},
+                {'range': [0.67, 1], 'color': 'rgba(16, 185, 129, 0.2)'}
             ],
             'threshold': {
-                'line': {'color': "red", 'width': 4},
+                'line': {'color': color, 'width': 4},
                 'thickness': 0.75,
                 'value': 0.9
             }
@@ -47,7 +63,10 @@ def create_score_gauge(score, title, color):
     
     fig.update_layout(
         height=200,
-        margin=dict(l=20, r=20, t=40, b=20)
+        margin=dict(l=20, r=20, t=40, b=20),
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)',
+        font={'family': 'Inter', 'color': '#f1f5f9'}
     )
     
     return fig
@@ -71,13 +90,18 @@ def render():
     # Load system
     processor, recommender, error = load_system()
     
-    if error:
+    if error or processor is None or recommender is None:
         st.error(f"""
-        **🚨 System Error:** {error}
+        **🚨 System Error: Cannot Load Components**
+        
+        {error if error else "Failed to initialize system components"}
         
         **Required Setup:**
-        1. Run Horn's Index: `python src/4_knowledge_graph/horn_index.py`
-        2. Verify KG exists: `knowledge_graph/heritage_kg.gpickle`
+        1. Ensure knowledge graph exists: `knowledge_graph/heritage_kg.gpickle`
+        2. Run Horn's Index: `python src/4_knowledge_graph/horn_index.py`
+        3. Verify all required files are present
+        
+        **Please check the error message above and ensure all dependencies are installed.**
         """)
         return
     
@@ -125,6 +149,10 @@ def render():
     st.markdown("---")
     
     # ========== ADVANCED OPTIONS ==========
+    simrank_weight = 0.4
+    horn_weight = 0.3
+    embedding_weight = 0.3
+    
     with st.expander("⚙️ Advanced Options", expanded=False):
         tab1, tab2 = st.tabs(["🎚️ Score Weights", "🔍 Filters"])
         
@@ -194,8 +222,12 @@ def render():
     
     if query_text:
         # ========== QUERY PARSING ==========
-        with st.spinner("🔍 Parsing your query..."):
-            parsed_query = processor.parse_query(query_text)
+        try:
+            with st.spinner("🔍 Parsing your query..."):
+                parsed_query = processor.parse_query(query_text)
+        except Exception as e:
+            st.error(f"❌ Error parsing query: {str(e)}")
+            return
         
         # Display parsed attributes
         st.markdown("---")
@@ -204,53 +236,85 @@ def render():
         attr_col1, attr_col2, attr_col3, attr_col4 = st.columns(4)
         
         with attr_col1:
-            if parsed_query['heritage_types']:
+            if parsed_query.get('heritage_types'):
                 st.markdown(f"""
                 <div class='result-card animated-card'>
                     <strong>🏛️ Heritage Types</strong><br>
-                    {', '.join(parsed_query['heritage_types'])}
+                    {', '.join(parsed_query['heritage_types']) if parsed_query['heritage_types'] else 'None detected'}
+                </div>
+                """, unsafe_allow_html=True)
+            else:
+                st.markdown("""
+                <div class='result-card animated-card'>
+                    <strong>🏛️ Heritage Types</strong><br>
+                    None detected
                 </div>
                 """, unsafe_allow_html=True)
         
         with attr_col2:
-            if parsed_query['domains']:
+            if parsed_query.get('domains'):
                 st.markdown(f"""
                 <div class='result-card animated-card'>
                     <strong>🎯 Domains</strong><br>
-                    {', '.join(parsed_query['domains'])}
+                    {', '.join(parsed_query['domains']) if parsed_query['domains'] else 'None detected'}
+                </div>
+                """, unsafe_allow_html=True)
+            else:
+                st.markdown("""
+                <div class='result-card animated-card'>
+                    <strong>🎯 Domains</strong><br>
+                    None detected
                 </div>
                 """, unsafe_allow_html=True)
         
         with attr_col3:
-            if parsed_query['time_period']:
+            if parsed_query.get('time_period'):
                 st.markdown(f"""
                 <div class='result-card animated-card'>
                     <strong>⏳ Period</strong><br>
                     {parsed_query['time_period'].title()}
                 </div>
                 """, unsafe_allow_html=True)
+            else:
+                st.markdown("""
+                <div class='result-card animated-card'>
+                    <strong>⏳ Period</strong><br>
+                    Not specified
+                </div>
+                """, unsafe_allow_html=True)
         
         with attr_col4:
-            if parsed_query['region']:
+            if parsed_query.get('region'):
                 st.markdown(f"""
                 <div class='result-card animated-card'>
                     <strong>📍 Region</strong><br>
                     {parsed_query['region'].title()}
                 </div>
                 """, unsafe_allow_html=True)
+            else:
+                st.markdown("""
+                <div class='result-card animated-card'>
+                    <strong>📍 Region</strong><br>
+                    Not specified
+                </div>
+                """, unsafe_allow_html=True)
         
         # ========== RECOMMENDATIONS ==========
         st.markdown("---")
         
-        with st.spinner(f"🤖 Finding top-{top_k} recommendations..."):
-            # Update weights if customized
-            if 'simrank_weight' in locals():
+        try:
+            with st.spinner(f"🤖 Finding top-{top_k} recommendations..."):
+                # Update weights if customized
                 total = simrank_weight + horn_weight + embedding_weight
-                recommender.simrank_weight = simrank_weight / total
-                recommender.horn_weight = horn_weight / total
-                recommender.embedding_weight = embedding_weight / total
-            
-            recommendations = recommender.recommend(parsed_query, top_k=top_k, explain=True)
+                if total > 0:
+                    recommender.simrank_weight = simrank_weight / total
+                    recommender.horn_weight = horn_weight / total
+                    recommender.embedding_weight = embedding_weight / total
+                
+                recommendations = recommender.recommend(parsed_query, top_k=top_k, explain=True)
+        except Exception as e:
+            st.error(f"❌ Error getting recommendations: {str(e)}")
+            return
         
         # Store in session
         st.session_state.update({
@@ -260,6 +324,10 @@ def render():
             'top_k': top_k
         })
         
+        if not recommendations or len(recommendations) == 0:
+            st.warning("⚠️ No recommendations found for this query. Try a different search term.")
+            return
+        
         # Success message
         st.success(f"✅ Found {len(recommendations)} relevant documents!")
         
@@ -267,63 +335,86 @@ def render():
         st.markdown("## 📚 Top Recommendations")
         
         for i, rec in enumerate(recommendations[:5], 1):  # Show top 5
+            title = rec.get('title', 'Untitled Document')
+            score = rec.get('hybrid_score', 0.0)
+            
             with st.expander(
-                f"**#{i}** {rec['title'][:80]}{'...' if len(rec['title']) > 80 else ''} — Score: {rec['hybrid_score']:.4f}",
+                f"**#{i}** {title[:80]}{'...' if len(title) > 80 else ''} — Score: {score:.4f}",
                 expanded=(i <= 2)
             ):
                 # Metadata row
                 meta_cols = st.columns(4)
                 
                 with meta_cols[0]:
-                    if rec['metadata'].get('heritage_type'):
-                        st.markdown(f"🏛️ **Type:** {rec['metadata']['heritage_type']}")
+                    heritage_type = rec.get('metadata', {}).get('heritage_type', '')
+                    if heritage_type:
+                        st.markdown(f"🏛️ **Type:** {heritage_type}")
+                    else:
+                        st.markdown("🏛️ **Type:** N/A")
                 
                 with meta_cols[1]:
-                    if rec['metadata'].get('domain'):
-                        st.markdown(f"🎯 **Domain:** {rec['metadata']['domain']}")
+                    domain = rec.get('metadata', {}).get('domain', '')
+                    if domain:
+                        st.markdown(f"🎯 **Domain:** {domain}")
+                    else:
+                        st.markdown("🎯 **Domain:** N/A")
                 
                 with meta_cols[2]:
-                    if rec['metadata'].get('time_period'):
-                        st.markdown(f"⏳ **Period:** {rec['metadata']['time_period']}")
+                    time_period = rec.get('metadata', {}).get('time_period', '')
+                    if time_period:
+                        st.markdown(f"⏳ **Period:** {time_period}")
+                    else:
+                        st.markdown("⏳ **Period:** N/A")
                 
                 with meta_cols[3]:
-                    if rec['metadata'].get('region'):
-                        st.markdown(f"📍 **Region:** {rec['metadata']['region']}")
+                    region = rec.get('metadata', {}).get('region', '')
+                    if region:
+                        st.markdown(f"📍 **Region:** {region}")
+                    else:
+                        st.markdown("📍 **Region:** N/A")
                 
                 # Score breakdown with gauges
                 st.markdown("**Score Components:**")
                 
+                component_scores = rec.get('component_scores', {})
+                
                 gauge_cols = st.columns(3)
                 
                 with gauge_cols[0]:
+                    simrank_score = component_scores.get('simrank', 0.0)
                     fig1 = create_score_gauge(
-                        rec['component_scores']['simrank'],
+                        simrank_score,
                         "SimRank",
-                        "#667eea"
+                        "#2563eb"
                     )
                     st.plotly_chart(fig1, use_container_width=True)
                 
                 with gauge_cols[1]:
+                    horn_score = component_scores.get('horn', 0.0)
                     fig2 = create_score_gauge(
-                        rec['component_scores']['horn'],
+                        horn_score,
                         "Horn's Index",
-                        "#764ba2"
+                        "#0d9488"
                     )
                     st.plotly_chart(fig2, use_container_width=True)
                 
                 with gauge_cols[2]:
+                    embedding_score = component_scores.get('embedding', 0.0)
                     fig3 = create_score_gauge(
-                        rec['component_scores']['embedding'],
+                        embedding_score,
                         "Embedding",
-                        "#f093fb"
+                        "#475569"
                     )
                     st.plotly_chart(fig3, use_container_width=True)
                 
                 # KG explanations
-                if rec.get('kg_explanations'):
+                kg_explanations = rec.get('kg_explanations', [])
+                if kg_explanations:
                     st.markdown("**🕸️ Why Recommended (Knowledge Graph):**")
-                    for path in rec['kg_explanations'][:3]:
+                    for path in kg_explanations[:3]:
                         st.markdown(f'<div class="kg-path">{path}</div>', unsafe_allow_html=True)
+                else:
+                    st.info("No knowledge graph explanations available for this recommendation.")
         
         # ========== NAVIGATION ==========
         st.markdown("---")

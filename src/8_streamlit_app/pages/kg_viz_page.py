@@ -20,7 +20,17 @@ import tempfile
 @st.cache_resource
 def load_kg():
     """Load knowledge graph (cached)."""
-    kg_path = Path('knowledge_graph/heritage_kg.gpickle')
+    # Get project root (4 levels up from this file)
+    PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
+    kg_path = PROJECT_ROOT / 'knowledge_graph' / 'heritage_kg.gpickle'
+    
+    if not kg_path.exists():
+        raise FileNotFoundError(
+            f"Knowledge graph file not found at: {kg_path.absolute()}\n\n"
+            f"To generate the knowledge graph, run:\n"
+            f"  python src/4_knowledge_graph/5_build_knowledge_graph.py"
+        )
+    
     with open(kg_path, 'rb') as f:
         G = pickle.load(f)
     return G
@@ -48,8 +58,8 @@ def create_pyvis_network(G_sub, layout='spring', physics=True):
     net = Network(
         height='700px',
         width='100%',
-        bgcolor='#ffffff',
-        font_color='#000000',
+        bgcolor='#0f172a',
+        font_color='#f1f5f9',
         notebook=False,
         directed=G_sub.is_directed()
     )
@@ -133,8 +143,22 @@ def render():
     # Load KG
     try:
         G = load_kg()
+    except FileNotFoundError as e:
+        st.error(f"""
+        **🚨 Knowledge Graph File Not Found**
+        
+        The knowledge graph file is required for visualization.
+        
+        **To generate the knowledge graph:**
+        1. Run: `python src/4_knowledge_graph/horn_index.py`
+        2. This will create: `knowledge_graph/heritage_kg.gpickle`
+        3. Refresh this page after generation
+        
+        **File expected at:** `knowledge_graph/heritage_kg.gpickle`
+        """)
+        return
     except Exception as e:
-        st.error(f"Failed to load knowledge graph: {str(e)}")
+        st.error(f"**Failed to load knowledge graph:** {str(e)}")
         return
 
     # KG Statistics
