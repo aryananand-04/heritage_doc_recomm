@@ -121,6 +121,24 @@ class QueryProcessor:
             if domain in query_lower:
                 parsed['domains'].add(domain)
 
+        # Infer domains from heritage types and architectural styles
+        if 'temple' in parsed['heritage_types'] or 'mosque' in parsed['heritage_types'] or \
+           'church' in parsed['heritage_types'] or 'monastery' in parsed['heritage_types'] or \
+           'stupa' in parsed['heritage_types'] or 'shrine' in parsed['heritage_types'] or \
+           'cathedral' in parsed['heritage_types']:
+            parsed['domains'].add('religious')
+
+        if 'fort' in parsed['heritage_types'] or 'fortress' in parsed['heritage_types'] or \
+           'citadel' in parsed['heritage_types'] or 'castle' in parsed['heritage_types']:
+            parsed['domains'].add('military')
+
+        if 'palace' in parsed['heritage_types'] or 'haveli' in parsed['heritage_types'] or \
+           'mansion' in parsed['heritage_types']:
+            parsed['domains'].add('royal')
+
+        if 'architecture' in parsed['heritage_types'] or parsed['architectural_styles']:
+            parsed['domains'].add('architectural')
+
         # Extract time period
         for period, keywords in self.TIME_PERIODS.items():
             for keyword in keywords:

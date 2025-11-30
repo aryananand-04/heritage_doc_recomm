@@ -13,9 +13,13 @@ import numpy as np
 import pickle
 import json
 import faiss
+import logging
 from pathlib import Path
-from typing import Dict, List, Tuple, Set
+from typing import Dict, List, Tuple, Set, Optional
 import networkx as nx
+
+# Configure logging
+logger = logging.getLogger(__name__)
 
 
 class HeritageRecommender:
@@ -31,7 +35,8 @@ class HeritageRecommender:
         horn_weights_path: str = 'knowledge_graph/horn_weights.json',
         simrank_weight: float = 0.4,
         horn_weight: float = 0.3,
-        embedding_weight: float = 0.3
+        embedding_weight: float = 0.3,
+        horn_fallback_value: float = 0.5
     ):
         """
         Initialize hybrid recommender.
@@ -46,6 +51,7 @@ class HeritageRecommender:
             simrank_weight: Weight for SimRank score (default 0.4)
             horn_weight: Weight for Horn's Index score (default 0.3)
             embedding_weight: Weight for embedding similarity (default 0.3)
+            horn_fallback_value: Fallback value when Horn weights unavailable (default 0.5)
         """
         print("Loading knowledge graph...")
         with open(kg_path, 'rb') as f:
@@ -77,6 +83,8 @@ class HeritageRecommender:
         self.simrank_weight = simrank_weight
         self.horn_weight = horn_weight
         self.embedding_weight = embedding_weight
+        self.horn_fallback_value = horn_fallback_value
+        self._horn_fallback_logged = False  # Log warning only once
 
         # Create document index mapping
         self.doc_nodes = [n for n, d in self.G.nodes(data=True) if d.get('node_type') == 'document']
@@ -113,7 +121,11 @@ class HeritageRecommender:
             Horn's Index score [0, 1]
         """
         if not self.horn_weights:
-            return 0.5  # Uniform weight if Horn's not available
+            # Log warning only once to avoid spam
+            if not self._horn_fallback_logged:
+                logger.warning(f"Horn weights not available. Using fallback value: {self.horn_fallback_value}")
+                self._horn_fallback_logged = True
+            return self.horn_fallback_value
 
         # Get document's connected entities
         doc_entities = set()
@@ -239,7 +251,11 @@ class HeritageRecommender:
         self,
         parsed_query: Dict,
         top_k: int = 10,
-        explain: bool = True
+        explain: bool = True,
+        filter_period: Optional[List[str]] = None,
+        filter_region: Optional[List[str]] = None,
+        filter_heritage: Optional[List[str]] = None,
+        filter_domain: Optional[List[str]] = None
     ) -> List[Dict]:
         """
         Generate top-K recommendations using hybrid scoring.
@@ -248,6 +264,10 @@ class HeritageRecommender:
             parsed_query: Parsed query from QueryProcessor
             top_k: Number of recommendations to return
             explain: Whether to include KG path explanations
+            filter_period: Optional list of time periods to filter by (e.g., ['ancient', 'medieval'])
+            filter_region: Optional list of regions to filter by (e.g., ['north', 'south'])
+            filter_heritage: Optional list of heritage types to filter by (e.g., ['temple', 'fort'])
+            filter_domain: Optional list of domains to filter by (e.g., ['religious', 'military'])
 
         Returns:
             List of recommendation dictionaries with scores and explanations
@@ -255,17 +275,18 @@ class HeritageRecommender:
         query_embedding = parsed_query['query_embedding']
         scores = []
 
+        # Select query document: single most embedding-similar document
+        # This serves as a proxy for the user's query intent in the knowledge graph
+        query_doc_idx = self._get_top_k_similar_by_embedding(query_embedding, k=1)[0]
+
         # Compute hybrid scores for all documents
         for doc_idx, doc_id in enumerate(self.doc_nodes):
             # Embedding similarity (always available)
             emb_score = self.compute_embedding_similarity(query_embedding, doc_idx)
 
-            # SimRank score (structural similarity)
-            # For new queries, use average SimRank with top-k similar docs
-            top_k_similar_indices = self._get_top_k_similar_by_embedding(query_embedding, k=5)
-            simrank_scores = [self.compute_simrank_score(similar_idx, doc_idx)
-                            for similar_idx in top_k_similar_indices]
-            simrank_score = np.mean(simrank_scores) if simrank_scores else 0.0
+            # SimRank score (structural similarity to query document)
+            # Use single most semantically similar document as query document for clear interpretation
+            simrank_score = self.compute_simrank_score(query_doc_idx, doc_idx)
 
             # Horn's Index score (entity importance)
             horn_score = self.compute_horn_score(doc_id, parsed_query)
@@ -289,11 +310,29 @@ class HeritageRecommender:
         # Sort by hybrid score
         scores = sorted(scores, key=lambda x: x['hybrid_score'], reverse=True)
 
+        # Apply filters if provided (filter AFTER scoring, BEFORE selecting top-K)
+        if any([filter_period, filter_region, filter_heritage, filter_domain]):
+            scores = self._apply_filters(
+                scores,
+                filter_period,
+                filter_region,
+                filter_heritage,
+                filter_domain
+            )
+
         # Get top-K recommendations
         recommendations = []
         for rank, score_dict in enumerate(scores[:top_k], 1):
             doc_id = score_dict['doc_id']
             doc_data = self.G.nodes[doc_id]
+
+            # Extract metadata (handle both arrays and single values)
+            heritage_types = doc_data.get('heritage_types', [])
+            domains = doc_data.get('domains', [])
+
+            # Convert to display strings (join arrays with comma)
+            heritage_display = ', '.join(heritage_types) if heritage_types else None
+            domain_display = ', '.join(domains) if domains else None
 
             rec = {
                 'rank': rank,
@@ -306,8 +345,8 @@ class HeritageRecommender:
                     'embedding': score_dict['embedding_score']
                 },
                 'metadata': {
-                    'heritage_type': doc_data.get('heritage_type'),
-                    'domain': doc_data.get('domain'),
+                    'heritage_type': heritage_display,
+                    'domain': domain_display,
                     'time_period': doc_data.get('time_period'),
                     'region': doc_data.get('region')
                 }
@@ -331,6 +370,60 @@ class HeritageRecommender:
             recommendations.append(rec)
 
         return recommendations
+
+    def _apply_filters(
+        self,
+        scores: List[Dict],
+        filter_period: Optional[List[str]],
+        filter_region: Optional[List[str]],
+        filter_heritage: Optional[List[str]],
+        filter_domain: Optional[List[str]]
+    ) -> List[Dict]:
+        """
+        Filter scored documents based on metadata.
+
+        Args:
+            scores: List of score dictionaries with doc_id
+            filter_period: Time periods to filter by (empty list = no filter)
+            filter_region: Regions to filter by (empty list = no filter)
+            filter_heritage: Heritage types to filter by (empty list = no filter)
+            filter_domain: Domains to filter by (empty list = no filter)
+
+        Returns:
+            Filtered list of score dictionaries
+        """
+        filtered = []
+        for score_dict in scores:
+            doc_id = score_dict['doc_id']
+            doc_data = self.G.nodes[doc_id]
+
+            # Time period (single value in graph)
+            if filter_period and doc_data.get('time_period') not in filter_period:
+                continue
+
+            # Region (single value in graph)
+            if filter_region and doc_data.get('region') not in filter_region:
+                continue
+
+            # Heritage types (array in graph - check if ANY filter matches ANY doc type)
+            if filter_heritage:
+                heritage_types = doc_data.get('heritage_types', [])
+                if isinstance(heritage_types, str):
+                    heritage_types = [heritage_types]
+                if not heritage_types or not any(ht in filter_heritage for ht in heritage_types):
+                    continue
+
+            # Domains (array in graph - check if ANY filter matches ANY doc domain)
+            if filter_domain:
+                domains = doc_data.get('domains', [])
+                if isinstance(domains, str):
+                    domains = [domains]
+                if not domains or not any(d in filter_domain for d in domains):
+                    continue
+
+            filtered.append(score_dict)
+
+        return filtered
 
     def _get_top_k_similar_by_embedding(self, query_embedding: np.ndarray, k: int = 5) -> List[int]:
         """
