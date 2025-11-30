@@ -506,3 +506,30 @@ if __name__ == '__main__':
 
     print("\n✓ Logging system initialized")
     print(f"   Log file: logs/heritage_recommender.log")
+
+
+_global_logger = None
+
+def get_logger(name: str = None, log_file: str = None, log_level: str = 'INFO') -> HeritageLogger:
+    """
+    Get or create a logger instance
+    
+    Args:
+        name: Logger name (defaults to 'heritage_recommender')
+        log_file: Path to log file (optional)
+        log_level: Logging level (default: 'INFO')
+    
+    Returns:
+        HeritageLogger instance
+    """
+    global _global_logger
+    
+    if _global_logger is None:
+        _global_logger = HeritageLogger(
+            name=name or 'heritage_recommender',
+            log_file=log_file,
+            log_level=log_level,
+            console_output=True
+        )
+    
+    return _global_logger

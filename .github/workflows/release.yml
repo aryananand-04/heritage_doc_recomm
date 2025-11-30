@@ -55,16 +55,21 @@ jobs:
       - name: Create release archive
         run: |
           # Create a clean archive without git files
-          mkdir -p release-files
-          rsync -av --exclude='.git' \
-                    --exclude='venv' \
-                    --exclude='__pycache__' \
-                    --exclude='*.pyc' \
-                    --exclude='.pytest_cache' \
-                    --exclude='data/raw' \
-                    --exclude='data/embeddings' \
-                    --exclude='models' \
-                    . release-files/heritage-doc-recomm-${{ steps.version.outputs.VERSION_NUMBER }}/
+          mkdir -p release-files/heritage-doc-recomm-${{ steps.version.outputs.VERSION_NUMBER }}
+
+          # Copy files excluding unwanted directories
+          find . -type f \
+            -not -path "./.git/*" \
+            -not -path "./venv/*" \
+            -not -path "./__pycache__/*" \
+            -not -path "*/__pycache__/*" \
+            -not -path "*.pyc" \
+            -not -path "./.pytest_cache/*" \
+            -not -path "./data/raw/*" \
+            -not -path "./data/embeddings/*" \
+            -not -path "./models/*" \
+            -not -path "./release-files/*" \
+            -exec cp --parents {} release-files/heritage-doc-recomm-${{ steps.version.outputs.VERSION_NUMBER }}/ \;
 
           cd release-files
           tar -czf heritage-doc-recomm-${{ steps.version.outputs.VERSION_NUMBER }}.tar.gz heritage-doc-recomm-${{ steps.version.outputs.VERSION_NUMBER }}/

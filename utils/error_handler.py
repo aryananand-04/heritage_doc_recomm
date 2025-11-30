@@ -592,3 +592,8 @@ if __name__ == '__main__':
     print(f"By severity: {stats['by_severity']}")
 
     print("\n✓ Error handling system initialized")
+
+RecommenderError = HeritageRecommenderError
+ComponentFailureError = ComponentError
+DataError = DataQualityError
+InputError = UserInputError
