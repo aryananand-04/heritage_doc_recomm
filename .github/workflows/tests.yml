@@ -31,7 +31,12 @@ jobs:
           pip install pytest pytest-cov
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      # Step 4: Run tests
+      # Step 4: Download NLTK data
+      - name: Download NLTK data
+        run: |
+          python -c "import nltk; nltk.download('wordnet'); nltk.download('omw-1.4'); nltk.download('stopwords'); nltk.download('punkt')"
+
+      # Step 5: Run tests
       - name: Run tests
         run: |
           if [ -d "tests" ]; then
