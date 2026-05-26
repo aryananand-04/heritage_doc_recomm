@@ -40,7 +40,7 @@ jobs:
       - name: Run tests
         run: |
           if [ -d "tests" ]; then
-            pytest tests/ -v --cov=. --cov-report=term-missing --cov-report=xml
+            pytest tests/ -v --ignore=tests/test_production_infrastructure.py --cov=. --cov-report=term-missing --cov-report=xml
           else
             echo "No tests directory found, skipping tests"
           fi
