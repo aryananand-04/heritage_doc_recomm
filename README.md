@@ -1,172 +1,162 @@
-# Heritage Document Recommendation System
+# Heritage Document Recommender
 
-A multi-source heritage document recommendation system using Knowledge Graphs, autoencoders, and graph-based ranking algorithms.
+An intelligent heritage document recommendation system powered by Knowledge Graphs, semantic embeddings, and graph-based ranking — built to surface culturally relevant documents across global and Indian heritage corpora.
 
-## 🎯 Project Overview
+**Live Demo** → [heritagerec.vercel.app](https://heritagerec.vercel.app)
 
-This system collects heritage documents from multiple authoritative sources, constructs a rich Knowledge Graph, and provides intelligent recommendations based on semantic similarity and graph topology.
+---
 
-### Key Features
-- **Multi-source data collection**: Wikipedia, UNESCO, Indian Heritage, Archive.org
-- **Automated metadata extraction**: Using NLP and entity recognition
-- **Deep learning classification**: Autoencoder-based document clustering
-- **Rich Knowledge Graph**: Lesk similarity + external KG integration
-- **Advanced ranking**: SimRank + Horn's Index + Firework Algorithm
+## Screenshots
 
-## 📊 Dataset Statistics
+**Landing Page**
+![Landing Page](Landing%20Page.png)
 
-- **Total Documents**: 150-200 heritage documents
-- **Sources**: 4 diverse heritage databases
-- **Coverage**: Global + India-specific monuments
-- **Metadata**: Categories, entities, temporal data, geographic info
+**Browse & Search**
+![Browsing Page](Browsing%20page.png)
 
-## 🏗️ Architecture
+**Dashboard**
+![Dashboard](Dashboard.png)
+
+**Saved Documents**
+![Saved Documents](Saved%20Documents.png)
+
+**Evaluation Metrics**
+![Evaluation Metrics](EvaluationMetrics%20.png)
+
+![Evaluation Continued](EvalContinued%20.png)
+
+---
+
+## What it does
+
+Takes a heritage-related query and returns semantically ranked documents using a pipeline of FAISS vector search, a Knowledge Graph (SimRank + Horn's Index), and a learned LambdaMART ranker — all served through a Next.js frontend backed by a FastAPI API.
+
+---
+
+## Tech Stack
+
+| Layer | Tech |
+|---|---|
+| Frontend | Next.js 14, Tailwind CSS, Framer Motion |
+| Backend | FastAPI, Python 3.11 |
+| Embeddings | Sentence Transformers + FAISS |
+| Knowledge Graph | NetworkX, SimRank, Horn's Index |
+| Ranking | LambdaMART (LTR), Firework Algorithm |
+| Data | Wikipedia, UNESCO, Indian Heritage, Archive.org |
+
+---
+
+## Architecture
+
 ```
-Data Collection → Metadata Extraction → Classification (Autoencoder) 
-→ Knowledge Graph Construction → Ranking (SimRank + Horn's Index) 
-→ Query Processing → Recommendations
+Query
+  └── FastAPI
+        ├── FAISS vector search (semantic retrieval)
+        ├── Knowledge Graph traversal (SimRank + Horn's Index)
+        └── LambdaMART ranker (learned re-ranking)
+              └── Ranked recommendations → Next.js UI
 ```
 
-## 📁 Project Structure
+---
+
+## Project Structure
+
 ```
-heritage-doc-recommender/
-├── data/                      # Data storage
-│   ├── raw/                   # Raw collected documents
-│   ├── cleaned/               # Preprocessed documents
-│   └── metadata/              # Extracted metadata
-├── src/                       # Source code
-│   ├── 1a_collect_wikipedia.py
-│   ├── 1b_collect_unesco.py
-│   ├── 1c_collect_indian_heritage.py
-│   ├── 1d_collect_archives.py
-│   ├── 1_collect_all_sources.py
-│   ├── 2_data_cleaning.py
-│   ├── 3_metadata_extraction.py
-│   ├── 4_autoencoder_classification.py
-│   ├── 5_kg_construction.py
-│   ├── 6_kg_integration.py
-│   ├── 7_ranking_simrank.py
-│   ├── 8_firework_algorithm.py
-│   └── 9_query_processing.py
-├── models/                    # Trained models
-├── knowledge_graph/           # KG data and visualizations
-├── utils/                     # Utility functions
-├── requirements.txt
-└── README.md
+heritage_doc_recomm/
+├── api/                        # FastAPI backend
+├── frontend/                   # Next.js app
+│   ├── app/                    # App router pages
+│   └── components/             # UI components
+├── src/
+│   ├── 1_data_collection/      # Wikipedia, UNESCO, Indian Heritage scrapers
+│   ├── 2_preprocessing/        # Cleaning, balancing, gazetteer
+│   ├── 3_representation/       # Embeddings + autoencoder
+│   ├── 4_knowledge_graph/      # KG construction + FAISS indexing
+│   ├── 5_ranking/              # LTR, LambdaMART, Firework optimizer
+│   ├── 6_query_system/         # Query processor + recommender
+│   └── 7_evaluation/           # Metrics, ground truth, reports
+├── data/
+│   ├── metadata/               # Enriched document metadata
+│   ├── classified/             # Clustered documents
+│   └── evaluation/             # Ground truth + results
+├── knowledge_graph/            # KG weights, statistics, SimRank
+├── models/ranker/              # FAISS indices + trained ranker weights
+├── evaluation/                 # Evaluation reports
+└── requirements.txt
 ```
 
-## 🚀 Installation
+---
 
-### Prerequisites
-- Python 3.8+
-- pip
+## Getting Started
 
-### Setup
+**Prerequisites:** Python 3.10+, Node.js 18+
 
-1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/heritage-doc-recommender.git
-cd heritage-doc-recommender
-```
+# Clone
+git clone https://github.com/aryananand-04/heritage_doc_recomm.git
+cd heritage_doc_recomm
 
-2. Install dependencies:
-```bash
+# Backend
+python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
+python -c "import nltk; nltk.download('wordnet'); nltk.download('stopwords')"
+uvicorn api.main:app --reload
+
+# Frontend (separate terminal)
+cd frontend
+npm install
+npm run dev
 ```
 
-3. Download NLTK data:
-```python
-python -c "import nltk; nltk.download('wordnet'); nltk.download('omw-1.4'); nltk.download('stopwords')"
-```
+Open [http://localhost:3000](http://localhost:3000)
 
-## 📖 Usage
+---
 
-### 1. Data Collection
-Collect heritage documents from multiple sources:
-```bash
-python src/1_collect_all_sources.py
-```
+## Evaluation
 
-This will scrape:
-- Wikipedia heritage articles
-- UNESCO World Heritage Sites
-- Indian monuments and archaeological sites
-- Archive.org historical documents
+The system is evaluated against a curated ground truth set using standard IR metrics:
 
-### 2. Data Preprocessing
-Clean and normalize collected documents:
-```bash
-python src/2_data_cleaning.py
-```
+| Metric | Score |
+|---|---|
+| Precision@5 | see `/evaluation` page |
+| NDCG@10 | see `/evaluation` page |
+| MAP | see `/evaluation` page |
 
-### 3. Metadata Extraction
-Extract categories, entities, and keywords:
-```bash
-python src/3_metadata_extraction.py
-```
+Full evaluation report available at `/evaluation` on the live demo.
 
-### 4. Document Classification
-Train autoencoder and classify documents:
-```bash
-python src/4_autoencoder_classification.py
-```
+---
 
-### 5. Knowledge Graph Construction
-Build and integrate Knowledge Graph:
-```bash
-python src/5_kg_construction.py
-python src/6_kg_integration.py
-```
+## Research Paper
 
-### 6. Query and Recommend
-Process queries and get recommendations:
-```bash
-python src/9_query_processing.py
-```
+This project is accompanied by a research paper detailing the methodology, Knowledge Graph construction, and ranking experiments.
 
-## 🔬 Methodology
+> *Heritage Document Recommendation using Knowledge Graphs and Learning-to-Rank* — available on request.
 
-### Data Collection
-- **Automated scraping** from 4 diverse sources
-- **Validation pipeline** to ensure content quality
-- **Deduplication** across sources
+---
 
-### Knowledge Graph
-- **Entities**: Documents, monuments, locations, time periods, cultural themes
-- **Relationships**: part_of, similar_to, located_in, belongs_to_period
-- **Enrichment**: Integration with Google Knowledge Graph API
+## Contributors
 
-### Ranking Algorithm
-1. **SimRank**: Structural similarity in KG
-2. **Horn's Index**: Entity importance weighting  
-3. **Firework Algorithm**: Metaheuristic optimization
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/aryananand-04">
+        <b>Aryan Anand</b>
+      </a>
+      <br/>
+      <a href="mailto:aryananand.dev04@gmail.com">aryananand.dev04@gmail.com</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Akchhya1108">
+        <b>Akchhya Singh</b>
+      </a>
+      <br/>
+      <a href="mailto:akchhya.dev@gmail.com">akchhya.dev@gmail.com</a>
+    </td>
+  </tr>
+</table>
 
-## 📊 Evaluation Metrics
+---
 
-- Precision@K
-- Recall@K
-- NDCG (Normalized Discounted Cumulative Gain)
-- Mean Average Precision (MAP)
-- Knowledge Graph density and connectivity
+## License
 
-## 🎓 Academic Context
-
-This project was developed as a final year project and is intended for submission to Conference.
-
-
-## 🤝 Contributing
-
-Contributions welcome! Please:
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
-
-
-## 👤 Author
-
-**Akchhya Singh**
-- Email: akchhya1108@gmail.com
-
-**Status**: 🚧 In Development | **Version**: 1.0.0 | **Last Updated**: October 2025
+MIT
