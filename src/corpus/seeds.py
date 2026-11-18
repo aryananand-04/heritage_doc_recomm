@@ -31,13 +31,15 @@ RUN = "seeds_v1"
 RAW_DIR = ROOT / "data/raw" / RUN
 OUT_DIR = ROOT / "data/seeds"
 SCAN_FILE = OUT_DIR / "curated/culture_scan.csv"
+DYNASTY_SCAN_FILE = OUT_DIR / "curated/dynasty_scan.csv"
 
 RANDOM_SEED = 20261118
 ASI_TOTAL = 500
 ASI_MIN_PER_STATE = 5
 FOLK_DANCE_CAP = 40
 GI_CAP = 60
-THIN_STATE = 5  # a state or union territory with fewer seeds than this is reported as thin
+THIN_STATE = 5  # a state or union territory with fewer seeds than this is topped up
+PEOPLE_BORN_BEFORE = 1900
 
 INDIA = "Q668"
 WORLD_HERITAGE = "Q9259"
@@ -66,6 +68,8 @@ DOC_TYPE = {
     "culture": "culture",
     "style": "person_dynasty_style",
     "person": "person_dynasty_style",
+    "topup_site": "site",
+    "topup_culture": "culture",
 }
 
 
@@ -444,6 +448,166 @@ def one_hop(wm, name: str, sources, props: str, extra: str = "") -> dict[str, st
     return out
 
 
+def princely_states(wm, dyn) -> set[str]:
+    out = set()
+    for n, chunk in batches(sorted(dyn)):
+        rows = wm.sparql(
+            f"dynasty_princely_{n:02d}",
+            f'SELECT ?i WHERE {{ VALUES ?i {{ {values(chunk)} }} ?i wdt:P31 ?t . ?t rdfs:label "princely state"@en }}',
+        )
+        out |= {qid(r["i"]) for r in rows}
+    return out
+
+
+def linked_to(wm, name: str, sources, targets) -> set[str]:
+    """Sources with a direct Wikidata statement to or from any of the targets."""
+    targets, found = set(targets), set()
+    for n, chunk in batches(sorted(sources), 25):
+        rows = wm.sparql(
+            f"{name}_{n:02d}",
+            f"""SELECT DISTINCT ?s ?o WHERE {{ VALUES ?s {{ {values(chunk)} }}
+                {{ ?s ?p ?o }} UNION {{ ?o ?p ?s }}
+                FILTER(STRSTARTS(STR(?p), "http://www.wikidata.org/prop/direct/")) FILTER(isIRI(?o)) }}""",
+        )
+        found |= {qid(r["s"]) for r in rows if qid(r["o"]) in targets}
+    return found
+
+
+def year_of(value: str | None) -> int | None:
+    """'1592-01-05T00:00:00Z' -> 1592; '-0304-01-01T00:00:00Z' -> -304; unknown values -> None."""
+    m = re.match(r"^(-?\d+)-", value or "")
+    return int(m.group(1)) if m else None
+
+
+def born_before(years: dict, limit: int) -> bool:
+    """Birth year before the limit; failing a birth date, death year before it."""
+    if "birth" in years:
+        return years["birth"] < limit
+    if "death" in years:
+        return years["death"] < limit
+    return False
+
+
+def life_years(wm, people) -> dict[str, dict]:
+    out: dict[str, dict] = defaultdict(dict)
+    for n, chunk in batches(sorted(people)):
+        rows = wm.sparql(
+            f"people_dates_{n:02d}",
+            f"""SELECT ?i ?b ?d WHERE {{ VALUES ?i {{ {values(chunk)} }}
+                OPTIONAL {{ ?i wdt:P569 ?b }} OPTIONAL {{ ?i wdt:P570 ?d }} }}""",
+        )
+        for r in rows:
+            for key, var in (("birth", "b"), ("death", "d")):
+                y = year_of(r.get(var))
+                if y is not None:
+                    out[qid(r["i"])][key] = min(y, out[qid(r["i"])].get(key, y))
+    return out
+
+
+TOPUP_CATEGORIES = ("Culture of", "Monuments and memorials in", "Festivals in")
+TOPUP_SKIP_SUBCATS = re.compile(
+    r"cuisine|food|cinema|film|people|organi[sz]ations|sport|media|television|education|politic|"
+    r"writers|artists|musicians|stubs|images|by city|companies|books|novels",
+    re.I,
+)
+TOPUP_EXCLUDE = re.compile(
+    r"human|film|cuisine|dish|food|beverage|organi[sz]ation|company|business|university|college|school|institut|"
+    r"television|newspaper|magazine|political|sport|club|award|museum|library|government|ministry|hospital|"
+    r"airport|station|stadium|hotel|restaurant|band|album|song|book|website|literary work|group|diocese|administrative",
+    re.I,
+)
+TOPUP_CULTURE = re.compile(
+    r"festival|dance|music|tradition|ritual|craft|art form|theatre|cultural|ceremony|custom|textile|painting|"
+    r"holiday|fair|celebration|observance|performing art",
+    re.I,
+)
+TOPUP_SITE = re.compile(
+    r"monument|memorial|temple|church|mosque|fort|palace|archaeolog|building|structure|tomb|stupa|monastery|"
+    r"cave|shrine|heritage|statue|gurdwara|ruin|tower|gate|lighthouse|cathedral|basilica|chapel|mausoleum|"
+    r"ghat|stepwell|garden|historic site",
+    re.I,
+)
+
+
+def topup_candidates(wm, resolver: "StateResolver", state: str, exclude: set) -> list[tuple]:
+    """Items in a state's culture, monument and festival categories, typed and checked on Wikidata."""
+    slug = re.sub(r"\W+", "_", state.lower())
+    place = {"National Capital Territory of Delhi": "Delhi"}.get(state, state)
+    titles = set()
+    for base in TOPUP_CATEGORIES:
+        for name in (f"{base} {place}", f"{base} the {place}"):
+            todo, depth = [name], 0
+            while todo and depth < 2:
+                next_level = []
+                for cat in todo:
+                    data = wm.wiki(
+                        f"topup_{slug}_cat",
+                        {"action": "query", "list": "categorymembers", "cmtitle": f"Category:{cat}", "cmlimit": "max"},
+                    )
+                    for m in data.get("query", {}).get("categorymembers", []):
+                        if m["ns"] == 0:
+                            titles.add(m["title"])
+                        elif m["ns"] == 14 and not TOPUP_SKIP_SUBCATS.search(m["title"]):
+                            next_level.append(m["title"][9:])
+                todo, depth = next_level, depth + 1
+    by_qid = {q: t for t, q in titles_to_qids(wm, f"topup_{slug}", titles).items() if q not in exclude}
+    if not by_qid:
+        return []
+    resolver.load(f"topup_{slug}", by_qid)
+    types = defaultdict(set)
+    for n, chunk in batches(sorted(by_qid)):
+        for r in wm.sparql(
+            f"topup_{slug}_types_{n:02d}",
+            f"""SELECT ?i ?tLabel WHERE {{ VALUES ?i {{ {values(chunk)} }} ?i wdt:P31 ?t .
+                ?t rdfs:label ?tLabel FILTER(lang(?tLabel) = "en") }}""",
+        ):
+            types[qid(r["i"])].add(r["tLabel"])
+    out = []
+    for q, title in sorted(by_qid.items()):
+        t = " | ".join(sorted(types[q]))
+        # Overview articles ("Music of Meghalaya") describe a whole field, not one heritage item.
+        overview = re.match(r"(Music|Culture|Dances?|Festivals|Cuisine|Art|Arts|Architecture) of ", title)
+        if not t or overview or TOPUP_EXCLUDE.search(t) or not resolver.not_foreign(q):
+            continue
+        if TOPUP_CULTURE.search(t):
+            out.append((q, title, "topup_culture", state))
+        elif TOPUP_SITE.search(t):
+            out.append((q, title, "topup_site", state))
+    return out
+
+
+def top_up(wm, resolver: "StateResolver", seeds: dict, rng: random.Random) -> tuple[list, list]:
+    """Add seeds until each state or union territory has THIN_STATE seeds and one cultural seed, where items exist."""
+    counts: dict[str, Counter] = defaultdict(Counter)
+    for s in seeds.values():
+        if s.status == "selected":
+            for st in s.states:
+                counts[st][s.doc_type] += 1
+    added, unfilled = [], []
+    for st in sorted(resolver.states.values()):
+        total, has_culture = sum(counts[st].values()), counts[st]["culture"] > 0
+        if total >= THIN_STATE and has_culture:
+            continue
+        taken = set(seeds) | {a[0] for a in added}
+        cands = topup_candidates(wm, resolver, st, taken)
+        culture = [c for c in cands if c[2] == "topup_culture"]
+        picks = []
+        if not has_culture and culture:
+            picks.append(rng.choice(culture))
+        pool = [c for c in cands if c not in picks]
+        rng.shuffle(pool)
+        for c in pool:
+            if total + len(picks) >= THIN_STATE:
+                break
+            picks.append(c)
+        added += picks
+        final_total = total + len(picks)
+        final_culture = has_culture or any(c[2] == "topup_culture" for c in picks)
+        if final_total < THIN_STATE or not final_culture:
+            unfilled.append((st, final_total, "yes" if final_culture else "no"))
+    return added, unfilled
+
+
 def en_titles(wm, name: str, qids) -> dict[str, str]:
     """QID -> English Wikipedia article title."""
     out = {}
@@ -515,9 +679,18 @@ def build() -> tuple[list[Seed], dict]:
         for q in rng.sample(sorted(by_state[s]), quota[s]):
             add(q, asi[q], "asi_monument")
 
-    # Dynasties and historical states
-    for q, (label, rule) in dynasties(wm).items():
-        add(q, label, "dynasty", flags=[f"rule: {rule}"])
+    # Dynasties and historical states. Colonial administrative entities are
+    # removed (author decision, recorded in DYNASTY_SCAN_FILE); princely states
+    # wait until the other seeds exist, because they are kept only when linked to one.
+    dyn_removed = {
+        r["qid"] for r in csv.DictReader(open(DYNASTY_SCAN_FILE, encoding="utf-8")) if r["decision"] == "remove"
+    }
+    all_dynasties = {q: v for q, v in dynasties(wm).items() if q not in dyn_removed}
+    princely = princely_states(wm, all_dynasties)
+    notes["dynasties_removed"] = len(dyn_removed)
+    for q, (label, rule) in all_dynasties.items():
+        if q not in princely:
+            add(q, label, "dynasty", flags=[f"rule: {rule}"])
 
     # Culture
     scan = list(csv.DictReader(open(SCAN_FILE, encoding="utf-8")))
@@ -544,13 +717,20 @@ def build() -> tuple[list[Seed], dict]:
     folk = {q: label for q, label in folk.items() if q not in seeds}
     resolver.load("folk_dance", folk)
     resolver.load_categories(wm, "folk_dance", folk)
+    # Forms the author chose by hand are always in; the rest are drawn by state in turn.
+    chosen = [r["qid"] for r in scan if r["sub_stratum"] == "folk_dance" and r["decision"] == "keep"]
+    for q in chosen:
+        if q in folk:
+            add(q, folk[q], "culture", "folk_dance")
     folk_by_state = defaultdict(list)
     for q in folk:
+        if q in seeds:
+            continue
         probe = Seed(q, folk[q], "culture")
         resolver.assign(probe, hints.get(q, ""))
         folk_by_state[probe.state or "unresolved"].append(q)
     notes["folk_dance_available"] = len(folk)
-    for q in round_robin(folk_by_state, FOLK_DANCE_CAP, rng):
+    for q in round_robin(folk_by_state, FOLK_DANCE_CAP - sum(1 for q in chosen if q in seeds), rng):
         add(q, folk[q], "culture", "folk_dance")
 
     for sub in ("folk_music", "folk_theatre"):
@@ -564,7 +744,7 @@ def build() -> tuple[list[Seed], dict]:
     notes["painting_candidates"] = len(painting)
     notes["painting_typed"] = len(typed)
     for q, label in sorted(typed.items(), key=lambda kv: kv[1]):
-        if resolver.not_foreign(q):
+        if resolver.not_foreign(q) and q not in removed:
             add(q, label, "culture", "painting_school")
 
     gi_rows = gi_crafts(wm)
@@ -590,7 +770,7 @@ def build() -> tuple[list[Seed], dict]:
             gi_state.setdefault(q, r["state"])
             gi_label.setdefault(q, r["title"])
     resolver.load("gi", gi_state)
-    gi_ok = {q for q in gi_state if resolver.not_foreign(q)}
+    gi_ok = {q for q in gi_state if resolver.not_foreign(q) and q not in removed}
     notes["gi_handicraft_rows"] = len(crafts)
     notes["gi_linked_items"] = len(gi_state)
     notes["gi_in_india"] = len(gi_ok)
@@ -606,19 +786,41 @@ def build() -> tuple[list[Seed], dict]:
     for q, label in one_hop(wm, "styles", sites, "wdt:P149|wdt:P135").items():
         add(q, label, "style")
 
-    # People: proposed, reported but not yet selected (decision 0002)
+    # Princely states: kept only when a Wikidata statement links them to a site or cultural seed.
+    anchors = [q for q, s in seeds.items() if s.doc_type in ("site", "culture")]
+    linked = linked_to(wm, "princely_links", princely, anchors)
+    for q in sorted(princely):
+        if q in linked:
+            label, rule = all_dynasties[q]
+            add(q, label, "dynasty", flags=[f"rule: {rule}", "princely state linked to another seed"])
+    notes["princely_kept"], notes["princely_dropped"] = len(linked), len(princely) - len(linked)
+
+    # People (author decision): historical figures born before 1900 who commissioned or
+    # designed a seeded site, or belonged to a seeded dynasty.
     dyn = [q for q, s in seeds.items() if s.stratum == "dynasty"]
     people = one_hop(wm, "people_sites", sites, "wdt:P88|wdt:P84|wdt:P112", "?i wdt:P31 wd:Q5 .")
     people |= one_hop(wm, "people_dynasties", dyn, "^wdt:P53", "?i wdt:P31 wd:Q5 .")
-    for q, label in people.items():
-        add(q, label, "person", status="proposed")
+    years = life_years(wm, people)
+    kept = {q for q in people if born_before(years.get(q, {}), PEOPLE_BORN_BEFORE)}
+    notes["people_candidates"], notes["people_kept"] = len(people), len(kept)
+    notes["people_no_dates"] = sum(1 for q in people if not years.get(q))
+    for q in sorted(kept):
+        add(q, people[q], "person", flags=["born before 1900" if "birth" in years[q] else "died before 1900"])
 
-    # States, languages
-    resolver.load("all", seeds)
-    resolver.load_categories(wm, "culture", [q for q, s in seeds.items() if s.stratum == "culture"])
-    for s in seeds.values():
-        s.sitelinks = set()
-        resolver.assign(s, hints.get(s.qid, ""))
+    # States, then a top-up for states and union territories that are still thin
+    def place_all() -> None:
+        resolver.load("all", seeds)
+        resolver.load_categories(wm, "culture", [q for q, s in seeds.items() if s.doc_type == "culture"])
+        for s in seeds.values():
+            resolver.assign(s, hints.get(s.qid, ""))
+
+    place_all()
+    added, unfilled = top_up(wm, resolver, seeds, rng)
+    for q, label, kind, state in added:
+        hints[q] = state
+        add(q, label, kind)
+    notes["topup"], notes["topup_unfilled"] = added, unfilled
+    place_all()
     links = sitelinks(wm, seeds)
     for q, s in seeds.items():
         s.sitelinks = links.get(q, set())
@@ -721,6 +923,18 @@ def write_report(seeds: list[Seed], notes: dict) -> None:
         f"- GI table rows: {notes['gi_rows']}, by type {notes['gi_types']}; handicraft rows with an article:"
         f" {notes['gi_handicraft_rows']}; distinct linked items: {notes['gi_linked_items']}; not placed in another country on Wikidata:"
         f" {notes['gi_in_india']}; selected up to {GI_CAP} by state in turn. {notes['gi_note']}",
+        f"- Dynasties: {notes['dynasties_removed']} colonial administrative entities removed (author decision);"
+        f" princely states kept because linked to another seed: {notes['princely_kept']}; dropped: {notes['princely_dropped']}.",
+        f"- People: {notes['people_candidates']} candidates, {notes['people_kept']} kept as born before {PEOPLE_BORN_BEFORE}"
+        f" (or, without a birth date, died before it); {notes['people_no_dates']} had no dates and were left out.",
+        "- Top-up for thin states and union territories (from 'Culture of', 'Monuments and memorials in' and"
+        " 'Festivals in' categories): "
+        + (
+            "; ".join(f"{label} ({state}, {kind.removeprefix('topup_')})" for _, label, kind, state in notes["topup"])
+            or "none"
+        ),
+        "- Could not be filled to the target (state, seeds, has cultural seed): "
+        + ("; ".join(f"{st} ({n}, {c})" for st, n, c in notes["topup_unfilled"]) or "none"),
         f"- API responses fetched: {notes['fetched']}; reused from cache: {notes['reused']}.",
         "",
         "## Lists for hand scan",
@@ -735,7 +949,7 @@ def write_report(seeds: list[Seed], notes: dict) -> None:
         "",
         f"**Styles:** {listing('style')}",
         "",
-        f"**People (proposed, {len(proposed)}):** {listing('person')}",
+        f"**People:** {listing('person')}",
         "",
     ]
     (OUT_DIR / "seed_report.md").write_text("\n".join(out), encoding="utf-8")
