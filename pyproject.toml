@@ -80,3 +80,4 @@ package = false   # research project, not an installable package
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]  # so tests can import src.corpus
