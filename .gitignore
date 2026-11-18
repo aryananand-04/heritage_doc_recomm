@@ -473,3 +473,6 @@ frontend/.pnpm-debug.log*
 # ============================================================================
 # END OF .gitignore
 # ============================================================================
+
+# Raw API responses for corpus builds (archived on Zenodo, decision 0004)
+data/raw/**/*.gz
