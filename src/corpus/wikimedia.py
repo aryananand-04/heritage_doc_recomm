@@ -47,8 +47,8 @@ class Wikimedia:
         time.sleep(self.pause)
         for attempt in range(4):
             r = fetch()
-            # The query service answers 429 when busy; back off and retry.
-            if r.status_code in (429, 503) and attempt < 3:
+            # The query service answers 429 when busy and 5xx when overloaded; back off and retry.
+            if r.status_code in (429, 500, 502, 503, 504) and attempt < 3:
                 time.sleep(int(r.headers.get("Retry-After", 10 * (attempt + 1))))
                 continue
             r.raise_for_status()
