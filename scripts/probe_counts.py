@@ -283,9 +283,11 @@ def probe_internet_archive() -> None:
 
 def probe_met() -> None:
     print("Met Museum: Indian objects count...")
+    # v1/search was retired on 2026-10-01 (HTTP 410); v1.1 is paginated, so
+    # ask for one ID and read the total.
     r = requests.get(
-        "https://collectionapi.metmuseum.org/public/collection/v1/search",
-        params={"q": "India", "departmentId": "6", "isPublicDomain": "true"},
+        "https://collectionapi.metmuseum.org/public/collection/v1.1/search",
+        params={"q": "India", "departmentId": "6", "isPublicDomain": "true", "limit": "1", "offset": "0"},
         headers=HEADERS,
         timeout=30,
     )
@@ -295,7 +297,7 @@ def probe_met() -> None:
         "met",
         {
             "query": "q=India&departmentId=6&isPublicDomain=true",
-            "endpoint": "https://collectionapi.metmuseum.org/public/collection/v1/search",
+            "endpoint": "https://collectionapi.metmuseum.org/public/collection/v1.1/search",
             "total": total,
         },
     )
@@ -341,7 +343,9 @@ def probe_chicago() -> None:
             "fields": ["id"],
             "limit": 0,
         },
-        headers={**HEADERS, "Content-Type": "application/json"},
+        # The API sits behind a bot check; AIC's docs ask clients to identify
+        # themselves with this header, which lets the request through.
+        headers={**HEADERS, "AIC-User-Agent": HEADERS["User-Agent"], "Content-Type": "application/json"},
         timeout=30,
     )
     r.raise_for_status()
