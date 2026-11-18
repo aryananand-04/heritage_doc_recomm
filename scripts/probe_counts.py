@@ -33,11 +33,7 @@ REPO_URL = "https://github.com/aryananand-04/heritage_doc_recomm"
 if not CONTACT_EMAIL:
     raise SystemExit("Set CONTACT_EMAIL in .env before running probes.")
 
-HEADERS = {
-    "User-Agent": (
-        f"Heritage-Doc-Collect/0.1 ({REPO_URL}; contact: {CONTACT_EMAIL})"
-    )
-}
+HEADERS = {"User-Agent": (f"Heritage-Doc-Collect/0.1 ({REPO_URL}; contact: {CONTACT_EMAIL})")}
 
 PROBES_DIR = Path("results/probes")
 PROBES_DIR.mkdir(parents=True, exist_ok=True)
@@ -101,9 +97,7 @@ SELECT (COUNT(DISTINCT ?item) AS ?n) WHERE {
   ?admin wdt:P17 wd:Q668 .
 }
 """
-    dynasty_located = int(
-        _sparql(q_dynasty_located)["results"]["bindings"][0]["n"]["value"]
-    )
+    dynasty_located = int(_sparql(q_dynasty_located)["results"]["bindings"][0]["n"]["value"])
     time.sleep(1)
 
     # Sample 10 seed QIDs (for Wikipedia sitelink probe below)
@@ -125,19 +119,22 @@ LIMIT 10
         "Vijayanagara, Maratha) and report added count."
     )
 
-    save("wikidata", {
-        "queries": {
-            "total_seed": q_total.strip(),
-            "dynasty_P17": q_dynasty_p17.strip(),
-            "dynasty_located_in": q_dynasty_located.strip(),
-            "sample_QIDs": q_sample.strip(),
+    save(
+        "wikidata",
+        {
+            "queries": {
+                "total_seed": q_total.strip(),
+                "dynasty_P17": q_dynasty_p17.strip(),
+                "dynasty_located_in": q_dynasty_located.strip(),
+                "sample_QIDs": q_sample.strip(),
+            },
+            "total_seed_entities": total,
+            "dynasty_via_P17": dynasty_p17,
+            "dynasty_via_located_in": dynasty_located,
+            "sample_qids_for_wikipedia_probe": sample_qids,
+            "note": note,
         },
-        "total_seed_entities": total,
-        "dynasty_via_P17": dynasty_p17,
-        "dynasty_via_located_in": dynasty_located,
-        "sample_qids_for_wikipedia_probe": sample_qids,
-        "note": note,
-    })
+    )
 
     return sample_qids
 
@@ -156,28 +153,33 @@ def probe_wikipedia(sample_qids: list) -> None:
             continue
         entity = r.json().get("entities", {}).get(qid, {})
         sitelinks = entity.get("sitelinks", {})
-        results.append({
-            "qid": qid,
-            "label_en": entity.get("labels", {}).get("en", {}).get("value", ""),
-            "has_en": "enwiki" in sitelinks,
-            "has_hi": "hiwiki" in sitelinks,
-            "has_kn": "knwiki" in sitelinks,
-            "has_sa": "sawiki" in sitelinks,
-        })
+        results.append(
+            {
+                "qid": qid,
+                "label_en": entity.get("labels", {}).get("en", {}).get("value", ""),
+                "has_en": "enwiki" in sitelinks,
+                "has_hi": "hiwiki" in sitelinks,
+                "has_kn": "knwiki" in sitelinks,
+                "has_sa": "sawiki" in sitelinks,
+            }
+        )
 
-    save("wikipedia", {
-        "query": "Special:EntityData/{qid}.json — sitelinks check",
-        "sample_size": len(results),
-        "has_en": sum(1 for r in results if r["has_en"]),
-        "has_hi": sum(1 for r in results if r["has_hi"]),
-        "has_kn": sum(1 for r in results if r["has_kn"]),
-        "has_sa": sum(1 for r in results if r["has_sa"]),
-        "detail": results,
-        "note": (
-            "Re-run with the full seed QID list after the Wikidata probe "
-            "to get representative coverage percentages."
-        ),
-    })
+    save(
+        "wikipedia",
+        {
+            "query": "Special:EntityData/{qid}.json — sitelinks check",
+            "sample_size": len(results),
+            "has_en": sum(1 for r in results if r["has_en"]),
+            "has_hi": sum(1 for r in results if r["has_hi"]),
+            "has_kn": sum(1 for r in results if r["has_kn"]),
+            "has_sa": sum(1 for r in results if r["has_sa"]),
+            "detail": results,
+            "note": (
+                "Re-run with the full seed QID list after the Wikidata probe "
+                "to get representative coverage percentages."
+            ),
+        },
+    )
 
 
 def probe_wikisource(sample_entity: str = "Taj Mahal") -> None:
@@ -197,15 +199,18 @@ def probe_wikisource(sample_entity: str = "Taj Mahal") -> None:
     )
     r.raise_for_status()
     total = r.json()["query"]["searchinfo"]["totalhits"]
-    save("wikisource", {
-        "query": f"action=query&list=search&srsearch={sample_entity}&srnamespace=0",
-        "sample_entity": sample_entity,
-        "total_hits_for_sample": total,
-        "note": (
-            "This is hits for one entity; run for a sample of 10 seed entities "
-            "and sum to estimate total Wikisource coverage."
-        ),
-    })
+    save(
+        "wikisource",
+        {
+            "query": f"action=query&list=search&srsearch={sample_entity}&srnamespace=0",
+            "sample_entity": sample_entity,
+            "total_hits_for_sample": total,
+            "note": (
+                "This is hits for one entity; run for a sample of 10 seed entities "
+                "and sum to estimate total Wikisource coverage."
+            ),
+        },
+    )
 
 
 def probe_internet_archive() -> None:
@@ -257,37 +262,45 @@ def probe_internet_archive() -> None:
         pcs = doc.get("possible-copyright-status", "")
         pcs_counter[str(pcs) if pcs else "(none)"] += 1
 
-    save("internet_archive", {
-        "query": base_q,
-        "total_items": total,
-        "sample_size": len(docs),
-        "language_values": dict(lang_counter.most_common(40)),
-        "licenseurl_values": dict(license_counter.most_common(20)),
-        "possible_copyright_status_values": dict(pcs_counter.most_common(10)),
-        "note": (
-            "Fix the language filter in internet_archive.py using the exact "
-            "strings in language_values. Accept items where licenseurl contains "
-            "creativecommons.org or publicdomain, OR possible-copyright-status "
-            "is NOT_IN_COPYRIGHT / NOT_IN_COPYRIGHT_US."
-        ),
-    })
+    save(
+        "internet_archive",
+        {
+            "query": base_q,
+            "total_items": total,
+            "sample_size": len(docs),
+            "language_values": dict(lang_counter.most_common(40)),
+            "licenseurl_values": dict(license_counter.most_common(20)),
+            "possible_copyright_status_values": dict(pcs_counter.most_common(10)),
+            "note": (
+                "Fix the language filter in internet_archive.py using the exact "
+                "strings in language_values. Accept items where licenseurl contains "
+                "creativecommons.org or publicdomain, OR possible-copyright-status "
+                "is NOT_IN_COPYRIGHT / NOT_IN_COPYRIGHT_US."
+            ),
+        },
+    )
 
 
 def probe_met() -> None:
     print("Met Museum: Indian objects count...")
+    # v1/search was retired on 2026-10-01 (HTTP 410); v1.1 is paginated, so
+    # ask for one ID and read the total.
     r = requests.get(
-        "https://collectionapi.metmuseum.org/public/collection/v1/search",
-        params={"q": "India", "departmentId": "6", "isPublicDomain": "true"},
+        "https://collectionapi.metmuseum.org/public/collection/v1.1/search",
+        params={"q": "India", "departmentId": "6", "isPublicDomain": "true", "limit": "1", "offset": "0"},
         headers=HEADERS,
         timeout=30,
     )
     r.raise_for_status()
     total = r.json().get("total", 0)
-    save("met", {
-        "query": "q=India&departmentId=6&isPublicDomain=true",
-        "endpoint": "https://collectionapi.metmuseum.org/public/collection/v1/search",
-        "total": total,
-    })
+    save(
+        "met",
+        {
+            "query": "q=India&departmentId=6&isPublicDomain=true",
+            "endpoint": "https://collectionapi.metmuseum.org/public/collection/v1.1/search",
+            "total": total,
+        },
+    )
 
 
 def probe_cleveland() -> None:
@@ -297,19 +310,21 @@ def probe_cleveland() -> None:
         time.sleep(0.5)
         r = requests.get(
             "https://openaccess-api.clevelandart.org/api/artworks/",
-            params={"culture": culture, "has_image": "1", "shareitem": "1",
-                    "limit": "1", "skip": "0"},
+            params={"culture": culture, "has_image": "1", "shareitem": "1", "limit": "1", "skip": "0"},
             headers=HEADERS,
             timeout=30,
         )
         r.raise_for_status()
         counts[culture] = r.json().get("info", {}).get("total", 0)
 
-    save("cleveland", {
-        "query": "culture=X&has_image=1&shareitem=1",
-        "counts_by_culture_string": counts,
-        "note": "Sum deduplicated across culture strings when writing the collector.",
-    })
+    save(
+        "cleveland",
+        {
+            "query": "culture=X&has_image=1&shareitem=1",
+            "counts_by_culture_string": counts,
+            "note": "Sum deduplicated across culture strings when writing the collector.",
+        },
+    )
 
 
 def probe_chicago() -> None:
@@ -317,32 +332,44 @@ def probe_chicago() -> None:
     r = requests.post(
         "https://api.artic.edu/api/v1/artworks/search",
         json={
-            "query": {"bool": {"must": [
-                {"term": {"is_public_domain": True}},
-                {"match": {"place_of_origin": "India"}},
-            ]}},
+            "query": {
+                "bool": {
+                    "must": [
+                        {"term": {"is_public_domain": True}},
+                        {"match": {"place_of_origin": "India"}},
+                    ]
+                }
+            },
             "fields": ["id"],
             "limit": 0,
         },
-        headers={**HEADERS, "Content-Type": "application/json"},
+        # The API sits behind a bot check; AIC's docs ask clients to identify
+        # themselves with this header, which lets the request through.
+        headers={**HEADERS, "AIC-User-Agent": HEADERS["User-Agent"], "Content-Type": "application/json"},
         timeout=30,
     )
     r.raise_for_status()
     total = r.json().get("pagination", {}).get("total", 0)
-    save("chicago", {
-        "query": "place_of_origin=India AND is_public_domain=true",
-        "endpoint": "https://api.artic.edu/api/v1/artworks/search",
-        "total": total,
-    })
+    save(
+        "chicago",
+        {
+            "query": "place_of_origin=India AND is_public_domain=true",
+            "endpoint": "https://api.artic.edu/api/v1/artworks/search",
+            "total": total,
+        },
+    )
 
 
 def probe_smithsonian() -> None:
     if not SMITHSONIAN_API_KEY:
         print("Smithsonian: SMITHSONIAN_API_KEY not set — skipping.")
-        save("smithsonian", {
-            "total": None,
-            "skipped": "SMITHSONIAN_API_KEY not set in .env",
-        })
+        save(
+            "smithsonian",
+            {
+                "total": None,
+                "skipped": "SMITHSONIAN_API_KEY not set in .env",
+            },
+        )
         return
     print("Smithsonian: Indian objects count...")
     r = requests.get(
@@ -353,11 +380,14 @@ def probe_smithsonian() -> None:
     )
     r.raise_for_status()
     total = r.json().get("response", {}).get("rowCount", 0)
-    save("smithsonian", {
-        "query": "q=India&rows=0",
-        "endpoint": "https://api.si.edu/openaccess/api/v1.0/search",
-        "total": total,
-    })
+    save(
+        "smithsonian",
+        {
+            "query": "q=India&rows=0",
+            "endpoint": "https://api.si.edu/openaccess/api/v1.0/search",
+            "total": total,
+        },
+    )
 
 
 def probe_wellcome() -> None:
@@ -375,11 +405,14 @@ def probe_wellcome() -> None:
     )
     r.raise_for_status()
     total = r.json().get("totalResults", 0)
-    save("wellcome", {
-        "query": "query=India&languages=san,hin,tam,kan,tel,ben&workType=a,k",
-        "endpoint": "https://api.wellcomecollection.org/catalogue/v2/works",
-        "total": total,
-    })
+    save(
+        "wellcome",
+        {
+            "query": "query=India&languages=san,hin,tam,kan,tel,ben&workType=a,k",
+            "endpoint": "https://api.wellcomecollection.org/catalogue/v2/works",
+            "total": total,
+        },
+    )
 
 
 def probe_siddham() -> None:
@@ -397,12 +430,15 @@ def probe_siddham() -> None:
     )
     r.raise_for_status()
     total = r.json().get("hits", {}).get("total", 0)
-    save("siddham", {
-        "query": "communities=siddham&q=india",
-        "endpoint": "https://zenodo.org/api/records",
-        "authenticated": bool(ZENODO_TOKEN),
-        "total": total,
-    })
+    save(
+        "siddham",
+        {
+            "query": "communities=siddham&q=india",
+            "endpoint": "https://zenodo.org/api/records",
+            "authenticated": bool(ZENODO_TOKEN),
+            "total": total,
+        },
+    )
 
 
 def main() -> None:

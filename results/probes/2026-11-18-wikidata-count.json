@@ -1,0 +1,26 @@
+{
+  "queries": {
+    "total_seed": "SELECT (COUNT(DISTINCT ?item) AS ?n) WHERE {\n  { ?item wdt:P1371 ?id ; wdt:P17 wd:Q668 . }\n  UNION { ?item wdt:P1435 wd:Q9259  ; wdt:P17 wd:Q668 . }\n  UNION { ?item wdt:P1435 wd:Q1459900 ; wdt:P17 wd:Q668 . }\n  UNION { ?item wdt:P31/wdt:P279* wd:Q164950 ; wdt:P17 wd:Q668 . }\n}",
+    "dynasty_P17": "SELECT (COUNT(DISTINCT ?item) AS ?n) WHERE {\n  ?item wdt:P31/wdt:P279* wd:Q164950 ;\n        wdt:P17 wd:Q668 .\n}",
+    "dynasty_located_in": "SELECT (COUNT(DISTINCT ?item) AS ?n) WHERE {\n  ?item wdt:P31/wdt:P279* wd:Q164950 .\n  FILTER NOT EXISTS { ?item wdt:P17 wd:Q668 . }\n  ?item wdt:P131+ ?admin .\n  ?admin wdt:P17 wd:Q668 .\n}",
+    "sample_QIDs": "SELECT DISTINCT ?item WHERE {\n  { ?item wdt:P1371 ?id ; wdt:P17 wd:Q668 . }\n  UNION { ?item wdt:P1435 wd:Q9259 ; wdt:P17 wd:Q668 . }\n}\nORDER BY ?item\nLIMIT 10"
+  },
+  "total_seed_entities": 7846,
+  "dynasty_via_P17": 65,
+  "dynasty_via_located_in": 0,
+  "sample_qids_for_wikipedia_probe": [
+    "Q101256627",
+    "Q1026431",
+    "Q10283654",
+    "Q10428494",
+    "Q104643303",
+    "Q104845865",
+    "Q104862860",
+    "Q105605675",
+    "Q1061529",
+    "Q106606477"
+  ],
+  "note": "dynasty_via_P17 + dynasty_via_located = total dynasty seeds. If combined < 20, expand using a verified QID list of major Indian dynasties (e.g. Q33296 Mughal Empire, Q15242416 Mughal dynasty, Chola, Gupta, Maurya, Vijayanagara, Maratha) and report added count.",
+  "date": "2026-11-18",
+  "source": "wikidata"
+}

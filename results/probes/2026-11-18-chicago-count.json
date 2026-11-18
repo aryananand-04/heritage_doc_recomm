@@ -1,0 +1,7 @@
+{
+  "query": "place_of_origin=India AND is_public_domain=true",
+  "endpoint": "https://api.artic.edu/api/v1/artworks/search",
+  "total": 347,
+  "date": "2026-11-18",
+  "source": "chicago"
+}

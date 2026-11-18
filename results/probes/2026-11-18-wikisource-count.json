@@ -1,0 +1,8 @@
+{
+  "query": "action=query&list=search&srsearch=Taj Mahal&srnamespace=0",
+  "sample_entity": "Taj Mahal",
+  "total_hits_for_sample": 141,
+  "note": "This is hits for one entity; run for a sample of 10 seed entities and sum to estimate total Wikisource coverage.",
+  "date": "2026-11-18",
+  "source": "wikisource"
+}
