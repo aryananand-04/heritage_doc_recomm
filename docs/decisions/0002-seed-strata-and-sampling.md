@@ -47,7 +47,8 @@ Option A. The strata are:
 | ASI monuments | ASI Monument ID (P1371), country India, English article; sites already in the two strata above are excluded | About 500, sampled by state (below) |
 | Cultural heritage | Sub-strata below | About 210 |
 | Styles | Architectural style (P149) or movement (P135) of seeded sites, one hop | All reached |
-| People | Proposed addition, see below | Reported before any are used |
+| People | Rule set at the first checkpoint, see below | All that pass the rule |
+| Top-up | For thin states and union territories, see below | Until 5 seeds and one cultural seed, where items exist |
 
 Cultural sub-strata, with the author's quotas:
 
@@ -83,10 +84,25 @@ location on Wikidata, so the Indian origin comes from the source list (the GI
 table's state column, the "Indian painting" article), and an item is rejected
 when Wikidata gives it a country (P17) other than India.
 
-People (proposed, decided after the counts): people reached in one hop from
-seeded sites (commissioned by P88, architect P84, founded by P112) and members
-(P53) of seeded dynasties. Their counts are reported with the other strata before
-any are used.
+Decisions taken by the author at the first seed checkpoint (18 November 2026):
+
+- Dynasties: colonial administrative entities (British Raj, Company rule,
+  Dominion of India, Eastern States Union, Ajmer-Merwara) are removed, as
+  recorded in `data/seeds/curated/dynasty_scan.csv`. Princely states are kept
+  only when a direct Wikidata statement links them to a site or cultural seed.
+- People: historical figures born before 1900 (or, without a birth date, who died
+  before 1900) who commissioned, designed or founded a seeded site (P88, P84,
+  P112) or belonged to a seeded dynasty (P53). People with no dates are left out.
+- Painting schools and folk dance: removals and replacements are recorded in the
+  culture hand-scan file, with reasons.
+- Top-up: any state or union territory with fewer than 5 seeds, or no cultural
+  seed, is topped up from its English Wikipedia categories "Culture of X",
+  "Monuments and memorials in X" and "Festivals in X" (one level of
+  subcategories, skipping cuisine, cinema, people, organisations, sport and
+  media). Items are typed on Wikidata as a cultural item or a site; people,
+  films, food, institutions, administrative bodies and overview articles
+  ("Music of X") are excluded, and the same country check applies. The report
+  lists every addition and every place that still cannot be filled.
 
 ## Consequences
 
