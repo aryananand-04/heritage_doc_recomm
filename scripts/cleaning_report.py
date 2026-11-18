@@ -107,14 +107,24 @@ def main() -> None:
         "",
         "- Each article's Wikidata item and country (P17) gave a proposed label: keep (India),"
         " drop (another present-day country) or review (no item, no country, or only historical states).",
-        f"- {len(review_rows)} documents were proposed for review. Each was decided from the Wikidata"
-        " item (citizenship P27, country of origin P495) and the Wikipedia article's opening sentences,"
-        " and the evidence is in the note column.",
+        f"- {len(review_rows)} documents were proposed for review and decided from the Wikidata item"
+        " (citizenship P27, country of origin P495) and the Wikipedia article's opening sentences;"
+        " the evidence for each is in the note column. "
+        + (
+            f"All {len(review_rows)} are author-reviewed (author_checked = yes)."
+            if review_rows and len(checked_review) == len(review_rows)
+            else f"{len(checked_review)} of {len(review_rows)} are author-reviewed (author_checked = yes)."
+        ),
+        f"- The other {total - len(review_rows)} documents were labelled by the Wikidata rule, with an"
+        f" evidence note each; {len(checked) - len(checked_review)} of them are marked author-reviewed.",
         f"- {len(changed)} documents with a keep or drop proposal ended with a different final label.",
-        f"- {len(checked)} rows are marked as checked by the author, including"
-        f" {len(checked_review)} of the {len(review_rows)} review rows.",
         "",
     ]
+    author_decisions = [r for r in rows if r["note"].startswith("author decision")]
+    if author_decisions:
+        out += ["Author decisions, recorded in the note column:", ""]
+        out += [f"- {r['title']} ({r['final_label']}): {r['note']}" for r in author_decisions]
+        out += [""]
     if borderline:
         out += ["Borderline calls, flagged in the note column:", ""]
         out += [f"- {r['title']} ({r['final_label']}): {r['note']}" for r in borderline]
