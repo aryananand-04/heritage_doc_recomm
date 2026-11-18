@@ -50,6 +50,7 @@ KINGDOM = "Q417175"
 EMPIRE = "Q48349"
 INDIAN_FOLK_DANCE = "Q5464449"
 INDIAN_PAINTING = "Q2744438"
+DISTRICT_OF_INDIA = "Q1149652"
 ICH_LISTS = (
     "Representative List of the Intangible Cultural Heritage of Humanity",
     "Masterpieces of the Oral and Intangible Heritage of Humanity",
@@ -473,6 +474,48 @@ def linked_to(wm, name: str, sources, targets) -> set[str]:
     return found
 
 
+def capitals(wm, name: str, qids) -> dict[str, set]:
+    out: dict[str, set] = defaultdict(set)
+    for n, chunk in batches(sorted(qids)):
+        for r in wm.sparql(
+            f"{name}_{n:02d}", f"SELECT ?i ?c WHERE {{ VALUES ?i {{ {values(chunk)} }} ?i wdt:P36 ?c }}"
+        ):
+            out[qid(r["i"])].add(qid(r["c"]))
+    return out
+
+
+def districts_of(wm, name: str, qids) -> dict[str, set]:
+    """Districts of India an entity lies in, following 'located in' (P131) upwards."""
+    out: dict[str, set] = defaultdict(set)
+    # Small batches: walking P131* for many items at once times out on the query service.
+    for n, chunk in batches(sorted(qids), 40):
+        for r in wm.sparql(
+            f"{name}_{n:02d}",
+            f"""SELECT DISTINCT ?i ?d WHERE {{ VALUES ?i {{ {values(chunk)} }}
+                ?i wdt:P131* ?d . ?d wdt:P31 wd:{DISTRICT_OF_INDIA} . }}""",
+        ):
+            out[qid(r["i"])].add(qid(r["d"]))
+    return out
+
+
+def dynasty_end_years(wm, name: str, people, dynasties) -> dict[str, dict]:
+    """For each person, the end year (P576) of every seeded dynasty they belong to (P53)."""
+    out: dict[str, dict] = defaultdict(dict)
+    if not people:
+        return out
+    for n, chunk in batches(sorted(people)):
+        for r in wm.sparql(
+            f"{name}_{n:02d}",
+            f"""SELECT ?i ?dyn ?dynLabel ?end WHERE {{ VALUES ?i {{ {values(chunk)} }} VALUES ?dyn {{ {values(dynasties)} }}
+                ?i wdt:P53 ?dyn . ?dyn wdt:P576 ?end . {LABEL} }}""",
+        ):
+            y = year_of(r.get("end"))
+            if y is not None:
+                label = r.get("dynLabel", qid(r["dyn"]))
+                out[qid(r["i"])][label] = min(y, out[qid(r["i"])].get(label, y))
+    return out
+
+
 def year_of(value: str | None) -> int | None:
     """'1592-01-05T00:00:00Z' -> 1592; '-0304-01-01T00:00:00Z' -> -304; unknown values -> None."""
     m = re.match(r"^(-?\d+)-", value or "")
@@ -480,12 +523,18 @@ def year_of(value: str | None) -> int | None:
 
 
 def born_before(years: dict, limit: int) -> bool:
-    """Birth year before the limit; failing a birth date, death year before it."""
-    if "birth" in years:
-        return years["birth"] < limit
-    if "death" in years:
-        return years["death"] < limit
+    """Birth year before the limit; failing that, death year; failing that, floruit (P1317)."""
+    for key in ("birth", "death", "floruit"):
+        if key in years:
+            return years[key] < limit
     return False
+
+
+def date_basis(years: dict) -> str:
+    for key in ("birth", "death", "floruit"):
+        if key in years:
+            return f"{key} {years[key]}"
+    return "no dates"
 
 
 def life_years(wm, people) -> dict[str, dict]:
@@ -493,11 +542,11 @@ def life_years(wm, people) -> dict[str, dict]:
     for n, chunk in batches(sorted(people)):
         rows = wm.sparql(
             f"people_dates_{n:02d}",
-            f"""SELECT ?i ?b ?d WHERE {{ VALUES ?i {{ {values(chunk)} }}
-                OPTIONAL {{ ?i wdt:P569 ?b }} OPTIONAL {{ ?i wdt:P570 ?d }} }}""",
+            f"""SELECT ?i ?b ?d ?f WHERE {{ VALUES ?i {{ {values(chunk)} }}
+                OPTIONAL {{ ?i wdt:P569 ?b }} OPTIONAL {{ ?i wdt:P570 ?d }} OPTIONAL {{ ?i wdt:P1317 ?f }} }}""",
         )
         for r in rows:
-            for key, var in (("birth", "b"), ("death", "d")):
+            for key, var in (("birth", "b"), ("death", "d"), ("floruit", "f")):
                 y = year_of(r.get(var))
                 if y is not None:
                     out[qid(r["i"])][key] = min(y, out[qid(r["i"])].get(key, y))
@@ -786,26 +835,63 @@ def build() -> tuple[list[Seed], dict]:
     for q, label in one_hop(wm, "styles", sites, "wdt:P149|wdt:P135").items():
         add(q, label, "style")
 
-    # Princely states: kept only when a Wikidata statement links them to a site or cultural seed.
+    # Princely states (author decision): kept when a Wikidata statement links them to a
+    # site or cultural seed, or when their capital lies in the same district as a seeded site.
     anchors = [q for q, s in seeds.items() if s.doc_type in ("site", "culture")]
     linked = linked_to(wm, "princely_links", princely, anchors)
+    capital = capitals(wm, "princely_capitals", princely)
+    cap_districts = districts_of(wm, "princely_capital_districts", {c for cs in capital.values() for c in cs})
+    site_districts = set().union(*districts_of(wm, "site_districts", sites).values())
+    same_district = {
+        q for q in princely if any(cap_districts.get(c, set()) & site_districts for c in capital.get(q, ()))
+    }
     for q in sorted(princely):
-        if q in linked:
+        if q in linked or q in same_district:
             label, rule = all_dynasties[q]
-            add(q, label, "dynasty", flags=[f"rule: {rule}", "princely state linked to another seed"])
-    notes["princely_kept"], notes["princely_dropped"] = len(linked), len(princely) - len(linked)
+            why = "linked to another seed" if q in linked else "capital in the district of a seeded site"
+            add(q, label, "dynasty", flags=[f"rule: {rule}", f"princely state: {why}"])
+    kept_princely = linked | same_district
+    notes["princely"] = {
+        "total": len(princely),
+        "kept": len(kept_princely),
+        "by_link": len(linked),
+        "by_district": len(same_district - linked),
+        "dropped": len(princely) - len(kept_princely),
+        "capital_without_district": sum(
+            1 for q in princely if not any(cap_districts.get(c) for c in capital.get(q, ()))
+        ),
+    }
 
-    # People (author decision): historical figures born before 1900 who commissioned or
-    # designed a seeded site, or belonged to a seeded dynasty.
+    # People (author decision): historical figures who commissioned, designed or founded a
+    # seeded site, or belonged to a seeded dynasty; dated before 1900 by birth, death or
+    # floruit, or, with no dates at all, members of a seeded dynasty that ended before 1900.
     dyn = [q for q, s in seeds.items() if s.stratum == "dynasty"]
     people = one_hop(wm, "people_sites", sites, "wdt:P88|wdt:P84|wdt:P112", "?i wdt:P31 wd:Q5 .")
     people |= one_hop(wm, "people_dynasties", dyn, "^wdt:P53", "?i wdt:P31 wd:Q5 .")
     years = life_years(wm, people)
-    kept = {q for q in people if born_before(years.get(q, {}), PEOPLE_BORN_BEFORE)}
-    notes["people_candidates"], notes["people_kept"] = len(people), len(kept)
-    notes["people_no_dates"] = sum(1 for q in people if not years.get(q))
-    for q in sorted(kept):
-        add(q, people[q], "person", flags=["born before 1900" if "birth" in years[q] else "died before 1900"])
+    undated = [q for q in people if not years.get(q)]
+    ended = dynasty_end_years(wm, "people_dynasty_ends", undated, dyn)
+    kept, via_dynasty, borderline = {}, [], []
+    for q in sorted(people):
+        if born_before(years.get(q, {}), PEOPLE_BORN_BEFORE):
+            kept[q] = date_basis(years[q])
+            if max(years[q].values()) >= PEOPLE_BORN_BEFORE - 50:
+                borderline.append(f"{people[q]} ({date_basis(years[q])})")
+        elif not years.get(q) and any(y < PEOPLE_BORN_BEFORE for y in ended.get(q, {}).values()):
+            name, end = min(ended[q].items(), key=lambda kv: kv[1])
+            kept[q] = f"no dates; member of {name}, ended {end}"
+            via_dynasty.append(f"{people[q]} ({kept[q]})")
+    notes["people"] = {
+        "candidates": len(people),
+        "kept": len(kept),
+        "by_dates": len(kept) - len(via_dynasty),
+        "by_dynasty_end": len(via_dynasty),
+        "undated_left_out": sum(1 for q in undated if q not in kept),
+        "borderline": borderline,
+        "via_dynasty": via_dynasty,
+    }
+    for q, basis in kept.items():
+        add(q, people[q], "person", flags=[basis])
 
     # States, then a top-up for states and union territories that are still thin
     def place_all() -> None:
@@ -923,17 +1009,25 @@ def write_report(seeds: list[Seed], notes: dict) -> None:
         f"- GI table rows: {notes['gi_rows']}, by type {notes['gi_types']}; handicraft rows with an article:"
         f" {notes['gi_handicraft_rows']}; distinct linked items: {notes['gi_linked_items']}; not placed in another country on Wikidata:"
         f" {notes['gi_in_india']}; selected up to {GI_CAP} by state in turn. {notes['gi_note']}",
-        f"- Dynasties: {notes['dynasties_removed']} colonial administrative entities removed (author decision);"
-        f" princely states kept because linked to another seed: {notes['princely_kept']}; dropped: {notes['princely_dropped']}.",
-        f"- People: {notes['people_candidates']} candidates, {notes['people_kept']} kept as born before {PEOPLE_BORN_BEFORE}"
-        f" (or, without a birth date, died before it); {notes['people_no_dates']} had no dates and were left out.",
+        f"- Dynasties: {notes['dynasties_removed']} colonial administrative entities removed (author decision)."
+        f" Princely states: {notes['princely']['total']}; kept {notes['princely']['kept']}"
+        f" ({notes['princely']['by_link']} linked to another seed, {notes['princely']['by_district']} with the capital"
+        f" in the district of a seeded site); dropped {notes['princely']['dropped']};"
+        f" capital not placed in any district on Wikidata: {notes['princely']['capital_without_district']}.",
+        f"- People: {notes['people']['candidates']} candidates; kept {notes['people']['kept']}"
+        f" ({notes['people']['by_dates']} by a birth, death or floruit date before {PEOPLE_BORN_BEFORE},"
+        f" {notes['people']['by_dynasty_end']} undated members of a seeded dynasty that ended before {PEOPLE_BORN_BEFORE});"
+        f" undated and left out: {notes['people']['undated_left_out']}.",
+        "- People near the date limit (a date from 1850 on): " + ("; ".join(notes["people"]["borderline"]) or "none"),
+        "- People kept through a dynasty end date: " + ("; ".join(notes["people"]["via_dynasty"]) or "none"),
         "- Top-up for thin states and union territories (from 'Culture of', 'Monuments and memorials in' and"
         " 'Festivals in' categories): "
         + (
             "; ".join(f"{label} ({state}, {kind.removeprefix('topup_')})" for _, label, kind, state in notes["topup"])
             or "none"
         ),
-        "- Could not be filled to the target (state, seeds, has cultural seed): "
+        "- Places that could not be filled to 5 seeds and one cultural seed, because Wikipedia and Wikidata"
+        " hold no more qualifying items for them (state, seeds, has cultural seed): "
         + ("; ".join(f"{st} ({n}, {c})" for st, n, c in notes["topup_unfilled"]) or "none"),
         f"- API responses fetched: {notes['fetched']}; reused from cache: {notes['reused']}.",
         "",
