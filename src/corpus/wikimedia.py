@@ -79,6 +79,10 @@ class Wikimedia:
         full = {"format": "json", "formatversion": "2", **params}
         return self._cached(name, {"url": url, **full}, lambda: self.session.get(url, params=full, timeout=120))
 
+    def get_json(self, name: str, url: str, params: dict) -> dict:
+        """Cached GET of any JSON API (museum and archive collections use the same politeness rules)."""
+        return self._cached(name, {"url": url, **params}, lambda: self.session.get(url, params=params, timeout=120))
+
 
 def qid(uri: str) -> str:
     """'http://www.wikidata.org/entity/Q668' -> 'Q668'."""
