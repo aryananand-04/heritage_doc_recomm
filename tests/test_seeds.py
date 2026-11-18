@@ -55,3 +55,21 @@ def test_assign_uses_hint_only_without_wikidata_location():
     r.assign(hinted, hint="Gujarat; Rajasthan")
     assert located.state == "Karnataka" and located.state_source == "located in (P131)"
     assert hinted.state == "multi-state" and hinted.states == ["Gujarat", "Rajasthan"]
+
+
+def test_year_of_handles_bce_and_unknown_values():
+    from src.corpus.seeds import year_of
+
+    assert year_of("1592-01-05T00:00:00Z") == 1592
+    assert year_of("-0304-01-01T00:00:00Z") == -304
+    assert year_of("http://www.wikidata.org/.well-known/genid/abc") is None
+    assert year_of(None) is None
+
+
+def test_born_before_falls_back_to_death_year():
+    from src.corpus.seeds import born_before
+
+    assert born_before({"birth": 1592}, 1900)
+    assert not born_before({"birth": 1905, "death": 1890}, 1900)  # birth date wins when present
+    assert born_before({"death": 1799}, 1900)
+    assert not born_before({}, 1900)
