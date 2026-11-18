@@ -317,6 +317,8 @@ outputs/
 # ============================================================================
 # Experiment results (keep small JSON, exclude large CSVs)
 results/**/*.csv
+# Audit sheets are small and record the hand-checked labels, so keep them.
+!results/audit/*.csv
 results/**/*.pkl
 results/experiments/
 results/runs/
