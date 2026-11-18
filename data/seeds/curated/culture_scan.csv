@@ -94,3 +94,18 @@ folk_theatre,Q1363943,Nautanki,keep,traditional theatre form,,Uttar Pradesh
 folk_theatre,Q2121790,Raslila,keep,traditional theatre form,,Uttar Pradesh
 folk_theatre,Q65286917,Pandav Lila,keep,traditional theatre form,,Uttarakhand
 folk_theatre,Q3348813,Jatra,keep,traditional theatre form,,West Bengal
+painting_school,Q189458,Academic art,remove,"generic Western movement, removed by author",,
+painting_school,Q102932,Avant garde,remove,"generic Western movement, removed by author",,
+painting_school,Q878985,Modernist,remove,"generic Western movement, removed by author",,
+painting_school,Q280817,Kalam,remove,"Wikidata item is Ilm al-kalam (Islamic theology), not kalamezhuthu; removed per author rule",,
+folk_dance,Q60791260,Jharkhand folk dance,remove,"overview article, replaced by a specific form from the same state (author)",,
+folk_dance,Q15723771,Odisha folk dance,remove,"overview article, replaced by a specific form from the same state (author)",,
+folk_dance,Q5464455,Punjabi folk dance,remove,"overview article, replaced by a specific form from the same state (author)",,
+folk_dance,Q24930335,Sourashtra folk dance,remove,"overview article, replaced by a specific form from the same state (author)",,
+folk_dance,Q4461768,traditional dances of Himachal Pradesh,remove,"overview article, replaced by a specific form from the same state (author)",,
+folk_dance,Q5221793,dappankuthu,remove,"film-associated street dance, dropped by author",,
+folk_dance,Q60749916,Domkach,keep,specific form replacing the Jharkhand overview article (author),,Jharkhand
+folk_dance,Q5211077,Dalkhai,keep,specific form replacing the Odisha overview article (author),,Odisha
+folk_dance,Q6406312,Kikkli,keep,specific form replacing the Punjab overview article (author),,Punjab
+folk_dance,Q3629880,Dandiya raas,keep,specific form replacing the Gujarat overview article (author),,Gujarat
+folk_dance,Q6414041,Nati,keep,specific form replacing the Himachal Pradesh overview article (author),,Himachal Pradesh
