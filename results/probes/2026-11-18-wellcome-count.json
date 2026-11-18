@@ -1,0 +1,7 @@
+{
+  "query": "query=India&languages=san,hin,tam,kan,tel,ben&workType=a,k",
+  "endpoint": "https://api.wellcomecollection.org/catalogue/v2/works",
+  "total": 638,
+  "date": "2026-11-18",
+  "source": "wellcome"
+}

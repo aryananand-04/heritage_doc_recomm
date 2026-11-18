@@ -1,0 +1,93 @@
+{
+  "query": "Special:EntityData/{qid}.json — sitelinks check",
+  "sample_size": 10,
+  "has_en": 8,
+  "has_hi": 3,
+  "has_kn": 2,
+  "has_sa": 2,
+  "detail": [
+    {
+      "qid": "Q101256627",
+      "label_en": "Humcha Jain temples",
+      "has_en": true,
+      "has_hi": false,
+      "has_kn": false,
+      "has_sa": false
+    },
+    {
+      "qid": "Q1026431",
+      "label_en": "Santiniketan",
+      "has_en": true,
+      "has_hi": true,
+      "has_kn": true,
+      "has_sa": true
+    },
+    {
+      "qid": "Q10283654",
+      "label_en": "Fort Reis Magos",
+      "has_en": false,
+      "has_hi": false,
+      "has_kn": false,
+      "has_sa": false
+    },
+    {
+      "qid": "Q10428494",
+      "label_en": "Hill Forts of Rajasthan",
+      "has_en": true,
+      "has_hi": true,
+      "has_kn": false,
+      "has_sa": false
+    },
+    {
+      "qid": "Q104643303",
+      "label_en": "Hari Parbat Fort",
+      "has_en": true,
+      "has_hi": false,
+      "has_kn": false,
+      "has_sa": false
+    },
+    {
+      "qid": "Q104845865",
+      "label_en": "Valmiki Ashram",
+      "has_en": true,
+      "has_hi": false,
+      "has_kn": false,
+      "has_sa": false
+    },
+    {
+      "qid": "Q104862860",
+      "label_en": "Akhund Mulla Shah's Mosque",
+      "has_en": true,
+      "has_hi": false,
+      "has_kn": false,
+      "has_sa": false
+    },
+    {
+      "qid": "Q105605675",
+      "label_en": "Parthasarathy temple, Parthivapuram",
+      "has_en": true,
+      "has_hi": false,
+      "has_kn": false,
+      "has_sa": false
+    },
+    {
+      "qid": "Q1061529",
+      "label_en": "Chamundeshwari Temple",
+      "has_en": true,
+      "has_hi": true,
+      "has_kn": true,
+      "has_sa": true
+    },
+    {
+      "qid": "Q106606477",
+      "label_en": "Sri Lakshmi Narasimha Swamy Temple, Ahobilam",
+      "has_en": false,
+      "has_hi": false,
+      "has_kn": false,
+      "has_sa": false
+    }
+  ],
+  "note": "Re-run with the full seed QID list after the Wikidata probe to get representative coverage percentages.",
+  "date": "2026-11-18",
+  "source": "wikipedia"
+}

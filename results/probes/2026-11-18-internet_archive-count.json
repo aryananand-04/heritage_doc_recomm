@@ -1,0 +1,42 @@
+{
+  "query": "subject:\"India\" AND mediatype:texts",
+  "total_items": 1685145,
+  "sample_size": 200,
+  "language_values": {
+    "eng": 130,
+    "English": 37,
+    "hin": 7,
+    "san": 4,
+    "Arabic": 2,
+    "urd": 2,
+    "mul": 1,
+    "lat": 1,
+    "ENG": 1,
+    "Sanskrit": 1,
+    "Prakrit": 1,
+    "ENGLISH": 1,
+    "grc": 1,
+    "Javanese": 1,
+    "Malay": 1
+  },
+  "licenseurl_values": {
+    "(none)": 157,
+    "http://creativecommons.org/publicdomain/mark/1.0/": 12,
+    "http://creativecommons.org/licenses/by-nc-nd/3.0/": 10,
+    "https://creativecommons.org/licenses/by-nc-nd/4.0/": 9,
+    "http://creativecommons.org/publicdomain/zero/1.0/": 5,
+    "http://creativecommons.org/licenses/by/3.0/": 3,
+    "https://creativecommons.org/licenses/by-nd/4.0/": 1,
+    "http://creativecommons.org/licenses/by-nc-nd/2.5/in/": 1,
+    "http://creativecommons.org/licenses/by-nc/3.0/": 1,
+    "http://creativecommons.org/licenses/publicdomain/": 1
+  },
+  "possible_copyright_status_values": {
+    "(none)": 138,
+    "NOT_IN_COPYRIGHT": 61,
+    "Permission to digitize granted by rights holder": 1
+  },
+  "note": "Fix the language filter in internet_archive.py using the exact strings in language_values. Accept items where licenseurl contains creativecommons.org or publicdomain, OR possible-copyright-status is NOT_IN_COPYRIGHT / NOT_IN_COPYRIGHT_US.",
+  "date": "2026-11-18",
+  "source": "internet_archive"
+}

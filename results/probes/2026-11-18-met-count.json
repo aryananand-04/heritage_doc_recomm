@@ -1,0 +1,7 @@
+{
+  "query": "q=India&departmentId=6&isPublicDomain=true",
+  "endpoint": "https://collectionapi.metmuseum.org/public/collection/v1.1/search",
+  "total": 1878,
+  "date": "2026-11-18",
+  "source": "met"
+}

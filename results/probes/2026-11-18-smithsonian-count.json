@@ -1,0 +1,6 @@
+{
+  "total": null,
+  "skipped": "SMITHSONIAN_API_KEY not set in .env",
+  "date": "2026-11-18",
+  "source": "smithsonian"
+}

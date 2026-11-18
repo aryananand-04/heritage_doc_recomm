@@ -1,0 +1,11 @@
+{
+  "query": "culture=X&has_image=1&shareitem=1",
+  "counts_by_culture_string": {
+    "India": 3144,
+    "Indian subcontinent": 0,
+    "South Asia": 4
+  },
+  "note": "Sum deduplicated across culture strings when writing the collector.",
+  "date": "2026-11-18",
+  "source": "cleveland"
+}
