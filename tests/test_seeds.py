@@ -73,3 +73,12 @@ def test_born_before_falls_back_to_death_year():
     assert not born_before({"birth": 1905, "death": 1890}, 1900)  # birth date wins when present
     assert born_before({"death": 1799}, 1900)
     assert not born_before({}, 1900)
+
+
+def test_born_before_uses_floruit_last():
+    from src.corpus.seeds import born_before, date_basis
+
+    assert born_before({"floruit": 1650}, 1900)
+    assert not born_before({"floruit": 1920}, 1900)
+    assert date_basis({"death": 1700, "floruit": 1650}) == "death 1700"
+    assert date_basis({}) == "no dates"
