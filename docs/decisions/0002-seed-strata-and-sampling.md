@@ -89,10 +89,17 @@ Decisions taken by the author at the first seed checkpoint (18 November 2026):
 - Dynasties: colonial administrative entities (British Raj, Company rule,
   Dominion of India, Eastern States Union, Ajmer-Merwara) are removed, as
   recorded in `data/seeds/curated/dynasty_scan.csv`. Princely states are kept
-  only when a direct Wikidata statement links them to a site or cultural seed.
-- People: historical figures born before 1900 (or, without a birth date, who died
-  before 1900) who commissioned, designed or founded a seeded site (P88, P84,
-  P112) or belonged to a seeded dynasty (P53). People with no dates are left out.
+  when a direct Wikidata statement links them to a site or cultural seed, or
+  when their capital (P36) lies in the same district of India as at least one
+  seeded site (districts found by following P131 upwards). This replaced a first,
+  link-only rule that kept 1 of 54, because palaces and other sites usually
+  point to their district rather than to the princely state.
+- People: historical figures who commissioned, designed or founded a seeded site
+  (P88, P84, P112) or belonged to a seeded dynasty (P53), dated before 1900 by
+  birth, then death, then floruit (P1317). People with no dates at all are kept
+  when they belong to a seeded dynasty whose end date (P576) is before 1900;
+  other undated people are left out. People with a date from 1850 on, and those
+  kept through a dynasty end date, are listed in the seed report.
 - Painting schools and folk dance: removals and replacements are recorded in the
   culture hand-scan file, with reasons.
 - Top-up: any state or union territory with fewer than 5 seeds, or no cultural
