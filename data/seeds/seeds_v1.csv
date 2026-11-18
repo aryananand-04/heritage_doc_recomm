@@ -1,0 +1,1216 @@
+qid,label,stratum,sub_stratum,doc_type,status,state,states,state_source,en,hi,kn,also_in,flags
+Q171857,Agra Fort,world_heritage,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,yes,yes,,
+Q184427,Ajanta Caves,world_heritage,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,yes,,
+Q331603,Bhimbetka rock shelters,world_heritage,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,yes,,
+Q844427,Champaner-Pavagadh Archaeological Park,world_heritage,,site,selected,Gujarat,Gujarat,located in (P131),yes,yes,yes,,
+Q131753100,Charaideo deoshal,world_heritage,,site,selected,Assam,Assam,located in (P131),,,,,
+Q235884,Chhatrapati Shivaji Maharaj Terminus,world_heritage,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,yes,,
+Q15726428,Churches and Convents of Goa,world_heritage,,site,selected,Goa,Goa,located in (P131),yes,yes,,,
+Q1753664,Descent of the Ganges,world_heritage,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,yes,,,
+Q134550841,Dhal ni Pol,world_heritage,,site,selected,Gujarat,Gujarat,located in (P131),,,,,
+Q9468,Dholavira,world_heritage,,site,selected,Gujarat,Gujarat,located in (P131),yes,yes,yes,,
+Q649384,Elephanta Caves,world_heritage,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,yes,,
+Q189616,Ellora Caves,world_heritage,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,yes,,
+Q179046,Fatehpur Sikri,world_heritage,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,yes,yes,,
+Q1544213,Great Himalayan National Park,world_heritage,,site,selected,Himachal Pradesh,Himachal Pradesh,located in (P131),yes,yes,yes,,
+Q695229,Great Living Chola Temples,world_heritage,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,yes,yes,,
+Q3522747,Group of monuments at Mahabalipuram,world_heritage,,site,selected,Tamil Nadu,Tamil Nadu,location (P276),yes,yes,yes,,
+Q26732,Hampi,world_heritage,,site,selected,Karnataka,Karnataka,located in (P131),yes,yes,yes,,
+Q10428494,Hill Forts of Rajasthan,world_heritage,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,yes,,,
+Q5472448,Historic City of Ahmadabad,world_heritage,,site,selected,Gujarat,Gujarat,located in (P131),yes,yes,,,
+Q189648,Humayun's Tomb,world_heritage,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,yes,,
+Q66485,Jaipur,world_heritage,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,yes,yes,,
+Q508634,Jantar Mantar,world_heritage,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,yes,,,
+Q2045115,Jantar Mantar,world_heritage,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,,,
+Q6343582,Kaas Plateau,world_heritage,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,,,
+Q192764,Kaziranga National Park,world_heritage,,site,selected,Assam,Assam,located in (P131),yes,yes,yes,,
+Q235878,Kevladev National Park,world_heritage,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,yes,yes,,
+Q167298,Khajuraho Group of Monuments,world_heritage,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,yes,,
+Q2605019,Khangchendzonga National Park,world_heritage,,site,selected,Sikkim,Sikkim,located in (P131),yes,yes,yes,,
+Q752091,Konark Sun Temple,world_heritage,,site,selected,Odisha,Odisha,located in (P131),yes,yes,,,
+Q4513,Mahabodhi Temple,world_heritage,,site,selected,Bihar,Bihar,located in (P131),yes,yes,yes,,
+Q6735332,Maidam,world_heritage,,site,selected,Assam,Assam,located in (P131),yes,yes,,tentative_list,
+Q506511,Manas National Park,world_heritage,,site,selected,Assam,Assam,located in (P131),yes,yes,yes,,
+Q134720951,Maratha Military Landscapes of India,world_heritage,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,,,
+Q4528,Mountain Railways of India,world_heritage,,site,selected,,,,yes,yes,yes,tentative_list,
+Q216243,Nalanda Mahavihara,world_heritage,,site,selected,Bihar,Bihar,located in (P131),yes,yes,yes,,
+Q1648266,Nanda Devi National Park,world_heritage,,site,selected,Uttarakhand,Uttarakhand,located in (P131),yes,yes,yes,,
+Q15839097,Nanda Devi and Valley of Flowers National Parks,world_heritage,,site,selected,Uttarakhand,Uttarakhand,located in (P131),yes,yes,,,
+Q817250,Pattadakal Group of Monuments,world_heritage,,site,selected,Karnataka,Karnataka,located in (P131),yes,yes,yes,,
+Q187635,Qutb Minar,world_heritage,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,yes,,
+Q1074330,Qutb complex,world_heritage,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,,,
+Q3380656,Ramappa Temple,world_heritage,,site,selected,Telangana,Telangana,located in (P131),yes,yes,yes,,
+Q7293002,Rani ki vav,world_heritage,,site,selected,Gujarat,Gujarat,located in (P131),yes,yes,yes,,
+Q45957,Red Fort,world_heritage,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,,,
+Q66023123,Sacred Ensembles of the Hoysalas,world_heritage,,site,selected,,,,yes,yes,yes,,
+Q181123,Sanchi,world_heritage,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,yes,,
+Q1026431,Santiniketan,world_heritage,,site,selected,West Bengal,West Bengal,located in (P131),yes,yes,yes,,
+Q324394,Sarnath,world_heritage,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,yes,,tentative_list,
+Q7444209,Secretariat Building,world_heritage,,site,selected,Chandigarh,Chandigarh,located in (P131),yes,,,,
+Q532440,Sundarbans National Park,world_heritage,,site,selected,West Bengal,West Bengal,located in (P131),yes,yes,,,
+Q9141,Taj Mahal,world_heritage,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,yes,yes,,
+Q55619850,The Architectural Work of Le Corbusier,world_heritage,,site,selected,,,,yes,yes,yes,,
+Q65041035,Tomb of Isa Khan,world_heritage,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,,,
+Q116451393,Tower of Shadows,world_heritage,,site,selected,Chandigarh,Chandigarh,located in (P131),,,,,
+Q605897,Valley of Flowers National Park,world_heritage,,site,selected,Uttarakhand,Uttarakhand,located in (P131),yes,yes,yes,,
+Q16942531,Victorian Gothic and Art Deco Ensembles of Mumbai,world_heritage,,site,selected,,,,yes,yes,yes,,
+Q4527,Western Ghats,world_heritage,,site,selected,multi-state,Goa; Gujarat; Karnataka; Kerala; Maharashtra; Tamil Nadu,located in (P131),yes,yes,yes,,
+Q543419,iron pillar of Delhi,world_heritage,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,,,
+Q66023120,Apatani Cultural Landscape,tentative_list,,site,selected,,,,,,,,
+Q158455,Bhedaghat,tentative_list,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,,,
+Q24951898,Bhojeshwar Temple,tentative_list,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,,,
+Q171771,Bhubaneswar,tentative_list,,site,selected,Odisha,Odisha,located in (P131),yes,yes,yes,,
+Q19787278,Burzahom archaeological site,tentative_list,,site,selected,,,,yes,yes,,,
+Q3345501,Cellular Jail,tentative_list,,site,selected,Andaman and Nicobar Islands,Andaman and Nicobar Islands,located in (P131),yes,yes,yes,,
+Q5071315,Chandra Taal,tentative_list,,site,selected,Himachal Pradesh,Himachal Pradesh,located in (P131),yes,yes,,,
+Q681937,Chettinad,tentative_list,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,yes,,,
+Q2047322,Chilika Lake,tentative_list,,site,selected,Odisha,Odisha,located in (P131),yes,yes,yes,,
+Q5142237,Cold Desert,tentative_list,,site,selected,Himachal Pradesh,Himachal Pradesh,located in (P131),yes,yes,yes,,
+Q66022868,Delhi - A Heritage City,tentative_list,,site,selected,,,,,,,,
+Q3058213,Desert National Park,tentative_list,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,yes,yes,,
+Q59308065,Dhamnar caves,tentative_list,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),,,,,
+Q39050223,Erra Matti Dibbalu,tentative_list,,site,selected,Andhra Pradesh,Andhra Pradesh,located in (P131),yes,,,,
+Q66023129,Evolution of Temple Architecture – Aihole-Badami- Pattadakal,tentative_list,,site,selected,,,,,,,,
+Q3036349,Garo Hills,tentative_list,,site,selected,Meghalaya,Meghalaya,located in (P131),yes,yes,,,
+Q300701,Grand Trunk Road,tentative_list,,site,selected,,,,yes,yes,,,
+Q66021150,"Group of Monuments at Mandu, Madhya Pradesh",tentative_list,,site,selected,,,,,,,,
+Q109145843,"Group of Monuments, Orchha",tentative_list,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),,,,,
+Q2487545,Gwalior Fort,tentative_list,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,yes,,
+Q180422,Harmandir Sahib,tentative_list,,site,selected,Punjab,Punjab,located in (P131),yes,yes,yes,,
+Q5769587,Hirebenkal,tentative_list,,site,selected,Karnataka,Karnataka,located in (P131),yes,,yes,,
+Q66022898,Iconic Saree Weaving Clusters of India,tentative_list,,site,selected,,,,,,,,
+Q1207543,Indian Wild Ass Sanctuary,tentative_list,,site,selected,Gujarat,Gujarat,located in (P131),yes,yes,,,
+Q1723746,Kanger Ghati National Park,tentative_list,,site,selected,Chhattisgarh,Chhattisgarh,located in (P131),yes,yes,yes,,
+Q744580,Kangra Valley Railway,tentative_list,,site,selected,multi-state,Himachal Pradesh; Punjab,located in (P131),yes,,,,
+Q1737898,Keibul Lamjao National Park,tentative_list,,site,selected,Manipur,Manipur,located in (P131),yes,yes,yes,,
+Q9443,Lothal,tentative_list,,site,selected,Gujarat,Gujarat,located in (P131),yes,yes,yes,,
+Q940843,Lotus Temple,tentative_list,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,yes,,
+Q277552,Majuli,tentative_list,,site,selected,Assam,Assam,located in (P131),yes,yes,yes,,
+Q1267941,Mattancherry Palace,tentative_list,,site,selected,Kerala,Kerala,located in (P131),yes,,,,
+Q24906440,Monuments and Forts of the Deccan Sultanate,tentative_list,,site,selected,,,,yes,,,,
+Q137671412,Mudumal Megalithic Menhirs,tentative_list,,site,selected,Telangana,Telangana,located in (P131),yes,,,,
+Q66022851,Mughal Gardens in Kashmir,tentative_list,,site,selected,Jammu and Kashmir,Jammu and Kashmir,located in (P131),,,,,
+Q1815612,Namdapha National Park,tentative_list,,site,selected,Arunachal Pradesh,Arunachal Pradesh,located in (P131),yes,yes,yes,,
+Q1965316,Narcondam Island,tentative_list,,site,selected,Andaman and Nicobar Islands,Andaman and Nicobar Islands,located in (P131),yes,yes,,,
+Q2985788,Neora Valley National Park,tentative_list,,site,selected,West Bengal,West Bengal,located in (P131),yes,yes,yes,,
+Q3534509,Padmanabhapuram Palace,tentative_list,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q14229383,Pin Valley National Park,tentative_list,,site,selected,Himachal Pradesh,Himachal Pradesh,located in (P131),yes,yes,yes,,
+Q127517381,Q127517381,tentative_list,,site,selected,,,,,,,,
+Q2671548,"Ranganathaswamy Temple, Srirangam",tentative_list,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,yes,yes,,
+Q24908100,Salkhan Fossils Park,tentative_list,,site,selected,,,,yes,,,,
+Q7423561,Sarchu,tentative_list,,site,selected,Ladakh,Ladakh,located in (P131),yes,yes,,,
+Q7515190,Silk Road sites in India,tentative_list,,site,selected,,,,yes,,,,
+Q60846934,"Sites of Saytagrah, India’s non-violent freedom movement",tentative_list,,site,selected,,,,,,,,
+Q653988,Srirangapatna,tentative_list,,site,selected,Karnataka,Karnataka,located in (P131),yes,yes,yes,,
+Q4254076,St. Mary's Islands,tentative_list,,site,selected,Karnataka,Karnataka,located in (P131),yes,,yes,,
+Q2570737,Sun Temple,tentative_list,,site,selected,Gujarat,Gujarat,located in (P131),yes,yes,,,
+Q6642818,Temples of Bishnupur,tentative_list,,site,selected,West Bengal,West Bengal,located in (P131),yes,yes,,,
+Q66022890,The Glorious Kakatiya Temples and Gateways,tentative_list,,site,selected,,,,,,,,
+Q66022706,The Qutb Shahi Monuments of Hyderabad,tentative_list,,site,selected,,,,,,,,
+Q7781201,Thembang,tentative_list,,site,selected,Arunachal Pradesh,Arunachal Pradesh,located in (P131),yes,yes,,,
+Q136312108,Thembang Dzong,tentative_list,,site,selected,Arunachal Pradesh,Arunachal Pradesh,located in (P131),,,,,
+Q7882256,Unakoti,tentative_list,,site,selected,Tripura,Tripura,located in (P131),yes,yes,,,
+Q2570726,Vadnagar,tentative_list,,site,selected,Gujarat,Gujarat,located in (P131),yes,yes,,,
+Q7915960,Varkala Beach,tentative_list,,site,selected,Kerala,Kerala,located in (P131),yes,yes,yes,,
+Q7918143,Veerabhadra Temple,tentative_list,,site,selected,Andhra Pradesh,Andhra Pradesh,located in (P131),yes,yes,yes,,
+Q5555933,ghats in Varanasi,tentative_list,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,yes,,,
+Q4661426,Aam Khas Bagh,asi_monument,,site,selected,Punjab,Punjab,located in (P131),yes,,,,
+Q19456628,Achut Bibi's Mosque and Tomb,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q14547483,Adhai Din Ka Jhonpra,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,yes,,,
+Q64606244,Adi Kadi Vav,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q28035249,Adinatha temple,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,,,,
+Q2344976,Aga Khan Palace,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,,,
+Q19881775,Ahmad Shah's Mosque,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q2827657,Ahmad Shah's Tomb,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q97440446,Ain-ul-mulk's tomb,asi_monument,,site,selected,multi-state,Chhattisgarh; Karnataka,located in (P131),yes,,,,
+Q3437182,Airavatesvara Temple,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,yes,,,
+Q66817078,Akbar's Fort,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,,,,
+Q97881897,Akbari Mahal,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,,,,
+Q4700682,Akhandalamani Temple,asi_monument,,site,selected,Odisha,Odisha,located in (P131),yes,,,,
+Q15178737,Akhnoor Fort,asi_monument,,site,selected,Jammu and Kashmir,Jammu and Kashmir,located in (P131),yes,yes,yes,,
+Q24912874,Alamgir Mosque,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,yes,,,
+Q4706010,Alampur Navabrahma Temples,asi_monument,,site,selected,Telangana,Telangana,located in (P131),yes,,,,
+Q4710411,Albert Hall Museum,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,yes,,,
+Q2705908,Alchi Monastery,asi_monument,,site,selected,Ladakh,Ladakh,located in (P131),yes,,,,
+Q771105,Allahabad Fort,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,yes,yes,,
+Q19898492,Ambapur Stepwell,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q456817,Amber Fort,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,yes,yes,,
+Q29025058,Amruteshwar Temple,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q4750846,Anagpur Dam,asi_monument,,site,selected,Haryana,Haryana,located in (P131),yes,,,,
+Q2578551,Ananta Vasudeva Temple,asi_monument,,site,selected,Odisha,Odisha,located in (P131),yes,,yes,,
+Q4751490,Ananthasayana temple,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,yes,yes,,
+Q4752774,Anchuthengu Fort,asi_monument,,site,selected,Kerala,Kerala,located in (P131),yes,,yes,,
+Q60441918,Anglo Sikh War Memorial,asi_monument,,site,selected,Punjab,Punjab,located in (P131),yes,,,,
+Q12414125,Arab Serai,asi_monument,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,,,
+Q19882059,Arakeshvara Templa,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,yes,,
+Q24906644,"Arakeshwara Temple, Haleyedatore",asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,,,
+Q2861278,Arikamedu,asi_monument,,site,selected,Puducherry,Puducherry,located in (P131),yes,yes,yes,,
+Q17004426,Ariyannur Umbrellas,asi_monument,,site,selected,Kerala,Kerala,located in (P131),yes,,,,
+Q3630501,Asirgarh Fort,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,,,
+Q15193894,Attur Fort,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q15194007,Aundha Nagnath Temple,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q24938434,Avanibhajana Pallaveshwaram temple,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q24950973,Avanti Swami Temple,asi_monument,,site,selected,Jammu and Kashmir,Jammu and Kashmir,located in (P131),yes,yes,,,
+Q4827896,Avchitgad,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q19882185,Azam and Muazzam Khan's Tomb,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q799695,Badrinath Temple,asi_monument,,site,selected,Uttarakhand,Uttarakhand,located in (P131),yes,yes,,,
+Q85744882,Badshahi Haveli,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,,,,
+Q3632765,Bagh Caves,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,,,
+Q30625771,Baijnath Temple Complex,asi_monument,,site,selected,Uttarakhand,Uttarakhand,located in (P131),yes,yes,yes,,
+Q4843233,"Baijnath Temple, Himachal Pradesh",asi_monument,,site,selected,Himachal Pradesh,Himachal Pradesh,located in (P131),yes,yes,,,
+Q97946308,"Bajramath Temple, Gyaraspur",asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,,,,
+Q4850720,Baleshwar Temple,asi_monument,,site,selected,Uttarakhand,Uttarakhand,located in (P131),yes,yes,,,
+Q4853949,Banashankari Temple,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,yes,,
+Q66809979,Baneshwar Shiva temple,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q4858263,Barakhamba,asi_monument,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,,,
+Q66363295,Barid Shahi Tombs,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,yes,,,
+Q13058783,Baro Shona Masjid,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q4867358,Basilica of Our Lady of Graces,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,,,,
+Q18110322,Bava Pyara caves,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q4873755,Bawaman Mosque,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q4879428,Bedse Caves,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q3519346,Bekal Fort,asi_monument,,site,selected,Kerala,Kerala,located in (P131),yes,,yes,,
+Q723862,Belum Caves,asi_monument,,site,selected,Andhra Pradesh,Andhra Pradesh,located in (P131),yes,,yes,,
+Q4855049,Bengaluru Fort,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,yes,yes,,
+Q84362579,Bezar Doul,asi_monument,,site,selected,Assam,Assam,located in (P131),yes,,,,
+Q4900527,Bhadkal Gate,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q4900554,Bhadrakali Temple,asi_monument,,site,selected,Odisha,Odisha,located in (P131),yes,,,,
+Q29634204,Bhand Deva Temple,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,,,,
+Q38251122,Bhandasar Jain Temple,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,,,,
+Q15061692,Bhangarh Fort,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,yes,,,
+Q55605342,Bharatgad,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q13004961,Bhavanarayana temple,asi_monument,,site,selected,Andhra Pradesh,Andhra Pradesh,located in (P131),yes,,,,
+Q56375830,Bhavaniswar Mandir,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q4901753,Bhima Ratha,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q18177128,Bhismaknagar ruins,asi_monument,,site,selected,Arunachal Pradesh,Arunachal Pradesh,located in (P131),yes,yes,yes,,
+Q4902046,Bhoramdeo Temple,asi_monument,,site,selected,Chhattisgarh,Chhattisgarh,located in (P131),yes,yes,yes,,
+Q56199594,Bhubaneswari Temple,asi_monument,,site,selected,Tripura,Tripura,located in (P131),yes,,,,
+Q3517721,"Bhutanatha group of temples, Badami",asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,yes,yes,,
+Q856259,Bibi Ka Maqbara,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,,,
+Q4907148,Bijai Garh,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,yes,,,
+Q4915588,Biraja Temple,asi_monument,,site,selected,Odisha,Odisha,located in (P131),yes,yes,,,
+Q24943477,Birwadi Fort,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q65063681,Bowring Institute,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,,,
+Q16726744,"Brahma Jinalaya, Lakkundi",asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,,,
+Q2766567,Brahma Kund,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q4955611,Brahmeswara Temple,asi_monument,,site,selected,Odisha,Odisha,located in (P131),yes,yes,yes,,
+Q24937544,Buddhanath Temple,asi_monument,,site,selected,Odisha,Odisha,located in (P131),yes,,,,
+Q17280929,Bugga Ramalingeswara temple,asi_monument,,site,selected,Andhra Pradesh,Andhra Pradesh,located in (P131),yes,,,,
+Q5015741,Cabo de Rama,asi_monument,,site,selected,Goa,Goa,located in (P131),yes,,,,
+Q72014701,Chaman Mahal,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,,,,
+Q112912431,Chamatkarji Jain Temple,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,,,,
+Q2273412,Chand Baori,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,yes,,,
+Q115408600,"Chandraditya temple, Barsur",asi_monument,,site,selected,Chhattisgarh,Chhattisgarh,located in (P131),yes,,yes,,
+Q5071343,Chandragupta Basadi,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,,,
+Q28041245,Chapel of our Lady of the Mount,asi_monument,,site,selected,Goa,Goa,located in (P131),yes,,,,
+Q5073352,Chapora Fort,asi_monument,,site,selected,Goa,Goa,located in (P131),yes,,,,
+Q5073874,Charaideo,asi_monument,,site,selected,Assam,Assam,located in (P131),yes,yes,,,
+Q5087912,Chattar Manzil,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,yes,,,
+Q5087986,"Chaturbhuj Temple, Khajuraho",asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,,,
+Q5087989,"Chaturbhuj Temple, Orchha",asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,yes,,
+Q22952213,Chaturmukha Basadi,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,yes,,
+Q97815517,Chauburji,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,,,,
+Q1131206,Chaukhandi Stupa,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,yes,yes,,
+Q5088366,Chausath Khamba,asi_monument,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,,,
+Q17883316,"Chausath Yogini Temple, Bhedaghat",asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,,,
+Q5090262,Cheluvanarayana Swamy Temple,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,,,
+Q18209506,Chemmanthatta Mahadeva Temple,asi_monument,,site,selected,Kerala,Kerala,located in (P131),yes,,,,
+Q5091549,Chenraya Perumal Temple,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q5101062,Chini Ka Rauza,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,yes,yes,,
+Q17278426,"Chintala Venkataramana Temple, Tadipatri",asi_monument,,site,selected,Andhra Pradesh,Andhra Pradesh,located in (P131),yes,,yes,,
+Q12426499,Chitragupta Temple,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,yes,,
+Q3695769,Chittorgarh Fort,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,yes,,,
+Q59633576,Choron ki Baoli,asi_monument,,site,selected,Haryana,Haryana,located in (P131),yes,,,,
+Q19891193,Chowannur burial cave,asi_monument,,site,selected,Kerala,Kerala,located in (P131),yes,,,,
+Q17986881,Chowdeshwari Temple at Nandavaram,asi_monument,,site,selected,Andhra Pradesh,Andhra Pradesh,located in (P131),yes,,,,
+Q20047855,Church of Our Lady of the Rosary,asi_monument,,site,selected,Goa,Goa,located in (P131),yes,yes,,,
+Q5117224,Church of St. Francis of Assisi,asi_monument,,site,selected,Goa,Goa,located in (P131),yes,,,,
+Q97440982,Colonel Bailey's Dungeon,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,,,
+Q5166812,Cooch Behar Palace,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,yes,,,
+Q56245193,Currency Building,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q56245266,Dakhil Darwaza,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q132452150,Dakhni Sarai,asi_monument,,site,selected,Punjab,Punjab,located in (P131),yes,,,,
+Q56153418,Dalmadal Cannon,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q56235894,Dargah of Zafar Khan Gazi,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q5227654,Datia Palace,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,,,
+Q88667786,Daulatabad Fort,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,,,
+Q5253759,Delhi Gate,asi_monument,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,,,
+Q97481253,Delhi Gate,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q108672845,Deogarh Fort,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,,,,
+Q55609360,Deopahar,asi_monument,,site,selected,Assam,Assam,located in (P131),yes,yes,,,
+Q1985137,Dhamek Stupa,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,yes,,,
+Q16924514,Dhank Caves,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,yes,,,
+Q97119238,Dhumnath Temple,asi_monument,,site,selected,Chhattisgarh,Chhattisgarh,located in (P131),yes,,,,
+Q131807039,Dilawar Khan's Tomb and Mosque,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q5283746,Diu Fortress,asi_monument,,site,selected,Dadra and Nagar Haveli and Daman and Diu,Dadra and Nagar Haveli and Daman and Diu,located in (P131),yes,yes,,,
+Q5310691,Dubdi Monastery,asi_monument,,site,selected,Sikkim,Sikkim,located in (P131),yes,,,,
+Q5313281,Duladeo Temple,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,,,
+Q3517553,"Durga temple, Aihole",asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,yes,yes,,
+Q56379243,Dutch Cemetery,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q29032413,Dutch Cemetery,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q1268294,Dwarakadhish Temple,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,yes,yes,,
+Q2372682,Edakkal Caves,asi_monument,,site,selected,Kerala,Kerala,located in (P131),yes,yes,yes,,
+Q1347967,Eran,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,,,
+Q5395965,Erumbeeswarar Temple,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q28170183,Eyyal burial cave,asi_monument,,site,selected,Kerala,Kerala,located in (P131),yes,,,,
+Q15217339,Farah Bagh,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q97119404,Fateh Jang Gumbad,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,,,,
+Q24943841,Fatehgarh Fort,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,,,,
+Q1187568,Feroz Shah Kotla,asi_monument,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,,,
+Q5452165,Firoz Shah palace complex,asi_monument,,site,selected,Haryana,Haryana,located in (P131),yes,,,,
+Q5457032,Flagstaff Tower,asi_monument,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,,,
+Q11964733,Fort Dansborg,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q2731512,Galteswar Temple,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q17053330,Ganesha Ratha,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q130857616,"Garh Palace, Jhalawar",asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,,,,
+Q85762760,Garhwa Fort,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,,,,
+Q864862,Gateway of India,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,yes,,
+Q5527798,"Gaurishvara Temple, Yelandur",asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,,,
+Q932562,Gawilghur Fort,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,yes,,
+Q97705542,General Wali Kothi,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,,,,
+Q18536501,Ghanashyam's house,asi_monument,,site,selected,Assam,Assam,located in (P131),yes,,,,
+Q85763398,Ghateshwar Temple,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,,,,
+Q5556939,Ghorawadi Caves,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q24950067,Ghosalegad Fort,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q3536493,Gingee Fort,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,yes,,,
+Q5577562,Gohad Fort,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,,,
+Q56160151,Gokulchand Temple,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q192295,Gol Gumbaz,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,yes,yes,,
+Q60753316,Gola Ghar,asi_monument,,site,selected,Assam,Assam,located in (P131),yes,,,,
+Q107573534,Gommateshwara statue,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,yes,,
+Q22330289,Gommateshwara statue,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,yes,yes,,
+Q15698570,Gooty Fort,asi_monument,,site,selected,Andhra Pradesh,Andhra Pradesh,located in (P131),yes,,,,
+Q26708817,Gop Temple,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,yes,,,
+Q1092799,Grishneshwar temple,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,yes,,
+Q59657942,Group of Temples at Kiramchi,asi_monument,,site,selected,Jammu and Kashmir,Jammu and Kashmir,located in (P131),yes,yes,,,
+Q15222236,Gudiwada Dibba,asi_monument,,site,selected,Andhra Pradesh,Andhra Pradesh,located in (P131),yes,,,,
+Q5617266,Gulbarga Fort,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,yes,yes,,
+Q5618740,Gunfoundry,asi_monument,,site,selected,Telangana,Telangana,located in (P131),yes,yes,,,
+Q24936874,Hadi Rani Ki Baori,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,,,,
+Q19891668,Haibat Khan's Mosque,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q3249952,Haldighati,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,yes,,,
+Q98871551,Hampar Vav,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q5648088,Hangseshwari Temple,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,yes,,,
+Q104643303,Hari Parbat Fort,asi_monument,,site,selected,Jammu and Kashmir,Jammu and Kashmir,located in (P131),yes,,,,
+Q5657414,Harihareshwara Temple,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,yes,,
+Q16008848,Harshat Mata Temple,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,,yes,,
+Q5673931,Harshnath Temple,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,yes,,,
+Q4496635,Hauz Khas Complex,asi_monument,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,,,
+Q836531,Hawa Mahal,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,yes,yes,,
+Q6512504,Hayagriva Madhava Temple,asi_monument,,site,selected,Assam,Assam,located in (P131),yes,yes,yes,,
+Q5687746,Hazarduari Palace,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,yes,,,
+Q4497698,Hemis Monastery,asi_monument,,site,selected,Ladakh,Ladakh,located in (P131),yes,yes,,,
+Q15223867,"Hidimba Devi Temple, Dhungri Manali",asi_monument,,site,selected,Himachal Pradesh,Himachal Pradesh,located in (P131),yes,yes,yes,,
+Q125372084,Hilal Khan Ghazi Mosque,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q3517561,Hoysaleswara Temple,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,yes,yes,,
+Q66363313,Ibrahim Rouza,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,,,
+Q6080700,"Ishvara Temple, Arasikere",asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,yes,,,
+Q84362906,Jagadhatri Doul,asi_monument,,site,selected,Assam,Assam,located in (P131),yes,,,,
+Q4500786,Jagannath Temple,asi_monument,,site,selected,Jharkhand,Jharkhand,located in (P131),yes,yes,,,
+Q66439421,Jagat Sett's house,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q6122662,Jagjivanpur,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q24950730,Jahaj Kothi,asi_monument,,site,selected,Haryana,Haryana,located in (P131),yes,,,,
+Q3612475,Jahangiri Mahal,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,yes,,,
+Q6123214,Jahaz Haveli,asi_monument,,site,selected,Punjab,Punjab,located in (P131),yes,yes,,,
+Q13113602,"Jain Temple, Kidanganad",asi_monument,,site,selected,Kerala,Kerala,located in (P131),yes,,,,
+Q97481101,"Jain temple, Mettupudur",asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q42103094,Jain temples of Deogarh,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,,,,
+Q58307216,Jal Mahal,asi_monument,,site,selected,Haryana,Haryana,located in (P131),yes,,yes,,
+Q15701733,"Jalakandeswarar Temple, Vellore",asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q97945667,Jama Masjid,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,,,,
+Q6127147,Jama Masjid,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,yes,,,
+Q6127151,"Jama Masjid, Bijapur",asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,yes,,,
+Q28195181,Jamalabad Fort,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,yes,,
+Q4292384,Jamali Kamali Mosque and Tomb,asi_monument,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,,,
+Q62781196,"Jami Masjid, Bharuch",asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q63343124,"Jami Masjid, Mangrol",asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q6159487,Jarai-ka-Math,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,,,,
+Q26898655,"Jasmalnathji Mahadev Temple, Asoda",asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q6165262,"Javari Temple, Khajuraho",asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,,,
+Q19892184,Jethabhai's Stepwell,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q97692108,Jhanjhari Masjid,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,,,,
+Q56153635,Jor Mandir,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q56761683,Jorbangla temple,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q18536498,Joysagar Vishnudol,asi_monument,,site,selected,Assam,Assam,located in (P131),yes,,,,
+Q12979988,Kabilar Kundru,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q16924762,Kadia Dungar caves,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q19892371,Kalayat Ancient Bricks Temple Complex,asi_monument,,site,selected,Haryana,Haryana,located in (P131),yes,,,,
+Q67014069,"Kalinga sculptures, Chengamedu",asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q6353761,"Kalleshvara Temple, Bagali",asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,yes,,
+Q6353755,Kalleshvara temple,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,,,
+Q97096042,Kamal Basadi,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,yes,,
+Q648390,Kandariya Mahadeva Temple,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,yes,,
+Q6362859,"Kangra Fort, Himachal Pradesh",asi_monument,,site,selected,Himachal Pradesh,Himachal Pradesh,located in (P131),yes,yes,,,
+Q1356198,Kanheri Caves,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,,,
+Q97124420,Kans Quila,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,,,,
+Q97459466,Kanswa Temple,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,,,,
+Q13218267,Kanthkot Fort,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q6366646,Kapilash Temple,asi_monument,,site,selected,Odisha,Odisha,located in (P131),yes,,,,
+Q15040926,Karad Caves,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q6372431,Karla Caves,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,yes,,
+Q6374558,"Kasivisvesvara Temple, Lakkundi",asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,yes,,
+Q70832804,Kawtchhuah Ropui,asi_monument,,site,selected,Mizoram,Mizoram,located in (P131),yes,,,,
+Q30587895,Kesaria stupa,asi_monument,,site,selected,Bihar,Bihar,located in (P131),yes,yes,,,
+Q16924784,Khambhalida Caves,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q19459653,Khanqah-e-Mu'alla,asi_monument,,site,selected,Jammu and Kashmir,Jammu and Kashmir,located in (P131),yes,,,,
+Q60746853,Khapra Kodiya Caves,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q56379609,Kheraul mosque,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q6401720,Khirachora Gopinatha Temple,asi_monument,,site,selected,Odisha,Odisha,located in (P131),yes,yes,,,
+Q3535259,Khooni Darwaza,asi_monument,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,,,
+Q3815023,Khusro Bagh,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,yes,yes,,
+Q55640251,Khwaja Khizr Tomb,asi_monument,,site,selected,Haryana,Haryana,located in (P131),yes,,,,
+Q12419620,Kiradu temples,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,yes,,,
+Q2786019,"Kirti Mandir, Porbandar",asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q3824083,Kolaba Fort,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,yes,,
+Q6427067,Kolaramma Temple,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,yes,yes,,
+Q16924791,Kolvi Caves,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,yes,,,
+Q19284921,Koncheswar Mahadev temple,asi_monument,,site,selected,Bihar,Bihar,located in (P131),yes,,,,
+Q17986877,Konda Reddy Fort,asi_monument,,site,selected,Andhra Pradesh,Andhra Pradesh,located in (P131),yes,,yes,,
+Q15040927,Kondana Caves,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,yes,,
+Q6428950,Kondapalli Fort,asi_monument,,site,selected,Andhra Pradesh,Andhra Pradesh,located in (P131),yes,,,,
+Q6431407,Koranganatha Temple,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q16893656,Kovalanpottal,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q15240480,Krishna Cave Temple,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q6437601,Krishnapuram Palace,asi_monument,,site,selected,Kerala,Kerala,located in (P131),yes,,,,
+Q6440783,Ksheerarama,asi_monument,,site,selected,Andhra Pradesh,Andhra Pradesh,located in (P131),yes,,yes,,
+Q20826376,Kuldhara,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,yes,yes,,
+Q27074014,Lakhpat Gurdwara Sahib,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q48731967,"Lakshana Devi Temple, Bharmour",asi_monument,,site,selected,Himachal Pradesh,Himachal Pradesh,located in (P131),yes,,,,
+Q4832985,Lakshmi Devi Temple,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,yes,,
+Q6479891,"Lakshmi Narasimha Temple, Nuggehalli",asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,yes,,
+Q24906618,"Lakshmikanta Temple, Kalale",asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,,,
+Q6479950,"Lakshminarayana Temple, Hosaholalu",asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,yes,,
+Q95985705,Lalbagh Palace,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,,,
+Q3827825,Laling Fort,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q3445538,Lalitgiri,asi_monument,,site,selected,Odisha,Odisha,located in (P131),yes,yes,,,
+Q56154082,Lalji Temple,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q2556336,Lamayuru Monastery,asi_monument,,site,selected,Ladakh,Ladakh,located in (P131),yes,yes,,,
+Q3043543,Leh Palace,asi_monument,,site,selected,Ladakh,Ladakh,located in (P131),yes,,,,
+Q6523426,Lenyadri,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,,,
+Q48728854,Lohani Caves,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,,,,
+Q19323329,Lomas Rishi Cave,asi_monument,,site,selected,Bihar,Bihar,located in (P131),yes,,,,
+Q22807267,Lothian Cemetery,asi_monument,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,,,
+Q97440781,Lotus Mahal Pavilion,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,,,
+Q56245449,Lukachuri Gateway,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q26936178,MacMurdo's Bungalow,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q17278417,Madaksira hill fort,asi_monument,,site,selected,Andhra Pradesh,Andhra Pradesh,located in (P131),yes,yes,,,
+Q6726401,Madan Kamdev,asi_monument,,site,selected,Assam,Assam,located in (P131),yes,yes,,,
+Q4500833,Madan Mohan Temple,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,yes,,,
+Q28797374,Madhavav,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q97440616,Madhukesvara temple,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,,,
+Q17351111,Maha Stupa at Amaravati,asi_monument,,site,selected,Andhra Pradesh,Andhra Pradesh,located in (P131),yes,yes,,,
+Q85783181,"Mahadev Temple, Deobaloda",asi_monument,,site,selected,Chhattisgarh,Chhattisgarh,located in (P131),yes,,,,
+Q6732753,"Mahadev Temple, Tambdi Surla",asi_monument,,site,selected,Goa,Goa,located in (P131),yes,,,,
+Q6732769,"Mahadeva Temple, Itagi",asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,yes,yes,,
+Q6732862,Mahakali Caves,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,,,
+Q6733045,"Mahamaya Temple, Ratanpur",asi_monument,,site,selected,Chhattisgarh,Chhattisgarh,located in (P131),yes,yes,,,
+Q6733462,"Mahasu Devta Temple, Hanol",asi_monument,,site,selected,Uttarakhand,Uttarakhand,located in (P131),yes,yes,,,
+Q96391538,Mahur Fort,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q97946318,Maladevi Temple,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,,,,
+Q20824311,Malleshwar Temple,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q24907856,Maluti temples,asi_monument,,site,selected,Jharkhand,Jharkhand,located in (P131),yes,yes,,,
+Q115380060,"Mama Bhanja Temple, Barsoor",asi_monument,,site,selected,Chhattisgarh,Chhattisgarh,located in (P131),yes,,,,
+Q12444660,Mandapeshwar Caves,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,,,
+Q19288475,Mangapuram Venkatesvara Vishnu Temple,asi_monument,,site,selected,Andhra Pradesh,Andhra Pradesh,located in (P131),yes,,,,
+Q13646574,Manora Fort,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q6774201,Martand Sun Temple,asi_monument,,site,selected,Jammu and Kashmir,Jammu and Kashmir,located in (P131),yes,yes,,,
+Q19893793,Masroor Temples,asi_monument,,site,selected,Himachal Pradesh,Himachal Pradesh,located in (P131),yes,yes,,,
+Q15673405,"Matangeshvara temple, Khajuraho",asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,,,
+Q98871548,Matri Vav,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q24944004,Megheswar Temple,asi_monument,,site,selected,Odisha,Odisha,located in (P131),yes,,,,
+Q16933896,Mina Mosque,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,,,,
+Q19894008,Mir Abu Turab's Tomb,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q6873592,Mirjan Fort,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,yes,,
+Q28858561,Mithi Vav,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q19894140,"Moorish Mosque, Kapurthala",asi_monument,,site,selected,Punjab,Punjab,located in (P131),yes,,,,
+Q12062031,Moovar Koil,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,yes,,,
+Q12062083,Moth Ki Masjid,asi_monument,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,,,,
+Q98927684,Moti Mahal,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,,,,
+Q41515358,Moti Masjid,asi_monument,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,,,,
+Q56380470,Motijheel Jama Mosque,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q6930853,Mubarak Mandi Palace,asi_monument,,site,selected,Jammu and Kashmir,Jammu and Kashmir,located in (P131),yes,,,,
+Q60764080,Mughal Bridge,asi_monument,,site,selected,Haryana,Haryana,located in (P131),yes,,,,
+Q16931489,Muhafiz Khan Mosque,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q6933613,"Muktheshwarar Temple, Kanchipuram",asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q56063785,Musheerabad Masjid,asi_monument,,site,selected,Telangana,Telangana,located in (P131),yes,,,,
+Q6943944,Mutiny Memorial,asi_monument,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,,,,
+Q17011872,Nadan Mahal,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,,,,
+Q25627418,"Nageshvara-Chennakeshava Temple complex, Mosale",asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,yes,,
+Q17062524,Nakula Sahadeva Ratha,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,yes,,
+Q24908269,Naldurg Fort,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,,,
+Q6960926,Nalknad Palace,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,yes,,
+Q4312749,Namgyal Tsemo Monastery,asi_monument,,site,selected,Ladakh,Ladakh,located in (P131),yes,,,,
+Q115463941,Narayanpal Temple,asi_monument,,site,selected,Chhattisgarh,Chhattisgarh,located in (P131),yes,,,,
+Q60155046,Naugaza Digambar Jain temple,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,,,,
+Q26258400,Nava Toran Temple,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,,,,
+Q15040932,Nenavali Caves,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q24946811,Nithyakalyana Perumal temple,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q56204092,Norbugang Chorten,asi_monument,,site,selected,Sikkim,Sikkim,located in (P131),yes,,,,
+Q67648120,Nrusinghanath Temple,asi_monument,,site,selected,Odisha,Odisha,located in (P131),yes,,,,
+Q15263712,Olakkannesvara Temple,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q66438919,Pakbirra Jain Shrine,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q3522109,Palakkad Fort,asi_monument,,site,selected,Kerala,Kerala,located in (P131),yes,yes,,,
+Q3595357,Pallipuram Fort,asi_monument,,site,selected,Kerala,Kerala,located in (P131),yes,yes,yes,,
+Q1767992,"Panchakuta Basadi, Kambadahalli",asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,yes,,
+Q7130263,"Panchalingeshwara temple, Govindanahalli",asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,yes,,
+Q7130757,Pandu Rajar Dhibi,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,yes,,,
+Q16924964,Panhalakaji Caves,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q84135942,Parel Relief,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q7136985,Pari Mahal,asi_monument,,site,selected,Jammu and Kashmir,Jammu and Kashmir,located in (P131),yes,,,,
+Q24908179,Parinirvana Stupa,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,yes,,,
+Q12437742,Parshvanatha Temple,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,,,
+Q105605675,"Parthasarathy temple, Parthivapuram",asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q12065367,Parvati Temple,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,,,,
+Q7144196,Patal Bhuvaneshwar,asi_monument,,site,selected,Uttarakhand,Uttarakhand,located in (P131),yes,yes,yes,,
+Q7144204,Pataleshwar,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q13113468,Peruvanam Mahadeva Temple,asi_monument,,site,selected,Kerala,Kerala,located in (P131),yes,,,,
+Q48082556,Pindara Group of Temples,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q59296643,Pohale caves,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q97119164,"Pretshila Hill (Bagdi Chiraiya Road, Bahadur Bigha)",asi_monument,,site,selected,Bihar,Bihar,located in (P131),yes,,,,
+Q1151529,Purana Qila,asi_monument,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,,,
+Q7130214,Q7130214,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,yes,yes,,
+Q97692149,Q97692149,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,,,,
+Q3926492,Qila Mubarak,asi_monument,,site,selected,Punjab,Punjab,located in (P131),yes,yes,yes,,
+Q7273006,Qutb Shahi tombs,asi_monument,,site,selected,Telangana,Telangana,located in (P131),yes,yes,,,
+Q19895569,Qutub-e-Alam's Mosque,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q1244570,Rabdentse,asi_monument,,site,selected,Sikkim,Sikkim,located in (P131),yes,yes,,,
+Q56154579,Radha Gobinda Temple,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q56154613,Radha Madhab Temple,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q56154637,Radha Shyam Temple,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q7283696,Raibania Fort,asi_monument,,site,selected,Odisha,Odisha,located in (P131),yes,yes,,,
+Q59633549,Raja Harsh ka Tila,asi_monument,,site,selected,Haryana,Haryana,located in (P131),yes,,,,
+Q6507638,Rajarani Temple,asi_monument,,site,selected,Odisha,Odisha,located in (P131),yes,yes,yes,,
+Q19833050,"Rajiv Lochan temple, Rajim",asi_monument,,site,selected,Chhattisgarh,Chhattisgarh,located in (P131),yes,,,,
+Q15271611,"Rameshvara Temple, Koodli",asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,yes,,
+Q6507707,Rameshwar Deula,asi_monument,,site,selected,Odisha,Odisha,located in (P131),yes,,,,
+Q17085981,Ramnagar Fort,asi_monument,,site,selected,Jammu and Kashmir,Jammu and Kashmir,located in (P131),yes,yes,yes,,
+Q63347592,Ranak Devi's Temple,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q63343140,"Ranchhodrai Temple, Mul Dwarka",asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q10967495,Rang Ghar,asi_monument,,site,selected,Assam,Assam,located in (P131),yes,yes,,,
+Q2724894,Ranthambore Fort,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,yes,,,
+Q24950082,Rasalgad,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q7294995,Rashtrapati Niwas,asi_monument,,site,selected,Himachal Pradesh,Himachal Pradesh,located in (P131),yes,yes,,,
+Q113560234,Ratnagiri Fort,asi_monument,,site,selected,Andhra Pradesh,Andhra Pradesh,located in (P131),yes,,,,
+Q7298517,Raymond's Tomb,asi_monument,,site,selected,Telangana,Telangana,located in (P131),yes,,,,
+Q130265602,Relic Stupa of Vaishali,asi_monument,,site,selected,Bihar,Bihar,located in (P131),yes,,,,
+Q31728764,"Residency Cemetery, Babulbona",asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q7338999,Riwa Fort,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,,,
+Q56064770,Rock edicts of Khalsi,asi_monument,,site,selected,Uttarakhand,Uttarakhand,located in (P131),yes,,yes,,
+Q29863682,Roda Group of Temples,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q11946159,Rohtasgarh Fort,asi_monument,,site,selected,Bihar,Bihar,located in (P131),yes,yes,yes,,
+Q7379279,Rumi Darwaza,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,yes,yes,,
+Q12455517,Sabalgarh Fort,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,,,
+Q29052432,Safa Masjid,asi_monument,,site,selected,Goa,Goa,located in (P131),yes,yes,,,
+Q7399544,Sahastralinga Tank,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q2983675,"Saint Paul's College, Goa",asi_monument,,site,selected,Goa,Goa,located in (P131),yes,,,,
+Q24931166,Sanghiji,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,yes,,,
+Q471838,Sankagiri Fort,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,yes,,
+Q7421143,Saptakoteshwar Temple,asi_monument,,site,selected,Goa,Goa,located in (P131),yes,,,,
+Q7424948,Sasbahu Temple,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,,,
+Q56425457,Sat Deul,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q56425688,Sayyid Jamaluddin Mosque,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,yes,,,
+Q7433162,Schwartz Church,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,yes,,,
+Q2942482,Se Cathedral,asi_monument,,site,selected,Goa,Goa,located in (P131),yes,,,,
+Q7452650,Serai Nurmahal,asi_monument,,site,selected,Punjab,Punjab,located in (P131),yes,,,,
+Q59633559,Shah Quli Khan's Tomb,asi_monument,,site,selected,Haryana,Haryana,located in (P131),yes,,,,
+Q19898307,Shah-e-Alam's Roza,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q7461611,Shahi Qila,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,yes,,,
+Q97945679,Shahzadi ka Roza,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,,,,
+Q1351060,Shaniwar Wada,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,,,
+Q7488715,"Shankaracharya Temple, Srinagar",asi_monument,,site,selected,Jammu and Kashmir,Jammu and Kashmir,located in (P131),yes,yes,yes,,
+Q2090440,Shanti Stupa,asi_monument,,site,selected,Ladakh,Ladakh,located in (P131),yes,,,,
+Q19898328,"Shantinatha Basadi, Jinanathapura",asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,yes,,
+Q28173401,Shantinatha temple,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,,,,
+Q7492910,Sheikh Chilli's Tomb,asi_monument,,site,selected,Haryana,Haryana,located in (P131),yes,,,,
+Q97119184,Shergarh Fort,asi_monument,,site,selected,Bihar,Bihar,located in (P131),yes,,,,
+Q4521832,Shey Monastery,asi_monument,,site,selected,Ladakh,Ladakh,located in (P131),yes,,,,
+Q22077087,Shish Gumbad,asi_monument,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,,,,
+Q7499202,"Shiv Mandir, Ambarnath",asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,,,
+Q3520074,Shivneri Fort,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,yes,,
+Q16346744,Shyamrai Temple,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q1550186,Sikandar Bagh,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,yes,,,
+Q13413791,Sindhudurg Fort,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,yes,,
+Q3078248,Sinhagad,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,,,
+Q7530898,Sisodiya Rani Bagh,asi_monument,,site,selected,Rajasthan,Rajasthan,located in (P131),yes,yes,,,
+Q55179237,"Sitala Mata Temple, Butapaldi",asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q7532312,Sivaganga Fort,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q97144378,Sivankoil (Raja Raja Choleshwar Mahadevar Temple),asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q7506933,Sivasagar Sivadol,asi_monument,,site,selected,Assam,Assam,located in (P131),yes,yes,,,
+Q4902107,Solapur Bhuikot Killa,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q7559998,"Someshwara Temple, Kolar",asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,yes,,
+Q61363414,Soneri Mahal,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q2972549,South Park Street Cemetery,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,yes,,,
+Q7586293,Sri Surya Pahar,asi_monument,,site,selected,Assam,Assam,located in (P131),yes,,,,
+Q7586384,"Srikanteshwara Temple, Nanjangud",asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,yes,yes,,
+Q7595554,St Thomas Fort,asi_monument,,site,selected,Kerala,Kerala,located in (P131),yes,yes,yes,,
+Q2663176,St. Angelo Fort,asi_monument,,site,selected,Kerala,Kerala,located in (P131),yes,yes,,,
+Q3595372,St. Francis Church,asi_monument,,site,selected,Kerala,Kerala,located in (P131),yes,,yes,,
+Q7591040,St. Paul's Church,asi_monument,,site,selected,Dadra and Nagar Haveli and Daman and Diu,Dadra and Nagar Haveli and Daman and Diu,located in (P131),yes,,,,
+Q7619059,Stone circles of Junapani,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,,,
+Q41650552,Subz Burz,asi_monument,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,,,
+Q61066095,Sukreeswarar temple,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q26898105,Summer Palace of Maharaja Ranjit Singh,asi_monument,,site,selected,Punjab,Punjab,located in (P131),yes,,,,
+Q63347605,"Sun temple, Thangadh",asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q7351431,Surajkund,asi_monument,,site,selected,Haryana,Haryana,located in (P131),yes,yes,yes,,
+Q7646429,Surkotada,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,yes,,,
+Q2099096,Suvarnadurg Fort,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q19807538,Talagad,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q7678799,Talagunda pillar inscription,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,yes,yes,,
+Q16925054,Talaja Caves,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q18752661,Teen Darwaza,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,yes,,,
+Q3523380,Tellicherry Fort,asi_monument,,site,selected,Kerala,Kerala,located in (P131),yes,,,,
+Q25378270,Temple of Ichai Ghosh,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q7743925,The Kachari Ruins,asi_monument,,site,selected,Nagaland,Nagaland,located in (P131),yes,yes,,,
+Q867066,Thikse Monastery,asi_monument,,site,selected,Ladakh,Ladakh,located in (P131),yes,,,,
+Q7785352,Thirumayam Fort,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q7796914,Thotlakonda,asi_monument,,site,selected,Andhra Pradesh,Andhra Pradesh,located in (P131),yes,,,,
+Q7797068,Thousand Pillar Temple,asi_monument,,site,selected,Telangana,Telangana,located in (P131),yes,yes,,,
+Q60787172,Tipagad,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q7809304,Tiruchirappalli Rock Fort,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q41650747,Tomb of Ataga Khan,asi_monument,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,,,,
+Q56374510,Tomb of Azimunnisha Begum,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q22806958,Tomb of Bahlul Lodi,asi_monument,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,,,
+Q19342888,Tomb of Bakhtiar Khan,asi_monument,,site,selected,Bihar,Bihar,located in (P131),yes,,,,
+Q19342237,Tomb of Hasan Shah Suri,asi_monument,,site,selected,Bihar,Bihar,located in (P131),yes,,,,
+Q97307459,Tomb of Malik Ambar,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q7818627,Tomb of Mariam-uz-Zamani,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,yes,,,
+Q56378979,Tomb of Mir Madan,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q97815877,Tomb of Nawab Najib-ud-Daula,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,,,,
+Q375624,Tomb of Safdar Jang,asi_monument,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,,,
+Q3180790,Tomb of Salim Chishti,asi_monument,,site,selected,Uttar Pradesh,Uttar Pradesh,located in (P131),yes,yes,yes,,
+Q71352563,Tomb of Sawai Singh,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,,,,
+Q97946799,Tomb of Shah Nawaz Khan,asi_monument,,site,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,,,,
+Q60764249,Tomb of Sheikh Tayyab,asi_monument,,site,selected,Haryana,Haryana,located in (P131),yes,,,,
+Q21475086,Tomb of Sikandar Lodi,asi_monument,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,yes,,,
+Q47462259,Tomb of Sikandar Shah,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q7825964,Torna Fort,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q28172877,Tripolia Gates,asi_monument,,site,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,located in (P131),yes,,,,
+Q56242029,Trivikrama Temple,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q7852108,Tulja Bhavani Temple,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,,,
+Q7876995,Udayagiri,asi_monument,,site,selected,Odisha,Odisha,located in (P131),yes,yes,,,
+Q3536413,Udayagiri and Khandagiri Caves,asi_monument,,site,selected,Odisha,Odisha,located in (P131),yes,yes,yes,,
+Q7877186,Udgir Fort,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,,,
+Q2044395,Udupi Sri Krishna Matha,asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,yes,yes,,
+Q7881041,Umachal rock inscription,asi_monument,,site,selected,Assam,Assam,located in (P131),yes,,,,
+Q26944017,Uparkot Caves,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q24937257,"Vaikunda Perumal Temple, Uthiramerur",asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q7911723,Valisvara Temple,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,,,,
+Q24938746,Varadaraja Perumal Temple,asi_monument,,site,selected,Puducherry,Puducherry,located in (P131),yes,,,,
+Q7915405,Varaha Cave Temple,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,yes,yes,,
+Q7915407,Varahanatha Temple,asi_monument,,site,selected,Odisha,Odisha,located in (P131),yes,,,,
+Q7917189,Vattakottai Fort,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,yes,,,
+Q3390913,Vellore Fort,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,yes,,,
+Q73785706,Vijasan Caves,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q3827850,Vijaydurg Fort,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,,,,
+Q18359186,Vijaynagar,asi_monument,,site,selected,Arunachal Pradesh,Arunachal Pradesh,located in (P131),yes,,,,
+Q1634624,Vikramaśīla University,asi_monument,,site,selected,Bihar,Bihar,located in (P131),yes,yes,yes,,
+Q19899151,Vikramkhol,asi_monument,,site,selected,Odisha,Odisha,located in (P131),yes,,,,
+Q11954902,Vishalgad,asi_monument,,site,selected,Maharashtra,Maharashtra,located in (P131),yes,yes,,,
+Q63343148,Vithalbhai Haveli,asi_monument,,site,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q3344887,Vivekananda Rock Memorial,asi_monument,,site,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,yes,yes,,
+Q18394457,"Wangath Temple complex, Naranag",asi_monument,,site,selected,Jammu and Kashmir,Jammu and Kashmir,located in (P131),yes,,,,
+Q2790445,Wanla Monastery,asi_monument,,site,selected,Ladakh,Ladakh,located in (P131),yes,,,,
+Q7968796,Warangal Fort,asi_monument,,site,selected,Telangana,Telangana,located in (P131),yes,yes,yes,,
+Q3517635,Yameshwar Temple,asi_monument,,site,selected,Odisha,Odisha,located in (P131),yes,yes,yes,,
+Q56380183,Yellow Mosque,asi_monument,,site,selected,West Bengal,West Bengal,located in (P131),yes,,,,
+Q19899120,"Yoga Madhava Temple, Settikere",asi_monument,,site,selected,Karnataka,Karnataka,located in (P131),yes,,,,
+Q4667447,Abhira,dynasty,,person_dynasty_style,selected,,,,yes,yes,yes,,"rule: dynasty, country India"
+Q400998,Ahmadnagar Sultanate,dynasty,,person_dynasty_style,selected,Maharashtra,Maharashtra,capital (P36),yes,yes,,,rule: capital in India
+Q2308237,Ahom Kingdom,dynasty,,person_dynasty_style,selected,Assam,Assam,capital (P36),yes,yes,,,rule: capital in India
+Q402382,Ahom dynasty,dynasty,,person_dynasty_style,selected,Assam,Assam,capital (P36),yes,yes,,,rule: capital in India
+Q16154186,Andhra Ikshvaku,dynasty,,person_dynasty_style,selected,,,,yes,yes,,,"rule: dynasty, country India"
+Q1155818,Anga Kingdom,dynasty,,person_dynasty_style,selected,Bihar,Bihar,capital (P36),yes,yes,yes,,rule: capital in India
+Q4781804,Apraca,dynasty,,person_dynasty_style,selected,,,,yes,,,,"rule: dynasty, country India"
+Q16962165,Asaf Jahi Dynasty,dynasty,,person_dynasty_style,selected,,,,yes,yes,,,"rule: dynasty, country India"
+Q4821773,Aulikaras,dynasty,,person_dynasty_style,selected,,,,yes,,,,"rule: dynasty, country India"
+Q4827705,Avanti,dynasty,,person_dynasty_style,selected,Madhya Pradesh,Madhya Pradesh,capital (P36),yes,yes,yes,,rule: capital in India
+Q374521,Bahmani Sultanate,dynasty,,person_dynasty_style,selected,Karnataka,Karnataka,capital (P36),yes,yes,yes,,"rule: capital in India; dynasty, country India"
+Q810557,Bastar State,dynasty,,person_dynasty_style,selected,Chhattisgarh,Chhattisgarh,capital (P36),yes,yes,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q1375154,Benares State,dynasty,,person_dynasty_style,selected,Uttar Pradesh,Uttar Pradesh,capital (P36),yes,yes,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q818666,Berar Sultanate,dynasty,,person_dynasty_style,selected,Maharashtra,Maharashtra,capital (P36),yes,yes,,,rule: capital in India
+Q854850,Bharatpur State,dynasty,,person_dynasty_style,selected,Rajasthan,Rajasthan,capital (P36),yes,yes,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q854917,Bhavnagar State,dynasty,,person_dynasty_style,selected,Gujarat,Gujarat,capital (P36),yes,,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q669317,Bidar Sultanate,dynasty,,person_dynasty_style,selected,Karnataka,Karnataka,capital (P36),yes,yes,,,rule: capital in India
+Q83821,Bijapur Sultanate,dynasty,,person_dynasty_style,selected,Karnataka,Karnataka,capital (P36),yes,yes,yes,,rule: capital in India
+Q859966,Bikaner State,dynasty,,person_dynasty_style,selected,Rajasthan,Rajasthan,capital (P36),yes,yes,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q5066878,Chagi,dynasty,,person_dynasty_style,selected,,,,yes,,,,"rule: dynasty, country India"
+Q24896841,Chahamanas of Jalor,dynasty,,person_dynasty_style,selected,,,,yes,,,,"rule: dynasty, country India"
+Q24897480,Chahamanas of Naddula,dynasty,,person_dynasty_style,selected,,,,yes,yes,,,"rule: dynasty, country India"
+Q25341528,Chahamanas of Ranastambhapura,dynasty,,person_dynasty_style,selected,Rajasthan,Rajasthan,capital (P36),yes,yes,,,"rule: capital in India; dynasty, country India"
+Q107144425,Chak dynasty,dynasty,,person_dynasty_style,selected,Jammu and Kashmir,Jammu and Kashmir,capital (P36),yes,,,,rule: capital in India
+Q1395011,Chalukya dynasty,dynasty,,person_dynasty_style,selected,Karnataka,Karnataka,capital (P36),yes,yes,yes,,"rule: capital in India; dynasty, country India"
+Q24883028,Chalukyas of Lata,dynasty,,person_dynasty_style,selected,,,,yes,,,,"rule: dynasty, country India"
+Q28053304,Chalukyas of Vemulavada,dynasty,,person_dynasty_style,selected,,,,yes,,,,"rule: dynasty, country India"
+Q1060520,Chamba State,dynasty,,person_dynasty_style,selected,Himachal Pradesh,Himachal Pradesh,capital (P36),yes,,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q2039087,Chandelas of Jejakabhukti,dynasty,,person_dynasty_style,selected,Madhya Pradesh,Madhya Pradesh,capital (P36),yes,yes,yes,,"rule: capital in India; dynasty, country India"
+Q1068371,Chauhan,dynasty,,person_dynasty_style,selected,,,,yes,yes,,,"rule: dynasty, country India"
+Q13117201,Cher,dynasty,,person_dynasty_style,selected,,,,,,,,"rule: dynasty, country India"
+Q877155,Chera dynasty,dynasty,,person_dynasty_style,selected,Tamil Nadu,Tamil Nadu,capital (P36),yes,yes,yes,,"rule: capital in India; dynasty, country India"
+Q1071493,Chhatarpur State,dynasty,,person_dynasty_style,selected,Madhya Pradesh,Madhya Pradesh,capital (P36),yes,yes,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q6806806,Chola Empire,dynasty,,person_dynasty_style,selected,Tamil Nadu,Tamil Nadu,capital (P36),yes,,,,rule: capital in India
+Q151148,Chola dynasty,dynasty,,person_dynasty_style,selected,Tamil Nadu,Tamil Nadu,capital (P36),yes,yes,yes,,rule: capital in India
+Q25226947,Chudasama dynasty,dynasty,,person_dynasty_style,selected,Gujarat,Gujarat,capital (P36),yes,,,,"rule: capital in India; dynasty, country India"
+Q7650054,Chutia Kingdom,dynasty,,person_dynasty_style,selected,multi-state,Arunachal Pradesh; Assam,capital (P36),yes,yes,,,rule: capital in India
+Q5118391,Chutu,dynasty,,person_dynasty_style,selected,Karnataka,Karnataka,capital (P36),yes,yes,yes,,rule: capital in India
+Q6424771,Cooch Dynasty,dynasty,,person_dynasty_style,selected,West Bengal,West Bengal,capital (P36),yes,yes,,,rule: capital in India
+Q1720882,Cutch State,dynasty,,person_dynasty_style,selected,Gujarat,Gujarat,capital (P36),yes,,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q1172600,Datia State,dynasty,,person_dynasty_style,selected,Madhya Pradesh,Madhya Pradesh,capital (P36),yes,yes,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q1183649,Deccan sultanates,dynasty,,person_dynasty_style,selected,Maharashtra,Maharashtra,capital (P36),yes,yes,,,rule: capital in India
+Q229411,Delhi Sultanate,dynasty,,person_dynasty_style,selected,multi-state,National Capital Territory of Delhi; Uttar Pradesh,capital (P36),yes,yes,yes,,rule: capital in India
+Q4156330,Deva dynasty,dynasty,,person_dynasty_style,selected,West Bengal,West Bengal,capital (P36),yes,yes,,,"rule: capital in India; dynasty, country India"
+Q1207561,Dhar State,dynasty,,person_dynasty_style,selected,Madhya Pradesh,Madhya Pradesh,capital (P36),yes,yes,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q3765117,Eastern Chalukyas,dynasty,,person_dynasty_style,selected,,,,yes,yes,,,"rule: capital in India; dynasty, country India"
+Q5436526,Faruqi Dynasty,dynasty,,person_dynasty_style,selected,Madhya Pradesh,Madhya Pradesh,capital (P36),yes,yes,yes,,rule: capital in India
+Q17076645,Gauḍa Kingdom,dynasty,,person_dynasty_style,selected,West Bengal,West Bengal,capital (P36),yes,yes,,,rule: capital in India
+Q19805959,Golconda Sultanate,dynasty,,person_dynasty_style,selected,Telangana,Telangana,capital (P36),yes,yes,yes,,rule: capital in India
+Q28065926,Guhilas of Medapata,dynasty,,person_dynasty_style,selected,,,,yes,yes,yes,,"rule: dynasty, country India"
+Q11774,Gupta Empire,dynasty,,person_dynasty_style,selected,Bihar,Bihar,capital (P36),yes,yes,yes,,rule: capital in India
+Q5324,Gurjara-Pratihara,dynasty,,person_dynasty_style,selected,Uttar Pradesh,Uttar Pradesh,capital (P36),yes,yes,yes,,rule: capital in India
+Q466581,Hoysala Empire,dynasty,,person_dynasty_style,selected,Karnataka,Karnataka,capital (P36),yes,yes,yes,,rule: capital in India
+Q1240096,Hyderabad State,dynasty,,person_dynasty_style,selected,multi-state,Maharashtra; Telangana,capital (P36),yes,yes,yes,,rule: capital in India
+Q716890,Indore State,dynasty,,person_dynasty_style,selected,Madhya Pradesh,Madhya Pradesh,capital (P36),yes,yes,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q6124144,Jaipur State,dynasty,,person_dynasty_style,selected,Rajasthan,Rajasthan,capital (P36),yes,yes,,,rule: capital in India
+Q654380,Kabul Shahi,dynasty,,person_dynasty_style,selected,,,,yes,yes,,,"rule: dynasty, country India"
+Q24951845,Kachchhapaghata dynasty,dynasty,,person_dynasty_style,selected,,,,yes,yes,,,"rule: dynasty, country India"
+Q1479952,Kadamba dynasty,dynasty,,person_dynasty_style,selected,Karnataka,Karnataka,capital (P36),yes,yes,yes,,"rule: capital in India; dynasty, country India"
+Q16851326,Kadamba of Hangal,dynasty,,person_dynasty_style,selected,,,,yes,,yes,,"rule: dynasty, country India"
+Q6345086,Kadambas of Goa,dynasty,,person_dynasty_style,selected,,,,yes,,yes,,"rule: dynasty, country India"
+Q6345088,Kadambas of Halasi,dynasty,,person_dynasty_style,selected,,,,yes,,,,"rule: dynasty, country India"
+Q2086556,Kakatiya dynasty,dynasty,,person_dynasty_style,selected,Telangana,Telangana,capital (P36),yes,yes,yes,,"rule: capital in India; dynasty, country India"
+Q2572901,Kalabhra,dynasty,,person_dynasty_style,selected,Tamil Nadu,Tamil Nadu,capital (P36),yes,yes,yes,,rule: capital in India
+Q28062492,Kalachuris of Mahishmati,dynasty,,person_dynasty_style,selected,,,,yes,,yes,,"rule: dynasty, country India"
+Q28065106,Kalachuris of Ratnapura,dynasty,,person_dynasty_style,selected,,,,yes,,,,"rule: dynasty, country India"
+Q24883128,Kalachuris of Tripuri,dynasty,,person_dynasty_style,selected,,,,yes,yes,,,"rule: dynasty, country India"
+Q1194765,Kamarupa,dynasty,,person_dynasty_style,selected,Assam,Assam,capital (P36),yes,yes,,,rule: capital in India
+Q1446192,Kampili,dynasty,,person_dynasty_style,selected,Karnataka,Karnataka,capital (P36),yes,,yes,,rule: capital in India
+Q1728782,Kapurthala State,dynasty,,person_dynasty_style,selected,Punjab,Punjab,capital (P36),yes,yes,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q466433,Karkota dynasty,dynasty,,person_dynasty_style,selected,Jammu and Kashmir,Jammu and Kashmir,capital (P36),yes,yes,yes,,rule: capital in India
+Q12660335,Kashi,dynasty,,person_dynasty_style,selected,Uttar Pradesh,Uttar Pradesh,capital (P36),yes,,,,rule: capital in India
+Q123027565,Kashmir Sultanate,dynasty,,person_dynasty_style,selected,Jammu and Kashmir,Jammu and Kashmir,capital (P36),yes,,,,rule: capital in India
+Q1587991,Keladi Nayaka,dynasty,,person_dynasty_style,selected,,,,yes,yes,yes,,"rule: dynasty, country India"
+Q919071,Khalji dynasty,dynasty,,person_dynasty_style,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,capital (P36),yes,yes,yes,,rule: capital in India
+Q85774236,Khayaravala dynasty,dynasty,,person_dynasty_style,selected,multi-state,Bihar; Jharkhand,location (P276),yes,yes,,,"rule: dynasty, country India"
+Q130261957,Kingdom of Calicut,dynasty,,person_dynasty_style,selected,Kerala,Kerala,capital (P36),yes,,,,rule: capital in India
+Q150056,Kingdom of Cochin,dynasty,,person_dynasty_style,selected,Kerala,Kerala,capital (P36),yes,,yes,,rule: capital in India; princely state: capital in the district of a seeded site
+Q1678784,Kingdom of Jaisalmer,dynasty,,person_dynasty_style,selected,Rajasthan,Rajasthan,capital (P36),yes,,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q6207845,Kingdom of Marwar,dynasty,,person_dynasty_style,selected,Rajasthan,Rajasthan,capital (P36),yes,yes,,,rule: capital in India
+Q17319155,Kingdom of Mewar,dynasty,,person_dynasty_style,selected,Rajasthan,Rajasthan,capital (P36),yes,yes,,,rule: capital in India
+Q266923,Kingdom of Mysore,dynasty,,person_dynasty_style,selected,Karnataka,Karnataka,capital (P36),yes,yes,yes,,rule: capital in India; princely state: linked to another seed
+Q81893195,Kingdom of Rohilkhand,dynasty,,person_dynasty_style,selected,Uttar Pradesh,Uttar Pradesh,capital (P36),yes,yes,,,rule: capital in India
+Q150058,Kingdom of Thiruvithamkoor,dynasty,,person_dynasty_style,selected,multi-state,Kerala; Tamil Nadu,capital (P36),yes,yes,yes,,rule: capital in India; princely state: capital in the district of a seeded site
+Q657946,Kolhapur State,dynasty,,person_dynasty_style,selected,Maharashtra,Maharashtra,capital (P36),yes,yes,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q756854,Kosala,dynasty,,person_dynasty_style,selected,Uttar Pradesh,Uttar Pradesh,capital (P36),yes,yes,yes,,rule: capital in India
+Q1785349,Kota State,dynasty,,person_dynasty_style,selected,Rajasthan,Rajasthan,capital (P36),yes,yes,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q129300661,Kulpahar,dynasty,,person_dynasty_style,selected,Uttar Pradesh,Uttar Pradesh,capital (P36),,,,,rule: capital in India
+Q1068408,Kuru Kingdom,dynasty,,person_dynasty_style,selected,Haryana,Haryana,capital (P36),yes,yes,yes,,rule: capital in India
+Q28116147,Later Gupta dynasty,dynasty,,person_dynasty_style,selected,,,,yes,yes,yes,,"rule: dynasty, country India"
+Q3241025,Limbdi State,dynasty,,person_dynasty_style,selected,Gujarat,Gujarat,capital (P36),yes,,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q11709,Lodi dynasty,dynasty,,person_dynasty_style,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,capital (P36),yes,yes,,,rule: capital in India
+Q28058158,Madurai Nayak Kingdom,dynasty,,person_dynasty_style,selected,Tamil Nadu,Tamil Nadu,capital (P36),,,,,rule: capital in India
+Q234009,Magadha,dynasty,,person_dynasty_style,selected,Bihar,Bihar,capital (P36),yes,yes,yes,,rule: capital in India
+Q6737189,Maitraka dynasty,dynasty,,person_dynasty_style,selected,,,,yes,yes,yes,,rule: capital in India
+Q1376303,Malla,dynasty,,person_dynasty_style,selected,Uttar Pradesh,Uttar Pradesh,capital (P36),yes,yes,,,rule: capital in India
+Q6744020,Mallabhum,dynasty,,person_dynasty_style,selected,West Bengal,West Bengal,capital (P36),yes,yes,,,rule: capital in India
+Q937879,Malwa Sultanate,dynasty,,person_dynasty_style,selected,Madhya Pradesh,Madhya Pradesh,capital (P36),yes,yes,yes,,rule: capital in India
+Q847420,Mamluk Sultanate,dynasty,,person_dynasty_style,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,capital (P36),yes,yes,yes,,rule: capital in India
+Q83618,Maratha Empire,dynasty,,person_dynasty_style,selected,Maharashtra,Maharashtra,capital (P36),yes,yes,yes,,rule: capital in India
+Q28171871,Mathara dynasty,dynasty,,person_dynasty_style,selected,,,,yes,,yes,,"rule: dynasty, country India"
+Q2665398,Matsya,dynasty,,person_dynasty_style,selected,Rajasthan,Rajasthan,capital (P36),yes,yes,yes,,rule: capital in India
+Q12448145,Maukhari,dynasty,,person_dynasty_style,selected,Uttar Pradesh,Uttar Pradesh,capital (P36),yes,yes,yes,,rule: capital in India
+Q62943,Maurya empire,dynasty,,person_dynasty_style,selected,Bihar,Bihar,capital (P36),yes,yes,yes,,rule: capital in India
+Q88410073,Mitra dynasty,dynasty,,person_dynasty_style,selected,,,,yes,,,,"rule: dynasty, country India"
+Q28173754,Mitra dynasty,dynasty,,person_dynasty_style,selected,,,,yes,,,,"rule: dynasty, country India"
+Q1144811,Mlechchha dynasty,dynasty,,person_dynasty_style,selected,Assam,Assam,capital (P36),yes,,,,rule: capital in India
+Q60753139,Moilang,dynasty,,person_dynasty_style,selected,,,,yes,,,,"rule: dynasty, country India"
+Q1951726,Mudhol State,dynasty,,person_dynasty_style,selected,Karnataka,Karnataka,capital (P36),yes,,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q33296,Mughal Empire,dynasty,,person_dynasty_style,selected,multi-state,National Capital Territory of Delhi; Uttar Pradesh,capital (P36),yes,yes,yes,,rule: capital in India
+Q4311709,Nagpur kingdom,dynasty,,person_dynasty_style,selected,Maharashtra,Maharashtra,capital (P36),yes,yes,,,rule: capital in India
+Q28171929,Nala dynasty,dynasty,,person_dynasty_style,selected,,,,yes,yes,,,"rule: dynasty, country India"
+Q949268,Nanda Empire,dynasty,,person_dynasty_style,selected,Bihar,Bihar,capital (P36),yes,yes,yes,,rule: capital in India
+Q6965297,Naraka dynasty,dynasty,,person_dynasty_style,selected,,,,yes,yes,,,rule: capital in India
+Q609288,Nayakas of Chitradurga,dynasty,,person_dynasty_style,selected,,,,yes,,yes,,"rule: dynasty, country India"
+Q6983076,Nayaks of Kalahasti,dynasty,,person_dynasty_style,selected,,,,yes,,,,"rule: dynasty, country India"
+Q6990209,Nellore Chodas,dynasty,,person_dynasty_style,selected,,,,yes,,,,"rule: dynasty, country India"
+Q58399542,Oiniwar Dynasty,dynasty,,person_dynasty_style,selected,,,,yes,yes,,,"rule: dynasty, country India"
+Q668415,Orchha State,dynasty,,person_dynasty_style,selected,Madhya Pradesh,Madhya Pradesh,capital (P36),yes,yes,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q668412,Pala Empire,dynasty,,person_dynasty_style,selected,Bihar,Bihar,capital (P36),yes,yes,yes,,rule: capital in India
+Q1108420,Pala dynasty (Kamarupa),dynasty,,person_dynasty_style,selected,,,,yes,yes,,,"rule: dynasty, country India"
+Q7126720,Palanpur State,dynasty,,person_dynasty_style,selected,Gujarat,Gujarat,capital (P36),yes,,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q466803,Pallava dynasty,dynasty,,person_dynasty_style,selected,Tamil Nadu,Tamil Nadu,capital (P36),yes,yes,yes,,rule: capital in India
+Q27134743,Pandalam dynasty,dynasty,,person_dynasty_style,selected,Kerala,Kerala,located in (P131),yes,,,,"rule: dynasty, country India"
+Q844910,Pandya dynasty,dynasty,,person_dynasty_style,selected,Tamil Nadu,Tamil Nadu,capital (P36),yes,yes,yes,,"rule: capital in India; dynasty, country India"
+Q7135130,Paramara dynasty,dynasty,,person_dynasty_style,selected,,,,yes,yes,,,"rule: dynasty, country India"
+Q28172042,Parivrajaka dynasty,dynasty,,person_dynasty_style,selected,,,,yes,,,,"rule: dynasty, country India"
+Q85792466,Patwardhan dynasty,dynasty,,person_dynasty_style,selected,,,,yes,,,,"rule: dynasty, country India"
+Q3110559,Pauravas,dynasty,,person_dynasty_style,selected,Uttar Pradesh,Uttar Pradesh,capital (P36),yes,yes,,,rule: capital in India
+Q7168389,Pericchedi,dynasty,,person_dynasty_style,selected,,,,yes,,,,"rule: dynasty, country India"
+Q28171884,Pitrbhakta dynasty,dynasty,,person_dynasty_style,selected,,,,yes,,,,"rule: dynasty, country India"
+Q14552167,Porbandar State,dynasty,,person_dynasty_style,selected,Gujarat,Gujarat,capital (P36),yes,,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q28169311,Pratiharas of Mandavyapura,dynasty,,person_dynasty_style,selected,,,,yes,yes,,,"rule: dynasty, country India"
+Q3535371,Pudukkottai State,dynasty,,person_dynasty_style,selected,Tamil Nadu,Tamil Nadu,capital (P36),yes,,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q11934612,Q11934612,dynasty,,person_dynasty_style,selected,Rajasthan,Rajasthan,capital (P36),,,,,rule: capital in India
+Q126325731,Q126325731,dynasty,,person_dynasty_style,selected,Uttar Pradesh,Uttar Pradesh,capital (P36),,yes,,,rule: capital in India
+Q128809345,Q128809345,dynasty,,person_dynasty_style,selected,Rajasthan,Rajasthan,capital (P36),,,,,rule: capital in India
+Q128809419,Q128809419,dynasty,,person_dynasty_style,selected,Madhya Pradesh,Madhya Pradesh,capital (P36),,,,,rule: capital in India
+Q128810309,Q128810309,dynasty,,person_dynasty_style,selected,Gujarat,Gujarat,capital (P36),,,,,rule: capital in India
+Q13116777,Q13116777,dynasty,,person_dynasty_style,selected,,,,,,,,"rule: dynasty, country India"
+Q16657543,Q16657543,dynasty,,person_dynasty_style,selected,Uttar Pradesh,Uttar Pradesh,capital (P36),,,,,rule: capital in India
+Q6398953,Q6398953,dynasty,,person_dynasty_style,selected,,,,yes,,,,"rule: dynasty, country India"
+Q1148042,Qutb Shahi dynasty,dynasty,,person_dynasty_style,selected,Telangana,Telangana,capital (P36),yes,,,,"rule: capital in India; dynasty, country India"
+Q1723023,Raj Darbhanga,dynasty,,person_dynasty_style,selected,Bihar,Bihar,capital (P36),yes,yes,,,"rule: capital in India; dynasty, country India"
+Q2128743,Rajkot State,dynasty,,person_dynasty_style,selected,Gujarat,Gujarat,capital (P36),yes,,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q856691,Rashtrakuta dynasty,dynasty,,person_dynasty_style,selected,Karnataka,Karnataka,capital (P36),yes,yes,yes,,rule: capital in India
+Q24944828,Recherla Nayaks,dynasty,,person_dynasty_style,selected,,,,yes,,,,"rule: dynasty, country India"
+Q5102103,Reddy mahto dynasty,dynasty,,person_dynasty_style,selected,Andhra Pradesh,Andhra Pradesh,capital (P36),yes,yes,,,rule: capital in India
+Q29877232,Saindhava,dynasty,,person_dynasty_style,selected,Gujarat,Gujarat,capital (P36),yes,,,,rule: capital in India
+Q7403631,Salankayana,dynasty,,person_dynasty_style,selected,,,,yes,yes,,,"rule: dynasty, country India"
+Q1261743,Samthar State,dynasty,,person_dynasty_style,selected,Uttar Pradesh,Uttar Pradesh,capital (P36),yes,,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q5257,Satavahana dynasty,dynasty,,person_dynasty_style,selected,Andhra Pradesh,Andhra Pradesh,capital (P36),yes,yes,yes,,rule: capital in India
+Q1331421,Sayyid dynasty,dynasty,,person_dynasty_style,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,capital (P36),yes,yes,,,rule: capital in India
+Q13122143,Sen,dynasty,,person_dynasty_style,selected,,,,,,,,"rule: dynasty, country India"
+Q2428714,Sena dynasty,dynasty,,person_dynasty_style,selected,West Bengal,West Bengal,capital (P36),yes,yes,,,"rule: capital in India; dynasty, country India"
+Q11057724,Shah Mir dynasty,dynasty,,person_dynasty_style,selected,Jammu and Kashmir,Jammu and Kashmir,capital (P36),yes,yes,,,rule: capital in India
+Q111016259,Sheikhsar State,dynasty,,person_dynasty_style,selected,Rajasthan,Rajasthan,capital (P36),,,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q41022058,Shekhar dynasty,dynasty,,person_dynasty_style,selected,West Bengal,West Bengal,capital (P36),,,,,rule: capital in India
+Q972165,Shishunaga dynasty,dynasty,,person_dynasty_style,selected,Bihar,Bihar,capital (P36),yes,yes,yes,,rule: capital in India
+Q651377,Shunga Empire,dynasty,,person_dynasty_style,selected,Bihar,Bihar,capital (P36),yes,yes,yes,,rule: capital in India
+Q2578028,Sikh Confederacy,dynasty,,person_dynasty_style,selected,Punjab,Punjab,capital (P36),yes,yes,,,rule: capital in India
+Q14475879,Singh Krora Misl,dynasty,,person_dynasty_style,selected,Punjab,Punjab,capital (P36),yes,,,,rule: capital in India
+Q2290502,Sitamau State,dynasty,,person_dynasty_style,selected,Madhya Pradesh,Madhya Pradesh,capital (P36),yes,yes,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q373650,Sur Empire,dynasty,,person_dynasty_style,selected,National Capital Territory of Delhi,National Capital Territory of Delhi,capital (P36),yes,yes,,,rule: capital in India
+Q1330149,Surasena,dynasty,,person_dynasty_style,selected,Uttar Pradesh,Uttar Pradesh,capital (P36),yes,yes,,,rule: capital in India
+Q3530610,Thanjavur Maratha kingdom,dynasty,,person_dynasty_style,selected,Tamil Nadu,Tamil Nadu,capital (P36),yes,yes,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q1588434,Thanjavur Nayak kingdom,dynasty,,person_dynasty_style,selected,Tamil Nadu,Tamil Nadu,located in (P131),yes,yes,,,"rule: capital in India; dynasty, country India"
+Q12432642,Tomaras of Delhi,dynasty,,person_dynasty_style,selected,,,,yes,yes,,,"rule: dynasty, country India"
+Q914031,Tonk State,dynasty,,person_dynasty_style,selected,Rajasthan,Rajasthan,capital (P36),yes,,,,rule: capital in India; princely state: capital in the district of a seeded site
+Q1124402,Tughlaq dynasty,dynasty,,person_dynasty_style,selected,multi-state,Maharashtra; National Capital Territory of Delhi,capital (P36),yes,yes,,,rule: capital in India
+Q1745385,United States of Matsya,dynasty,,person_dynasty_style,selected,Rajasthan,Rajasthan,capital (P36),yes,,,,rule: capital in India
+Q1617123,Utpala dynasty,dynasty,,person_dynasty_style,selected,Jammu and Kashmir,Jammu and Kashmir,capital (P36),yes,yes,,,rule: capital in India
+Q605199,Vajji,dynasty,,person_dynasty_style,selected,Bihar,Bihar,capital (P36),yes,yes,yes,,rule: capital in India
+Q1501306,Vakataka empire,dynasty,,person_dynasty_style,selected,Madhya Pradesh,Madhya Pradesh,located in (P131),yes,yes,yes,,rule: capital in India
+Q1109008,Varman dynasty,dynasty,,person_dynasty_style,selected,,,,yes,yes,yes,,rule: capital in India
+Q28171887,Vasishtha dynasty,dynasty,,person_dynasty_style,selected,,,,yes,,,,"rule: dynasty, country India"
+Q1331184,Vatsa,dynasty,,person_dynasty_style,selected,Uttar Pradesh,Uttar Pradesh,capital (P36),yes,yes,yes,,rule: capital in India
+Q7918803,Velanati Chodas,dynasty,,person_dynasty_style,selected,,,,yes,yes,,,"rule: dynasty, country India"
+Q3532158,Venad,dynasty,,person_dynasty_style,selected,Kerala,Kerala,capital (P36),yes,,yes,,rule: capital in India
+Q167639,Vijayanagara Empire,dynasty,,person_dynasty_style,selected,multi-state,Andhra Pradesh; Karnataka; Tamil Nadu,capital (P36),yes,yes,yes,,rule: capital in India
+Q3765100,Vishnukundina,dynasty,,person_dynasty_style,selected,Telangana,Telangana,capital (P36),yes,yes,,,rule: capital in India
+Q14624218,Western Chalukya Empire,dynasty,,person_dynasty_style,selected,Karnataka,Karnataka,capital (P36),yes,yes,,,rule: capital in India
+Q2018662,Western Ganga dynasty,dynasty,,person_dynasty_style,selected,Karnataka,Karnataka,capital (P36),yes,yes,yes,,rule: capital in India
+Q2086608,Western Satraps,dynasty,,person_dynasty_style,selected,Madhya Pradesh,Madhya Pradesh,capital (P36),yes,yes,yes,,rule: capital in India
+Q28171797,Yajvapala dynasty,dynasty,,person_dynasty_style,selected,,,,yes,,,,"rule: dynasty, country India"
+Q4754350,Andhra Natyam,culture,classical_dance,culture,selected,Andhra Pradesh,Andhra Pradesh,Wikipedia categories,yes,,,,
+Q6797297,Arjuna Nritham,culture,classical_dance,culture,selected,Kerala,Kerala,Wikipedia categories,yes,,,,
+Q15788442,Bhagavata Mela,culture,classical_dance,culture,selected,,,,yes,yes,,,
+Q334156,Bharatanatyam,culture,classical_dance,culture,selected,,,,yes,yes,yes,,recognised classical form
+Q5252826,Deknni,culture,classical_dance,culture,selected,,,,yes,,,,
+Q5587904,Gotipua,culture,classical_dance,culture,selected,Odisha,Odisha,Wikipedia categories,yes,,,,
+Q949256,Kathak,culture,classical_dance,culture,selected,multi-state,National Capital Territory of Delhi; Rajasthan; Uttar Pradesh,Wikipedia categories,yes,yes,yes,,recognised classical form
+Q839500,Kathakali,culture,classical_dance,culture,selected,Kerala,Kerala,Wikipedia categories,yes,yes,yes,,recognised classical form
+Q3595273,Kerala Natanam,culture,classical_dance,culture,selected,Kerala,Kerala,Wikipedia categories,yes,yes,yes,,
+Q1145471,Kuchipudi,culture,classical_dance,culture,selected,Andhra Pradesh,Andhra Pradesh,Wikipedia categories,yes,yes,yes,,recognised classical form
+Q511116,Manipuri dance,culture,classical_dance,culture,selected,Manipur,Manipur,Wikipedia categories,yes,yes,yes,,recognised classical form
+Q940868,Mohiniyattam,culture,classical_dance,culture,selected,Kerala,Kerala,Wikipedia categories,yes,yes,yes,,recognised classical form
+Q2014687,Odissi,culture,classical_dance,culture,selected,Odisha,Odisha,"indigenous to or origin (P2341, P495)",yes,yes,yes,,recognised classical form
+Q3765070,Perini Shivatandavam,culture,classical_dance,culture,selected,Telangana,Telangana,Wikipedia categories,yes,yes,,,
+Q1584013,Yakshagana,culture,classical_dance,culture,selected,Karnataka,Karnataka,Wikipedia categories,yes,yes,yes,,
+Q2641862,Abhang,culture,classical_music,culture,selected,,,,yes,yes,yes,,
+Q956883,Carnatic music,culture,classical_music,culture,selected,Karnataka,Karnataka,"indigenous to or origin (P2341, P495)",yes,yes,yes,,
+Q1157018,Dadra,culture,classical_music,culture,selected,,,,yes,yes,,,
+Q59158,Dhrupad,culture,classical_music,culture,selected,,,,yes,yes,yes,,
+Q5269880,Dhun,culture,classical_music,culture,selected,,,,yes,,,,
+Q17054653,Haveli Sangeet,culture,classical_music,culture,selected,,,,yes,,,,
+Q1770695,Hindustani classical music,culture,classical_music,culture,selected,,,,yes,yes,yes,,
+Q62128,Khyal,culture,classical_music,culture,selected,,,,yes,yes,yes,,
+Q3521984,Konnakol,culture,classical_music,culture,selected,,,,yes,,,,
+Q7077860,Odissi music,culture,classical_music,culture,selected,Odisha,Odisha,"indigenous to or origin (P2341, P495)",yes,,yes,,
+Q16344235,Ragamalika,culture,classical_music,culture,selected,,,,yes,,,,
+Q70076,Tappa,culture,classical_music,culture,selected,,,,yes,yes,,,
+Q3981034,Tarana,culture,classical_music,culture,selected,,,,yes,yes,yes,,
+Q69596,Thumri,culture,classical_music,culture,selected,,,,yes,yes,yes,,
+Q4842177,Bagurumba,culture,folk_dance,culture,selected,Assam,Assam,Wikipedia categories,yes,yes,yes,,
+Q4860186,Bardo Chham,culture,folk_dance,culture,selected,Arunachal Pradesh,Arunachal Pradesh,Wikipedia categories,yes,,,,
+Q3351768,Bihu dance,culture,folk_dance,culture,selected,Assam,Assam,Wikipedia categories,yes,yes,yes,,
+Q5480371,Brita dance,culture,folk_dance,culture,selected,West Bengal,West Bengal,Wikipedia categories,yes,,,,
+Q15724049,Chaiti Ghoda Nacha,culture,folk_dance,culture,selected,Odisha,Odisha,Wikipedia categories,yes,,,,
+Q5071642,Chang Lo,culture,folk_dance,culture,selected,Nagaland,Nagaland,Wikipedia categories,yes,,,,
+Q5074581,Charkula,culture,folk_dance,culture,selected,Uttar Pradesh,Uttar Pradesh,Wikipedia categories,yes,,,,
+Q27891487,Cheraw dance,culture,folk_dance,culture,selected,Mizoram,Mizoram,Wikipedia categories,yes,yes,yes,,
+Q5094924,Chholiya,culture,folk_dance,culture,selected,Uttarakhand,Uttarakhand,Wikipedia categories,yes,yes,,,
+Q5211077,Dalkhai,culture,folk_dance,culture,selected,Odisha,Odisha,Wikipedia categories,yes,,,,
+Q3629880,Dandiya raas,culture,folk_dance,culture,selected,Gujarat,Gujarat,"indigenous to or origin (P2341, P495)",yes,yes,yes,,
+Q15724280,Dasakathia,culture,folk_dance,culture,selected,Odisha,Odisha,"indigenous to or origin (P2341, P495)",yes,,,,
+Q60749916,Domkach,culture,folk_dance,culture,selected,multi-state,Bihar; Chhattisgarh; Jharkhand,Wikipedia categories,yes,yes,,,
+Q5313817,Dumhal,culture,folk_dance,culture,selected,Jammu and Kashmir,Jammu and Kashmir,Wikipedia categories,yes,yes,,,
+Q5515224,Gaarudi Gombe,culture,folk_dance,culture,selected,Karnataka,Karnataka,Wikipedia categories,yes,,yes,,
+Q5517326,Gair dance,culture,folk_dance,culture,selected,Rajasthan,Rajasthan,Wikipedia categories,yes,yes,,,
+Q5557705,Ghumura dance,culture,folk_dance,culture,selected,,,,yes,,,,
+Q106199770,Harul,culture,folk_dance,culture,selected,Himachal Pradesh,Himachal Pradesh,Wikipedia categories,yes,,,,
+Q60749913,Janani Jhumar,culture,folk_dance,culture,selected,Jharkhand,Jharkhand,Wikipedia categories,yes,,,,
+Q16965077,Jhijhiya,culture,folk_dance,culture,selected,Bihar,Bihar,Wikipedia categories,yes,yes,,,
+Q37757994,Kambara dance,culture,folk_dance,culture,selected,Kerala,Kerala,Wikipedia categories,yes,,,,
+Q6406312,Kikkli,culture,folk_dance,culture,selected,Punjab,Punjab,Wikipedia categories,yes,,,,
+Q108427651,Koli Dance,culture,folk_dance,culture,selected,Maharashtra,Maharashtra,location (P276),yes,,,,
+Q104866080,Kushan dance,culture,folk_dance,culture,selected,West Bengal,West Bengal,Wikipedia categories,yes,,,,
+Q6538197,Lezim,culture,folk_dance,culture,selected,Maharashtra,Maharashtra,Wikipedia categories,yes,,,,
+Q60742478,Mardana Jhumair,culture,folk_dance,culture,selected,multi-state,Jharkhand; Odisha,"indigenous to or origin (P2341, P495)",yes,,,,
+Q6414041,Nati,culture,folk_dance,culture,selected,Himachal Pradesh,Himachal Pradesh,Wikipedia categories,yes,yes,,,
+Q24883098,Padhar dance,culture,folk_dance,culture,selected,Gujarat,Gujarat,Wikipedia categories,yes,,,,
+Q16314303,Poikkaal Kuthirai Aattam,culture,folk_dance,culture,selected,Tamil Nadu,Tamil Nadu,Wikipedia categories,yes,,,,
+Q7259363,Puliyattam,culture,folk_dance,culture,selected,Tamil Nadu,Tamil Nadu,Wikipedia categories,yes,,,,
+Q7296249,Raut Nacha,culture,folk_dance,culture,selected,Chhattisgarh,Chhattisgarh,Wikipedia categories,yes,yes,,,
+Q7409668,Sammi,culture,folk_dance,culture,selected,Punjab,Punjab,Wikipedia categories,yes,yes,,,
+Q7777744,Theeyaattam,culture,folk_dance,culture,selected,Kerala,Kerala,Wikipedia categories,yes,,,,
+Q7808860,Tippani Dance,culture,folk_dance,culture,selected,Gujarat,Gujarat,Wikipedia categories,yes,,,,
+Q85809800,Tipri dance,culture,folk_dance,culture,selected,multi-state,Haryana; Punjab,Wikipedia categories,yes,,,,
+Q7917186,Vattakkali,culture,folk_dance,culture,selected,Kerala,Kerala,Wikipedia categories,yes,,,,
+Q109254580,Yak dance,culture,folk_dance,culture,selected,Arunachal Pradesh,Arunachal Pradesh,Wikipedia categories,yes,,,,
+Q12426073,chari dance,culture,folk_dance,culture,selected,Rajasthan,Rajasthan,Wikipedia categories,yes,yes,,,
+Q33479889,hinde,culture,folk_dance,culture,selected,Karnataka,Karnataka,"indigenous to or origin (P2341, P495)",yes,,yes,,
+Q6191199,jhumar,culture,folk_dance,culture,selected,Punjab,Punjab,Wikipedia categories,yes,,,,
+Q811449,Baul,culture,folk_music,culture,selected,West Bengal,West Bengal,"indigenous to or origin (P2341, P495)",yes,yes,,,
+Q3347022,Bhawaiya,culture,folk_music,culture,selected,multi-state,West Bengal; Assam,hand scan or source list,yes,yes,,,
+Q55593233,Biraha,culture,folk_music,culture,selected,multi-state,Bihar; Uttar Pradesh,hand scan or source list,yes,yes,,,
+Q17454116,Chaar Bayt,culture,folk_music,culture,selected,Uttar Pradesh,Uttar Pradesh,hand scan or source list,yes,yes,,,
+Q5105581,Chowtal,culture,folk_music,culture,selected,multi-state,Bihar; Uttar Pradesh,hand scan or source list,yes,,,,
+Q28004144,Dhadi,culture,folk_music,culture,selected,Punjab,Punjab,hand scan or source list,yes,,,,
+Q97861161,Dhol damau,culture,folk_music,culture,selected,Uttarakhand,Uttarakhand,Wikipedia categories,yes,,,,
+Q17051846,Dhumpa sangita,culture,folk_music,culture,selected,Odisha,Odisha,Wikipedia categories,yes,yes,,,
+Q111938157,Jhumar,culture,folk_music,culture,selected,multi-state,Jharkhand; West Bengal,"indigenous to or origin (P2341, P495)",yes,yes,,,
+Q6304912,Jugni,culture,folk_music,culture,selected,Punjab,Punjab,hand scan or source list,yes,,,,
+Q6359686,Kamrupi lokgeet,culture,folk_music,culture,selected,Assam,Assam,Wikipedia categories,yes,,,,
+Q104875944,Ladishah,culture,folk_music,culture,selected,Jammu and Kashmir,Jammu and Kashmir,hand scan or source list,yes,,,,
+Q141439026,Lagan Geet,culture,folk_music,culture,selected,Gujarat,Gujarat,hand scan or source list,yes,,,,
+Q13112247,Njattupattu,culture,folk_music,culture,selected,Kerala,Kerala,hand scan or source list,yes,,,,
+Q6543501,Oppari,culture,folk_music,culture,selected,Tamil Nadu,Tamil Nadu,hand scan or source list,yes,,,,
+Q7130527,Pandavani,culture,folk_music,culture,selected,Chhattisgarh,Chhattisgarh,Wikipedia categories,yes,yes,yes,,
+Q13118900,Powada,culture,folk_music,culture,selected,Maharashtra,Maharashtra,hand scan or source list,yes,yes,,,
+Q7295067,Rasiya,culture,folk_music,culture,selected,Uttar Pradesh,Uttar Pradesh,Wikipedia categories,yes,yes,,,
+Q2774511,Sanedo,culture,folk_music,culture,selected,Gujarat,Gujarat,hand scan or source list,yes,,,,
+Q97356926,Sua,culture,folk_music,culture,selected,Chhattisgarh,Chhattisgarh,hand scan or source list,yes,,,,
+Q4766054,Ankia Naat,culture,folk_theatre,culture,selected,Assam,Assam,hand scan or source list,yes,yes,,,
+Q4901494,Bhavai,culture,folk_theatre,culture,selected,multi-state,Gujarat; Rajasthan,Wikipedia categories,yes,yes,,,
+Q19891110,Chadar Badar,culture,folk_theatre,culture,selected,Jharkhand,Jharkhand,hand scan or source list,yes,yes,yes,,
+Q2740885,Chakyar koothu,culture,folk_theatre,culture,selected,Kerala,Kerala,Wikipedia categories,yes,,yes,,
+Q17050629,Chindu Bhagavatham,culture,folk_theatre,culture,selected,Telangana,Telangana,Wikipedia categories,yes,,,,
+Q3348813,Jatra,culture,folk_theatre,culture,selected,West Bengal,West Bengal,Wikipedia categories,yes,yes,,,
+Q675271,Kathputli,culture,folk_theatre,culture,selected,Rajasthan,Rajasthan,Wikipedia categories,yes,yes,yes,,
+Q6426576,Kokborok drama,culture,folk_theatre,culture,selected,Tripura,Tripura,hand scan or source list,yes,,,,
+Q13560108,Maach,culture,folk_theatre,culture,selected,Madhya Pradesh,Madhya Pradesh,Wikipedia categories,yes,yes,,,
+Q1363943,Nautanki,culture,folk_theatre,culture,selected,Uttar Pradesh,Uttar Pradesh,hand scan or source list,yes,yes,,,
+Q65286917,Pandav Lila,culture,folk_theatre,culture,selected,Uttarakhand,Uttarakhand,Wikipedia categories,yes,yes,,,
+Q17086371,Rabana Chhaya,culture,folk_theatre,culture,selected,Odisha,Odisha,Wikipedia categories,yes,,yes,,
+Q2121790,Raslila,culture,folk_theatre,culture,selected,multi-state,Assam; Manipur; Uttar Pradesh,Wikipedia categories,yes,yes,yes,,
+Q1346068,Saang,culture,folk_theatre,culture,selected,multi-state,Haryana; Rajasthan,Wikipedia categories,yes,yes,,,
+Q73901910,Shumang Kumhei,culture,folk_theatre,culture,selected,Manipur,Manipur,Wikipedia categories,yes,,,,
+Q1634822,Tamasha,culture,folk_theatre,culture,selected,Maharashtra,Maharashtra,Wikipedia categories,yes,yes,yes,,
+Q7705309,Terukkuttu,culture,folk_theatre,culture,selected,Tamil Nadu,Tamil Nadu,hand scan or source list,yes,,,,
+Q7460579,Tholu bommalata,culture,folk_theatre,culture,selected,Andhra Pradesh,Andhra Pradesh,Wikipedia categories,yes,,yes,,
+Q7800302,Tiatr,culture,folk_theatre,culture,selected,Goa,Goa,Wikipedia categories,yes,,,,
+Q7813032,Togalu gombeyaata,culture,folk_theatre,culture,selected,Karnataka,Karnataka,Wikipedia categories,yes,,yes,,
+Q19882205,Bagh Prints of Madhya Pradesh,culture,gi_craft,culture,selected,Madhya Pradesh,Madhya Pradesh,Wikipedia categories,yes,,yes,,
+Q107598910,Bagru print,culture,gi_craft,culture,selected,Rajasthan,Rajasthan,hand scan or source list,yes,,,,
+Q2723230,Banaras brocades and sarees,culture,gi_craft,culture,selected,Uttar Pradesh,Uttar Pradesh,Wikipedia categories,yes,yes,yes,,
+Q5269691,Bastar Dhokra,culture,gi_craft,culture,selected,multi-state,Chhattisgarh; West Bengal,Wikipedia categories,yes,,,,
+Q25350670,Bastar Iron Craft,culture,gi_craft,culture,selected,Chhattisgarh,Chhattisgarh,Wikipedia categories,yes,,,,
+Q24945589,Bastar Wooden Craft,culture,gi_craft,culture,selected,multi-state,Chhattisgarh; West Bengal,Wikipedia categories,yes,,,,
+Q22340591,Berhampur Patta,culture,gi_craft,culture,selected,Odisha,Odisha,Wikipedia categories,yes,,,,
+Q4900587,Bhagalpur sari,culture,gi_craft,culture,selected,Bihar,Bihar,Wikipedia categories,yes,,,,
+Q4929641,Blue Pottery of Jaipur,culture,gi_craft,culture,selected,Rajasthan,Rajasthan,Wikipedia categories,yes,yes,,,
+Q110112212,Bodo Dokhona,culture,gi_craft,culture,selected,Assam,Assam,Wikipedia categories,yes,,,,
+Q16938548,Bodo Sifung,culture,gi_craft,culture,selected,Assam,Assam,Wikipedia categories,yes,,,,
+Q7560934,Bomkai sari,culture,gi_craft,culture,selected,Odisha,Odisha,Wikipedia categories,yes,,yes,,
+Q24945518,Budithi Bell and Brass Craft,culture,gi_craft,culture,selected,Andhra Pradesh,Andhra Pradesh,Wikipedia categories,yes,,,,
+Q24945749,Chamba Rumal,culture,gi_craft,culture,selected,Himachal Pradesh,Himachal Pradesh,located in (P131),yes,,,,
+Q5071016,Chanderi sari,culture,gi_craft,culture,selected,Madhya Pradesh,Madhya Pradesh,Wikipedia categories,yes,yes,,,
+Q4242642,Channapatna toys,culture,gi_craft,culture,selected,Karnataka,Karnataka,Wikipedia categories,yes,yes,yes,,
+Q17050560,Cheriyal Paintings,culture,gi_craft,culture,selected,Telangana,Telangana,Wikipedia categories,yes,,,,
+Q55607265,Chhau mask,culture,gi_craft,culture,selected,West Bengal,West Bengal,"indigenous to or origin (P2341, P495)",yes,,,,
+Q1531220,Gamosa of Assam,culture,gi_craft,culture,selected,Assam,Assam,location (P276),yes,yes,,,
+Q6374909,Kasuti embroidery,culture,gi_craft,culture,selected,Karnataka,Karnataka,location (P276),yes,,,,
+Q27961889,Khatwa,culture,gi_craft,culture,selected,Bihar,Bihar,Wikipedia categories,yes,,,,
+Q24945565,Kinnauri Shawl,culture,gi_craft,culture,selected,Himachal Pradesh,Himachal Pradesh,Wikipedia categories,yes,,,,
+Q6427232,Kolhapuri Chappal,culture,gi_craft,culture,selected,Maharashtra,Maharashtra,Wikipedia categories,yes,yes,,,
+Q6428954,Kondapalli toys,culture,gi_craft,culture,selected,Andhra Pradesh,Andhra Pradesh,Wikipedia categories,yes,,,,
+Q22343870,Kotpad Handloom fabrics,culture,gi_craft,culture,selected,Odisha,Odisha,Wikipedia categories,yes,,,,
+Q24930159,Kullu Shawl,culture,gi_craft,culture,selected,Himachal Pradesh,Himachal Pradesh,Wikipedia categories,yes,,,,
+Q22704232,Kutch Embroidery,culture,gi_craft,culture,selected,Gujarat,Gujarat,located in (P131),yes,,,,
+Q4280694,Kuthampully saree,culture,gi_craft,culture,selected,Kerala,Kerala,Wikipedia categories,yes,yes,yes,,
+Q10950828,Lucknow Chikan Craft,culture,gi_craft,culture,selected,Uttar Pradesh,Uttar Pradesh,"indigenous to or origin (P2341, P495)",yes,yes,yes,,
+Q16934557,Machilipatnam Kalamkari,culture,gi_craft,culture,selected,Andhra Pradesh,Andhra Pradesh,Wikipedia categories,yes,,,,
+Q3275471,Maddalam of Palakkad,culture,gi_craft,culture,selected,Kerala,Kerala,hand scan or source list,yes,,yes,,
+Q137673438,Maheshwari Saree,culture,gi_craft,culture,selected,Madhya Pradesh,Madhya Pradesh,hand scan or source list,yes,,,,
+Q24951774,Moirang Phee,culture,gi_craft,culture,selected,Manipur,Manipur,Wikipedia categories,yes,,,,
+Q6895650,Molakalmuru sari,culture,gi_craft,culture,selected,Karnataka,Karnataka,Wikipedia categories,yes,,yes,,
+Q6948726,Mysore silk,culture,gi_craft,culture,selected,Karnataka,Karnataka,Wikipedia categories,yes,yes,yes,,
+Q16917667,Nirmal furniture,culture,gi_craft,culture,selected,Telangana,Telangana,Wikipedia categories,yes,,,,
+Q56273828,Nirmal toys,culture,gi_craft,culture,selected,Telangana,Telangana,Wikipedia categories,yes,,,,
+Q7125238,Paithani,culture,gi_craft,culture,selected,Maharashtra,Maharashtra,Wikipedia categories,yes,yes,yes,,
+Q126478412,Pattamadai Mat,culture,gi_craft,culture,selected,Tamil Nadu,Tamil Nadu,Wikipedia categories,yes,,,,
+Q22291135,Payyannur Pavithra Ring,culture,gi_craft,culture,selected,Kerala,Kerala,Wikipedia categories,yes,,yes,,
+Q7188325,Phulkari,culture,gi_craft,culture,selected,multi-state,Haryana; Punjab,Wikipedia categories,yes,yes,,,
+Q19895294,Pithora (painting),culture,gi_craft,culture,selected,Gujarat,Gujarat,hand scan or source list,yes,yes,,,
+Q7260130,Puneri Pagadi,culture,gi_craft,culture,selected,Maharashtra,Maharashtra,Wikipedia categories,yes,,,,
+Q24945118,Sankheda Furniture,culture,gi_craft,culture,selected,Gujarat,Gujarat,Wikipedia categories,yes,,,,
+Q22661954,Santiniketan Leather Goods,culture,gi_craft,culture,selected,West Bengal,West Bengal,Wikipedia categories,yes,,,,
+Q137802829,Sarthebari Metal Craft,culture,gi_craft,culture,selected,Assam,Assam,Wikipedia categories,yes,,,,
+Q24945222,Screw Pine Craft of Kerala,culture,gi_craft,culture,selected,Kerala,Kerala,Wikipedia categories,yes,,yes,,
+Q25587548,Shantipuri sari,culture,gi_craft,culture,selected,West Bengal,West Bengal,Wikipedia categories,yes,,,,
+Q24951799,Shaphee Lanphee,culture,gi_craft,culture,selected,Manipur,Manipur,Wikipedia categories,yes,,,,
+Q7513773,Sikki grass craft,culture,gi_craft,culture,selected,Bihar,Bihar,Wikipedia categories,yes,,,,
+Q24948369,Solapur Terry Towel,culture,gi_craft,culture,selected,Maharashtra,Maharashtra,Wikipedia categories,yes,,,,
+Q24952100,Sujini embroidery work of Bihar,culture,gi_craft,culture,selected,Bihar,Bihar,located in (P131),yes,,,,
+Q24945269,Swamimalai Bronze Icons,culture,gi_craft,culture,selected,Tamil Nadu,Tamil Nadu,Wikipedia categories,yes,,,,
+Q17141505,Tangaliya Shawl,culture,gi_craft,culture,selected,Gujarat,Gujarat,Wikipedia categories,yes,,,,
+Q7683397,Thanjavur Doll,culture,gi_craft,culture,selected,Tamil Nadu,Tamil Nadu,Wikipedia categories,yes,,,,
+Q7783614,Thewa,culture,gi_craft,culture,selected,Rajasthan,Rajasthan,Wikipedia categories,yes,,,,
+Q131735784,Tripura Risa Textile,culture,gi_craft,culture,selected,Tripura,Tripura,hand scan or source list,yes,,,,
+Q7898422,Uppada Jamdani sarees,culture,gi_craft,culture,selected,Andhra Pradesh,Andhra Pradesh,Wikipedia categories,yes,,,,
+Q24951715,Wangkhei Phee,culture,gi_craft,culture,selected,Manipur,Manipur,Wikipedia categories,yes,,,,
+Q7969499,Warli Painting,culture,gi_craft,culture,selected,Maharashtra,Maharashtra,Wikipedia categories,yes,yes,,,
+Q1071518,Chhau dance,culture,intangible_heritage,culture,selected,multi-state,Jharkhand; Odisha; West Bengal,"indigenous to or origin (P2341, P495)",yes,yes,yes,,
+Q10244,Diwali,culture,intangible_heritage,culture,selected,Jharkhand,Jharkhand,Wikipedia categories,yes,yes,yes,,
+Q16345168,Durga Puja in Kolkata,culture,intangible_heritage,culture,selected,West Bengal,West Bengal,Wikipedia categories,yes,yes,,,
+Q48733007,Durga Puja in West Bengal,culture,intangible_heritage,culture,selected,West Bengal,West Bengal,Wikipedia categories,yes,,,,
+Q5527615,Gaudiya Nritya,culture,intangible_heritage,culture,selected,West Bengal,West Bengal,Wikipedia categories,yes,yes,yes,,
+Q841285,Kalaripayattu,culture,intangible_heritage,culture,selected,Kerala,Kerala,Wikipedia categories,yes,yes,yes,,
+Q6351763,Kalbelia,culture,intangible_heritage,culture,selected,Rajasthan,Rajasthan,Wikipedia categories,yes,yes,yes,,
+Q1641463,Koodiyattam,culture,intangible_heritage,culture,selected,Kerala,Kerala,Wikipedia categories,yes,yes,yes,,
+Q10283,Kumbh Mela,culture,intangible_heritage,culture,selected,multi-state,Uttar Pradesh; Uttarakhand; West Bengal,Wikipedia categories,yes,yes,yes,,
+Q28171926,Manipuri Sankirtana,culture,intangible_heritage,culture,selected,,,,yes,yes,,,
+Q1479611,Mudiyettu,culture,intangible_heritage,culture,selected,Kerala,Kerala,Wikipedia categories,yes,yes,,,
+Q483236,Nowruz,culture,intangible_heritage,culture,selected,,,,yes,yes,,,
+Q18207270,Peacock dance,culture,intangible_heritage,culture,selected,,,,yes,,yes,,
+Q167067,Ramlila,culture,intangible_heritage,culture,selected,multi-state,Himachal Pradesh; Uttar Pradesh; Uttarakhand,Wikipedia categories,yes,yes,,,
+Q7289735,Ramman,culture,intangible_heritage,culture,selected,Uttarakhand,Uttarakhand,Wikipedia categories,yes,yes,,,
+Q2724537,Sattriya,culture,intangible_heritage,culture,selected,Assam,Assam,Wikipedia categories,yes,yes,yes,culture/classical_dance,recognised classical form
+Q48723594,Vedic chant,culture,intangible_heritage,culture,selected,,,,yes,yes,yes,,
+Q882985,garba,culture,intangible_heritage,culture,selected,Gujarat,Gujarat,Wikipedia categories,yes,yes,yes,,
+Q17146207,kalamkari,culture,intangible_heritage,culture,selected,Andhra Pradesh,Andhra Pradesh,Wikipedia categories,yes,yes,yes,,
+Q1436500,khol,culture,intangible_heritage,culture,selected,Assam,Assam,Wikipedia categories,yes,,,,
+Q512410,qawwali,culture,intangible_heritage,culture,selected,,,,yes,yes,,culture/classical_music,
+Q959769,veena,culture,intangible_heritage,culture,selected,,,,yes,yes,yes,,
+Q9350,yoga,culture,intangible_heritage,culture,selected,,,,yes,yes,yes,,
+Q948504,Bengal School of Art,culture,painting_school,culture,selected,West Bengal,West Bengal,Wikipedia categories,yes,,,,
+Q19882365,Bikaner style of painting,culture,painting_school,culture,selected,,,,yes,,,,
+Q861297,Company style,culture,painting_school,culture,selected,,,,yes,,,,
+Q28173212,Deccan painting,culture,painting_school,culture,selected,,,,yes,,,,
+Q19891769,Idital,culture,painting_school,culture,selected,Odisha,Odisha,Wikipedia categories,yes,,,,
+Q6352595,Kalighat painting,culture,painting_school,culture,selected,,,,yes,yes,,,
+Q6362867,Kangra paintings,culture,painting_school,culture,selected,Himachal Pradesh,Himachal Pradesh,Wikipedia categories,yes,yes,yes,,
+Q138005785,Kurumba painting,culture,painting_school,culture,selected,Tamil Nadu,Tamil Nadu,Wikipedia categories,yes,,,,
+Q2547125,Madhubani Painting,culture,painting_school,culture,selected,Bihar,Bihar,located in (P131),yes,yes,,,
+Q6747815,Mandana painting,culture,painting_school,culture,selected,Rajasthan,Rajasthan,Wikipedia categories,yes,yes,,,
+Q6969951,Nathdwara Painting,culture,painting_school,culture,selected,Rajasthan,Rajasthan,location (P276),yes,yes,,,
+Q3631050,Pahari painting,culture,painting_school,culture,selected,multi-state,Himachal Pradesh; Jammu and Kashmir; Uttarakhand,Wikipedia categories,yes,yes,,,
+Q16965789,Patna School of Painting,culture,painting_school,culture,selected,,,,yes,yes,,,
+Q2624660,Pattachitra,culture,painting_school,culture,selected,multi-state,Odisha; West Bengal,Wikipedia categories,yes,yes,,,
+Q7282803,Ragamala paintings,culture,painting_school,culture,selected,,,,yes,,,,
+Q2988788,Rajput painting,culture,painting_school,culture,selected,,,,yes,yes,,,
+Q106936171,painting in Bihar,culture,painting_school,culture,selected,Bihar,Bihar,located in (P131),yes,,,,
+Q116692654,painting of Assam,culture,painting_school,culture,selected,Assam,Assam,located in (P131),yes,,,,
+Q2047562,Buddhist architecture,style,,person_dynasty_style,selected,,,,yes,,,,
+Q3024819,Deul,style,,person_dynasty_style,selected,,,,yes,yes,,,
+Q171309,Dravidian architecture,style,,person_dynasty_style,selected,,,,yes,yes,,,
+Q24945384,Ek-ratna,style,,person_dynasty_style,selected,,,,yes,yes,,,
+Q46825,Gothic art,style,,person_dynasty_style,selected,,,,yes,yes,yes,,
+Q1008014,Greco-Buddhist art,style,,person_dynasty_style,selected,,,,yes,yes,,,
+Q80706,Hindu temple architecture,style,,person_dynasty_style,selected,,,,yes,yes,yes,,
+Q2361582,Hoysala architecture,style,,person_dynasty_style,selected,,,,yes,yes,yes,,
+Q825394,Indo-Islamic architecture,style,,person_dynasty_style,selected,,,,yes,yes,,,
+Q3374557,Indo-Saracenic architecture,style,,person_dynasty_style,selected,,,,yes,,,,
+Q212940,Islamic architecture,style,,person_dynasty_style,selected,,,,yes,yes,,,
+Q615196,Italianate architecture,style,,person_dynasty_style,selected,,,,yes,,,,
+Q6119627,Jacobethan,style,,person_dynasty_style,selected,,,,yes,,,,
+Q6276222,Jor-bangla,style,,person_dynasty_style,selected,,,,yes,,,,
+Q13640694,Kalinga architecture,style,,person_dynasty_style,selected,Odisha,Odisha,"indigenous to or origin (P2341, P495)",yes,,,,
+Q751878,Manueline,style,,person_dynasty_style,selected,,,,yes,,,,
+Q22948695,Moroccan architecture,style,,person_dynasty_style,selected,,,,yes,,,,
+Q542261,Mughal architecture,style,,person_dynasty_style,selected,,,,yes,yes,yes,,
+Q25204255,Pancharatna,style,,person_dynasty_style,selected,,,,yes,,,,
+Q7448523,Seljuk architecture,style,,person_dynasty_style,selected,,,,yes,,,,
+Q565165,Victorian architecture,style,,person_dynasty_style,selected,,,,yes,,,,
+Q61050,architecture of India,style,,person_dynasty_style,selected,,,,yes,yes,yes,,
+Q1501585,architecture of Iran,style,,person_dynasty_style,selected,,,,yes,yes,,,
+Q840829,baroque architecture,style,,person_dynasty_style,selected,,,,yes,yes,,,
+Q994776,brutalist architecture,style,,person_dynasty_style,selected,,,,yes,,,,
+Q1148060,expressionist architecture,style,,person_dynasty_style,selected,,,,yes,,,,
+Q245188,modern architecture,style,,person_dynasty_style,selected,,,,yes,yes,,,
+Q11587139,rock-cut architecture,style,,person_dynasty_style,selected,,,,yes,yes,,,
+Q12020836,timber-framed house,style,,person_dynasty_style,selected,,,,yes,,,,
+Q930314,vernacular architecture,style,,person_dynasty_style,selected,,,,yes,yes,,,
+Q2822165,Abu Bakr Shah,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1350
+Q3535800,Aditya I,person,,person_dynasty_style,selected,,,,yes,yes,,,death 907
+Q366213,Aga Khan III,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1877
+Q2551253,Ahmad Lahori,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1580
+Q3482078,Ahmad Shah I Wali,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1370
+Q2723071,Ahmed Shah I,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1389
+Q8597,Akbar,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1542
+Q3826620,Ala-ud-Din Masud Shah,person,,person_dynasty_style,selected,,,,yes,,,,birth 1300
+Q335362,Alauddin Khalji,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1266
+Q4724557,Ali Adil Shah,person,,person_dynasty_style,selected,,,,yes,yes,yes,,death 1579
+Q117844715,Ali Shah Miri,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Shah Mir dynasty, ended 1589"
+Q48734984,Alli Raani,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Pandya dynasty, ended 1650"
+Q4779124,Aparajitavarman,person,,person_dynasty_style,selected,,,,yes,yes,,,death 897
+Q2349158,Aram Shah,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1176
+Q4791599,Arjunavarman,person,,person_dynasty_style,selected,,,,yes,yes,,,death 1218
+Q24952053,Arjunavarman II,person,,person_dynasty_style,selected,,,,yes,yes,,,death 1283
+Q29896,Asaf Jah I of Hyderabad,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1671
+Q720294,Asaf Jah II of Hyderabad,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1734
+Q485547,Aurangzeb,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1618
+Q25352172,Avanti Varman,person,,person_dynasty_style,selected,,,,yes,yes,,,"no dates; member of Utpala dynasty, ended 1003"
+Q4830278,Axel Haig,person,,person_dynasty_style,selected,,,,yes,,,,birth 1835
+Q3535972,Azim-ush-Shan,person,,person_dynasty_style,selected,,,,yes,,,,birth 1664
+Q2747189,Bahlul Khan Lodi,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1400
+Q1107658,Bala Varman,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Varman dynasty, ended 655"
+Q4851418,Ballal Sena,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1083
+Q4880399,Bega Begum,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1511
+Q4901328,Bhartrdaman,person,,person_dynasty_style,selected,,,,yes,yes,,,"no dates; member of Western Satraps, ended 405"
+Q4901896,Bhoja II,person,,person_dynasty_style,selected,,,,yes,,,,birth 1175
+Q21069478,Bir Hambir,person,,person_dynasty_style,selected,,,,yes,,,,death 1620
+Q4918619,Biswa Singha of Kamata,person,,person_dynasty_style,selected,,,,yes,,,,birth 1515
+Q229192,Catherine of Valois,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1401
+Q135641627,"Charu Singha, Charing Raja",person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Ahom dynasty, ended 1826"
+Q1289992,Chavundaraya,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 940
+Q5211924,Damajadasri I,person,,person_dynasty_style,selected,,,,yes,yes,,,"no dates; member of Western Satraps, ended 405"
+Q60788585,Damajadasri III,person,,person_dynasty_style,selected,,,,yes,yes,,,"no dates; member of Western Satraps, ended 405"
+Q48728034,Damasena,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Western Satraps, ended 405"
+Q3183804,Dharmapala,person,,person_dynasty_style,selected,,,,yes,yes,,,death 810
+Q455442,Firuz Shah Tughlaq,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1309
+Q163900,Francis Xavier,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1506
+Q5499109,Frederick William Stevens,person,,person_dynasty_style,selected,,,,yes,,yes,,birth 1847
+Q1143919,Ganapati Varman,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Varman dynasty, ended 655"
+Q5520608,Gandaraditya,person,,person_dynasty_style,selected,,,,yes,yes,,,death 956
+Q1508644,George Wittet,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1878
+Q374288,Ghiyas ud din Balban,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1201
+Q1391172,Ghiyath al-Din Tughluq,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1250
+Q3352284,Gopala,person,,person_dynasty_style,selected,,,,yes,yes,yes,,"no dates; member of Pala dynasty (Kamarupa), ended 1100"
+Q5589869,Govinda II,person,,person_dynasty_style,selected,,,,yes,yes,yes,,death 780
+Q3631506,Habba Khatun,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1554
+Q27957618,Harsha,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Chandelas of Jejakabhukti, ended 1311"
+Q12460830,Hemanta Sena,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1179
+Q11684693,Hemādri,person,,person_dynasty_style,selected,,,,yes,yes,,,death 1309
+Q381754,Ibrahim Khan Lodi,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1480
+Q3764168,Ibrahim Quli Qutb Shah Wali,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1518
+Q336312,Iltutmish,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1192
+Q105690300,Ishanavarman,person,,person_dynasty_style,selected,,,,yes,,,,birth 600
+Q2392864,Jai Singh II,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1688
+Q2691885,Jalal ud din Firuz Khalji,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1220
+Q6127674,Jamali Kamboh,person,,person_dynasty_style,selected,,,,yes,,,,death 1536
+Q616654,Janamejaya,person,,person_dynasty_style,selected,,,,yes,yes,yes,,"no dates; member of Kuru Kingdom, ended -900"
+Q6167457,Jayadaman,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Western Satraps, ended 405"
+Q6167670,Jayasimha II,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1015
+Q6203452,Jivadaman,person,,person_dynasty_style,selected,,,,yes,yes,,,"no dates; member of Western Satraps, ended 405"
+Q5879,Johann Wolfgang von Goethe,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1749
+Q10313627,Kakavarna Kalashoka,person,,person_dynasty_style,selected,,,,yes,yes,,,"no dates; member of Shishunaga dynasty, ended -344"
+Q1143889,Kalyana Varman,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Varman dynasty, ended 655"
+Q3695807,Kayumars of Delhi,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1285
+Q6387049,Kempe Gowda I,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1510
+Q2741754,Khizr Khan,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1361
+Q6416224,Kirtivarman I,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 566
+Q707430,Kirtivarman II,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 746
+Q6430664,Koon Pandiyan,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Pandya dynasty, ended 1650"
+Q3536697,Krishna III(kannara deva),person,,person_dynasty_style,selected,,,,yes,yes,,,birth 939
+Q2119008,Kulothunga Chola I,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1050
+Q2502220,Lakshman Sen,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1118
+Q4724,Le Corbusier,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1887
+Q335371,Madhvacharya,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1238
+Q6733116,Mahanandin,person,,person_dynasty_style,selected,,,,yes,yes,yes,,death -344
+Q1144246,Mahendra Varman,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Varman dynasty, ended 655"
+Q6734077,Mahipala,person,,person_dynasty_style,selected,,,,yes,yes,,,death 1038
+Q12444610,Mangalesa,person,,person_dynasty_style,selected,,,,yes,yes,,,"no dates; member of Chalukya dynasty, ended 753"
+Q2724621,Mayurasharma,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 345
+Q135641554,"Molou Gohain, Tipam Raja",person,,person_dynasty_style,selected,,,,yes,,,,death 1775
+Q381830,Muhammad ibn Tughluq,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1290
+Q337442,Muiz ud din Bahram,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1212
+Q2168115,Muiz ud din Qaiqabad,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1269
+Q2621758,Muzaffar Jung,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1750
+Q269093,Nara Narayan,person,,person_dynasty_style,selected,,,,yes,,,,death 1587
+Q203060,Naropa,person,,person_dynasty_style,selected,,,,yes,,,,birth 1016
+Q3028975,Nasir ud din Muhammad Shah III,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1352
+Q6967114,Nasir-ud-Din Qabacha,person,,person_dynasty_style,selected,,,,yes,,,,death 1228
+Q2787241,Nasiruddin Bughra Khan,person,,person_dynasty_style,selected,,,,yes,,,,death 1291
+Q2572299,Nasiruddin Nasrat Shah,person,,person_dynasty_style,selected,,,,yes,yes,,,death 1533
+Q6986348,Nedum Cheralathan,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Chera dynasty, ended 1102"
+Q6986387,Nedunj Cheliyan I,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Pandya dynasty, ended 1650"
+Q64348109,Nilambar of Kamata,person,,person_dynasty_style,selected,,,,yes,,,,death 1498
+Q7067527,Nripendra Narayan I of Cooch Behar,person,,person_dynasty_style,selected,,,,yes,,,,birth 1862
+Q3277857,Nàssir-ad-Din Mahmud Xah Tughluq,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1350
+Q7134850,Parakrama Pandyan II,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Pandya dynasty, ended 1650"
+Q4997590,Parantaka Chola II,person,,person_dynasty_style,selected,,,,yes,,,,birth 957
+Q7135564,Parantaka I,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 907
+Q135641643,Pat Konwar,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Ahom dynasty, ended 1826"
+Q16873278,Perum Cheral Irumporai,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Chera dynasty, ended 1102"
+Q7171061,Perumkadungo,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Chera dynasty, ended 1102"
+Q7237244,Prabhavatigupta,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 350
+Q7238615,Prataparudra,person,,person_dynasty_style,selected,,,,yes,yes,,,death 1323
+Q708370,Pulakeshi II,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 610
+Q1143895,Pushyavarman,person,,person_dynasty_style,selected,,,,yes,,,,death 374
+Q3179907,Qutb ud din Mubarak Shah,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1299
+Q311151,Qutb-ud-din Aibak,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1150
+Q88127515,Radhamitra,person,,person_dynasty_style,selected,,,,yes,,,,birth -599
+Q7283027,Raghunatha Nayak,person,,person_dynasty_style,selected,,,,yes,,,,death 1634
+Q27957489,Rahila,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Chandelas of Jejakabhukti, ended 1311"
+Q17479441,Rahmat Banu Begum,person,,person_dynasty_style,selected,,,,yes,,,,birth 1656
+Q7285772,Rajaraja II,person,,person_dynasty_style,selected,,,,yes,yes,,,death 1173
+Q3520281,Rajashekhara Varman,person,,person_dynasty_style,selected,,,,yes,yes,,,"no dates; member of Chera dynasty, ended 1102"
+Q2934797,Rama Varma Kulashekhara,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Chera dynasty, ended 1102"
+Q135641638,"Ratneswar Gohain, Tipam Raja",person,,person_dynasty_style,selected,,,,yes,,,,death 1769
+Q465076,Razia Sultana,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1205
+Q1260392,Rudradaman,person,,person_dynasty_style,selected,,,,yes,yes,,,death 150
+Q3523666,Rudrama Devi,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1259
+Q7377527,Rudrasena I,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Western Satraps, ended 405"
+Q48726638,Rudrasena II,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Western Satraps, ended 405"
+Q7377528,Rudrasimha I,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Western Satraps, ended 405"
+Q48726681,Rudrasimha II,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Western Satraps, ended 405"
+Q2360374,Rukn ud din Firuz,person,,person_dynasty_style,selected,,,,yes,yes,,,death 1236
+Q1143770,Samudra Varman,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Varman dynasty, ended 655"
+Q2478699,Sanatan Goswami,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1484
+Q48728061,Satyadaman,person,,person_dynasty_style,selected,,,,yes,yes,,,"no dates; member of Western Satraps, ended 405"
+Q7428550,Sawai Pratap Singh,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1764
+Q3029931,Sayyid Mubarak-Xah,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1378
+Q2223390,Sengge Namgyal,person,,person_dynasty_style,selected,,,,yes,,,,birth 1570
+Q83672,Shah Jahan,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1592
+Q83680,Sher Shah Suri,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1472
+Q16863366,Shihab-ud-din Omar,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1310
+Q3632946,Shishunaga,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth -449
+Q2597227,Sikandar Khan Lodi,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1458
+Q3817955,Sikandar Shah Miri,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1400
+Q3348836,Sikandar Shah Suri,person,,person_dynasty_style,selected,,,,yes,yes,,,death 1559
+Q2600359,Someshvara II,person,,person_dynasty_style,selected,,,,yes,yes,,,"no dates; member of Chalukya dynasty, ended 753"
+Q7559999,Somesvara I,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1042
+Q7616086,Sthanu Ravi Varman,person,,person_dynasty_style,selected,,,,yes,yes,,,"no dates; member of Chera dynasty, ended 1102"
+Q7633837,Sudingphaa,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Ahom dynasty, ended 1826"
+Q4921391,Sukaphaa,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1189
+Q3104923,Tughluq Khan,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1301
+Q19663469,Ulugh Khan,person,,person_dynasty_style,selected,,,,yes,,,,birth 1201
+Q12981197,Uthiyan Cheralathan,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Chera dynasty, ended 1102"
+Q3536701,Uththama Chola,person,,person_dynasty_style,selected,,,,yes,,,,death 985
+Q3532891,Vel Kelu Kuttuvan,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Chera dynasty, ended 1102"
+Q7929259,Vijayaditya,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 696
+Q7929271,Vijayalaya Chola,person,,person_dynasty_style,selected,,,,yes,yes,,,death 871
+Q16969268,Vijayasena,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Western Satraps, ended 405"
+Q3576629,Vikramaditya I,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 655
+Q5477720,Vikramaditya II,person,,person_dynasty_style,selected,,,,yes,yes,yes,,death 744
+Q2600532,Vikramaditya VI,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1001
+Q7931393,Vinayaditya,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 680
+Q27957699,Vindhyashakti,person,,person_dynasty_style,selected,,,,yes,,,,birth 240
+Q17059109,Yanaikatchai Mantaran Cheral Irumporai,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Chera dynasty, ended 1102"
+Q27957624,Yashovarman,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Chandelas of Jejakabhukti, ended 1311"
+Q48726684,Yasodaman II,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Western Satraps, ended 405"
+Q3029922,Zayn al-Abidin the Great,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1401
+Q121905638,Agalmaka,topup_culture,,culture,selected,Meghalaya,Meghalaya,Wikipedia categories,yes,,,,
+Q17049884,Biju festival,topup_culture,,culture,selected,multi-state,Mizoram; Tripura,Wikipedia categories,yes,yes,,,
+Q16978056,Chapchar Kut,topup_culture,,culture,selected,Mizoram,Mizoram,Wikipedia categories,yes,yes,,,
+Q5521851,Garadi,topup_culture,,culture,selected,Puducherry,Puducherry,location (P276),yes,,,,
+Q17055323,Hornbill Festival,topup_culture,,culture,selected,Nagaland,Nagaland,Wikipedia categories,yes,,,,
+Q6367977,Karaikal Carnival,topup_culture,,culture,selected,Puducherry,Puducherry,Wikipedia categories,yes,,,,
+Q134412813,Mizo clothing,topup_culture,,culture,selected,Mizoram,Mizoram,Wikipedia categories,yes,,,,
+Q24952016,Mungmung,topup_culture,,culture,selected,Nagaland,Nagaland,Wikipedia categories,yes,,,,
+Q16919428,Pawl Kut,topup_culture,,culture,selected,Mizoram,Mizoram,Wikipedia categories,yes,,,,
+Q24943830,Pusnâ,topup_culture,,culture,selected,Meghalaya,Meghalaya,Wikipedia categories,yes,,,,
+Q55643345,Rose Festival (Chandigarh),topup_culture,,culture,selected,Chandigarh,Chandigarh,Wikipedia categories,yes,,,,
+Q24952229,Sekrenyi,topup_culture,,culture,selected,Nagaland,Nagaland,Wikipedia categories,yes,,,,
+Q7522234,Sindhu Darshan Festival,topup_culture,,culture,selected,Ladakh,Ladakh,Wikipedia categories,yes,,,,
+Q7699655,Tendong Lho Rumfaat,topup_culture,,culture,selected,Sikkim,Sikkim,Wikipedia categories,yes,,,,
+Q7967794,Wangala,topup_culture,,culture,selected,Meghalaya,Meghalaya,located in (P131),yes,yes,,,
