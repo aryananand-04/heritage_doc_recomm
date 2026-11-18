@@ -1,0 +1,753 @@
+"""Select the seed entities for corpus v1 and report their coverage.
+
+Applies the strata in docs/decisions/0002-seed-strata-and-sampling.md. Nothing
+is collected here: the output is the list of seed entities and a report of how
+they spread over strata, states and union territories, and document types, for
+the author to approve before any collection starts.
+
+Usage:
+    uv run python -m src.corpus.seeds
+
+Outputs:
+    data/seeds/seeds_v1.csv        one row per seed entity
+    data/seeds/seed_report.md      coverage report
+    data/raw/seeds_v1/*.json.gz    raw responses (gitignored; archived on release)
+"""
+
+import csv
+import random
+import re
+import subprocess
+from collections import Counter, defaultdict
+from dataclasses import dataclass, field
+from datetime import date
+from urllib.parse import unquote
+
+from bs4 import BeautifulSoup
+
+from src.corpus.wikimedia import ROOT, Wikimedia, qid, values
+
+RUN = "seeds_v1"
+RAW_DIR = ROOT / "data/raw" / RUN
+OUT_DIR = ROOT / "data/seeds"
+SCAN_FILE = OUT_DIR / "curated/culture_scan.csv"
+
+RANDOM_SEED = 20261118
+ASI_TOTAL = 500
+ASI_MIN_PER_STATE = 5
+FOLK_DANCE_CAP = 40
+GI_CAP = 60
+THIN_STATE = 5  # a state or union territory with fewer seeds than this is reported as thin
+
+INDIA = "Q668"
+WORLD_HERITAGE = "Q9259"
+TENTATIVE_LIST = "Q1459900"
+DYNASTY = "Q164950"
+HISTORICAL_COUNTRY = "Q3024240"
+KINGDOM = "Q417175"
+EMPIRE = "Q48349"
+INDIAN_FOLK_DANCE = "Q5464449"
+INDIAN_PAINTING = "Q2744438"
+ICH_LISTS = (
+    "Representative List of the Intangible Cultural Heritage of Humanity",
+    "Masterpieces of the Oral and Intangible Heritage of Humanity",
+    "National List for Intangible Cultural Heritage (ICH)",
+)
+LANGS = ("en", "hi", "kn")
+LABEL = 'SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }'
+HAS_EN = "?art schema:about ?i ; schema:isPartOf <https://en.wikipedia.org/> ."
+
+# Strata in priority order: a seed selected by several strata is kept in the first.
+DOC_TYPE = {
+    "world_heritage": "site",
+    "tentative_list": "site",
+    "asi_monument": "site",
+    "dynasty": "person_dynasty_style",
+    "culture": "culture",
+    "style": "person_dynasty_style",
+    "person": "person_dynasty_style",
+}
+
+
+@dataclass
+class Seed:
+    qid: str
+    label: str
+    stratum: str
+    sub_stratum: str = ""
+    state: str = ""
+    states: list = field(default_factory=list)
+    state_source: str = ""
+    flags: list = field(default_factory=list)
+    also_in: list = field(default_factory=list)
+    status: str = "selected"
+    sitelinks: set = field(default_factory=set)
+
+    @property
+    def doc_type(self) -> str:
+        return DOC_TYPE[self.stratum]
+
+
+def batches(items, size=200):
+    items = list(items)
+    for i in range(0, len(items), size):
+        yield i // size, items[i : i + size]
+
+
+# ------------------------------------------------------------------ states
+
+
+class StateResolver:
+    """Finds the Indian state or union territory an entity lies in."""
+
+    def __init__(self, wm: Wikimedia):
+        self.wm = wm
+        rows = wm.sparql(
+            "states",
+            f"""SELECT ?s ?sLabel WHERE {{
+                VALUES ?t {{ wd:Q12443800 wd:Q467745 }} ?s wdt:P31 ?t .
+                FILTER NOT EXISTS {{ ?s wdt:P576 ?end }} {LABEL} }}""",
+        )
+        self.states = {qid(r["s"]): r["sLabel"] for r in rows}
+        self.parents: dict[str, set] = {}
+        self.facts: dict[str, dict[str, set]] = defaultdict(lambda: defaultdict(set))
+        self.cat_states: dict[str, list] = {}
+
+    def load(self, name: str, qids) -> None:
+        """Fetch location facts for entities, then their P131 chains."""
+        todo = sorted(set(qids) - set(self.facts))
+        for n, chunk in batches(todo):
+            rows = self.wm.sparql(
+                f"{name}_facts_{n:02d}",
+                f"""SELECT ?i ?p ?v WHERE {{ VALUES ?i {{ {values(chunk)} }}
+                    VALUES ?p {{ wdt:P131 wdt:P276 wdt:P495 wdt:P2341 wdt:P36 wdt:P17 }}
+                    ?i ?p ?v . FILTER(isIRI(?v)) }}""",
+            )
+            for q in chunk:
+                self.facts[q]  # record that it was looked up, even with no facts
+            for r in rows:
+                self.facts[qid(r["i"])][qid(r["p"])].add(qid(r["v"]))
+        start = {v for q in todo for p in ("P131", "P276", "P495", "P2341", "P36") for v in self.facts[q][p]}
+        self._climb(name, start)
+
+    def _climb(self, name: str, start: set) -> None:
+        frontier = {q for q in start if q not in self.states}
+        for depth in range(8):
+            todo = sorted(q for q in frontier if q not in self.parents)
+            if not todo:
+                return
+            for n, chunk in batches(todo):
+                rows = self.wm.sparql(
+                    f"{name}_up{depth}_{n:02d}",
+                    f"SELECT ?x ?p WHERE {{ VALUES ?x {{ {values(chunk)} }} OPTIONAL {{ ?x wdt:P131 ?p }} }}",
+                )
+                for r in rows:
+                    self.parents.setdefault(qid(r["x"]), set())
+                    if "p" in r:
+                        self.parents[qid(r["x"])].add(qid(r["p"]))
+            frontier = {p for q in todo for p in self.parents.get(q, ()) if p not in self.states}
+
+    def state_of(self, q: str, seen=None) -> set:
+        if q in self.states:
+            return {self.states[q]}
+        seen = seen or set()
+        if q in seen:
+            return set()
+        seen.add(q)
+        found = set()
+        for p in self.parents.get(q, ()):
+            found |= self.state_of(p, seen)
+        return found
+
+    def assign(self, seed: Seed, hint: str = "") -> None:
+        facts = self.facts.get(seed.qid, {})
+        rules = (
+            (("P131",), "located in (P131)"),
+            (("P276",), "location (P276)"),
+            (("P2341", "P495"), "indigenous to or origin (P2341, P495)"),
+            (("P36",), "capital (P36)"),
+        )
+        for props, source in rules:
+            found = set().union(*(self.state_of(v) for p in props for v in facts.get(p, ())))
+            if found:
+                seed.states, seed.state_source = sorted(found), source
+                break
+        else:
+            hinted = [h.strip() for h in hint.split(";") if h.strip()]
+            if self.cat_states.get(seed.qid):
+                seed.states, seed.state_source = self.cat_states[seed.qid], "Wikipedia categories"
+            elif hinted:
+                seed.states, seed.state_source = hinted, "hand scan or source list"
+        seed.state = "multi-state" if len(seed.states) > 1 else (seed.states[0] if seed.states else "")
+
+    def not_foreign(self, q: str) -> bool:
+        """False only when Wikidata gives a country (P17) and India is not among them.
+
+        Crafts and art styles rarely carry a location on Wikidata, so absence of
+        evidence is not treated as evidence of a foreign item; the source list
+        (the GI table, the Indian painting article) supplies the Indian origin.
+        """
+        countries = self.facts.get(q, {}).get("P17", set())
+        return not countries or INDIA in countries
+
+    def load_categories(self, wm: Wikimedia, name: str, qids) -> None:
+        """States named in an article's English Wikipedia categories ('Dances of Assam')."""
+        names = {s: s for s in self.states.values()}
+        names |= {"Delhi": "National Capital Territory of Delhi", "Orissa": "Odisha"}
+        pattern = re.compile(
+            r"\b(?:of|in|from) (" + "|".join(sorted(map(re.escape, names), key=len, reverse=True)) + r")\b"
+        )
+        titles = en_titles(wm, f"{name}_titles", qids)
+        by_title = {t: q for q, t in titles.items()}
+        for n, chunk in batches(sorted(by_title), 50):
+            params = {"action": "query", "prop": "categories", "clshow": "!hidden", "cllimit": "max", "redirects": "1"}
+            params["titles"], page = "|".join(chunk), 0
+            while True:
+                data = wm.wiki(f"{name}_cats_{n:02d}_{page}", params)
+                for p in data.get("query", {}).get("pages", []):
+                    q = by_title.get(p["title"])
+                    for c in p.get("categories", []):
+                        for m in pattern.finditer(c["title"]):
+                            if q:
+                                self.cat_states.setdefault(q, [])
+                                if names[m.group(1)] not in self.cat_states[q]:
+                                    self.cat_states[q].append(names[m.group(1)])
+                if "continue" not in data:
+                    break
+                params, page = {**params, **data["continue"]}, page + 1
+        for q in self.cat_states:
+            self.cat_states[q].sort()
+
+
+# --------------------------------------------------------------- selection
+
+
+def allocate(counts: dict[str, int], total: int, minimum: int, floor_keys=None) -> dict[str, int]:
+    """Share `total` places over groups: up to `minimum` each, the rest by largest remainder.
+
+    Only groups in `floor_keys` (default: all) are guaranteed the minimum.
+    """
+    floor_keys = set(counts) if floor_keys is None else set(floor_keys)
+    alloc = {k: min(c, minimum) if k in floor_keys else 0 for k, c in counts.items()}
+    remaining = total - sum(alloc.values())
+    spare = {k: counts[k] - alloc[k] for k in counts}
+    pool = sum(spare.values())
+    if remaining <= 0 or pool == 0:
+        return alloc
+    if remaining >= pool:
+        return dict(counts)
+    quota = {k: remaining * spare[k] / pool for k in counts}
+    extra = {k: int(quota[k]) for k in counts}
+    left = remaining - sum(extra.values())
+    for k in sorted(counts, key=lambda k: (-(quota[k] - extra[k]), k))[:left]:
+        extra[k] += 1
+    return {k: alloc[k] + extra[k] for k in counts}
+
+
+def round_robin(by_group: dict[str, list], cap: int, rng: random.Random) -> list:
+    """Take one item per group in turn (groups in name order) until `cap` items."""
+    queues = {g: rng.sample(sorted(items), len(items)) for g, items in by_group.items()}
+    out = []
+    while len(out) < cap and any(queues.values()):
+        for g in sorted(queues):
+            if queues[g] and len(out) < cap:
+                out.append(queues[g].pop(0))
+    return out
+
+
+# ------------------------------------------------------------------ strata
+
+
+def labelled(rows, var="i") -> dict[str, str]:
+    return {qid(r[var]): r.get(f"{var}Label", "") for r in rows}
+
+
+def designation(wm, name, item) -> dict[str, str]:
+    return labelled(
+        wm.sparql(
+            name,
+            f"SELECT DISTINCT ?i ?iLabel WHERE {{ ?i wdt:P1435 wd:{item} ; wdt:P17 wd:{INDIA} . {LABEL} }}",
+        )
+    )
+
+
+def dynasties(wm) -> dict[str, tuple[str, str]]:
+    rows = wm.sparql(
+        "dynasties",
+        f"""SELECT DISTINCT ?i ?iLabel ?rule WHERE {{
+          {{ ?i wdt:P31/wdt:P279* wd:{DYNASTY} ; wdt:P17 wd:{INDIA} . BIND("dynasty, country India" AS ?rule) }}
+          UNION
+          {{ VALUES ?t {{ wd:{DYNASTY} wd:{HISTORICAL_COUNTRY} wd:{KINGDOM} wd:{EMPIRE} }}
+             ?i wdt:P31 ?t ; wdt:P36 ?cap . ?cap wdt:P17 wd:{INDIA} . BIND("capital in India" AS ?rule) }}
+          {LABEL} }}""",
+    )
+    out: dict[str, tuple[str, str]] = {}
+    for r in rows:
+        q = qid(r["i"])
+        rules = set(out.get(q, ("", ""))[1].split("; ")) - {""} | {r["rule"]}
+        out[q] = (r.get("iLabel", ""), "; ".join(sorted(rules)))
+    return out
+
+
+def asi_monuments(wm) -> dict[str, str]:
+    return labelled(
+        wm.sparql(
+            "asi_monuments",
+            f"SELECT DISTINCT ?i ?iLabel WHERE {{ ?i wdt:P1371 ?id ; wdt:P17 wd:{INDIA} . {HAS_EN} {LABEL} }}",
+        )
+    )
+
+
+def intangible_heritage(wm) -> dict[str, str]:
+    names = " ".join(f'"{n}"@en' for n in ICH_LISTS)
+    lists = [
+        qid(r["s"]) for r in wm.sparql("ich_lists", f"SELECT ?s WHERE {{ VALUES ?l {{ {names} }} ?s rdfs:label ?l }}")
+    ]
+    return labelled(
+        wm.sparql(
+            "ich",
+            f"""SELECT DISTINCT ?i ?iLabel WHERE {{ VALUES ?s {{ {values(lists)} }} ?i wdt:P3259 ?s .
+                {{ ?i wdt:P17 wd:{INDIA} }} UNION {{ ?i wdt:P495 wd:{INDIA} }} {HAS_EN} {LABEL} }}""",
+        )
+    )
+
+
+def folk_dances(wm) -> dict[str, str]:
+    return labelled(
+        wm.sparql(
+            "folk_dance",
+            f"""SELECT DISTINCT ?i ?iLabel WHERE {{
+                {{ ?i wdt:P279+ wd:{INDIAN_FOLK_DANCE} }} UNION {{ ?i wdt:P31/wdt:P279* wd:{INDIAN_FOLK_DANCE} }}
+                {HAS_EN} {LABEL} }}""",
+        )
+    )
+
+
+def titles_to_qids(wm, name: str, titles) -> dict[str, str]:
+    """English Wikipedia titles -> QIDs, following redirects."""
+    out = {}
+    for n, chunk in batches(sorted(set(titles)), 50):
+        data = wm.wiki(
+            f"{name}_pageprops_{n:02d}",
+            {
+                "action": "query",
+                "prop": "pageprops",
+                "ppprop": "wikibase_item",
+                "redirects": "1",
+                "titles": "|".join(chunk),
+            },
+        )
+        q = data.get("query", {})
+        renamed = {x["from"]: x["to"] for x in q.get("normalized", []) + q.get("redirects", [])}
+        found = {p["title"]: p.get("pageprops", {}).get("wikibase_item") for p in q.get("pages", [])}
+        for t in chunk:
+            final = t
+            for _ in range(3):
+                final = renamed.get(final, final)
+            if found.get(final):
+                out[t] = found[final]
+    return out
+
+
+def painting_candidates(wm) -> dict[str, str]:
+    """Wikidata members of 'Indian painting' plus schools linked from its article sections."""
+    members = labelled(
+        wm.sparql(
+            "painting_members",
+            f"""SELECT DISTINCT ?i ?iLabel WHERE {{
+                {{ ?i wdt:P31/wdt:P279* wd:{INDIAN_PAINTING} }} UNION {{ ?i wdt:P279+ wd:{INDIAN_PAINTING} }}
+                UNION {{ ?i wdt:P361 wd:{INDIAN_PAINTING} }} {HAS_EN} {LABEL} }}""",
+        )
+    )
+    html = wm.wiki("indian_painting_article", {"action": "parse", "page": "Indian painting", "prop": "text|revid"})
+    soup = BeautifulSoup(html["parse"]["text"], "html.parser")
+    wanted = re.compile(
+        r"Mughal|Deccan|Rajput|Pahari|Malwa|Mysore|Tanjore|Pattachitra|Assam|Other regional|Company|Bengal school|Vernacular"
+    )
+    titles, take = set(), False
+    for el in soup.find_all(["h2", "h3", "h4", "p", "ul", "div"]):
+        if el.name in ("h2", "h3", "h4"):
+            take = bool(wanted.search(el.get_text(" ", strip=True)))
+            continue
+        if take:
+            for a in el.find_all("a", href=True):
+                href = a["href"]
+                if href.startswith("/wiki/") and ":" not in href[6:]:
+                    titles.add(unquote(href[6:].split("#")[0]).replace("_", " "))
+    from_article = titles_to_qids(wm, "painting_links", titles)
+    candidates = dict(members)
+    for t, q in from_article.items():
+        candidates.setdefault(q, t)
+    return candidates
+
+
+def painting_filter(wm, candidates: dict[str, str]) -> dict[str, str]:
+    """Keep candidates typed as a style, school, movement or genre of art."""
+    # Art-specific types only: plain "movement" or "tradition" also matches religious movements.
+    keep_types = re.compile(
+        r"art movement|art style|artistic|painting|school of|style of|genre of|art form|art genre", re.I
+    )
+    types = defaultdict(set)
+    for n, chunk in batches(sorted(candidates)):
+        for r in wm.sparql(
+            f"painting_types_{n:02d}",
+            f"""SELECT ?i ?tLabel WHERE {{ VALUES ?i {{ {values(chunk)} }} ?i wdt:P31|wdt:P279 ?t .
+                ?t rdfs:label ?tLabel FILTER(lang(?tLabel) = "en") }}""",
+        ):
+            types[qid(r["i"])].add(r["tLabel"])
+    return {q: label for q, label in candidates.items() if any(keep_types.search(t) for t in types[q])}
+
+
+def gi_crafts(wm) -> list[dict]:
+    """Handicraft rows of the GI table, with the state given in the table."""
+    page = wm.wiki(
+        "gi_article",
+        {"action": "parse", "page": "Geographical indications in India", "prop": "text|revid", "redirects": "1"},
+    )
+    soup = BeautifulSoup(page["parse"]["text"], "html.parser")
+    rows = []
+    for table in soup.select("table.wikitable"):
+        trs = table.find_all("tr")
+        head = [c.get_text(" ", strip=True).lower() for c in trs[0].find_all(["th", "td"])]
+        if "type" not in head:
+            continue
+        i_name = next(i for i, h in enumerate(head) if "geographical indication" in h)
+        i_type, i_state = head.index("type"), next(i for i, h in enumerate(head) if "state" in h)
+        for tr in trs[1:]:
+            cells = tr.find_all(["th", "td"])
+            if len(cells) <= max(i_name, i_type, i_state):
+                continue
+            link = cells[i_name].find("a", href=True)
+            rows.append(
+                {
+                    "name": cells[i_name].get_text(" ", strip=True),
+                    "type": cells[i_type].get_text(" ", strip=True),
+                    "state": cells[i_state].get_text(" ", strip=True),
+                    "title": unquote(link["href"][6:]).replace("_", " ")
+                    if link and link["href"].startswith("/wiki/")
+                    else "",
+                }
+            )
+    return rows
+
+
+def one_hop(wm, name: str, sources, props: str, extra: str = "") -> dict[str, str]:
+    out = {}
+    for n, chunk in batches(sorted(sources)):
+        out |= labelled(
+            wm.sparql(
+                f"{name}_{n:02d}",
+                f"""SELECT DISTINCT ?i ?iLabel WHERE {{ VALUES ?s {{ {values(chunk)} }}
+                    ?s {props} ?i . {extra} {HAS_EN} {LABEL} }}""",
+            )
+        )
+    return out
+
+
+def en_titles(wm, name: str, qids) -> dict[str, str]:
+    """QID -> English Wikipedia article title."""
+    out = {}
+    for n, chunk in batches(sorted(qids)):
+        for r in wm.sparql(
+            f"{name}_{n:02d}",
+            f"""SELECT ?i ?t WHERE {{ VALUES ?i {{ {values(chunk)} }}
+                ?a schema:about ?i ; schema:isPartOf <https://en.wikipedia.org/> ; schema:name ?t . }}""",
+        ):
+            out[qid(r["i"])] = r["t"]
+    return out
+
+
+def sitelinks(wm, qids) -> dict[str, set]:
+    out = defaultdict(set)
+    sites = " ".join(f"<https://{lang}.wikipedia.org/>" for lang in LANGS)
+    for n, chunk in batches(sorted(qids)):
+        for r in wm.sparql(
+            f"sitelinks_{n:02d}",
+            f"""SELECT ?i ?site WHERE {{ VALUES ?i {{ {values(chunk)} }} VALUES ?site {{ {sites} }}
+                ?a schema:about ?i ; schema:isPartOf ?site . }}""",
+        ):
+            out[qid(r["i"])].add(r["site"].split("//")[1].split(".")[0])
+    return out
+
+
+# -------------------------------------------------------------------- main
+
+
+def build() -> tuple[list[Seed], dict]:
+    wm = Wikimedia(RAW_DIR)
+    rng = random.Random(RANDOM_SEED)
+    resolver = StateResolver(wm)
+    seeds: dict[str, Seed] = {}
+    notes: dict = {"states_found": len(resolver.states)}
+
+    def add(q: str, label: str, stratum: str, sub: str = "", flags=(), status: str = "selected") -> Seed:
+        if q in seeds:
+            seeds[q].also_in.append(f"{stratum}/{sub}" if sub else stratum)
+            seeds[q].flags += [f for f in flags if f not in seeds[q].flags]
+            return seeds[q]
+        seeds[q] = Seed(q, label, stratum, sub, flags=list(flags), status=status)
+        return seeds[q]
+
+    # Sites
+    whs = designation(wm, "world_heritage", WORLD_HERITAGE)
+    tentative = designation(wm, "tentative_list", TENTATIVE_LIST)
+    for q, label in whs.items():
+        add(q, label, "world_heritage")
+    for q, label in tentative.items():
+        add(q, label, "tentative_list")
+
+    asi = {q: label for q, label in asi_monuments(wm).items() if q not in seeds}
+    resolver.load("asi", asi)
+    by_state = defaultdict(list)
+    for q in asi:
+        probe = Seed(q, asi[q], "asi_monument")
+        resolver.assign(probe)
+        by_state[probe.state or "unresolved"].append(q)
+    quota = allocate(
+        {s: len(v) for s, v in by_state.items()},
+        ASI_TOTAL,
+        ASI_MIN_PER_STATE,
+        floor_keys=[s for s in by_state if s in resolver.states.values()],
+    )
+    notes["asi_available"] = {s: len(v) for s, v in by_state.items()}
+    notes["asi_quota"] = quota
+    for s in sorted(by_state):
+        for q in rng.sample(sorted(by_state[s]), quota[s]):
+            add(q, asi[q], "asi_monument")
+
+    # Dynasties and historical states
+    for q, (label, rule) in dynasties(wm).items():
+        add(q, label, "dynasty", flags=[f"rule: {rule}"])
+
+    # Culture
+    scan = list(csv.DictReader(open(SCAN_FILE, encoding="utf-8")))
+    removed = {r["qid"] for r in scan if r["decision"] == "remove"}
+    hints = {r["qid"]: r["state_hint"] for r in scan if r["decision"] == "keep"}
+
+    for q, label in intangible_heritage(wm).items():
+        add(q, label, "culture", "intangible_heritage")
+    for sub in ("classical_dance", "classical_music"):
+        for r in scan:
+            if r["sub_stratum"] == sub and r["decision"] == "keep":
+                add(
+                    r["qid"],
+                    r["label"],
+                    "culture",
+                    sub,
+                    flags=["recognised classical form"] if r["recognised_classical"] else [],
+                )
+
+    folk = {q: label for q, label in folk_dances(wm).items() if q not in removed}
+    for r in scan:
+        if r["sub_stratum"] == "folk_dance" and r["decision"] == "keep":
+            folk[r["qid"]] = r["label"]
+    folk = {q: label for q, label in folk.items() if q not in seeds}
+    resolver.load("folk_dance", folk)
+    resolver.load_categories(wm, "folk_dance", folk)
+    folk_by_state = defaultdict(list)
+    for q in folk:
+        probe = Seed(q, folk[q], "culture")
+        resolver.assign(probe, hints.get(q, ""))
+        folk_by_state[probe.state or "unresolved"].append(q)
+    notes["folk_dance_available"] = len(folk)
+    for q in round_robin(folk_by_state, FOLK_DANCE_CAP, rng):
+        add(q, folk[q], "culture", "folk_dance")
+
+    for sub in ("folk_music", "folk_theatre"):
+        for r in scan:
+            if r["sub_stratum"] == sub and r["decision"] == "keep":
+                add(r["qid"], r["label"], "culture", sub)
+
+    painting = painting_candidates(wm)
+    resolver.load("painting", painting)
+    typed = painting_filter(wm, painting)
+    notes["painting_candidates"] = len(painting)
+    notes["painting_typed"] = len(typed)
+    for q, label in sorted(typed.items(), key=lambda kv: kv[1]):
+        if resolver.not_foreign(q):
+            add(q, label, "culture", "painting_school")
+
+    gi_rows = gi_crafts(wm)
+    notes["gi_rows"] = len(gi_rows)
+    notes["gi_types"] = dict(Counter(r["type"] for r in gi_rows).most_common())
+    # The table spells the type several ways ("Handicraft", "Handicrafts", "Handi Crafts", "Textiles").
+    craft_type = re.compile(r"^(handicraft|textile)", re.I)
+    indian = set(resolver.states.values()) | {"Delhi", "Orissa"}
+
+    def in_indian_state(state_cell: str) -> bool:
+        return any(part.strip() in indian for part in re.split(r",|/|&| and ", state_cell))
+
+    crafts = [
+        r
+        for r in gi_rows
+        if craft_type.match(r["type"].replace(" ", "")) and r["title"] and in_indian_state(r["state"])
+    ]
+    title_qid = titles_to_qids(wm, "gi_links", [r["title"] for r in crafts])
+    gi_state, gi_label = {}, {}
+    for r in crafts:
+        q = title_qid.get(r["title"])
+        if q and q not in seeds:
+            gi_state.setdefault(q, r["state"])
+            gi_label.setdefault(q, r["title"])
+    resolver.load("gi", gi_state)
+    gi_ok = {q for q in gi_state if resolver.not_foreign(q)}
+    notes["gi_handicraft_rows"] = len(crafts)
+    notes["gi_linked_items"] = len(gi_state)
+    notes["gi_in_india"] = len(gi_ok)
+    gi_by_state = defaultdict(list)
+    for q in gi_ok:
+        gi_by_state[gi_state[q]].append(q)
+    for q in round_robin(gi_by_state, GI_CAP, rng):
+        hints[q] = gi_state[q]
+        add(q, gi_label[q], "culture", "gi_craft")
+
+    # Styles reached in one hop from the seeded sites
+    sites = [q for q, s in seeds.items() if s.doc_type == "site"]
+    for q, label in one_hop(wm, "styles", sites, "wdt:P149|wdt:P135").items():
+        add(q, label, "style")
+
+    # People: proposed, reported but not yet selected (decision 0002)
+    dyn = [q for q, s in seeds.items() if s.stratum == "dynasty"]
+    people = one_hop(wm, "people_sites", sites, "wdt:P88|wdt:P84|wdt:P112", "?i wdt:P31 wd:Q5 .")
+    people |= one_hop(wm, "people_dynasties", dyn, "^wdt:P53", "?i wdt:P31 wd:Q5 .")
+    for q, label in people.items():
+        add(q, label, "person", status="proposed")
+
+    # States, languages
+    resolver.load("all", seeds)
+    resolver.load_categories(wm, "culture", [q for q, s in seeds.items() if s.stratum == "culture"])
+    for s in seeds.values():
+        s.sitelinks = set()
+        resolver.assign(s, hints.get(s.qid, ""))
+    links = sitelinks(wm, seeds)
+    for q, s in seeds.items():
+        s.sitelinks = links.get(q, set())
+
+    notes["gi_note"] = "The GI article carried a 'needs updating' notice (April 2025) when fetched."
+    notes["fetched"], notes["reused"] = wm.fetched, wm.reused
+    notes["state_names"] = sorted(resolver.states.values())
+    return list(seeds.values()), notes
+
+
+def write_csv(seeds: list[Seed]) -> None:
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    with open(OUT_DIR / f"{RUN}.csv", "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["qid", "label", "stratum", "sub_stratum", "doc_type", "status", "state", "states",
+                    "state_source", "en", "hi", "kn", "also_in", "flags"])  # fmt: skip
+        for s in sorted(seeds, key=lambda s: (list(DOC_TYPE).index(s.stratum), s.sub_stratum, s.label)):
+            w.writerow([s.qid, s.label, s.stratum, s.sub_stratum, s.doc_type, s.status, s.state, "; ".join(s.states),
+                        s.state_source, *("yes" if lang in s.sitelinks else "" for lang in LANGS),
+                        "; ".join(s.also_in), "; ".join(s.flags)])  # fmt: skip
+
+
+def table(header, rows) -> list[str]:
+    out = ["| " + " | ".join(header) + " |", "| " + " | ".join("---" for _ in header) + " |"]
+    return out + ["| " + " | ".join(str(c) for c in r) + " |" for r in rows]
+
+
+def write_report(seeds: list[Seed], notes: dict) -> None:
+    commit = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+    selected = [s for s in seeds if s.status == "selected"]
+    proposed = [s for s in seeds if s.status == "proposed"]
+    types = ["site", "culture", "person_dynasty_style"]
+
+    def key(s):
+        return f"{s.stratum}/{s.sub_stratum}" if s.sub_stratum else s.stratum
+
+    strata = Counter(key(s) for s in selected)
+    by_stratum = [
+        [k, n] + [sum(1 for s in selected if key(s) == k and lang in s.sitelinks) for lang in LANGS]
+        for k, n in sorted(strata.items(), key=lambda kv: list(DOC_TYPE).index(kv[0].split("/")[0]))
+    ]
+    per_state = defaultdict(Counter)
+    for s in selected:
+        for st in s.states or ["(no state)"]:
+            per_state[st][s.doc_type] += 1
+    rows = []
+    for st in notes["state_names"] + sorted(set(per_state) - set(notes["state_names"])):
+        c = per_state.get(st, Counter())
+        rows.append([st] + [c[t] for t in types] + [sum(c.values())])
+    thin = [r for r in rows if r[0] in notes["state_names"] and r[-1] < THIN_STATE]
+    no_culture = [r[0] for r in rows if r[0] in notes["state_names"] and r[2] == 0]
+    no_site = [r[0] for r in rows if r[0] in notes["state_names"] and r[1] == 0]
+
+    def listing(stratum, sub=""):
+        return "; ".join(
+            f"{s.label} ({s.state or 'no state'})"
+            for s in sorted(seeds, key=lambda s: s.label)
+            if s.stratum == stratum and (not sub or s.sub_stratum == sub)
+        )
+
+    out = [
+        f"# Seed report, {RUN}",
+        "",
+        f"Generated by `src/corpus/seeds.py` on {date.today().isoformat()} at commit `{commit}`, from the rules in"
+        " decision 0002. Nothing has been collected yet.",
+        "",
+        f"{len(selected)} seed entities are selected; {len(proposed)} people are proposed and not yet selected."
+        f" Wikidata lists {notes['states_found']} current states and union territories.",
+        "",
+        "## By stratum, with Wikipedia articles available",
+        "",
+        *table(["Stratum", "Seeds", "en", "hi", "kn"], by_stratum),
+        "",
+        "## By document type",
+        "",
+        *table(["Document type", "Seeds"], [[t, sum(1 for s in selected if s.doc_type == t)] for t in types]),
+        "",
+        "Objects and manuscripts or texts are not seed entities: they come from museum and archive records"
+        " matched to these seeds, and are counted by the collector probes.",
+        "",
+        "## By state and union territory",
+        "",
+        "An entity that spans several states is counted in each of them.",
+        "",
+        *table(["State or union territory", *types, "Total"], rows),
+        "",
+        "## Coverage gaps",
+        "",
+        f"- Fewer than {THIN_STATE} seeds: " + (", ".join(f"{r[0]} ({r[-1]})" for r in thin) or "none"),
+        "- No cultural seed: " + (", ".join(no_culture) or "none"),
+        "- No site seed: " + (", ".join(no_site) or "none"),
+        "",
+        "## Selection details",
+        "",
+        f"- ASI monuments available by state: {notes['asi_available']}",
+        f"- ASI places allocated by state: {notes['asi_quota']}",
+        f"- Folk dance candidates: {notes['folk_dance_available']}; selected up to {FOLK_DANCE_CAP} by state in turn.",
+        f"- Painting school candidates: {notes['painting_candidates']}; typed as a style, school, movement or genre:"
+        f" {notes['painting_typed']}; kept if in India.",
+        f"- GI table rows: {notes['gi_rows']}, by type {notes['gi_types']}; handicraft rows with an article:"
+        f" {notes['gi_handicraft_rows']}; distinct linked items: {notes['gi_linked_items']}; not placed in another country on Wikidata:"
+        f" {notes['gi_in_india']}; selected up to {GI_CAP} by state in turn. {notes['gi_note']}",
+        f"- API responses fetched: {notes['fetched']}; reused from cache: {notes['reused']}.",
+        "",
+        "## Lists for hand scan",
+        "",
+        f"**Dynasties and historical states:** {listing('dynasty')}",
+        "",
+        f"**Folk dance:** {listing('culture', 'folk_dance')}",
+        "",
+        f"**Painting schools:** {listing('culture', 'painting_school')}",
+        "",
+        f"**GI crafts:** {listing('culture', 'gi_craft')}",
+        "",
+        f"**Styles:** {listing('style')}",
+        "",
+        f"**People (proposed, {len(proposed)}):** {listing('person')}",
+        "",
+    ]
+    (OUT_DIR / "seed_report.md").write_text("\n".join(out), encoding="utf-8")
+
+
+def main() -> None:
+    seeds, notes = build()
+    write_csv(seeds)
+    write_report(seeds, notes)
+    selected = sum(1 for s in seeds if s.status == "selected")
+    print(f"{selected} seeds selected, {len(seeds) - selected} proposed; wrote data/seeds/{RUN}.csv and seed_report.md")
+
+
+if __name__ == "__main__":
+    main()
