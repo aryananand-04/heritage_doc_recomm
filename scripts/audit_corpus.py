@@ -7,8 +7,9 @@ without changing it:
    Wikidata item, and the item's country (P17) decides a proposed label
    (see docs/decisions/0001-corpus-scope.md):
        keep    P17 includes India (Q668)
-       drop    P17 is set, but not to India
-       review  no Wikidata item, or no P17 (people, concepts, some rivers)
+       drop    P17 names a present-day country, and none is India
+       review  no Wikidata item, no P17 (people, concepts), or P17 names
+               only historical states such as the Mughal Empire
 2. Which documents are duplicates or near-duplicates? Same URL, same
    normalised title, or heavily overlapping entity sets. The full text is
    not in the repo, so MinHash on text waits for the rebuild.
@@ -17,7 +18,7 @@ without changing it:
    report can state both.
 
 Outputs (DATE defaults to today):
-    results/audit/raw/DATE/*.json            API responses, saved untouched
+    results/audit/raw/DATE/*.json.gz         API responses, saved untouched (gzipped)
     results/audit/corpus_audit_DATE.json     counts, duplicate groups, run info
     results/audit/indian_check_DATE.csv      one row per document for the hand check
 
@@ -34,6 +35,7 @@ Requirements (.env):
 
 import argparse
 import csv
+import gzip
 import hashlib
 import json
 import os
@@ -56,6 +58,7 @@ OUT_DIR = ROOT / "results/audit"
 
 WIKIPEDIA_API = "https://en.wikipedia.org/w/api.php"
 WIKIDATA_API = "https://www.wikidata.org/w/api.php"
+WIKIDATA_SPARQL = "https://query.wikidata.org/sparql"
 REPO_URL = "https://github.com/aryananand-04/heritage_doc_recomm"
 
 INDIA = "Q668"
@@ -83,7 +86,9 @@ def git_state() -> dict:
     def run(*args: str) -> str:
         return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True).stdout.strip()
 
-    return {"commit": run("rev-parse", "HEAD"), "dirty": bool(run("status", "--porcelain"))}
+    # Only tracked files count: the outputs this script writes are untracked
+    # until committed and would otherwise always mark the run as dirty.
+    return {"commit": run("rev-parse", "HEAD"), "dirty": bool(run("status", "--porcelain", "--untracked-files=no"))}
 
 
 def batches(items: list, size: int = BATCH):
@@ -121,10 +126,12 @@ class CachedClient:
         self.reused = 0
 
     def get(self, name: str, url: str, params: dict) -> dict:
-        path = self.raw_dir / f"{name}.json"
+        # Gzipped: Wikidata entities are large, and these files are committed.
+        path = self.raw_dir / f"{name}.json.gz"
         if path.exists():
             self.reused += 1
-            return json.loads(path.read_text(encoding="utf-8"))
+            with gzip.open(path, "rt", encoding="utf-8") as f:
+                return json.load(f)
 
         if not self.contact_email:
             raise SystemExit(
@@ -136,7 +143,8 @@ class CachedClient:
         r = requests.get(url, params=params, headers=headers, timeout=60)
         r.raise_for_status()
         self.raw_dir.mkdir(parents=True, exist_ok=True)
-        path.write_text(r.text, encoding="utf-8")
+        with gzip.open(path, "wt", encoding="utf-8") as f:
+            f.write(r.text)
         self.fetched += 1
         return r.json()
 
@@ -206,7 +214,7 @@ def en_label(entity: dict | None) -> str:
 # ---------------------------------------------------------------- the audit
 
 
-def propose_label(qid: str | None, countries: list[str]) -> tuple[str, str]:
+def propose_label(qid: str | None, countries: list[str], historical: set[str]) -> tuple[str, str]:
     if not qid:
         return "review", "no Wikidata item for this article"
     if not countries:
@@ -215,6 +223,10 @@ def propose_label(qid: str | None, countries: list[str]) -> tuple[str, str]:
         if len(countries) > 1:
             return "keep", f"India is one of {len(countries)} countries"
         return "keep", "country is India"
+    # A former state (Mughal Empire, British Raj) says nothing about where the
+    # subject is today, so it cannot justify a drop on its own.
+    if all(c in historical for c in countries):
+        return "review", "country (P17) lists only historical states"
     return "drop", "country is not India"
 
 
@@ -313,6 +325,15 @@ def main() -> None:
     countries = {q: claim_ids(items.get(q, {}), "P17") for q in found}
     instance_of = {q: claim_ids(items.get(q, {}), "P31") for q in found}
 
+    # A country with a dissolved date (P576) is a historical state. One SPARQL
+    # query asks only for that property; full country entities run to tens of MB.
+    country_ids = sorted({c for ids in countries.values() for c in ids})
+    sparql = "SELECT DISTINCT ?c WHERE { VALUES ?c { %s } ?c wdt:P576 ?end . }" % " ".join(
+        f"wd:{c}" for c in country_ids
+    )
+    dissolved = client.get("wikidata_dissolved_countries", WIKIDATA_SPARQL, {"query": sparql, "format": "json"})
+    historical = {b["c"]["value"].rsplit("/", 1)[-1] for b in dissolved["results"]["bindings"]}
+
     # Labels for the countries and types, so the hand check reads names, not ids.
     label_ids = sorted({x for ids in (*countries.values(), *instance_of.values()) for x in ids})
     label_entities = fetch_entities(client, "wikidata_labels", label_ids, "labels")
@@ -326,7 +347,7 @@ def main() -> None:
     for i, (doc, title) in enumerate(zip(docs, titles)):
         qid = qids.get(title) if title else None
         doc_countries = countries.get(qid, []) if qid else []
-        label, reason = propose_label(qid, doc_countries)
+        label, reason = propose_label(qid, doc_countries, historical)
         rows.append(
             {
                 "file_name": doc.get("file_name", ""),
