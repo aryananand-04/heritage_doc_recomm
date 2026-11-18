@@ -251,7 +251,9 @@ def allocate(counts: dict[str, int], total: int, minimum: int, floor_keys=None) 
 
 def round_robin(by_group: dict[str, list], cap: int, rng: random.Random) -> list:
     """Take one item per group in turn (groups in name order) until `cap` items."""
-    queues = {g: rng.sample(sorted(items), len(items)) for g, items in by_group.items()}
+    # Shuffle groups in name order: the generator is shared, so the order it is used in must
+    # not depend on how the groups were built (sets iterate differently from run to run).
+    queues = {g: rng.sample(sorted(by_group[g]), len(by_group[g])) for g in sorted(by_group)}
     out = []
     while len(out) < cap and any(queues.values()):
         for g in sorted(queues):
