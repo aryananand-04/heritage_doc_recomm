@@ -82,3 +82,9 @@ def test_born_before_uses_floruit_last():
     assert not born_before({"floruit": 1920}, 1900)
     assert date_basis({"death": 1700, "floruit": 1650}) == "death 1700"
     assert date_basis({}) == "no dates"
+
+
+def test_round_robin_ignores_group_insertion_order():
+    a = {"B": ["b1", "b2"], "A": ["a1", "a2", "a3"]}
+    b = {"A": ["a3", "a1", "a2"], "B": ["b2", "b1"]}
+    assert round_robin(a, cap=4, rng=random.Random(7)) == round_robin(b, cap=4, rng=random.Random(7))
