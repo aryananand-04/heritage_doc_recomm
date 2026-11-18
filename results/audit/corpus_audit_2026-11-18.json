@@ -1,0 +1,268 @@
+{
+  "date": "2026-11-18",
+  "git": {
+    "commit": "e939097115b3d8637d0283ed73958c739d06327b",
+    "dirty": false
+  },
+  "inputs": {
+    "data/classified/classified_documents.json": "673c3c0661aaa0796371b9429ee419da016df93f6c3c71d545f0b48fe9642380",
+    "legacy/data/balanced/balanced_documents.json": "86415db422fcccce3f562ddae17896fdce705d3d885d2e1c876b5544faf91218"
+  },
+  "rules": {
+    "scope": "docs/decisions/0001-corpus-scope.md",
+    "india_qid": "Q668",
+    "entity_jaccard_threshold": 0.8,
+    "min_entities_for_jaccard": 5
+  },
+  "live_corpus": {
+    "total": 303,
+    "by_source": {
+      "Wikipedia": 303
+    },
+    "synthetic": 0,
+    "unknown_source": 0,
+    "without_wikipedia_url": 0,
+    "without_wikidata_item": 0,
+    "proposed_labels": {
+      "keep": 83,
+      "drop": 178,
+      "review": 42
+    },
+    "duplicate_groups": 8,
+    "documents_in_duplicate_groups": 17
+  },
+  "legacy_corpus": {
+    "total": 449,
+    "by_source": {
+      "Unknown": 193,
+      "Indian Heritage (Auto-discovered)": 137,
+      "Unknown (Synthetic)": 37,
+      "Indian Heritage (Auto-discovered) (Synthetic)": 24,
+      "Indian Heritage": 21,
+      "Heritage Documentation (Wikipedia)": 17,
+      "Heritage Documentation (Wikipedia) (Synthetic)": 12,
+      "Indian Heritage (Synthetic)": 7,
+      "UNESCO": 1
+    },
+    "synthetic": 80,
+    "unknown_source": 193
+  },
+  "duplicate_groups": [
+    {
+      "group": 1,
+      "documents": [
+        {
+          "file_name": "193_Pattadakal.json",
+          "title": "Pattadakal"
+        },
+        {
+          "file_name": "010_Pattadakal.json",
+          "title": "Pattadakal"
+        }
+      ],
+      "links": [
+        {
+          "a": "193_Pattadakal.json",
+          "b": "010_Pattadakal.json",
+          "reasons": [
+            "same URL",
+            "same title",
+            "entity Jaccard 1.00"
+          ]
+        }
+      ]
+    },
+    {
+      "group": 2,
+      "documents": [
+        {
+          "file_name": "032_Brihadisvara Temple.json",
+          "title": "Brihadisvara Temple"
+        },
+        {
+          "file_name": "197_Brihadisvara Temple.json",
+          "title": "Brihadisvara Temple"
+        }
+      ],
+      "links": [
+        {
+          "a": "032_Brihadisvara Temple.json",
+          "b": "197_Brihadisvara Temple.json",
+          "reasons": [
+            "same URL",
+            "same title",
+            "entity Jaccard 1.00"
+          ]
+        }
+      ]
+    },
+    {
+      "group": 3,
+      "documents": [
+        {
+          "file_name": "273_Knossos.json",
+          "title": "Knossos"
+        },
+        {
+          "file_name": "148_Knossos.json",
+          "title": "Knossos"
+        }
+      ],
+      "links": [
+        {
+          "a": "273_Knossos.json",
+          "b": "148_Knossos.json",
+          "reasons": [
+            "same URL",
+            "same title",
+            "entity Jaccard 1.00"
+          ]
+        }
+      ]
+    },
+    {
+      "group": 4,
+      "documents": [
+        {
+          "file_name": "213_Golconda.json",
+          "title": "Golconda"
+        },
+        {
+          "file_name": "044_Golconda.json",
+          "title": "Golconda"
+        }
+      ],
+      "links": [
+        {
+          "a": "213_Golconda.json",
+          "b": "044_Golconda.json",
+          "reasons": [
+            "same URL",
+            "same title",
+            "entity Jaccard 1.00"
+          ]
+        }
+      ]
+    },
+    {
+      "group": 5,
+      "documents": [
+        {
+          "file_name": "026_Nalanda mahavihara.json",
+          "title": "Nalanda mahavihara"
+        },
+        {
+          "file_name": "202_Nalanda mahavihara.json",
+          "title": "Nalanda mahavihara"
+        }
+      ],
+      "links": [
+        {
+          "a": "026_Nalanda mahavihara.json",
+          "b": "202_Nalanda mahavihara.json",
+          "reasons": [
+            "same URL",
+            "same title",
+            "entity Jaccard 1.00"
+          ]
+        }
+      ]
+    },
+    {
+      "group": 6,
+      "documents": [
+        {
+          "file_name": "090_Zhoukoudian.json",
+          "title": "Zhoukoudian"
+        },
+        {
+          "file_name": "089_Zhoukoudian.json",
+          "title": "Zhoukoudian"
+        }
+      ],
+      "links": [
+        {
+          "a": "090_Zhoukoudian.json",
+          "b": "089_Zhoukoudian.json",
+          "reasons": [
+            "same URL",
+            "same title",
+            "entity Jaccard 1.00"
+          ]
+        }
+      ]
+    },
+    {
+      "group": 7,
+      "documents": [
+        {
+          "file_name": "048_Hampi.json",
+          "title": "Hampi"
+        },
+        {
+          "file_name": "006_Hampi.json",
+          "title": "Hampi"
+        }
+      ],
+      "links": [
+        {
+          "a": "048_Hampi.json",
+          "b": "006_Hampi.json",
+          "reasons": [
+            "same URL",
+            "same title",
+            "entity Jaccard 1.00"
+          ]
+        }
+      ]
+    },
+    {
+      "group": 8,
+      "documents": [
+        {
+          "file_name": "216_Sanchi Stupa.json",
+          "title": "Sanchi Stupa"
+        },
+        {
+          "file_name": "013_Sanchi Stupa.json",
+          "title": "Sanchi Stupa"
+        },
+        {
+          "file_name": "192_Sanchi Stupa.json",
+          "title": "Sanchi Stupa"
+        }
+      ],
+      "links": [
+        {
+          "a": "216_Sanchi Stupa.json",
+          "b": "013_Sanchi Stupa.json",
+          "reasons": [
+            "same URL",
+            "same title",
+            "entity Jaccard 1.00"
+          ]
+        },
+        {
+          "a": "216_Sanchi Stupa.json",
+          "b": "192_Sanchi Stupa.json",
+          "reasons": [
+            "same URL",
+            "same title",
+            "entity Jaccard 1.00"
+          ]
+        },
+        {
+          "a": "013_Sanchi Stupa.json",
+          "b": "192_Sanchi Stupa.json",
+          "reasons": [
+            "entity Jaccard 1.00"
+          ]
+        }
+      ]
+    }
+  ],
+  "api": {
+    "requests_fetched": 0,
+    "responses_reused": 21
+  }
+}
