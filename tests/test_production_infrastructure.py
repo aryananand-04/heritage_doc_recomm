@@ -20,18 +20,19 @@ import tempfile
 import shutil
 
 from utils.error_handler import (
-    ErrorSeverity, RecommenderError, CriticalError, HighSeverityError,
-    MediumSeverityError, LowSeverityError, FallbackChain, ErrorHandler,
-    InputValidator, OutputValidator
+    ErrorSeverity,
+    RecommenderError,
+    CriticalError,
+    HighSeverityError,
+    MediumSeverityError,
+    LowSeverityError,
+    FallbackChain,
+    ErrorHandler,
+    InputValidator,
+    OutputValidator,
 )
-from utils.logger_v2 import (
-    get_logger, QueryLogger, SystemLogger, PerformanceLogger,
-    PerformanceTimer
-)
-from utils.monitoring import (
-    MonitoringSystem, MetricCollector, AnomalyDetector, DriftDetector,
-    AlertManager, AlertLevel
-)
+from utils.logger_v2 import get_logger, QueryLogger, SystemLogger, PerformanceLogger, PerformanceTimer
+from utils.monitoring import MonitoringSystem, MetricCollector, AnomalyDetector, DriftDetector, AlertManager, AlertLevel
 
 
 class TestErrorHandling:
@@ -58,6 +59,7 @@ class TestErrorHandling:
 
     def test_fallback_chain_success(self):
         """Test fallback chain with successful primary strategy"""
+
         def primary():
             return "primary_result"
 
@@ -74,6 +76,7 @@ class TestErrorHandling:
 
     def test_fallback_chain_failure(self):
         """Test fallback chain when primary fails"""
+
         def primary():
             raise Exception("Primary failed")
 
@@ -90,6 +93,7 @@ class TestErrorHandling:
 
     def test_fallback_chain_all_fail(self):
         """Test fallback chain when all strategies fail"""
+
         def primary():
             raise Exception("Primary failed")
 
@@ -151,8 +155,8 @@ class TestErrorHandling:
 
         # Valid recommendations
         valid_recs = [
-            {'doc_id': '1', 'title': 'Doc 1', 'final_score': 0.9},
-            {'doc_id': '2', 'title': 'Doc 2', 'final_score': 0.8}
+            {"doc_id": "1", "title": "Doc 1", "final_score": 0.9},
+            {"doc_id": "2", "title": "Doc 2", "final_score": 0.8},
         ]
         assert validator.validate_recommendations(valid_recs) is True
 
@@ -162,14 +166,14 @@ class TestErrorHandling:
 
         # Missing required field
         invalid_recs = [
-            {'doc_id': '1', 'final_score': 0.9}  # Missing title
+            {"doc_id": "1", "final_score": 0.9}  # Missing title
         ]
         with pytest.raises(MediumSeverityError):
             validator.validate_recommendations(invalid_recs)
 
         # Invalid score
         invalid_recs = [
-            {'doc_id': '1', 'title': 'Doc 1', 'final_score': 1.5}  # Score > 1
+            {"doc_id": "1", "title": "Doc 1", "final_score": 1.5}  # Score > 1
         ]
         with pytest.raises(MediumSeverityError):
             validator.validate_recommendations(invalid_recs)
@@ -190,19 +194,17 @@ class TestLogging:
         log_file = temp_log_dir / "test.log"
 
         logger = get_logger("test_logger", log_file=str(log_file))
-        logger.info("Test message", extra={
-            'extra_fields': {'key': 'value', 'number': 42}
-        })
+        logger.info("Test message", extra={"extra_fields": {"key": "value", "number": 42}})
 
         # Read log file
         with open(log_file) as f:
             log_line = f.readline()
             log_data = json.loads(log_line)
 
-        assert log_data['level'] == 'INFO'
-        assert log_data['message'] == 'Test message'
-        assert log_data['key'] == 'value'
-        assert log_data['number'] == 42
+        assert log_data["level"] == "INFO"
+        assert log_data["message"] == "Test message"
+        assert log_data["key"] == "value"
+        assert log_data["number"] == 42
 
     def test_query_logger(self, temp_log_dir):
         """Test query-specific logging"""
@@ -212,9 +214,9 @@ class TestLogging:
         query_logger.log_query(
             query_id="test_001",
             query_text="temple architecture",
-            results=[{'doc_id': '1'}, {'doc_id': '2'}],
+            results=[{"doc_id": "1"}, {"doc_id": "2"}],
             latency_ms=150.5,
-            components_used=['simrank', 'horn_index']
+            components_used=["simrank", "horn_index"],
         )
 
         # Read log file
@@ -222,10 +224,10 @@ class TestLogging:
             log_line = f.readline()
             log_data = json.loads(log_line)
 
-        assert log_data['event_type'] == 'query'
-        assert log_data['query_id'] == 'test_001'
-        assert log_data['num_results'] == 2
-        assert log_data['latency_ms'] == 150.5
+        assert log_data["event_type"] == "query"
+        assert log_data["query_id"] == "test_001"
+        assert log_data["num_results"] == 2
+        assert log_data["latency_ms"] == 150.5
 
     def test_performance_timer(self, temp_log_dir):
         """Test automatic performance timing"""
@@ -241,9 +243,9 @@ class TestLogging:
             log_line = f.readline()
             log_data = json.loads(log_line)
 
-        assert log_data['event_type'] == 'performance'
-        assert log_data['operation'] == 'test_operation'
-        assert log_data['duration_ms'] >= 100  # Should be at least 100ms
+        assert log_data["event_type"] == "performance"
+        assert log_data["operation"] == "test_operation"
+        assert log_data["duration_ms"] >= 100  # Should be at least 100ms
 
 
 class TestMonitoring:
@@ -254,28 +256,28 @@ class TestMonitoring:
         collector = MetricCollector(retention_minutes=60)
 
         # Record some metrics
-        collector.record('test_metric', 10.0)
-        collector.record('test_metric', 20.0)
-        collector.record('test_metric', 30.0)
+        collector.record("test_metric", 10.0)
+        collector.record("test_metric", 20.0)
+        collector.record("test_metric", 30.0)
 
         # Get statistics
-        stats = collector.get_statistics('test_metric', minutes=60)
+        stats = collector.get_statistics("test_metric", minutes=60)
 
         assert stats is not None
-        assert stats['count'] == 3
-        assert stats['mean'] == 20.0
-        assert stats['min'] == 10.0
-        assert stats['max'] == 30.0
+        assert stats["count"] == 3
+        assert stats["mean"] == 20.0
+        assert stats["min"] == 10.0
+        assert stats["max"] == 30.0
 
     def test_metric_increment(self):
         """Test counter increment"""
         collector = MetricCollector()
 
-        collector.increment('test_counter', 1.0)
-        collector.increment('test_counter', 2.0)
-        collector.increment('test_counter', 3.0)
+        collector.increment("test_counter", 1.0)
+        collector.increment("test_counter", 2.0)
+        collector.increment("test_counter", 3.0)
 
-        values = collector.get_recent_values('test_counter', minutes=60)
+        values = collector.get_recent_values("test_counter", minutes=60)
         assert len(values) == 3
         assert values[-1] == 6.0  # Should be cumulative
 
@@ -285,13 +287,13 @@ class TestMonitoring:
 
         # Create baseline: mean=100, std=10
         baseline_values = [100 + np.random.randn() * 10 for _ in range(100)]
-        detector.update_baseline('test_metric', baseline_values)
+        detector.update_baseline("test_metric", baseline_values)
 
         # Normal value - should not be anomalous
-        assert detector.detect_zscore('test_metric', 105) is False
+        assert detector.detect_zscore("test_metric", 105) is False
 
         # Anomalous value (far from mean)
-        assert detector.detect_zscore('test_metric', 150) is True
+        assert detector.detect_zscore("test_metric", 150) is True
 
     def test_anomaly_detection_mad(self):
         """Test MAD anomaly detection (robust to outliers)"""
@@ -299,13 +301,13 @@ class TestMonitoring:
 
         # Create baseline with some outliers
         baseline_values = [100.0] * 90 + [200.0] * 10  # 90% around 100, 10% outliers
-        detector.update_baseline('test_metric', baseline_values)
+        detector.update_baseline("test_metric", baseline_values)
 
         # Normal value - should not be anomalous
-        assert detector.detect_mad('test_metric', 102) is False
+        assert detector.detect_mad("test_metric", 102) is False
 
         # Anomalous value
-        assert detector.detect_mad('test_metric', 150) is True
+        assert detector.detect_mad("test_metric", 150) is True
 
     def test_drift_detection_psi(self):
         """Test PSI-based drift detection"""
@@ -313,16 +315,16 @@ class TestMonitoring:
 
         # Reference distribution: Normal(100, 10)
         reference = np.random.normal(100, 10, 1000).tolist()
-        detector.set_reference('test_distribution', reference)
+        detector.set_reference("test_distribution", reference)
 
         # Current distribution similar to reference - no drift
         current_similar = np.random.normal(100, 10, 1000).tolist()
-        is_drift, psi = detector.detect_drift_psi('test_distribution', current_similar)
+        is_drift, psi = detector.detect_drift_psi("test_distribution", current_similar)
         assert is_drift is False  # PSI should be < 0.2
 
         # Current distribution shifted - drift detected
         current_shifted = np.random.normal(120, 10, 1000).tolist()
-        is_drift, psi = detector.detect_drift_psi('test_distribution', current_shifted)
+        is_drift, psi = detector.detect_drift_psi("test_distribution", current_shifted)
         assert is_drift is True  # PSI should be > 0.2
 
     def test_alert_creation(self):
@@ -333,11 +335,11 @@ class TestMonitoring:
 
             # Create alert
             alert = manager.create_alert(
-                metric_name='test_metric',
+                metric_name="test_metric",
                 level=AlertLevel.WARNING,
-                message='Test alert',
+                message="Test alert",
                 current_value=0.8,
-                threshold=0.7
+                threshold=0.7,
             )
 
             assert alert is not None
@@ -345,11 +347,11 @@ class TestMonitoring:
 
             # Try to create duplicate alert - should be deduplicated
             alert2 = manager.create_alert(
-                metric_name='test_metric',
+                metric_name="test_metric",
                 level=AlertLevel.WARNING,
-                message='Test alert',
+                message="Test alert",
                 current_value=0.85,
-                threshold=0.7
+                threshold=0.7,
             )
 
             assert alert2 is None  # Should be None due to cooldown
@@ -361,9 +363,9 @@ class TestMonitoring:
             manager = AlertManager(alert_file=alert_file)
 
             # Create alerts of different levels
-            manager.create_alert('metric1', AlertLevel.INFO, 'Info', 1.0, 1.0)
-            manager.create_alert('metric2', AlertLevel.WARNING, 'Warning', 2.0, 2.0)
-            manager.create_alert('metric3', AlertLevel.CRITICAL, 'Critical', 3.0, 3.0)
+            manager.create_alert("metric1", AlertLevel.INFO, "Info", 1.0, 1.0)
+            manager.create_alert("metric2", AlertLevel.WARNING, "Warning", 2.0, 2.0)
+            manager.create_alert("metric3", AlertLevel.CRITICAL, "Critical", 3.0, 3.0)
 
             # Get all alerts
             all_alerts = manager.get_active_alerts()
@@ -376,42 +378,33 @@ class TestMonitoring:
 
     def test_monitoring_system_integration(self):
         """Test full monitoring system"""
-        monitor = MonitoringSystem(config={
-            'retention_minutes': 60,
-            'anomaly_sensitivity': 3.0
-        })
+        monitor = MonitoringSystem(config={"retention_minutes": 60, "anomaly_sensitivity": 3.0})
 
         # Record some queries
         for i in range(10):
             monitor.record_query(
-                query_id=f'q{i}',
+                query_id=f"q{i}",
                 latency_ms=100 + i * 10,
                 num_results=10,
                 ndcg=0.8,
-                components_used=['simrank', 'horn_index']
+                components_used=["simrank", "horn_index"],
             )
 
         # Get dashboard data
         dashboard = monitor.get_dashboard_data()
 
-        assert 'metrics' in dashboard
-        assert 'alerts' in dashboard
-        assert 'system_health' in dashboard
-        assert dashboard['system_health']['score'] >= 0
-        assert dashboard['system_health']['score'] <= 100
+        assert "metrics" in dashboard
+        assert "alerts" in dashboard
+        assert "system_health" in dashboard
+        assert dashboard["system_health"]["score"] >= 0
+        assert dashboard["system_health"]["score"] <= 100
 
     def test_threshold_alerting(self):
         """Test automatic alerting based on thresholds"""
         with tempfile.TemporaryDirectory() as temp_dir:
             config = {
-                'alert_file': str(Path(temp_dir) / 'alerts.jsonl'),
-                'thresholds': {
-                    'query_latency_p95': {
-                        'max': 1000,
-                        'warning': 800,
-                        'critical': 2000
-                    }
-                }
+                "alert_file": str(Path(temp_dir) / "alerts.jsonl"),
+                "thresholds": {"query_latency_p95": {"max": 1000, "warning": 800, "critical": 2000}},
             }
 
             monitor = MonitoringSystem(config=config)
@@ -419,11 +412,11 @@ class TestMonitoring:
             # Record queries with high latency (should trigger alert)
             for i in range(20):
                 monitor.record_query(
-                    query_id=f'q{i}',
+                    query_id=f"q{i}",
                     latency_ms=1500,  # Above warning threshold
                     num_results=10,
                     ndcg=0.8,
-                    components_used=['simrank']
+                    components_used=["simrank"],
                 )
 
             # Check if alert was created
@@ -443,30 +436,22 @@ class TestIntegration:
         try:
             raise HighSeverityError("Test error")
         except HighSeverityError as e:
-            logger.error(f"Error occurred: {e}", extra={
-                'extra_fields': e.to_dict()
-            })
+            logger.error(f"Error occurred: {e}", extra={"extra_fields": e.to_dict()})
 
         # Verify error was logged
         with open(log_file) as f:
             log_line = f.readline()
             log_data = json.loads(log_line)
 
-        assert log_data['level'] == 'ERROR'
-        assert 'severity' in log_data
+        assert log_data["level"] == "ERROR"
+        assert "severity" in log_data
 
     def test_monitoring_alerting_integration(self):
         """Test monitoring triggers alerts which are logged"""
         with tempfile.TemporaryDirectory() as temp_dir:
             config = {
-                'alert_file': str(Path(temp_dir) / 'alerts.jsonl'),
-                'thresholds': {
-                    'error_rate': {
-                        'max': 0.01,
-                        'warning': 0.005,
-                        'critical': 0.05
-                    }
-                }
+                "alert_file": str(Path(temp_dir) / "alerts.jsonl"),
+                "thresholds": {"error_rate": {"max": 0.01, "warning": 0.005, "critical": 0.05}},
             }
 
             monitor = MonitoringSystem(config=config)
@@ -474,24 +459,24 @@ class TestIntegration:
             # Simulate high error rate
             for i in range(100):
                 monitor.record_query(
-                    query_id=f'q{i}',
+                    query_id=f"q{i}",
                     latency_ms=100,
                     num_results=10,
                     ndcg=0.8,
-                    components_used=['simrank'],
-                    had_error=(i % 10 == 0)  # 10% error rate
+                    components_used=["simrank"],
+                    had_error=(i % 10 == 0),  # 10% error rate
                 )
 
             # Check alerts were created and logged
-            alert_file = Path(temp_dir) / 'alerts.jsonl'
+            alert_file = Path(temp_dir) / "alerts.jsonl"
             if alert_file.exists():
                 with open(alert_file) as f:
                     alerts = [json.loads(line) for line in f]
                 # Verify alerts have proper structure
                 for alert in alerts:
-                    assert 'alert_id' in alert
-                    assert 'level' in alert
-                    assert 'metric_name' in alert
+                    assert "alert_id" in alert
+                    assert "level" in alert
+                    assert "metric_name" in alert
 
 
 class TestPerformance:
@@ -505,7 +490,7 @@ class TestPerformance:
 
         # Record 10,000 metrics
         for i in range(10000):
-            collector.record('test_metric', float(i))
+            collector.record("test_metric", float(i))
 
         elapsed = time.time() - start_time
 
@@ -518,13 +503,13 @@ class TestPerformance:
 
         # Record 10,000 metrics
         for i in range(10000):
-            collector.record('test_metric', float(i))
+            collector.record("test_metric", float(i))
 
         start_time = time.time()
 
         # Calculate statistics 100 times
         for _ in range(100):
-            stats = collector.get_statistics('test_metric', minutes=60)
+            stats = collector.get_statistics("test_metric", minutes=60)
 
         elapsed = time.time() - start_time
 
@@ -544,7 +529,7 @@ class TestFailureInjection:
 
         def horn_index_ranking(docs):
             # Fallback ranking
-            return sorted(docs, key=lambda x: x.get('horn_score', 0), reverse=True)
+            return sorted(docs, key=lambda x: x.get("horn_score", 0), reverse=True)
 
         # Create fallback chain
         chain = FallbackChain("ranking_chain")
@@ -553,16 +538,16 @@ class TestFailureInjection:
 
         # Test with sample documents
         docs = [
-            {'doc_id': '1', 'horn_score': 0.8},
-            {'doc_id': '2', 'horn_score': 0.9},
-            {'doc_id': '3', 'horn_score': 0.7}
+            {"doc_id": "1", "horn_score": 0.8},
+            {"doc_id": "2", "horn_score": 0.9},
+            {"doc_id": "3", "horn_score": 0.7},
         ]
 
         result, strategy = chain.execute(docs)
 
         # Should use fallback
         assert strategy == "horn_index"
-        assert result[0]['doc_id'] == '2'  # Highest horn_score
+        assert result[0]["doc_id"] == "2"  # Highest horn_score
 
     def test_timeout_handling(self):
         """Test timeout handling for slow components"""
@@ -594,9 +579,9 @@ class TestFailureInjection:
 
         # Simulate partial results (some components failed)
         partial_results = [
-            {'doc_id': '1', 'title': 'Doc 1', 'final_score': 0.9, 'simrank_score': 0.8},
-            {'doc_id': '2', 'title': 'Doc 2', 'final_score': 0.8, 'simrank_score': None},  # SimRank failed
-            {'doc_id': '3', 'title': 'Doc 3', 'final_score': 0.7, 'simrank_score': 0.6}
+            {"doc_id": "1", "title": "Doc 1", "final_score": 0.9, "simrank_score": 0.8},
+            {"doc_id": "2", "title": "Doc 2", "final_score": 0.8, "simrank_score": None},  # SimRank failed
+            {"doc_id": "3", "title": "Doc 3", "final_score": 0.7, "simrank_score": 0.6},
         ]
 
         # Should still be valid even with missing component scores
@@ -611,17 +596,11 @@ class TestFailureInjection:
 # Pytest configuration
 def pytest_configure(config):
     """Configure pytest with custom markers"""
-    config.addinivalue_line(
-        "markers", "integration: mark test as integration test"
-    )
-    config.addinivalue_line(
-        "markers", "performance: mark test as performance test"
-    )
-    config.addinivalue_line(
-        "markers", "failure_injection: mark test as failure injection test"
-    )
+    config.addinivalue_line("markers", "integration: mark test as integration test")
+    config.addinivalue_line("markers", "performance: mark test as performance test")
+    config.addinivalue_line("markers", "failure_injection: mark test as failure injection test")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # Run tests
-    pytest.main([__file__, '-v', '--tb=short'])
+    pytest.main([__file__, "-v", "--tb=short"])
