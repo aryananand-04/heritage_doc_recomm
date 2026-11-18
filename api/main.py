@@ -2,8 +2,10 @@
 Heritage Document Recommender — FastAPI Backend
 Run: uvicorn api.main:app --reload --port 8000
 """
+
 import sys
 import os
+
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from fastapi import FastAPI, HTTPException, Query, Request
@@ -15,6 +17,7 @@ import re
 import numpy as np
 import sys as _sys
 import os as _os
+
 _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), "utils"))
 from logger import get_logger as _get_logger
 from slowapi import Limiter, _rate_limit_exceeded_handler
@@ -25,6 +28,7 @@ logger = _get_logger("api")
 
 import importlib.util
 
+
 def _load_module(name, rel_path):
     base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     spec = importlib.util.spec_from_file_location(name, os.path.join(base, rel_path))
@@ -32,6 +36,7 @@ def _load_module(name, rel_path):
     sys.modules[name] = mod
     spec.loader.exec_module(mod)
     return mod
+
 
 _qp_mod = _load_module("query_processor", "src/6_query_system/query_processor.py")
 _rec_mod = _load_module("recommender", "src/6_query_system/recommender.py")
@@ -106,6 +111,7 @@ async def startup():
 
     try:
         import importlib as _il
+
         _er_mod = _il.import_module("ensemble_ranker")
         EnsembleRanker = _er_mod.EnsembleRanker
         AdaptiveEnsemble = _er_mod.AdaptiveEnsemble
@@ -133,9 +139,8 @@ async def startup():
 
     # Pre-compute era counts once so /stats is O(1) on every request
     from collections import Counter as _Counter
-    _era_counter = _Counter(
-        _era_from_doc(d) for d in app.state.classified.values()
-    )
+
+    _era_counter = _Counter(_era_from_doc(d) for d in app.state.classified.values())
     app.state.era_counts = {k: v for k, v in _era_counter.items() if k}
 
     # Data consistency check
@@ -144,11 +149,21 @@ async def startup():
         logger.warning(f"{len(missing)} FAISS index entries not found in classified docs: {missing[:5]}...")
 
     try:
-        n_embeddings = len(recommender.embeddings) if hasattr(recommender, "embeddings") and recommender.embeddings is not None else None
+        n_embeddings = (
+            len(recommender.embeddings)
+            if hasattr(recommender, "embeddings") and recommender.embeddings is not None
+            else None
+        )
         n_classified = len(app.state.classified)
-        n_faiss = recommender.faiss_index.ntotal if hasattr(recommender, "faiss_index") and recommender.faiss_index is not None else None
+        n_faiss = (
+            recommender.faiss_index.ntotal
+            if hasattr(recommender, "faiss_index") and recommender.faiss_index is not None
+            else None
+        )
         if n_embeddings is not None and n_faiss is not None and n_embeddings != n_faiss:
-            logger.warning(f"Data sync mismatch: {n_embeddings} embeddings vs {n_faiss} FAISS entries vs {n_classified} classified docs")
+            logger.warning(
+                f"Data sync mismatch: {n_embeddings} embeddings vs {n_faiss} FAISS entries vs {n_classified} classified docs"
+            )
         else:
             logger.info(f"Data OK: {n_classified} classified docs, {n_faiss} FAISS entries, {n_embeddings} embeddings")
     except Exception as e:
@@ -156,6 +171,7 @@ async def startup():
 
 
 # ── Request / Response Models ─────────────────────────────────────────────────
+
 
 class SearchRequest(BaseModel):
     query: str
@@ -213,11 +229,7 @@ class SearchResponse(BaseModel):
 def _query_complexity(parsed: dict) -> float:
     """Estimate query complexity in [0, 1] from parsed query fields."""
     words = len(parsed.get("original_query", "").split())
-    entities = len(
-        parsed.get("locations", []) +
-        parsed.get("persons", []) +
-        parsed.get("organizations", [])
-    )
+    entities = len(parsed.get("locations", []) + parsed.get("persons", []) + parsed.get("organizations", []))
     has_question = any(
         parsed.get("original_query", "").lower().startswith(w)
         for w in ("what", "which", "how", "why", "when", "where", "who")
@@ -268,6 +280,7 @@ class KGNeighborsResponse(BaseModel):
 
 _DIRECTIONAL_REGIONS = {"north", "south", "east", "west"}
 
+
 def _region_label(doc: dict) -> Optional[str]:
     """Return a display-ready region string for a document."""
     region = (doc.get("classifications", {}).get("region") or "").lower().strip()
@@ -290,6 +303,7 @@ def _region_label(doc: dict) -> Optional[str]:
 _CENTURY_RE = re.compile(r"(\d+)(?:st|nd|rd|th)-century", re.I)
 _YEAR_RE = re.compile(r"\b(\d{3,4})\b")
 _ERA_CATEGORY_KEYWORDS = {"established", "completed", "founded", "built", "century"}
+
 
 def _era_from_doc(doc: dict) -> Optional[str]:
     """Return the best era string for a document.
@@ -326,19 +340,41 @@ def _era_from_doc(doc: dict) -> Optional[str]:
 
 
 _SPECIFIC_TYPES = [
-    "temple", "fort", "mosque", "palace", "church", "stupa", "monastery",
-    "tomb", "mausoleum", "shrine", "gate", "tower", "cave", "museum",
-    "garden", "step well", "stepwell", "haveli", "mahal",
+    "temple",
+    "fort",
+    "mosque",
+    "palace",
+    "church",
+    "stupa",
+    "monastery",
+    "tomb",
+    "mausoleum",
+    "shrine",
+    "gate",
+    "tower",
+    "cave",
+    "museum",
+    "garden",
+    "step well",
+    "stepwell",
+    "haveli",
+    "mahal",
 ]
+
 
 def _detect_specific_type(doc: dict) -> Optional[str]:
     """Return a specific heritage subtype (temple, fort, mosque, palace…) if detectable,
     otherwise fall back to the broad heritage_types[0] classification."""
-    text = " ".join(filter(None, [
-        doc.get("title", ""),
-        " ".join(doc.get("keywords_tfidf", [])),
-        doc.get("topic", ""),
-    ])).lower()
+    text = " ".join(
+        filter(
+            None,
+            [
+                doc.get("title", ""),
+                " ".join(doc.get("keywords_tfidf", [])),
+                doc.get("topic", ""),
+            ],
+        )
+    ).lower()
     for stype in _SPECIFIC_TYPES:
         if stype in text:
             return stype
@@ -378,7 +414,16 @@ def _normalize_source(source: Optional[str], url: Optional[str]) -> Optional[str
     return None  # hide rather than show "Unknown"
 
 
-_INDIA_ARCH_STYLES = {"indo-islamic", "mughal", "dravidian", "rajput", "colonial-india", "vijayanagara", "hoysala", "chalukya"}
+_INDIA_ARCH_STYLES = {
+    "indo-islamic",
+    "mughal",
+    "dravidian",
+    "rajput",
+    "colonial-india",
+    "vijayanagara",
+    "hoysala",
+    "chalukya",
+}
 
 
 def _clean_arch_styles(doc: dict, styles: list) -> list:
@@ -457,7 +502,9 @@ def enrich_result(result: dict, use_ensemble: bool = False) -> DocumentResult:
         source=_normalize_source(raw_source, raw_url),
         summary=_build_summary(meta),
         score=min(round(float(result.get("ensemble_score" if use_ensemble else "hybrid_score", 0.0)), 4), 1.0),
-        component_scores={k: float(v) for k, v in result["component_scores"].items()} if result.get("component_scores") else None,
+        component_scores={k: float(v) for k, v in result["component_scores"].items()}
+        if result.get("component_scores")
+        else None,
         explanations=result.get("kg_explanations"),
         entities=entities if entities else None,
         keywords=meta.get("keywords_tfidf", [])[:8],
@@ -497,7 +544,7 @@ def _text_match_score(query: str, doc: dict) -> float:
       Distant, partial matches.
     """
     query_lower = query.lower().strip()
-    query_terms = [t for t in re.split(r'\s+', query_lower) if len(t) >= 2]
+    query_terms = [t for t in re.split(r"\s+", query_lower) if len(t) >= 2]
     if not query_terms:
         return 0.0
 
@@ -517,11 +564,11 @@ def _text_match_score(query: str, doc: dict) -> float:
 
     def _word_in(term: str, text: str) -> bool:
         """True if term appears as a whole word in text."""
-        return bool(re.search(r'\b' + re.escape(term) + r'\b', text))
+        return bool(re.search(r"\b" + re.escape(term) + r"\b", text))
 
     def _phrase_in(phrase: str, text: str) -> bool:
         """True if full phrase appears as whole words in text."""
-        return bool(re.search(r'\b' + re.escape(phrase) + r'\b', text))
+        return bool(re.search(r"\b" + re.escape(phrase) + r"\b", text))
 
     # ── Tier 1: Primary subject ─────────────────────────────────────────
     # Exact title match
@@ -635,18 +682,20 @@ def _text_search(query: str, top_k: int = 20) -> List[dict]:
             # (not available here directly, so we just store index for later)
             emb_score = 0.0  # will be filled during merge
 
-        scored.append({
-            "doc_id": doc_id,
-            "title": title,
-            "hybrid_score": s,
-            "_emb_idx": emb_idx,       # used during merge for tie-breaking
-            "component_scores": {
-                "simrank": 0.0,
-                "horn": 0.0,
-                "embedding": 0.0,
-                "text": s,
-            },
-        })
+        scored.append(
+            {
+                "doc_id": doc_id,
+                "title": title,
+                "hybrid_score": s,
+                "_emb_idx": emb_idx,  # used during merge for tie-breaking
+                "component_scores": {
+                    "simrank": 0.0,
+                    "horn": 0.0,
+                    "embedding": 0.0,
+                    "text": s,
+                },
+            }
+        )
 
     # Sort by text score descending; stable so same-score docs keep list order
     scored.sort(key=lambda x: x["hybrid_score"], reverse=True)
@@ -654,6 +703,7 @@ def _text_search(query: str, top_k: int = 20) -> List[dict]:
 
 
 # ── Routes ────────────────────────────────────────────────────────────────────
+
 
 @app.get("/")
 def root():
@@ -699,7 +749,8 @@ def search(request: Request, req: SearchRequest):
     if req.era or req.region or req.type:
         classified_state = getattr(app.state, "classified", {})
         results = [
-            r for r in results
+            r
+            for r in results
             if _doc_matches_filters(
                 classified_state.get(r.get("title", ""), {}),
                 era=req.era[0] if req.era else None,
@@ -712,11 +763,7 @@ def search(request: Request, req: SearchRequest):
     query_type = None
 
     if use_ensemble and EnsembleRanker is not None:
-        all_entities = (
-            parsed.get("locations", []) +
-            parsed.get("persons", []) +
-            parsed.get("organizations", [])
-        )
+        all_entities = parsed.get("locations", []) + parsed.get("persons", []) + parsed.get("organizations", [])
         complexity = _query_complexity(parsed)
 
         try:
@@ -741,11 +788,7 @@ def search(request: Request, req: SearchRequest):
             # Re-order results to match ensemble ranking, trim to top_k
             id_to_result = {r["doc_id"]: r for r in results}
             score_map = {obj.doc_id: obj.final_score for obj in ranked_objs}
-            results = [
-                id_to_result[obj.doc_id]
-                for obj in ranked_objs
-                if obj.doc_id in id_to_result
-            ][:req.top_k]
+            results = [id_to_result[obj.doc_id] for obj in ranked_objs if obj.doc_id in id_to_result][: req.top_k]
             for r in results:
                 r["ensemble_score"] = score_map.get(r["doc_id"], r["hybrid_score"])
         except Exception as e:
@@ -843,7 +886,7 @@ def search(request: Request, req: SearchRequest):
         # semantically similar one ranks first (e.g. Mughal architecture beats
         # Red Fort for "Taj Mahal" even if both score 0.30 on entity mention).
         results.sort(key=lambda r: (r[score_key], r.get("_emb_score", 0.0)), reverse=True)
-        results = results[:req.top_k]
+        results = results[: req.top_k]
 
     docs = [enrich_result(r, use_ensemble=use_ensemble) for r in results]
 
@@ -854,13 +897,13 @@ def search(request: Request, req: SearchRequest):
         ensemble_method=used_method,
         query_type=query_type,
         parsed_query={
-            "locations":           parsed.get("locations", []),
-            "persons":             parsed.get("persons", []),
-            "organizations":       parsed.get("organizations", []),
-            "heritage_types":      list(parsed.get("heritage_types", set())),
-            "domains":             list(parsed.get("domains", set())),
-            "region":              parsed.get("region"),
-            "time_period":         parsed.get("time_period"),
+            "locations": parsed.get("locations", []),
+            "persons": parsed.get("persons", []),
+            "organizations": parsed.get("organizations", []),
+            "heritage_types": list(parsed.get("heritage_types", set())),
+            "domains": list(parsed.get("domains", set())),
+            "region": parsed.get("region"),
+            "time_period": parsed.get("time_period"),
             "architectural_styles": list(parsed.get("architectural_styles", set())),
         },
     )
@@ -882,7 +925,7 @@ def search_baseline(request: Request, req: SearchRequest):
 
     results = recommender.recommend(
         parsed_query=parsed,
-        top_k=req.top_k * 2,   # fetch more so we have enough after re-sort
+        top_k=req.top_k * 2,  # fetch more so we have enough after re-sort
         candidates_k=min(req.top_k * 4, 80),
         explain=False,
         filter_period=req.era,
@@ -969,11 +1012,16 @@ def _doc_matches_filters(
         if any(tl in ht or ht in tl for ht in heritage_types):
             return True
         # Check title + keywords for type keyword
-        text = " ".join(filter(None, [
-            doc.get("title", ""),
-            " ".join(doc.get("keywords_tfidf", [])),
-            doc.get("topic", ""),
-        ])).lower()
+        text = " ".join(
+            filter(
+                None,
+                [
+                    doc.get("title", ""),
+                    " ".join(doc.get("keywords_tfidf", [])),
+                    doc.get("topic", ""),
+                ],
+            )
+        ).lower()
         if tl in text:
             return True
         return False
@@ -991,14 +1039,11 @@ def list_documents(
 ):
     """Browse all documents with optional filters and pagination."""
     classified = getattr(app.state, "classified", {})
-    docs = [
-        d for d in classified.values()
-        if _doc_matches_filters(d, era=era, region=region, type_filter=type)
-    ]
+    docs = [d for d in classified.values() if _doc_matches_filters(d, era=era, region=region, type_filter=type)]
 
     total = len(docs)
     start = (page - 1) * page_size
-    page_docs = docs[start: start + page_size]
+    page_docs = docs[start : start + page_size]
 
     return {
         "total": total,
@@ -1185,6 +1230,7 @@ def kg_edges(limit: int = Query(60, ge=1, le=300)):
 
 _horn_weights_cache: Optional[dict] = None
 
+
 def _load_horn_weights() -> dict:
     global _horn_weights_cache
     if _horn_weights_cache is None:
@@ -1219,7 +1265,7 @@ def _horn_key(etype: str, name: str) -> str:
     e.g. locations/'Taj Mahal' → 'loc_taj_mahal'
     KG builder truncates to 50 chars after the prefix."""
     prefix = _TYPE_TO_HORN_PREFIX.get(etype, etype)
-    slug = name.lower().replace(' ', '_')[:50]
+    slug = name.lower().replace(" ", "_")[:50]
     return f"{prefix}_{slug}"
 
 
@@ -1246,13 +1292,15 @@ def kg_graph(
         # Use the same ID format as the KG graph so neighbor lookup works:
         # "loc_taj_mahal", "person_shah_jahan", "org_unesco", etc.
         kg_id = _horn_key(etype, name)  # e.g. "loc_taj_mahal"
-        entity_nodes.append(KGNode(
-            id=kg_id,
-            name=name,
-            type=_TYPE_NORMALIZE.get(etype, etype),  # "location" not "locations"
-            count=count,
-            horn_weight=hw,
-        ))
+        entity_nodes.append(
+            KGNode(
+                id=kg_id,
+                name=name,
+                type=_TYPE_NORMALIZE.get(etype, etype),  # "location" not "locations"
+                count=count,
+                horn_weight=hw,
+            )
+        )
 
     # Sort by horn_weight desc, then count desc
     entity_nodes.sort(key=lambda n: (n.horn_weight, n.count), reverse=True)
@@ -1268,9 +1316,7 @@ def kg_graph(
         if os.path.exists(stats_path):
             with open(stats_path) as f:
                 stats_data = json.load(f)
-            top_central_titles = {
-                d.get("title", "") for d in stats_data.get("top_central_documents", [])[:15]
-            }
+            top_central_titles = {d.get("title", "") for d in stats_data.get("top_central_documents", [])[:15]}
 
         if os.path.exists(simrank_path):
             with open(simrank_path) as f:
@@ -1284,13 +1330,18 @@ def kg_graph(
                 node_id = doc_meta.get("node_id", f"doc_{doc_meta.get('index', 0)}")
                 if title in top_central_titles and node_id not in seen_ids:
                     seen_ids.add(node_id)
-                    doc_nodes.append(KGNode(
-                        id=node_id, name=title, type="document",
-                        count=1, horn_weight=0.85,
-                        cluster_id=doc_meta.get("cluster_id"),
-                        cluster_label=doc_meta.get("cluster_label"),
-                        is_top_central=True,
-                    ))
+                    doc_nodes.append(
+                        KGNode(
+                            id=node_id,
+                            name=title,
+                            type="document",
+                            count=1,
+                            horn_weight=0.85,
+                            cluster_id=doc_meta.get("cluster_id"),
+                            cluster_label=doc_meta.get("cluster_label"),
+                            is_top_central=True,
+                        )
+                    )
 
             # Add up to 2 per cluster
             cluster_rep: dict = {}
@@ -1305,13 +1356,18 @@ def kg_graph(
                     cluster_rep[cid] += 1
                     seen_ids.add(node_id)
                     title = doc_meta.get("title", "")
-                    doc_nodes.append(KGNode(
-                        id=node_id, name=title, type="document",
-                        count=1, horn_weight=0.5,
-                        cluster_id=cid,
-                        cluster_label=doc_meta.get("cluster_label"),
-                        is_top_central=False,
-                    ))
+                    doc_nodes.append(
+                        KGNode(
+                            id=node_id,
+                            name=title,
+                            type="document",
+                            count=1,
+                            horn_weight=0.5,
+                            cluster_id=cid,
+                            cluster_label=doc_meta.get("cluster_label"),
+                            is_top_central=False,
+                        )
+                    )
 
         nodes = nodes + doc_nodes
 
@@ -1334,21 +1390,31 @@ def kg_graph(
 
     edges: List[KGEdge] = [
         KGEdge(source=src, target=tgt, weight=float(w), edge_type="co_occurrence")
-        for (src, tgt), w in edge_counts.items() if w > 1
+        for (src, tgt), w in edge_counts.items()
+        if w > 1
     ]
 
     # Pull semantic/structural edges from the live KG if available
     if recommender is not None and hasattr(recommender, "kg") and recommender.kg is not None:
-        semantic_types = {"similar_to", "semantically_related", "same_cluster", "shares_keywords",
-                          "temporally_related", "geographically_related"}
+        semantic_types = {
+            "similar_to",
+            "semantically_related",
+            "same_cluster",
+            "shares_keywords",
+            "temporally_related",
+            "geographically_related",
+        }
         for u, v, data in recommender.kg.edges(data=True):
             rel = data.get("relation_type", data.get("relation", ""))
             if rel in semantic_types and u in node_id_set and v in node_id_set:
-                edges.append(KGEdge(
-                    source=u, target=v,
-                    weight=float(data.get("weight", 1.0)),
-                    edge_type=rel,
-                ))
+                edges.append(
+                    KGEdge(
+                        source=u,
+                        target=v,
+                        weight=float(data.get("weight", 1.0)),
+                        edge_type=rel,
+                    )
+                )
 
     edges.sort(key=lambda e: e.weight, reverse=True)
     return KGGraphResponse(nodes=nodes, edges=edges[:200])
@@ -1381,8 +1447,11 @@ def kg_entity_neighbors(entity_id: str):
         # Rough count from degree
         count = G.degree(nid)
         return KGNode(
-            id=str(nid), name=name, type=ntype,
-            count=count, horn_weight=hw,
+            id=str(nid),
+            name=name,
+            type=ntype,
+            count=count,
+            horn_weight=hw,
         )
 
     center_hw = horn.get(str(actual_id).replace("-", "_"), 0.0)
@@ -1398,11 +1467,14 @@ def kg_entity_neighbors(entity_id: str):
 
         edge_data = G.edges[actual_id, nbr]
         rel = edge_data.get("relation_type", edge_data.get("relation", "related"))
-        neighbor_edges.append(KGEdge(
-            source=str(actual_id), target=str(nbr),
-            weight=float(edge_data.get("weight", 1.0)),
-            edge_type=rel,
-        ))
+        neighbor_edges.append(
+            KGEdge(
+                source=str(actual_id),
+                target=str(nbr),
+                weight=float(edge_data.get("weight", 1.0)),
+                edge_type=rel,
+            )
+        )
 
     neighbor_nodes.sort(key=lambda n: n.horn_weight, reverse=True)
     return KGNeighborsResponse(

@@ -1,10 +1,12 @@
 """Test the complete query system end-to-end."""
 
 import sys
-sys.path.append('src/6_query_system')
+
+sys.path.append("src/6_query_system")
 
 from query_processor import QueryProcessor
 from recommender import HeritageRecommender
+
 
 def main():
     print("=" * 80)
@@ -19,11 +21,7 @@ def main():
     recommender = HeritageRecommender()
 
     # Test queries
-    test_queries = [
-        "Mughal temples in North India",
-        "Ancient forts in Rajasthan",
-        "Buddhist stupas and monasteries"
-    ]
+    test_queries = ["Mughal temples in North India", "Ancient forts in Rajasthan", "Buddhist stupas and monasteries"]
 
     print("\n" + "=" * 80)
     print("RUNNING TEST QUERIES")
@@ -55,5 +53,5 @@ def main():
     print("=" * 80)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
