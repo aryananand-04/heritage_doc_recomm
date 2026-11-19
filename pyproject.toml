@@ -45,6 +45,7 @@ dependencies = [
     #   deep-translator  — used only for synthetic augmentation (superseded)
     #   gradio           — not used in the current codebase
     #   imbalanced-learn — used only in the balancing step (superseded)
+    "pydantic>=2.6",
 ]
 
 [dependency-groups]
