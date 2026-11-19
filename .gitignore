@@ -476,3 +476,6 @@ frontend/.pnpm-debug.log*
 
 # Raw API responses for corpus builds (archived on Zenodo, decision 0004)
 data/raw/**/*.gz
+
+# Per-source staging records; only the snapshot (data/corpus_v1/records.jsonl.gz) is committed
+data/corpus_v1/staging/
