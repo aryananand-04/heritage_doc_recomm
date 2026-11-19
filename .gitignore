@@ -479,3 +479,7 @@ data/raw/**/*.gz
 
 # Per-source staging records; only the snapshot (data/corpus_v1/records.jsonl.gz) is committed
 data/corpus_v1/staging/
+
+# The corpus snapshot is archived on Zenodo and Hugging Face, not kept in git (decision 0004);
+# the manifest (checksums) and sample_v1.jsonl stay in git.
+data/corpus_v1/records.jsonl.gz
