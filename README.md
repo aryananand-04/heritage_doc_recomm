@@ -99,6 +99,12 @@ To be added.
 | `legacy/` | Superseded conference-version files, kept for traceability |
 | `api/`, `frontend/` | Demo application from the conference version |
 
+## Licence
+
+The code is released under the [Apache License 2.0](LICENSE). The documents keep the licences
+of their sources (CC BY-SA 4.0, CC BY 4.0, CC0 or public domain), recorded on every record and
+summarised in the [data card](docs/data_card.md).
+
 ## Citation
 
 <!-- Add the paper and the Zenodo DOI here at release. -->
