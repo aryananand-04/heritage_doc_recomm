@@ -13,12 +13,14 @@ Usage:
 Outputs:
     data/corpus_v1/records.jsonl.gz    the snapshot (gzip with a fixed timestamp, so it is reproducible)
     data/corpus_v1/manifest.json       snapshot SHA-256 and size; per-source counts; every raw file with its SHA-256
+    data/corpus_v1/sample_v1.jsonl     about 100 records for readers (long texts cut at 2,000 characters)
 """
 
 import gzip
 import hashlib
 import io
 import json
+import random
 import subprocess
 from collections import Counter
 from datetime import UTC, datetime
@@ -30,15 +32,25 @@ STAGING_DIR = ROOT / "data/corpus_v1/staging"
 RAW_DIR = ROOT / "data/raw"
 OUT = ROOT / "data/corpus_v1/records.jsonl.gz"
 MANIFEST = ROOT / "data/corpus_v1/manifest.json"
+SAMPLE = ROOT / "data/corpus_v1/sample_v1.jsonl"
+SAMPLE_SIZE = 100
+SAMPLE_TEXT_CHARS = 2000
+RANDOM_SEED = 20261120
 # Staging files that make up the snapshot, in merge order (samples are left out).
 SOURCES = [
     "wikipedia_seeds_v1",
     "wikipedia_asi_remainder_v1",
     "wikipedia_neighbours_v1",
-    "met_seeds_v1",
-    "cleveland_seeds_v1",
+    "wikipedia_class_list_v1",
+    # Museum objects after linking (decision 0017): seed-name and by-place collections.
+    "met_seeds_v1_linked",
+    "met_place_v1_linked",
+    "cleveland_seeds_v1_linked",
+    "cleveland_place_v1_linked",
+    "artic_place_v1_linked",
     "wellcome_seeds_v1",
     "internet_archive_seeds_v1",
+    "internet_archive_series_v1",
 ]
 
 
@@ -65,6 +77,27 @@ def merge(records: list[Record]) -> tuple[list[Record], int]:
         else:
             by_id[r.id] = r
     return [by_id[k] for k in sorted(by_id)], merged
+
+
+def write_sample(records: list[Record]) -> None:
+    """About 100 real records, spread over sources in proportion with at least two each, for
+    readers who want to see the format without downloading the snapshot. Texts longer than
+    2,000 characters are cut, and say so; sha256 stays that of the full text in the snapshot."""
+    by_source: dict[str, list[Record]] = {}
+    for r in records:
+        by_source.setdefault(r.source, []).append(r)
+    rng = random.Random(RANDOM_SEED)
+    picked = []
+    for source, rs in sorted(by_source.items()):
+        k = min(len(rs), max(2, round(SAMPLE_SIZE * len(rs) / len(records))))
+        picked += rng.sample(rs, k)
+    with open(SAMPLE, "w", encoding="utf-8") as f:
+        for r in sorted(picked, key=lambda r: r.id):
+            row = json.loads(r.model_dump_json())
+            if len(row["text"]) > SAMPLE_TEXT_CHARS:
+                row["text"] = row["text"][:SAMPLE_TEXT_CHARS]
+                row["text_cut_for_sample"] = True
+            f.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 
 def main() -> None:
@@ -115,6 +148,7 @@ def main() -> None:
         },
     }
     MANIFEST.write_text(json.dumps(manifest, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    write_sample(records)
     summary = {k: v for k, v in manifest.items() if k != "raw_files"}
     summary["raw_files"] = {k: manifest["raw_files"][k] for k in ("count", "bytes")}
     print(json.dumps(summary, indent=1, ensure_ascii=False))
