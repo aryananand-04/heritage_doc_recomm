@@ -1,0 +1,111 @@
+sub_stratum,qid,label,decision,reason,recognised_classical,state_hint
+classical_dance,Q4754350,Andhra Natyam,keep,dance form,,
+classical_dance,Q6797297,Arjuna Nritham,keep,dance form,,
+classical_dance,Q15788442,Bhagavata Mela,keep,dance form,,
+classical_dance,Q334156,Bharatanatyam,keep,dance form,yes,
+classical_dance,Q5252826,Deknni,keep,dance form,,
+classical_dance,Q5587904,Gotipua,keep,dance form,,
+classical_dance,Q949256,Kathak,keep,dance form,yes,
+classical_dance,Q839500,Kathakali,keep,dance form,yes,
+classical_dance,Q3595273,Kerala Natanam,keep,dance form,,
+classical_dance,Q1145471,Kuchipudi,keep,dance form,yes,
+classical_dance,Q511116,Manipuri dance,keep,dance form,yes,
+classical_dance,Q940868,Mohiniyattam,keep,dance form,yes,
+classical_dance,Q2014687,Odissi,keep,dance form,yes,
+classical_dance,Q3765070,Perini Shivatandavam,keep,dance form,,
+classical_dance,Q2724537,Sattriya,keep,dance form,yes,
+classical_dance,Q1584013,Yakshagana,keep,dance form,,
+classical_dance,Q96392510,Meenakshisundaram Pillai,remove,a person,,
+classical_dance,Q4708379,Alarippu,remove,a piece within Bharatanatyam,,
+classical_dance,Q6811643,Melattur style,remove,a style of Bharatanatyam,,
+classical_dance,Q7130489,Pandanallur style,remove,a style of Bharatanatyam,,
+classical_dance,Q7917624,Vazhuvoor,remove,a style of Bharatanatyam,,
+classical_dance,Q4874262,Bayalata,remove,a form of Yakshagana,,
+classical_dance,Q7698704,Temple dance,remove,a general concept,,
+folk_dance,Q7917186,Vattakkali,keep,dance form (English article: 'a dance form practiced among the Vattuvar community in Kerala'); moved from classical dance,,Kerala
+classical_music,Q956883,Carnatic music,keep,genre or form,,
+classical_music,Q1770695,Hindustani classical music,keep,genre or form,,
+classical_music,Q59158,Dhrupad,keep,genre or form,,
+classical_music,Q62128,Khyal,keep,genre or form,,
+classical_music,Q69596,Thumri,keep,genre or form,,
+classical_music,Q70076,Tappa,keep,genre or form,,
+classical_music,Q3981034,Tarana,keep,genre or form,,
+classical_music,Q512410,Qawwali,keep,genre or form,,
+classical_music,Q7077860,Odissi music,keep,genre or form,,
+classical_music,Q17054653,Haveli Sangeet,keep,genre or form,,
+classical_music,Q2641862,Abhang,keep,genre or form,,
+classical_music,Q16344235,Ragamalika,keep,genre or form,,
+classical_music,Q3521984,Konnakol,keep,genre or form,,
+classical_music,Q1157018,Dadra,keep,genre or form,,
+classical_music,Q5269880,Dhun,keep,genre or form,,
+classical_music,Q2011823,Arohana,remove,theory term,,
+classical_music,Q13583589,Avarohana,remove,theory term,,
+classical_music,Q3534390,Janya raga,remove,theory term,,
+classical_music,Q7410264,Sampurna raga,remove,theory term,,
+classical_music,Q12989207,Vivadi,remove,theory term,,
+classical_music,Q216926,Raga,remove,theory term,,
+classical_music,Q5043807,Carnatic raga,remove,theory term,,
+classical_music,Q17045682,Kanada,remove,group of ragas,,
+classical_music,Q6419747,Klasik,remove,Afghan genre,,
+classical_music,Q6821898,Semi-classical music,remove,"origin Pakistan, general term",,
+classical_music,Q7899987,Urban Qawwali,remove,origin unclear,,
+classical_music,Q5449126,Filmi qawwali,remove,film music,,
+classical_music,Q3595117,Kirana gharana,remove,"a lineage, not a genre",,
+classical_music,Q7290060,Rampur-Sahaswan gharana,remove,"a lineage, not a genre",,
+classical_music,Q17037735,Sadra,remove,skipped by author: no description,,
+classical_music,Q5105581,Chowtal,remove,moved to folk music,,
+folk_music,Q6359686,Kamrupi lokgeet,keep,folk music form,,Assam
+folk_music,Q55593233,Biraha,keep,folk music form,,Bihar; Uttar Pradesh
+folk_music,Q5105581,Chowtal,keep,folk music form,,Bihar; Uttar Pradesh
+folk_music,Q7130527,Pandavani,keep,folk music form,,Chhattisgarh
+folk_music,Q97356926,Sua,keep,folk music form,,Chhattisgarh
+folk_music,Q2774511,Sanedo,keep,folk music form,,Gujarat
+folk_music,Q141439026,Lagan Geet,keep,folk music form,,Gujarat
+folk_music,Q104875944,Ladishah,keep,folk music form,,Jammu and Kashmir
+folk_music,Q111938157,Jhumar,keep,folk music form,,Jharkhand
+folk_music,Q13112247,Njattupattu,keep,folk music form,,Kerala
+folk_music,Q13118900,Powada,keep,folk music form,,Maharashtra
+folk_music,Q17051846,Dhumpa sangita,keep,folk music form,,Odisha
+folk_music,Q28004144,Dhadi,keep,folk music form,,Punjab
+folk_music,Q6304912,Jugni,keep,folk music form,,Punjab
+folk_music,Q6543501,Oppari,keep,folk music form,,Tamil Nadu
+folk_music,Q7295067,Rasiya,keep,folk music form,,Uttar Pradesh
+folk_music,Q17454116,Chaar Bayt,keep,folk music form,,Uttar Pradesh
+folk_music,Q97861161,Dhol damau,keep,folk music form,,Uttarakhand
+folk_music,Q811449,Baul,keep,folk music form,,West Bengal
+folk_music,Q3347022,Bhawaiya,keep,folk music form,,West Bengal; Assam
+folk_theatre,Q7460579,Tholu bommalata,keep,traditional theatre form,,Andhra Pradesh
+folk_theatre,Q4766054,Ankia Naat,keep,traditional theatre form,,Assam
+folk_theatre,Q7800302,Tiatr,keep,traditional theatre form,,Goa
+folk_theatre,Q4901494,Bhavai,keep,traditional theatre form,,Gujarat
+folk_theatre,Q1346068,Saang,keep,traditional theatre form,,Haryana
+folk_theatre,Q19891110,Chadar Badar,keep,traditional theatre form,,Jharkhand
+folk_theatre,Q7813032,Togalu gombeyaata,keep,traditional theatre form,,Karnataka
+folk_theatre,Q2740885,Chakyar koothu,keep,traditional theatre form,,Kerala
+folk_theatre,Q13560108,Maach,keep,traditional theatre form,,Madhya Pradesh
+folk_theatre,Q1634822,Tamasha,keep,traditional theatre form,,Maharashtra
+folk_theatre,Q73901910,Shumang Kumhei,keep,traditional theatre form,,Manipur
+folk_theatre,Q17086371,Rabana Chhaya,keep,traditional theatre form,,Odisha
+folk_theatre,Q675271,Kathputli,keep,traditional theatre form,,Rajasthan
+folk_theatre,Q7705309,Terukkuttu,keep,traditional theatre form,,Tamil Nadu
+folk_theatre,Q17050629,Chindu Bhagavatham,keep,traditional theatre form,,Telangana
+folk_theatre,Q6426576,Kokborok drama,keep,traditional theatre form,,Tripura
+folk_theatre,Q1363943,Nautanki,keep,traditional theatre form,,Uttar Pradesh
+folk_theatre,Q2121790,Raslila,keep,traditional theatre form,,Uttar Pradesh
+folk_theatre,Q65286917,Pandav Lila,keep,traditional theatre form,,Uttarakhand
+folk_theatre,Q3348813,Jatra,keep,traditional theatre form,,West Bengal
+painting_school,Q189458,Academic art,remove,"generic Western movement, removed by author",,
+painting_school,Q102932,Avant garde,remove,"generic Western movement, removed by author",,
+painting_school,Q878985,Modernist,remove,"generic Western movement, removed by author",,
+painting_school,Q280817,Kalam,remove,"Wikidata item is Ilm al-kalam (Islamic theology), not kalamezhuthu; removed per author rule",,
+folk_dance,Q60791260,Jharkhand folk dance,remove,"overview article, replaced by a specific form from the same state (author)",,
+folk_dance,Q15723771,Odisha folk dance,remove,"overview article, replaced by a specific form from the same state (author)",,
+folk_dance,Q5464455,Punjabi folk dance,remove,"overview article, replaced by a specific form from the same state (author)",,
+folk_dance,Q24930335,Sourashtra folk dance,remove,"overview article, replaced by a specific form from the same state (author)",,
+folk_dance,Q4461768,traditional dances of Himachal Pradesh,remove,"overview article, replaced by a specific form from the same state (author)",,
+folk_dance,Q5221793,dappankuthu,remove,"film-associated street dance, dropped by author",,
+folk_dance,Q60749916,Domkach,keep,specific form replacing the Jharkhand overview article (author),,Jharkhand
+folk_dance,Q5211077,Dalkhai,keep,specific form replacing the Odisha overview article (author),,Odisha
+folk_dance,Q6406312,Kikkli,keep,specific form replacing the Punjab overview article (author),,Punjab
+folk_dance,Q3629880,Dandiya raas,keep,specific form replacing the Gujarat overview article (author),,Gujarat
+folk_dance,Q6414041,Nati,keep,specific form replacing the Himachal Pradesh overview article (author),,Himachal Pradesh

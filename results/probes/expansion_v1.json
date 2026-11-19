@@ -1,0 +1,135 @@
+{
+ "date": "2026-11-19",
+ "museums_by_place": {
+  "met_geoLocation_India": 4367,
+  "met_asian_art_India": 1878,
+  "cleveland_culture": {
+   "India": 3202,
+   "South Asia": 4
+  },
+  "chicago_place_of_origin_India": 347
+ },
+ "class_based_list": {
+  "per_class": {
+   "Hindu temple": {
+    "items": 16065,
+    "with_article": 2357,
+    "en": 2337,
+    "hi": 416,
+    "kn": 234
+   },
+   "temple": {
+    "items": 4540,
+    "with_article": 474,
+    "en": 452,
+    "hi": 110,
+    "kn": 72
+   },
+   "temple complex": {
+    "items": 89,
+    "with_article": 27,
+    "en": 27,
+    "hi": 13,
+    "kn": 7
+   },
+   "Jain temple": {
+    "items": 276,
+    "with_article": 231,
+    "en": 105,
+    "hi": 25,
+    "kn": 137
+   },
+   "mosque": {
+    "items": 594,
+    "with_article": 251,
+    "en": 250,
+    "hi": 57,
+    "kn": 8
+   },
+   "church building": {
+    "items": 722,
+    "with_article": 430,
+    "en": 430,
+    "hi": 12,
+    "kn": 14
+   },
+   "fort": {
+    "items": 657,
+    "with_article": 341,
+    "en": 340,
+    "hi": 108,
+    "kn": 65
+   },
+   "fortification": {
+    "items": 62,
+    "with_article": 43,
+    "en": 42,
+    "hi": 14,
+    "kn": 14
+   },
+   "fortress": {
+    "items": 65,
+    "with_article": 29,
+    "en": 29,
+    "hi": 18,
+    "kn": 6
+   },
+   "palace": {
+    "items": 354,
+    "with_article": 136,
+    "en": 135,
+    "hi": 46,
+    "kn": 17
+   },
+   "tomb": {
+    "items": 333,
+    "with_article": 58,
+    "en": 57,
+    "hi": 20,
+    "kn": 3
+   },
+   "mausoleum": {
+    "items": 68,
+    "with_article": 34,
+    "en": 34,
+    "hi": 13,
+    "kn": 5
+   },
+   "stepwell": {
+    "items": 140,
+    "with_article": 33,
+    "en": 33,
+    "hi": 9,
+    "kn": 2
+   },
+   "archaeological site": {
+    "items": 408,
+    "with_article": 183,
+    "en": 183,
+    "hi": 75,
+    "kn": 35
+   }
+  },
+  "distinct_items": 24269,
+  "distinct_with_article": 4569,
+  "not_in_entity_lists": 3516,
+  "new_articles_by_language": {
+   "en": 3345,
+   "hi": 565,
+   "kn": 399
+  },
+  "new_with_hi_or_kn_but_no_en": 171
+ },
+ "internet_archive_series_before_1950": {
+  "Archaeological Survey of India reports": 5,
+  "Imperial Gazetteer of India": 118,
+  "District gazetteers": 1,
+  "Epigraphia Indica": 2,
+  "Indian Antiquary": 5
+ },
+ "commit": "8bb7910bb35217e81621a77da7d450747fe6af85",
+ "requests": {
+  "fetched": 0,
+  "reused": 24
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "date": "2026-11-19",
+ "commit": "90e4f52b4587ee55ee741734ec4aa60300eb22d3",
+ "seeds": 40,
+ "sample": 40,
+ "caps": {
+  "manuscripts": 5,
+  "pictures": 3
+ },
+ "looked_at_per_seed_and_type": 20,
+ "outcomes": {
+  "manuscripts: does not name the seed or India": 71,
+  "pictures: does not name the seed or India": 46
+ },
+ "records": 0,
+ "records_by_doc_type": {},
+ "records_linked_to_several_seeds": 0,
+ "requests": {
+  "fetched": 80,
+  "reused": 0
+ }
+}

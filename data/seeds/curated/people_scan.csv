@@ -1,0 +1,11 @@
+qid,label,decision,reason
+Q616654,Janamejaya,remove,"legendary figure, dropped by author"
+Q48734984,Alli Raani,remove,"legendary figure, dropped by author"
+Q5879,Johann Wolfgang von Goethe,remove,"not Indian heritage; passed the date rule through a one-hop link; removed during collection 2026-11-19, pending author review"
+Q229192,Catherine of Valois,remove,"not Indian heritage; passed the date rule through a one-hop link; removed during collection 2026-11-19, pending author review"
+Q4724,Le Corbusier,keep,"dated 1850 or later; designed seeded sites, kept by author"
+Q1508644,George Wittet,keep,"dated 1850 or later; designed seeded sites, kept by author"
+Q366213,Aga Khan III,keep,"dated 1850 or later; tied to a seeded site, kept by author"
+Q4830278,Axel Haig,keep,"dated 1850 or later; designed seeded sites, kept by author"
+Q5499109,Frederick William Stevens,keep,"dated 1850 or later; designed seeded sites, kept by author"
+Q7067527,Nripendra Narayan I of Cooch Behar,keep,"dated 1850 or later; tied to a seeded site, kept by author"

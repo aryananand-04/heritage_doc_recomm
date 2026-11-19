@@ -1,0 +1,569 @@
+qid,label,stratum,sub_stratum,doc_type,status,flags
+Q101230977,"Rajmahal, Mehsana",neighbour,built structure,site,selected,one hop from a seed
+Q1028095,Cambay State,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q105085585,Muhammad Bin Abdullah Mosque,neighbour,built structure,site,selected,one hop from a seed
+Q105762623,Victoria and Albert Akbarnama,neighbour,manuscript,manuscript_text,selected,one hop from a seed
+Q105965016,Mohamedally Tower,neighbour,built structure,site,selected,one hop from a seed
+Q106982411,Ballāla Sena,neighbour,"person, death 1179",person_dynasty_style,selected,one hop from a seed
+Q1071500,Chhatrapati Shivaji Maharaj Vastu Sangrahalaya,neighbour,built structure,site,selected,one hop from a seed
+Q107417480,Dhunuchi dance,neighbour,type of dance,culture,selected,one hop from a seed
+Q107490368,Sarnath Jain Tirth,neighbour,built structure,site,selected,one hop from a seed
+Q109300179,Chatta Masjid,neighbour,built structure,site,selected,one hop from a seed
+Q109649317,Ram Bagh,neighbour,built structure,site,selected,one hop from a seed
+Q10972778,"Thiruvadigai Temple, Panruti",neighbour,built structure,site,selected,one hop from a seed
+Q113630155,Dhanasri,neighbour,raga,culture,selected,one hop from a seed
+Q113634954,Chinta Kamodi,neighbour,raga,culture,selected,one hop from a seed
+Q113634988,Panchama Baradi,neighbour,raga,culture,selected,one hop from a seed
+Q113635005,Mangala Gujjari,neighbour,raga,culture,selected,one hop from a seed
+Q113635020,Gujjari,neighbour,raga,culture,selected,one hop from a seed
+Q113635022,Ramakeri,neighbour,raga,culture,selected,one hop from a seed
+Q113635023,Sokabaradi,neighbour,raga,culture,selected,one hop from a seed
+Q113635038,Baradi,neighbour,raga,culture,selected,one hop from a seed
+Q113677791,Debagandhari,neighbour,raga,culture,selected,one hop from a seed
+Q113677793,Abhiri,neighbour,raga,culture,selected,one hop from a seed
+Q113677817,Kedara Kamodi,neighbour,raga,culture,selected,one hop from a seed
+Q113677850,Debakiri,neighbour,raga,culture,selected,one hop from a seed
+Q113677879,Kedaragouda,neighbour,raga,culture,selected,one hop from a seed
+Q1143887,Somnath temple,neighbour,built structure,site,selected,one hop from a seed
+Q114608371,Jodha Bai Mahal,neighbour,built structure,site,selected,one hop from a seed
+Q1147823,Gahadavala,neighbour,dynasty,person_dynasty_style,selected,one hop from a seed
+Q115058581,Pandit Seu,neighbour,"person, birth 1680",person_dynasty_style,selected,one hop from a seed
+Q115470321,Kanak Bhawan,neighbour,built structure,site,selected,one hop from a seed
+Q115517129,Sri,neighbour,raga,culture,selected,one hop from a seed
+Q11913591,Champaner,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q11916481,Daphlapur State,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q11947897,Muhammad Shah,neighbour,"person, birth 1397",person_dynasty_style,selected,one hop from a seed
+Q11947898,Sayyid Alà-ad-Din Àlam-Xah,neighbour,"person, birth 1417",person_dynasty_style,selected,one hop from a seed
+Q12059365,Hajo,neighbour,built structure,site,selected,one hop from a seed
+Q12060839,Jama Masjid Gulbarga,neighbour,built structure,site,selected,one hop from a seed
+Q12065365,Parupalli Ramakrishnayya Pantulu,neighbour,"person, birth 1883",person_dynasty_style,selected,one hop from a seed
+Q12069185,Siri Fort,neighbour,built structure,site,selected,one hop from a seed
+Q120785936,Haider Shah Miri,neighbour,"person, death 1472",person_dynasty_style,selected,one hop from a seed
+Q122225282,"Trinetra Ganesh Temple, Ranthambore",neighbour,built structure,site,selected,one hop from a seed
+Q122529750,"Alamgir Mosque, Aurangabad",neighbour,built structure,site,selected,one hop from a seed
+Q123302271,Sridhar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q123746427,Q123746427,neighbour,built structure,site,selected,one hop from a seed
+Q12418527,Karnat Dynasty,neighbour,dynasty,person_dynasty_style,selected,one hop from a seed
+Q124381934,Vadnagar archaeological site,neighbour,archaeological site,site,selected,one hop from a seed
+Q12452658,Vijay Sena,neighbour,"person, birth 1098",person_dynasty_style,selected,one hop from a seed
+Q126453974,Begumpur Mosque,neighbour,built structure,site,selected,one hop from a seed
+Q1268562,"Kailasa Temple, Ellora",neighbour,built structure,site,selected,one hop from a seed
+Q127787701,"City Park, Jaipur",neighbour,built structure,site,selected,one hop from a seed
+Q12918607,Kafi thaat,neighbour,thaat,culture,selected,one hop from a seed
+Q12973265,Agastheeswarar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q12973700,Kripapureeswarar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q12974505,Innambur Ezhutharinathar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q12976494,"Pasupateeswarar Temple, Karur",neighbour,built structure,site,selected,one hop from a seed
+Q12977534,Kodeeswarar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q12978382,Cherugudi Sukshmapureeswarar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q12983077,T N Rajarathinam Pillai,neighbour,"person, birth 1898",person_dynasty_style,selected,one hop from a seed
+Q12984103,Thiruchuzhial,neighbour,built structure,site,selected,one hop from a seed
+Q12984185,"Sakshinatheswarar Temple, Thiruppurambiyam.",neighbour,built structure,site,selected,one hop from a seed
+Q12984242,"Chandramouleeswar temple, Thiruvakkarai",neighbour,built structure,site,selected,one hop from a seed
+Q12984495,"Kasi Viswanathar temple, Tenkasi",neighbour,built structure,site,selected,one hop from a seed
+Q12985081,"Narasimhaswamy Temple, Namakkal",neighbour,built structure,site,selected,one hop from a seed
+Q12987008,Madavar Vilagam Vaidyanathar temple,neighbour,built structure,site,selected,one hop from a seed
+Q12988685,"Masilamaniswara Temple, Thirumullaivoyal",neighbour,built structure,site,selected,one hop from a seed
+Q130502,Punjab and Haryana High Court,neighbour,built structure,site,selected,one hop from a seed
+Q1311219,Jaffna kingdom,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q1311736,Barabar Caves,neighbour,archaeological site,site,selected,one hop from a seed
+Q131605844,Shahi Masjid Prayagraj,neighbour,built structure,site,selected,one hop from a seed
+Q131787260,Vadnagar Archaeological Experiential Museum,neighbour,built structure,site,selected,one hop from a seed
+Q13219110,Thirukkavalampadi,neighbour,built structure,site,selected,one hop from a seed
+Q1323698,Indian classical music,neighbour,music genre,culture,selected,one hop from a seed
+Q132853290,Ibrahim Adil Shah II hawking,neighbour,painting,object,selected,one hop from a seed
+Q1356352,Victoria Memorial,neighbour,built structure,site,selected,one hop from a seed
+Q136477058,Sham Singh of Narli,neighbour,"person, death 1739",person_dynasty_style,selected,one hop from a seed
+Q137360120,Sultan Ibrahim Adil Shah II Playing the Tambur,neighbour,painting,object,selected,one hop from a seed
+Q147886,Mandu,neighbour,archaeological site,site,selected,one hop from a seed
+Q15008059,Kalijai,neighbour,built structure,site,selected,one hop from a seed
+Q1509463,Vaishali,neighbour,archaeological site,site,selected,one hop from a seed
+Q1518229,Mewar,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q15233008,Kalika Mata Temple,neighbour,built structure,site,selected,one hop from a seed
+Q15233884,Karni Mata Temple,neighbour,built structure,site,selected,one hop from a seed
+Q15265274,Panchavarnaswamy Temple,neighbour,built structure,site,selected,one hop from a seed
+Q15275798,Secretariat Building,neighbour,built structure,site,selected,one hop from a seed
+Q15277622,Siddhesvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q1530838,Madurai Nayak dynasty,neighbour,dynasty,person_dynasty_style,selected,one hop from a seed
+Q1534153,Vallabhi,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q15391482,Maham Begum,neighbour,"person, death 1534",person_dynasty_style,selected,one hop from a seed
+Q15527673,Kabisurjya Baladeba Ratha,neighbour,"person, birth 1789",person_dynasty_style,selected,one hop from a seed
+Q1553143,Alwar State,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q15645359,Mushtaq Hussain Khan,neighbour,"person, birth 1878",person_dynasty_style,selected,one hop from a seed
+Q15648841,Diwan-i-Am,neighbour,built structure,site,selected,one hop from a seed
+Q1567294,Sarnath Museum,neighbour,built structure,site,selected,one hop from a seed
+Q15697211,Sarkhej Roza,neighbour,built structure,site,selected,one hop from a seed
+Q15719822,Bidaram Krishnappa,neighbour,"person, birth 1866",person_dynasty_style,selected,one hop from a seed
+Q15723641,Abhimanyu Samanta Singhara,neighbour,"person, birth 1760",person_dynasty_style,selected,one hop from a seed
+Q15723826,Kapilesvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q15724018,Gopalakrusna Pattanayaka,neighbour,"person, birth 1784",person_dynasty_style,selected,one hop from a seed
+Q15724123,Jagannatha Dasa,neighbour,"person, birth 1491",person_dynasty_style,selected,one hop from a seed
+Q15724754,Balarama Dasa,neighbour,"person, birth 1472",person_dynasty_style,selected,one hop from a seed
+Q15724891,Brajanath Badajena,neighbour,"person, birth 1730",person_dynasty_style,selected,one hop from a seed
+Q15725056,Mohan Sundar Deb Goswami,neighbour,"person, birth 1892",person_dynasty_style,selected,one hop from a seed
+Q15725063,Jasobanta Dasa,neighbour,"person, birth 1487",person_dynasty_style,selected,one hop from a seed
+Q15743333,Pakbirra,neighbour,archaeological site,site,selected,one hop from a seed
+Q1587164,Kapaleeshwarar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q15999134,Karaikudi Sambasiva Iyer,neighbour,"person, birth 1888",person_dynasty_style,selected,one hop from a seed
+Q16001609,Acharya Vamana,neighbour,"person, birth 750",person_dynasty_style,selected,one hop from a seed
+Q16036750,Khamaj thaat,neighbour,thaat,culture,selected,one hop from a seed
+Q1611788,Vijayanagara,neighbour,archaeological site,site,selected,one hop from a seed
+Q16212930,Madayi Palli,neighbour,built structure,site,selected,one hop from a seed
+Q16309280,Therazhundur Vedapureeswarar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q16309709,"Kandaswami Temple, Georgetown",neighbour,built structure,site,selected,one hop from a seed
+Q16312932,Venjamakoodal,neighbour,built structure,site,selected,one hop from a seed
+Q16313523,"Veerateeswarar Temple, Thirukovilur",neighbour,built structure,site,selected,one hop from a seed
+Q1647182,Muhammad of Ghor,neighbour,"person, birth 1144",person_dynasty_style,selected,one hop from a seed
+Q16611568,Manaku,neighbour,"person, birth 1700",person_dynasty_style,selected,one hop from a seed
+Q16829863,Diwan-i-Am,neighbour,built structure,site,selected,one hop from a seed
+Q16829867,Diwan-i-Khas,neighbour,built structure,site,selected,one hop from a seed
+Q1683780,Jashpur State,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q16839606,Gondal State,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q16843423,Hira Mahal,neighbour,built structure,site,selected,one hop from a seed
+Q16854086,Open Hand Monument,neighbour,built structure,site,selected,one hop from a seed
+Q16887347,Nizamuddin Markaz Masjeed,neighbour,built structure,site,selected,one hop from a seed
+Q1688822,Jhabua State,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q16895720,Naubat Khana,neighbour,built structure,site,selected,one hop from a seed
+Q16899120,Rang Mahal,neighbour,built structure,site,selected,one hop from a seed
+Q16900846,Sukutesvara Temple,neighbour,built structure,site,selected,one hop from a seed
+Q16900897,Sunehri Masjid,neighbour,built structure,site,selected,one hop from a seed
+Q16901469,Thanthoneeswarar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q16914122,Alauddin Firuz Shah II,neighbour,"person, death 1533",person_dynasty_style,selected,one hop from a seed
+Q16924755,Junagadh Buddhist Cave Groups,neighbour,cave,site,selected,one hop from a seed
+Q16931856,Lahore Gate,neighbour,built structure,site,selected,one hop from a seed
+Q17010856,Sadaqat Ashram,neighbour,built structure,site,selected,one hop from a seed
+Q17064100,"Parvati Temple, Odisha",neighbour,built structure,site,selected,one hop from a seed
+Q17150787,Bharshiva dynasty,neighbour,dynasty,person_dynasty_style,selected,one hop from a seed
+Q1771067,Muthuswami Dikshitar,neighbour,"person, birth 1775",person_dynasty_style,selected,one hop from a seed
+Q1772796,Nishat Bagh,neighbour,built structure,site,selected,one hop from a seed
+Q17996989,Bhayaharan Nath Mandir,neighbour,built structure,site,selected,one hop from a seed
+Q18126183,Jalaun State,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q18127026,Kurundvad Junior,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q18127028,Kurundvad Senior,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q18127719,Makrai State,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q18128734,Nilachal architecture,neighbour,architectural style,person_dynasty_style,selected,one hop from a seed
+Q18211496,Chaulukya dynasty,neighbour,dynasty,person_dynasty_style,selected,one hop from a seed
+Q18395434,World Trade Center Bhubaneswar,neighbour,built structure,site,selected,one hop from a seed
+Q18663452,Ishvari Singh,neighbour,"person, birth 1718",person_dynasty_style,selected,one hop from a seed
+Q188541,Chandragupta Maurya,neighbour,"person, birth -339",person_dynasty_style,selected,one hop from a seed
+Q18989156,Siddheshwari Kali temple,neighbour,built structure,site,selected,one hop from a seed
+Q191771,Manyakheta,neighbour,built structure,site,selected,one hop from a seed
+Q19282321,Jagat Singh of Amber,neighbour,"person, birth 1786",person_dynasty_style,selected,one hop from a seed
+Q19282459,Prithvi Singh II,neighbour,"person, birth 1762",person_dynasty_style,selected,one hop from a seed
+Q1964552,Nandgaon State,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q19881685,Adi Malla,neighbour,"person, birth 694",person_dynasty_style,selected,one hop from a seed
+Q19891383,"Durga Mandir, Varanasi",neighbour,built structure,site,selected,one hop from a seed
+Q19892830,Kingdom of Coorg,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q19894043,Miya Khan Chishti's Mosque,neighbour,built structure,site,selected,one hop from a seed
+Q19894080,Mohammed Ghous Mosque,neighbour,built structure,site,selected,one hop from a seed
+Q19895556,Qila-i-Kuhna Mosque,neighbour,built structure,site,selected,one hop from a seed
+Q19899108,Wajihuddin's Tomb,neighbour,built structure,site,selected,one hop from a seed
+Q200119,Ujjain,neighbour,archaeological site,site,selected,one hop from a seed
+Q201022,folk dance,neighbour,type of dance,culture,selected,one hop from a seed
+Q2031965,Jamia Masjid,neighbour,built structure,site,selected,one hop from a seed
+Q2044389,Tyagaraja,neighbour,"person, birth 1767",person_dynasty_style,selected,one hop from a seed
+Q20638819,"Bissau Palace Hotel, Jaipur",neighbour,built structure,site,selected,one hop from a seed
+Q20873390,Orchha Fort complex,neighbour,built structure,site,selected,one hop from a seed
+Q20890437,Ramagiri Fort,neighbour,built structure,site,selected,one hop from a seed
+Q21287560,"Siyot caves, Kutch",neighbour,built structure,site,selected,one hop from a seed
+Q2128757,Rajaraja I,neighbour,"person, birth 947",person_dynasty_style,selected,one hop from a seed
+Q21405810,Banamali Dasa,neighbour,"person, birth 1720",person_dynasty_style,selected,one hop from a seed
+Q21519711,Sawai Mansingh Indoor Stadium,neighbour,built structure,site,selected,one hop from a seed
+Q2191504,Islam Shah Suri,neighbour,"person, birth 1510",person_dynasty_style,selected,one hop from a seed
+Q21933307,Burail Fort,neighbour,built structure,site,selected,one hop from a seed
+Q22000685,"Christ Church, Salem",neighbour,built structure,site,selected,one hop from a seed
+Q2227256,Ghiyasuddin Mahmud Shah,neighbour,"person, death 1538",person_dynasty_style,selected,one hop from a seed
+Q2275530,Villa Shodhan,neighbour,built structure,site,selected,one hop from a seed
+Q23128230,"Begumpur Mosque, Dindigul",neighbour,built structure,site,selected,one hop from a seed
+Q233678,"Jama Masjid, Delhi",neighbour,built structure,site,selected,one hop from a seed
+Q23405815,Triplicane Big Mosque,neighbour,built structure,site,selected,one hop from a seed
+Q2350157,Purandara Dasa,neighbour,"person, birth 1470",person_dynasty_style,selected,one hop from a seed
+Q23617388,Sheikh Zainuddin,neighbour,"person, floruit 1770",person_dynasty_style,selected,one hop from a seed
+Q2368545,Surguja State,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q240123,Indo-Scythians,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q24265178,Sungam Mosque,neighbour,built structure,site,selected,one hop from a seed
+Q2429892,Mughal gardens,neighbour,architectural style,person_dynasty_style,selected,one hop from a seed
+Q2445615,Pancha Rathas,neighbour,built structure,site,selected,one hop from a seed
+Q24898410,"Khutba Mosque, Pondicherry",neighbour,built structure,site,selected,one hop from a seed
+Q24907234,"World Trade Park, Jaipur",neighbour,built structure,site,selected,one hop from a seed
+Q24927947,Madhava Perumal temple,neighbour,built structure,site,selected,one hop from a seed
+Q24928068,"Adikesava Perumal temple, Mylapore",neighbour,built structure,site,selected,one hop from a seed
+Q24931982,Lalita Gauri Mandir,neighbour,built structure,site,selected,one hop from a seed
+Q24936665,Devapiran temple,neighbour,built structure,site,selected,one hop from a seed
+Q24936834,"Kasi Viswanathar temple, Sivakasi",neighbour,built structure,site,selected,one hop from a seed
+Q24936837,"Badrakali Amman temple, Sivakasi",neighbour,built structure,site,selected,one hop from a seed
+Q24937423,Jagannatha Perumal temple,neighbour,built structure,site,selected,one hop from a seed
+Q24938228,Papanasanathar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q24938246,Anekadhangavadeswarar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q24938380,Metraleeswar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q24938384,Sathyanatheswarar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q24938394,Ona Kantheeswarar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q24939672,Namakkal Anjaneyar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q24943180,Sivasailam Temple,neighbour,built structure,site,selected,one hop from a seed
+Q2511605,Tughlaqabad Fort,neighbour,built structure,site,selected,one hop from a seed
+Q2564509,Hemu,neighbour,"person, birth 1501",person_dynasty_style,selected,one hop from a seed
+Q2594448,Shravasti,neighbour,archaeological site,site,selected,one hop from a seed
+Q25979,Kushan Empire,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q2642068,108 Divya desams,neighbour,built structure,site,selected,one hop from a seed
+Q26576,Hephthalites,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q2666459,Guruvayur Temple,neighbour,built structure,site,selected,one hop from a seed
+Q26994,Dhanteras,neighbour,festival,culture,selected,one hop from a seed
+Q2709041,Namgyal dynasty of Ladakh,neighbour,dynasty,person_dynasty_style,selected,one hop from a seed
+Q2720665,Vedagiriswarar temple,neighbour,built structure,site,selected,one hop from a seed
+Q2722469,Naraka Chaturdashi,neighbour,festival,culture,selected,one hop from a seed
+Q2722759,Jaigarh Fort,neighbour,built structure,site,selected,one hop from a seed
+Q2724452,Vijaya Stambha,neighbour,built structure,site,selected,one hop from a seed
+Q2726068,Harihara I,neighbour,"person, birth 1306",person_dynasty_style,selected,one hop from a seed
+Q2757538,Jal Mahal,neighbour,built structure,site,selected,one hop from a seed
+Q2770471,Ram Niwas Garden,neighbour,built structure,site,selected,one hop from a seed
+Q28028314,Chronicle of the Descendants of Timur,neighbour,manuscript,manuscript_text,selected,one hop from a seed
+Q28169998,Songadh Fort,neighbour,built structure,site,selected,one hop from a seed
+Q283257,Vidhana Soudha,neighbour,built structure,site,selected,one hop from a seed
+Q2837826,Allauddin Khan,neighbour,"person, birth 1881",person_dynasty_style,selected,one hop from a seed
+Q2871819,Aundh State,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q29385220,The House of Bijapur,neighbour,manuscript,manuscript_text,selected,one hop from a seed
+Q2983384,Hazrat Nizamuddin Dargah,neighbour,built structure,site,selected,one hop from a seed
+Q2991448,"Moti Masjid, Delhi",neighbour,built structure,site,selected,one hop from a seed
+Q31023,Bhai Dooj,neighbour,festival,culture,selected,one hop from a seed
+Q31319995,Kalicharan Pattnaik,neighbour,"person, birth 1897",person_dynasty_style,selected,one hop from a seed
+Q31374542,Arulmigu Prasanna Venkatesa Perumal Temple,neighbour,built structure,site,selected,one hop from a seed
+Q3151502,Hathigumpha inscription,neighbour,cave,site,selected,one hop from a seed
+Q3154,Gyanvapi Mosque,neighbour,built structure,site,selected,one hop from a seed
+Q3242297,Old Delhi,neighbour,built structure,site,selected,one hop from a seed
+Q33110105,Azim Khan's Tomb,neighbour,built structure,site,selected,one hop from a seed
+Q3315863,Miraj Junior,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q3346393,Ibrahim Shah Suri,neighbour,"person, death 1568",person_dynasty_style,selected,one hop from a seed
+Q3348891,Adil Shah Suri,neighbour,"person, birth 1505",person_dynasty_style,selected,one hop from a seed
+Q3351581,Kirti Stambha,neighbour,built structure,site,selected,one hop from a seed
+Q3360979,Laxmi Vilas Palace,neighbour,built structure,site,selected,one hop from a seed
+Q3403527,Royal House of Benares,neighbour,dynasty,person_dynasty_style,selected,one hop from a seed
+Q3422639,Kancherla Gopanna,neighbour,"person, birth 1620",person_dynasty_style,selected,one hop from a seed
+Q3446126,Ay kingdom,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q3514109,Taj-ul-Masajid,neighbour,built structure,site,selected,one hop from a seed
+Q3519351,Syama Sastri,neighbour,"person, birth 1762",person_dynasty_style,selected,one hop from a seed
+Q3523924,అరుణాచలం దేవాలయం,neighbour,built structure,site,selected,one hop from a seed
+Q3524713,Narayana Teertha,neighbour,"person, birth 1650",person_dynasty_style,selected,one hop from a seed
+Q3530224,Madras Music Season,neighbour,festival,culture,selected,one hop from a seed
+Q3530818,Kowdiar Palace,neighbour,built structure,site,selected,one hop from a seed
+Q3532913,Adikesava Perumal Temple,neighbour,built structure,site,selected,one hop from a seed
+Q3536517,Tallapaka Annamacharya,neighbour,"person, birth 1408",person_dynasty_style,selected,one hop from a seed
+Q3536565,Athirajendra Chola,neighbour,"person, death 1070",person_dynasty_style,selected,one hop from a seed
+Q3537017,Chembai,neighbour,"person, birth 1896",person_dynasty_style,selected,one hop from a seed
+Q3537051,Nandivarman III,neighbour,"person, birth 844",person_dynasty_style,selected,one hop from a seed
+Q3544561,Bhadra Fort,neighbour,built structure,site,selected,one hop from a seed
+Q3558747,Villa Sarabhai,neighbour,built structure,site,selected,one hop from a seed
+Q3582929,Pratapgad,neighbour,built structure,site,selected,one hop from a seed
+Q3595296,Omkarnath Thakur,neighbour,"person, birth 1897",person_dynasty_style,selected,one hop from a seed
+Q3595454,Jamini Roy,neighbour,"person, birth 1887",person_dynasty_style,selected,one hop from a seed
+Q3595804,Achyutananda Dasa,neighbour,"person, birth 1510",person_dynasty_style,selected,one hop from a seed
+Q3595866,Tyagaraja Aradhana,neighbour,festival,culture,selected,one hop from a seed
+Q3595931,Chowdiah,neighbour,"person, birth 1895",person_dynasty_style,selected,one hop from a seed
+Q36210,King Somesvara III,neighbour,"person, birth 1126",person_dynasty_style,selected,one hop from a seed
+Q3630059,Sawai Gandharva,neighbour,"person, birth 1886",person_dynasty_style,selected,one hop from a seed
+Q3630917,Kesarbai Kerkar,neighbour,"person, birth 1892",person_dynasty_style,selected,one hop from a seed
+Q3631019,Ibrahim Adil Shah II,neighbour,"person, birth 1570",person_dynasty_style,selected,one hop from a seed
+Q3635211,Q3635211,neighbour,built structure,site,selected,one hop from a seed
+Q3635688,Upendra Bhanja,neighbour,"person, birth 1670",person_dynasty_style,selected,one hop from a seed
+Q3713585,Prananadeswarar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q3764208,State Central Library,neighbour,built structure,site,selected,one hop from a seed
+Q3764606,Kondaveedu Fort,neighbour,built structure,site,selected,one hop from a seed
+Q3776964,Khusrau Khan,neighbour,"person, death 1321",person_dynasty_style,selected,one hop from a seed
+Q3827817,Khānderi Island,neighbour,built structure,site,selected,one hop from a seed
+Q389755,Pataliputra,neighbour,archaeological site,site,selected,one hop from a seed
+Q39046354,Uparkot Fort,neighbour,built structure,site,selected,one hop from a seed
+Q3963975,Akkalkot State,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q40193527,"Kanthaswamy Temple, Cheyyur",neighbour,built structure,site,selected,one hop from a seed
+Q404851,Aihole,neighbour,archaeological site,site,selected,one hop from a seed
+Q4060542,Alauddin Husain Shah,neighbour,"person, birth 1450",person_dynasty_style,selected,one hop from a seed
+Q40889054,Sanchi Stupa No.2,neighbour,built structure,site,selected,one hop from a seed
+Q4141623,Golconda,neighbour,archaeological site,site,selected,one hop from a seed
+Q41946013,Bharateswar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q456575,Mysore Palace,neighbour,built structure,site,selected,one hop from a seed
+Q456749,Ambedkar Stadium,neighbour,built structure,site,selected,one hop from a seed
+Q463735,Nilgiri Mountain Railway,neighbour,heritage railway,site,selected,one hop from a seed
+Q463874,Darjeeling Himalayan Railway,neighbour,heritage railway,site,selected,one hop from a seed
+Q4654727,ATMA House,neighbour,built structure,site,selected,one hop from a seed
+Q4662812,Aavoor Pasupatheeswaram temple,neighbour,built structure,site,selected,one hop from a seed
+Q4663603,Abaya Pradhan Temple,neighbour,built structure,site,selected,one hop from a seed
+Q4673340,Achabal Gardens,neighbour,archaeological site,site,selected,one hop from a seed
+Q469894,Tansen,neighbour,"person, birth 1493",person_dynasty_style,selected,one hop from a seed
+Q4699105,Aisanyesvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q4699396,Aiyarappar temple,neighbour,built structure,site,selected,one hop from a seed
+Q46996809,Madras Record Office,neighbour,built structure,site,selected,one hop from a seed
+Q4700472,Akbarabadi Mosque,neighbour,built structure,site,selected,one hop from a seed
+Q4700665,Akhadachandi Temple,neighbour,built structure,site,selected,one hop from a seed
+Q4708821,Alathur Venkatesa Iyer,neighbour,"person, birth 1895",person_dynasty_style,selected,one hop from a seed
+Q4730345,Allahabad Pillar,neighbour,built structure,site,selected,one hop from a seed
+Q4746783,"Amirthakadeswarar Temple, Sakkottai",neighbour,built structure,site,selected,one hop from a seed
+Q4747475,Amoghavarsha III,neighbour,"person, birth 934",person_dynasty_style,selected,one hop from a seed
+Q4751356,Anandavaleeswaram Temple,neighbour,built structure,site,selected,one hop from a seed
+Q4779245,"Apatsahayesvarar Temple, Alangudi",neighbour,built structure,site,selected,one hop from a seed
+Q4790726,Arinjaya Chola,neighbour,"person, death 957",person_dynasty_style,selected,one hop from a seed
+Q4791601,Arjunesvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q4805926,Ashtabujakaram,neighbour,built structure,site,selected,one hop from a seed
+Q4810570,Astasambhu Siva Temples,neighbour,built structure,site,selected,one hop from a seed
+Q4827709,Avanti Varman,neighbour,"person, death 650",person_dynasty_style,selected,one hop from a seed
+Q4841070,Baroli Temple Complex,neighbour,built structure,site,selected,one hop from a seed
+Q4851001,Balipratipada,neighbour,festival,culture,selected,one hop from a seed
+Q4855067,Bengaluru Nagarathnamma,neighbour,"person, birth 1878",person_dynasty_style,selected,one hop from a seed
+Q486188,Humayun,neighbour,"person, birth 1508",person_dynasty_style,selected,one hop from a seed
+Q4866285,Basavakalyana Fort,neighbour,built structure,site,selected,one hop from a seed
+Q4868499,Bata Mahadeva temple,neighbour,built structure,site,selected,one hop from a seed
+Q48724611,Eran boar inscription of Toramana,neighbour,inscription,inscription,selected,one hop from a seed
+Q48725153,Saptarishi Tila statue,neighbour,sculpture,object,selected,one hop from a seed
+Q48730192,Alampur Papanasi Temples,neighbour,built structure,site,selected,one hop from a seed
+Q4879812,"Beejamandal, Khajuraho",neighbour,archaeological site,site,selected,one hop from a seed
+Q4880672,Beharana Mandapa,neighbour,built structure,site,selected,one hop from a seed
+Q4900966,Bhandara Ghara Shrine,neighbour,built structure,site,selected,one hop from a seed
+Q4901208,Bharati Matha Temple,neighbour,built structure,site,selected,one hop from a seed
+Q4901674,Bhendi Bazaar gharana,neighbour,music genre,culture,selected,one hop from a seed
+Q4902076,Bhringesvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q4902078,Bhrukutesvar Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q4907175,Bijapur Fort,neighbour,built structure,site,selected,one hop from a seed
+Q4916529,Birla Mandir,neighbour,built structure,site,selected,one hop from a seed
+Q4917332,Bishan Singh,neighbour,"person, birth 1672",person_dynasty_style,selected,one hop from a seed
+Q4955506,"Brahma Temple, Bindusagar",neighbour,built structure,site,selected,one hop from a seed
+Q4984940,Ram Mandir,neighbour,built structure,site,selected,one hop from a seed
+Q4985052,Budha Deula,neighbour,built structure,site,selected,one hop from a seed
+Q5003932,Byamokesvara Temple,neighbour,built structure,site,selected,one hop from a seed
+Q5068410,Chakravageswarar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q5068422,Chakreshvari Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q5069919,Champakesvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q5071450,Chandrasekhara Mahadeva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q5087284,Chashme Shahi,neighbour,built structure,site,selected,one hop from a seed
+Q5088561,Chavda dynasty,neighbour,dynasty,person_dynasty_style,selected,one hop from a seed
+Q5088609,Chaya Someswara Swamy temple,neighbour,built structure,site,selected,one hop from a seed
+Q5101322,Chintamanisvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q5102515,Chittoor Subramaniam Pillai,neighbour,"person, birth 1898",person_dynasty_style,selected,one hop from a seed
+Q5124044,City wall of Jaipur,neighbour,built structure,site,selected,one hop from a seed
+Q5184963,Cricket Club of India,neighbour,built structure,site,selected,one hop from a seed
+Q5228461,Tirucherai Saranathan Temple,neighbour,built structure,site,selected,one hop from a seed
+Q5266574,Devasabha Temple,neighbour,built structure,site,selected,one hop from a seed
+Q5269821,Dhruva Dharavarsha,neighbour,"person, birth 780",person_dynasty_style,selected,one hop from a seed
+Q5275550,"Digambara Jaina Temple, Khandagiri",neighbour,built structure,site,selected,one hop from a seed
+Q5277923,Dinakrushna Dasa,neighbour,"person, birth 1650",person_dynasty_style,selected,one hop from a seed
+Q5282210,Dishisvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q5316395,"Durga Temple, Motia",neighbour,built structure,site,selected,one hop from a seed
+Q5335651,Edaganathar temple,neighbour,built structure,site,selected,one hop from a seed
+Q536288,Mecca Masjid,neighbour,built structure,site,selected,one hop from a seed
+Q53951722,Sabhyata Dwar,neighbour,built structure,site,selected,one hop from a seed
+Q5395341,Eros Cinema,neighbour,built structure,site,selected,one hop from a seed
+Q5521124,Gangesvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q5522066,Garchuk Lachit Garh,neighbour,built structure,site,selected,one hop from a seed
+Q5523215,Garh Ganesh Temple,neighbour,built structure,site,selected,one hop from a seed
+Q5523223,Garh Panchkot,neighbour,built structure,site,selected,one hop from a seed
+Q5532112,"General Post Office, Chennai",neighbour,built structure,site,selected,one hop from a seed
+Q553907,Old Goa,neighbour,archaeological site,site,selected,one hop from a seed
+Q55423533,Sitamarhi Cave,neighbour,built structure,site,selected,one hop from a seed
+Q5555635,Ghanteswara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q55636968,"Varadharajaperumal temple, Thirubuvanai",neighbour,built structure,site,selected,one hop from a seed
+Q5587124,Gosagaresvar Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q5587125,Gosagarsevara Mandapa,neighbour,built structure,site,selected,one hop from a seed
+Q56273810,Todi thaat,neighbour,thaat,culture,selected,one hop from a seed
+Q56273847,Kalyan thaat,neighbour,thaat,culture,selected,one hop from a seed
+Q56280947,Asavari thaat,neighbour,thaat,culture,selected,one hop from a seed
+Q56281453,Bhairavi thaat,neighbour,thaat,culture,selected,one hop from a seed
+Q56281664,Bhairav thaat,neighbour,thaat,culture,selected,one hop from a seed
+Q56283915,Marwa thaat,neighbour,thaat,culture,selected,one hop from a seed
+Q56283920,Poorvi thaat,neighbour,thaat,culture,selected,one hop from a seed
+Q56283954,Bilaval thaat,neighbour,thaat,culture,selected,one hop from a seed
+Q5651364,"Hanuman Temple, Kedara-Gouri",neighbour,built structure,site,selected,one hop from a seed
+Q5686078,Hayat Bakshi Mosque,neighbour,built structure,site,selected,one hop from a seed
+Q5790,Seuna Dynasty,neighbour,dynasty,person_dynasty_style,selected,one hop from a seed
+Q581240,Dawar Bakhsh,neighbour,"person, birth 1607",person_dynasty_style,selected,one hop from a seed
+Q5915498,Tulsipur State,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q5949588,Hussain Shahi dynasty,neighbour,dynasty,person_dynasty_style,selected,one hop from a seed
+Q5984420,Ibrahim Adil Shah I,neighbour,"person, birth 1534",person_dynasty_style,selected,one hop from a seed
+Q6022257,Indian folk music,neighbour,music genre,culture,selected,one hop from a seed
+Q60617894,Pushpavaneswarar temple,neighbour,built structure,site,selected,one hop from a seed
+Q6068308,Irattai Thiruppathy,neighbour,built structure,site,selected,one hop from a seed
+Q60744808,Hashtsal Minar,neighbour,built structure,site,selected,one hop from a seed
+Q60775979,Shaikpet Sarai,neighbour,built structure,site,selected,one hop from a seed
+Q6078838,Isanesvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q6126747,Jaleswar Siva Temple Precinct,neighbour,built structure,site,selected,one hop from a seed
+Q6127162,Jama Mosque,neighbour,built structure,site,selected,one hop from a seed
+Q61479227,"Samadhishvara Temple, Chittorgarh",neighbour,built structure,site,selected,one hop from a seed
+Q6156427,Jaoli State,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q61577959,Vijaya-Bhattarika,neighbour,"person, birth 650",person_dynasty_style,selected,one hop from a seed
+Q61638119,Alai Darwaza,neighbour,sculpture,object,selected,one hop from a seed
+Q61828403,Ekteshwar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q6202649,Jinnah House,neighbour,built structure,site,selected,one hop from a seed
+Q6350024,Kalabhairavi Temple,neighbour,built structure,site,selected,one hop from a seed
+Q6352367,Kalhora dynasty,neighbour,dynasty,person_dynasty_style,selected,one hop from a seed
+Q6352655,Kalika Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q6352661,Kalikadevi Temple,neighbour,built structure,site,selected,one hop from a seed
+Q6368814,Karauli State,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q6373562,Kartikesvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q6378372,Kattubava Mosque,neighbour,built structure,site,selected,one hop from a seed
+Q6380474,"Kayarohanaswami Temple, Nagapattinam",neighbour,built structure,site,selected,one hop from a seed
+Q6381119,Kazimar Big Mosque,neighbour,built structure,site,selected,one hop from a seed
+Q6382542,Kedareswar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q63929741,Sher Mandal,neighbour,built structure,site,selected,one hop from a seed
+Q6400007,Khamsa of Nizami,neighbour,manuscript,manuscript_text,selected,one hop from a seed
+Q6400557,Kharakhia Vaidyanatha Precinct,neighbour,built structure,site,selected,one hop from a seed
+Q6402628,Khottiga,neighbour,"person, birth 967",person_dynasty_style,selected,one hop from a seed
+Q6424903,Kochrab Ashram,neighbour,built structure,site,selected,one hop from a seed
+Q6434071,Kotitirtha Tank,neighbour,built structure,site,selected,one hop from a seed
+Q6437417,Krishna I,neighbour,"person, birth 756",person_dynasty_style,selected,one hop from a seed
+Q6442612,Kukutesvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q6444266,Kundala Karaneswarar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q6447564,Kurwai State,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q6467004,Labesvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q6469842,Ladu Baba Temple,neighbour,built structure,site,selected,one hop from a seed
+Q6479547,Lakhesvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q6479550,Lakhesvara Siva temple,neighbour,built structure,site,selected,one hop from a seed
+Q6479912,Lakshmi Puja,neighbour,festival,culture,selected,one hop from a seed
+Q6480077,"Lal Masjid, Delhi",neighbour,built structure,site,selected,one hop from a seed
+Q6503547,Lawa Thikana,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q6505227,Laxmi Narayan Temple,neighbour,built structure,site,selected,one hop from a seed
+Q65065419,Tomb of Imam Zamin,neighbour,built structure,site,selected,one hop from a seed
+Q6507406,Madneswar Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q65321235,Talesavara Siva Temple – II,neighbour,built structure,site,selected,one hop from a seed
+Q657861,Dholpur State,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q6668603,Lokanatha Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q6732861,Mahakala-Mahakali Temple,neighbour,built structure,site,selected,one hop from a seed
+Q6733051,Mahameghavahana dynasty,neighbour,dynasty,person_dynasty_style,selected,one hop from a seed
+Q6733266,Maharajapuram Viswanatha Iyer,neighbour,"person, birth 1896",person_dynasty_style,selected,one hop from a seed
+Q6738744,Makara Nedunkuzhai Kannan Temple,neighbour,built structure,site,selected,one hop from a seed
+Q6748661,Mangala Temple,neighbour,built structure,site,selected,one hop from a seed
+Q6748697,Mangalesvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q6749458,Manibhadresvara Siva Temple – I,neighbour,built structure,site,selected,one hop from a seed
+Q6749460,Manibhadresvara Temple – II,neighbour,built structure,site,selected,one hop from a seed
+Q6770549,Markandeshwar,neighbour,built structure,site,selected,one hop from a seed
+Q6893683,Mohanpur Jagannath temple,neighbour,built structure,site,selected,one hop from a seed
+Q6931816,Mudikondan Kothandaramar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q6933101,Muhyuddin Andavar Mosque,neighbour,built structure,site,selected,one hop from a seed
+Q6936220,"Municipal Corporation Building, Mumbai",neighbour,built structure,site,selected,one hop from a seed
+Q6940101,Musamman Burj,neighbour,built structure,site,selected,one hop from a seed
+Q6943543,Musunuri Nayaks,neighbour,dynasty,person_dynasty_style,selected,one hop from a seed
+Q6948722,Mysore Vasudevachar,neighbour,"person, birth 1865",person_dynasty_style,selected,one hop from a seed
+Q6958786,Nageshwar temple,neighbour,built structure,site,selected,one hop from a seed
+Q6958787,"Nageswaraswamy Temple, Kumbakonam",neighbour,built structure,site,selected,one hop from a seed
+Q6960729,Nakulesvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q6965417,Narasimha Temple,neighbour,built structure,site,selected,one hop from a seed
+Q6965437,Narasingam Yoga Narasimha Perumal Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7036858,Nilakantha Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7037120,Nilkantheswar Shiva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q709302,Kulothunga Chola II,neighbour,"person, death 1150",person_dynasty_style,selected,one hop from a seed
+Q7121432,"Paampuranathar Temple, Thirupampuram",neighbour,built structure,site,selected,one hop from a seed
+Q7121522,Pabaneswara Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7121969,Pachala Someswara temple,neighbour,built structure,site,selected,one hop from a seed
+Q7123745,Padikasu Nathar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7126217,Palace of Assembly,neighbour,built structure,site,selected,one hop from a seed
+Q7127849,"Palli Kondeswarar Temple, Surutupalle",neighbour,built structure,site,selected,one hop from a seed
+Q7130525,Pandava Thoothar Perumal Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7132477,Papanasini Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7134073,Paradaresvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7140075,Parsvanath Jain Temple-II,neighbour,built structure,site,selected,one hop from a seed
+Q7141812,Paschimesvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7143140,Pasupatiswarar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7144207,Patalesvara Siva Temple – II,neighbour,built structure,site,selected,one hop from a seed
+Q7144208,Patalesvara Siva Temple – III,neighbour,built structure,site,selected,one hop from a seed
+Q7144209,Patalesvara Siva temple – I,neighbour,built structure,site,selected,one hop from a seed
+Q7144710,Pathar ki Masjid,neighbour,built structure,site,selected,one hop from a seed
+Q7155512,Pavalavannam Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7171560,Kalka–Shimla Railway,neighbour,heritage railway,site,selected,one hop from a seed
+Q7180358,Phaltan State,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q719552,Asaf-ud-Daula,neighbour,"person, birth 1748",person_dynasty_style,selected,one hop from a seed
+Q7237629,Pragjyotishpura,neighbour,archaeological site,site,selected,one hop from a seed
+Q7259171,Pulakesi I,neighbour,"person, birth 543",person_dynasty_style,selected,one hop from a seed
+Q7261668,Purvesvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q727118,Muzaffarid dynasty of Gujarat,neighbour,dynasty,person_dynasty_style,selected,one hop from a seed
+Q7285323,"Raj Mandir Cinema, Jaipur",neighbour,built structure,site,selected,one hop from a seed
+Q7285606,Rajadiraja Chola II,neighbour,"person, death 1178",person_dynasty_style,selected,one hop from a seed
+Q7285611,Rajadhiraja Chola II,neighbour,"person, birth 1166",person_dynasty_style,selected,one hop from a seed
+Q7285625,"Rajagopalaswamy Temple, Mannargudi",neighbour,built structure,site,selected,one hop from a seed
+Q7288561,Ram Raja Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7307906,Regal Cinema,neighbour,built structure,site,selected,one hop from a seed
+Q7333197,Sukhna Lake,neighbour,built structure,site,selected,one hop from a seed
+Q7380456,Ruqaiya Sultan Begum,neighbour,"person, birth 1542",person_dynasty_style,selected,one hop from a seed
+Q7404420,Salher,neighbour,built structure,site,selected,one hop from a seed
+Q7409124,Sambuvaraya,neighbour,dynasty,person_dynasty_style,selected,one hop from a seed
+Q7418307,Sanisvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7418651,Sankarananda Matha,neighbour,built structure,site,selected,one hop from a seed
+Q7424777,Sarvatresvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7426508,"Sattainathar Temple, Sirkazhi",neighbour,built structure,site,selected,one hop from a seed
+Q7450007,Senate House,neighbour,built structure,site,selected,one hop from a seed
+Q7462296,Sheharyar,neighbour,"person, birth 1605",person_dynasty_style,selected,one hop from a seed
+Q7495962,"Shia Jama Masjid, Delhi",neighbour,built structure,site,selected,one hop from a seed
+Q7532332,Sivagurunathaswamy Temple.,neighbour,built structure,site,selected,one hop from a seed
+Q7532439,"Sivatirtha Matha, Old Town",neighbour,built structure,site,selected,one hop from a seed
+Q7532442,Sivayoginathar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7559114,Somabara Mandapa,neighbour,built structure,site,selected,one hop from a seed
+Q7559116,Somabaresvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7560002,Somesvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7570377,Southern Railway Headquarters,neighbour,built structure,site,selected,one hop from a seed
+Q7586226,"Ranganathaswamy Temple, Jiyaguda",neighbour,built structure,site,selected,one hop from a seed
+Q7586276,"Sri Sivalokanathar Temple, Tirupunkur",neighbour,built structure,site,selected,one hop from a seed
+Q7586291,"Sri Srinivasa Perumal Temple, Tirukulandhai",neighbour,built structure,site,selected,one hop from a seed
+Q7586305,Sri Vanamamalai Perumal Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7586534,Srivaikuntanathan Permual Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7616076,"Sthalasayana Perumal Temple, Tirusirupuliyur",neighbour,built structure,site,selected,one hop from a seed
+Q7630783,Subarnesvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7635703,Suka Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7639267,Sundaresvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7640389,Suniti Academy,neighbour,built structure,site,selected,one hop from a seed
+Q7650488,Suvarna Vidhana Soudha,neighbour,built structure,site,selected,one hop from a seed
+Q7651663,Svapnesvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7653905,Swarnadhisvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7655931,Swetharanyeswarar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7676751,Taj ud-Din Firuz Shah,neighbour,"person, birth 1371",person_dynasty_style,selected,one hop from a seed
+Q7678959,Talatal Ghar,neighbour,built structure,site,selected,one hop from a seed
+Q7679427,Talesvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7709490,Thalai Sanga Nanmathiyam,neighbour,built structure,site,selected,one hop from a seed
+Q7785239,Thirupuliyangudi Perumal Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7785241,ThiruVaragunamangai Perumal Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7785259,Thiruarimeya Vinnagaram,neighbour,built structure,site,selected,one hop from a seed
+Q7785270,Thiruchsemponsey,neighbour,built structure,site,selected,one hop from a seed
+Q7785282,Thirukkadigai,neighbour,built structure,site,selected,one hop from a seed
+Q7785299,Thirukoteeswarar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7785342,Thirumanimadam,neighbour,built structure,site,selected,one hop from a seed
+Q7785347,Thirumarperu,neighbour,built structure,site,selected,one hop from a seed
+Q7785423,"Subramaniya Swamy Temple, Thiruparankundram",neighbour,built structure,site,selected,one hop from a seed
+Q7785424,Thirupparaithurai,neighbour,built structure,site,selected,one hop from a seed
+Q7785436,Thiruppullani,neighbour,built structure,site,selected,one hop from a seed
+Q7785453,Thiruthetriyambalam,neighbour,built structure,site,selected,one hop from a seed
+Q7785466,Thiruvaikunda Vinnagaram,neighbour,built structure,site,selected,one hop from a seed
+Q7785520,Thiruvanthipuram temple,neighbour,built structure,site,selected,one hop from a seed
+Q7785541,Thiruvellakkulam,neighbour,built structure,site,selected,one hop from a seed
+Q7798286,Thrissur Town Hall,neighbour,built structure,site,selected,one hop from a seed
+Q7799552,"Thyagaraja Temple, Tiruvarur",neighbour,built structure,site,selected,one hop from a seed
+Q7801329,Tigawa Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7809289,Tirthesvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7809294,Tiru Parameswara Vinnagaram,neighbour,built structure,site,selected,one hop from a seed
+Q7809358,Tirunallar Saniswaran Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7809419,Pasupathi Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7809471,Tiruvelukkai,neighbour,built structure,site,selected,one hop from a seed
+Q784974,Kanva dynasty,neighbour,dynasty,person_dynasty_style,selected,one hop from a seed
+Q7878689,"Ulagalantha Perumal Temple, Tirukoyilur",neighbour,built structure,site,selected,one hop from a seed
+Q7903409,Uttaresvara Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7904421,Uyyakondan Thirumalai Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7908475,Vaghela dynasty,neighbour,dynasty,person_dynasty_style,selected,one hop from a seed
+Q7908890,Vaithamanidhi Perumal Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7909236,Valampurinathar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7917930,Vedaranyeswarar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7918085,Veenai Dhanammal,neighbour,"person, birth 1867",person_dynasty_style,selected,one hop from a seed
+Q7926978,Victoria Public Hall,neighbour,built structure,site,selected,one hop from a seed
+Q7929581,Vikrama Chola,neighbour,"person, death 1135",person_dynasty_style,selected,one hop from a seed
+Q7935983,"Vishnu Temple, Bhubaneswar",neighbour,built structure,site,selected,one hop from a seed
+Q7936648,Visvanath Siva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7936650,Visvanatha Shiva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q7936668,Viswanatha Sastri,neighbour,"person, birth 1893",person_dynasty_style,selected,one hop from a seed
+Q7942741,"Vriddhagiriswarar Temple, Vriddhachalam",neighbour,built structure,site,selected,one hop from a seed
+Q797848,Babur,neighbour,"person, birth 1483",person_dynasty_style,selected,one hop from a seed
+Q8050228,Yathothkari Perumal Temple,neighbour,built structure,site,selected,one hop from a seed
+Q807069,Baoni State,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q846025,Mahajanapada,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q851242,Shalimar Bagh,neighbour,built structure,site,selected,one hop from a seed
+Q85770566,"Jama Masjid, Nerul",neighbour,built structure,site,selected,one hop from a seed
+Q85795812,Ramgarhia Misl,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q861921,Bhangarh,neighbour,archaeological site,site,selected,one hop from a seed
+Q916943,Prahadisvarar Temple,neighbour,built structure,site,selected,one hop from a seed
+Q929357,Nabha State,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q932487,Miraj Senior,neighbour,historical country,person_dynasty_style,selected,one hop from a seed
+Q9375937,Tirumala Venkateswara Temple,neighbour,built structure,site,selected,one hop from a seed
+Q97149899,"Convocation Hall, University of Mumbai",neighbour,built structure,site,selected,one hop from a seed
+Q97185795,Wellington Fountain,neighbour,sculpture,object,selected,one hop from a seed
+Q97187269,Mulji Jetha Fountain,neighbour,built structure,site,selected,one hop from a seed
+Q98546200,Malleswara Shiva Temple,neighbour,built structure,site,selected,one hop from a seed
+Q99207091,Gitaprakasa,neighbour,treatise,manuscript_text,selected,one hop from a seed

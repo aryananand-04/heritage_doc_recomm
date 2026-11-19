@@ -1,0 +1,20 @@
+{
+ "date": "2026-11-19",
+ "commit": "90e4f52b4587ee55ee741734ec4aa60300eb22d3",
+ "seeds": 5,
+ "sample": 5,
+ "cap": 10,
+ "looked_at_per_seed": 20,
+ "outcomes": {
+  "does not name the seed": 6,
+  "not public domain": 4,
+  "withdrawn (404)": 1
+ },
+ "seeds_with_records": 0,
+ "records": 0,
+ "records_linked_to_several_seeds": 0,
+ "requests": {
+  "fetched": 0,
+  "reused": 15
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "date": "2026-11-19",
+ "commit": "90e4f52b4587ee55ee741734ec4aa60300eb22d3",
+ "entities_file": "data/seeds/seeds_v1.csv",
+ "entities": 5,
+ "sample": 5,
+ "articles_with_sitelink": {
+  "en": 5,
+  "hi": 2,
+  "kn": 1
+ },
+ "outcomes": {
+  "en kept": 5,
+  "hi kept": 2,
+  "kn kept": 1
+ },
+ "records": 8,
+ "records_by_doc_type": {
+  "person_dynasty_style": 5,
+  "site": 3
+ },
+ "text_length_chars": {
+  "en": {
+   "median": 1911,
+   "min": 363,
+   "max": 7961
+  },
+  "hi": {
+   "median": 191.0,
+   "min": 23,
+   "max": 359
+  },
+  "kn": {
+   "median": 594,
+   "min": 594,
+   "max": 594
+  }
+ },
+ "most_common_last_headings": {
+  "en": [
+   [
+    "reign",
+    2
+   ],
+   [
+    "notable people buried",
+    1
+   ],
+   [
+    "vijayaditya ii",
+    1
+   ],
+   [
+    "temple plan",
+    1
+   ]
+  ],
+  "hi": [],
+  "kn": []
+ },
+ "requests": {
+  "fetched": 1,
+  "reused": 8
+ },
+ "output": "data/corpus_v1/staging/wikipedia_seeds_v1_sample.jsonl.gz"
+}

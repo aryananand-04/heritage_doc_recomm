@@ -1,0 +1,20 @@
+{
+ "date": "2026-11-19",
+ "commit": "90e4f52b4587ee55ee741734ec4aa60300eb22d3",
+ "seeds": 696,
+ "sample": null,
+ "cap": 5,
+ "looked_at_per_seed": 20,
+ "outcomes": {
+  "does not name the seed or India": 325,
+  "kept": 135,
+  "dynasty name without a dynasty word": 47
+ },
+ "seeds_with_records": 41,
+ "records": 124,
+ "records_linked_to_several_seeds": 10,
+ "requests": {
+  "fetched": 0,
+  "reused": 696
+ }
+}

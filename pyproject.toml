@@ -45,6 +45,7 @@ dependencies = [
     #   deep-translator  — used only for synthetic augmentation (superseded)
     #   gradio           — not used in the current codebase
     #   imbalanced-learn — used only in the balancing step (superseded)
+    "pydantic>=2.6",
 ]
 
 [dependency-groups]
@@ -80,3 +81,4 @@ package = false   # research project, not an installable package
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]  # so tests can import src.corpus

@@ -1,0 +1,22 @@
+{
+ "date": "2026-11-19",
+ "commit": "90e4f52b4587ee55ee741734ec4aa60300eb22d3",
+ "seeds": 696,
+ "sample": null,
+ "cap": 10,
+ "looked_at_per_seed": 20,
+ "outcomes": {
+  "does not name the seed": 578,
+  "not public domain": 404,
+  "withdrawn (404)": 47,
+  "kept": 47,
+  "dynasty name without a dynasty word": 29
+ },
+ "seeds_with_records": 22,
+ "records": 42,
+ "records_linked_to_several_seeds": 5,
+ "requests": {
+  "fetched": 0,
+  "reused": 1754
+ }
+}
