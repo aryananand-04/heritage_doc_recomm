@@ -1013,32 +1013,17 @@ Q2047562,Buddhist architecture,style,,person_dynasty_style,selected,,,,yes,,,,
 Q3024819,Deul,style,,person_dynasty_style,selected,,,,yes,yes,,,
 Q171309,Dravidian architecture,style,,person_dynasty_style,selected,,,,yes,yes,,,
 Q24945384,Ek-ratna,style,,person_dynasty_style,selected,,,,yes,yes,,,
-Q46825,Gothic art,style,,person_dynasty_style,selected,,,,yes,yes,yes,,
 Q1008014,Greco-Buddhist art,style,,person_dynasty_style,selected,,,,yes,yes,,,
 Q80706,Hindu temple architecture,style,,person_dynasty_style,selected,,,,yes,yes,yes,,
 Q2361582,Hoysala architecture,style,,person_dynasty_style,selected,,,,yes,yes,yes,,
 Q825394,Indo-Islamic architecture,style,,person_dynasty_style,selected,,,,yes,yes,,,
 Q3374557,Indo-Saracenic architecture,style,,person_dynasty_style,selected,,,,yes,,,,
-Q212940,Islamic architecture,style,,person_dynasty_style,selected,,,,yes,yes,,,
-Q615196,Italianate architecture,style,,person_dynasty_style,selected,,,,yes,,,,
-Q6119627,Jacobethan,style,,person_dynasty_style,selected,,,,yes,,,,
 Q6276222,Jor-bangla,style,,person_dynasty_style,selected,,,,yes,,,,
 Q13640694,Kalinga architecture,style,,person_dynasty_style,selected,Odisha,Odisha,"indigenous to or origin (P2341, P495)",yes,,,,
-Q751878,Manueline,style,,person_dynasty_style,selected,,,,yes,,,,
-Q22948695,Moroccan architecture,style,,person_dynasty_style,selected,,,,yes,,,,
 Q542261,Mughal architecture,style,,person_dynasty_style,selected,,,,yes,yes,yes,,
 Q25204255,Pancharatna,style,,person_dynasty_style,selected,,,,yes,,,,
-Q7448523,Seljuk architecture,style,,person_dynasty_style,selected,,,,yes,,,,
-Q565165,Victorian architecture,style,,person_dynasty_style,selected,,,,yes,,,,
 Q61050,architecture of India,style,,person_dynasty_style,selected,,,,yes,yes,yes,,
-Q1501585,architecture of Iran,style,,person_dynasty_style,selected,,,,yes,yes,,,
-Q840829,baroque architecture,style,,person_dynasty_style,selected,,,,yes,yes,,,
-Q994776,brutalist architecture,style,,person_dynasty_style,selected,,,,yes,,,,
-Q1148060,expressionist architecture,style,,person_dynasty_style,selected,,,,yes,,,,
-Q245188,modern architecture,style,,person_dynasty_style,selected,,,,yes,yes,,,
 Q11587139,rock-cut architecture,style,,person_dynasty_style,selected,,,,yes,yes,,,
-Q12020836,timber-framed house,style,,person_dynasty_style,selected,,,,yes,,,,
-Q930314,vernacular architecture,style,,person_dynasty_style,selected,,,,yes,yes,,,
 Q2822165,Abu Bakr Shah,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1350
 Q3535800,Aditya I,person,,person_dynasty_style,selected,,,,yes,yes,,,death 907
 Q366213,Aga Khan III,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1877
@@ -1050,7 +1035,6 @@ Q3826620,Ala-ud-Din Masud Shah,person,,person_dynasty_style,selected,,,,yes,,,,b
 Q335362,Alauddin Khalji,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1266
 Q4724557,Ali Adil Shah,person,,person_dynasty_style,selected,,,,yes,yes,yes,,death 1579
 Q117844715,Ali Shah Miri,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Shah Mir dynasty, ended 1589"
-Q48734984,Alli Raani,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Pandya dynasty, ended 1650"
 Q4779124,Aparajitavarman,person,,person_dynasty_style,selected,,,,yes,yes,,,death 897
 Q2349158,Aram Shah,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1176
 Q4791599,Arjunavarman,person,,person_dynasty_style,selected,,,,yes,yes,,,death 1218
@@ -1069,7 +1053,6 @@ Q4901328,Bhartrdaman,person,,person_dynasty_style,selected,,,,yes,yes,,,"no date
 Q4901896,Bhoja II,person,,person_dynasty_style,selected,,,,yes,,,,birth 1175
 Q21069478,Bir Hambir,person,,person_dynasty_style,selected,,,,yes,,,,death 1620
 Q4918619,Biswa Singha of Kamata,person,,person_dynasty_style,selected,,,,yes,,,,birth 1515
-Q229192,Catherine of Valois,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1401
 Q135641627,"Charu Singha, Charing Raja",person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Ahom dynasty, ended 1826"
 Q1289992,Chavundaraya,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 940
 Q5211924,Damajadasri I,person,,person_dynasty_style,selected,,,,yes,yes,,,"no dates; member of Western Satraps, ended 405"
@@ -1097,11 +1080,9 @@ Q105690300,Ishanavarman,person,,person_dynasty_style,selected,,,,yes,,,,birth 60
 Q2392864,Jai Singh II,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1688
 Q2691885,Jalal ud din Firuz Khalji,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1220
 Q6127674,Jamali Kamboh,person,,person_dynasty_style,selected,,,,yes,,,,death 1536
-Q616654,Janamejaya,person,,person_dynasty_style,selected,,,,yes,yes,yes,,"no dates; member of Kuru Kingdom, ended -900"
 Q6167457,Jayadaman,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Western Satraps, ended 405"
 Q6167670,Jayasimha II,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1015
 Q6203452,Jivadaman,person,,person_dynasty_style,selected,,,,yes,yes,,,"no dates; member of Western Satraps, ended 405"
-Q5879,Johann Wolfgang von Goethe,person,,person_dynasty_style,selected,,,,yes,yes,yes,,birth 1749
 Q10313627,Kakavarna Kalashoka,person,,person_dynasty_style,selected,,,,yes,yes,,,"no dates; member of Shishunaga dynasty, ended -344"
 Q1143889,Kalyana Varman,person,,person_dynasty_style,selected,,,,yes,,,,"no dates; member of Varman dynasty, ended 655"
 Q3695807,Kayumars of Delhi,person,,person_dynasty_style,selected,,,,yes,yes,,,birth 1285
