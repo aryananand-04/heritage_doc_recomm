@@ -56,7 +56,14 @@ class Wikimedia:
             raise SystemExit(f"No cached response {path.name} and CONTACT_EMAIL is not set in .env")
         time.sleep(self.pause)
         for attempt in range(4):
-            r = fetch()
+            try:
+                r = fetch()
+            except (requests.ConnectionError, requests.Timeout, requests.exceptions.ChunkedEncodingError):
+                # A dropped or cut-off connection is retried like a busy server.
+                if attempt == 3:
+                    raise
+                time.sleep(10 * (attempt + 1))
+                continue
             # The query service answers 429 when busy and 5xx when overloaded; back off and retry.
             if r.status_code in (429, 500, 502, 503, 504) and attempt < 3:
                 time.sleep(int(r.headers.get("Retry-After", 10 * (attempt + 1))))
