@@ -89,6 +89,8 @@ After the people and style scans, the seeds went from 1,215 to 1,196.
 | Modern government records are marked public domain by uploaders | Lok Sabha debates such as "Widening of Grand Trunk Road (2009)" | Items dated 1950 or later left out | same file | Rule |
 | Many items have no date field; their titles often carry a modern year | "Rajput Painting by Basil Gray … 1948", "… Rowland 1953", "… Randhawa 1963" | The year is taken from the title when the date is missing; items with no year anywhere are left out (90), as their public-domain mark cannot be checked | same file | Rule |
 | Sanskrit in Devanagari can be tagged Hindi | Yoga Vasishta (Sanskrit commentary) | Not fixable by script; reported | `docs/data_card.md` | Accepted limit |
+| The Imperial Gazetteer of India was uploaded many times: 118 public-domain items are 52 distinct texts | Up to 5 scans of one volume (1885–1908 editions) | Repeat scans found by text overlap; the longest copy of each kept, 66 dropped | `src/corpus/ia_series_collector.py`, `repeat_scan_groups` in `results/collection/internet_archive_series_v1.json` | Rule |
+| Each gazetteer volume is very long (median about 1.35 million characters) | — | Kept whole in the corpus; split into passages at indexing (decision 0016) | decision 0016 | Rule |
 
 ## 7. Museum objects collected by place, and their entity links
 
