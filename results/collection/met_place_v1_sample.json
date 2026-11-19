@@ -1,0 +1,21 @@
+{
+ "date": "2026-11-19",
+ "commit": "8bba2af7bd00c81cd1c7ba4b1e750d17846178e9",
+ "search_totals": {
+  "geoLocation India": 4367,
+  "Asian Art department": 1878
+ },
+ "distinct_object_ids": 50,
+ "sample": 50,
+ "outcomes": {
+  "kept": 36,
+  "not public domain": 9,
+  "place does not name India": 5
+ },
+ "records": 36,
+ "records_with_layer1_links": 20,
+ "requests": {
+  "fetched": 56,
+  "reused": 7
+ }
+}

@@ -1,0 +1,88 @@
+{
+ "date": "2026-11-19",
+ "commit": "acbd132fdbc22ffa88ccf67df202c88fcebc5bf8",
+ "by_file": {
+  "met_seeds_v1": {
+   "records": 42,
+   "with layer 1": 42,
+   "with layer 2": 29,
+   "with layer 3": 1,
+   "linked to India only": 0,
+   "links layer 1": 156,
+   "ambiguous layer 1": 0,
+   "links layer 2": 73,
+   "ambiguous layer 2": 8,
+   "links layer 3": 1,
+   "ambiguous layer 3": 1
+  },
+  "met_place_v1": {
+   "records": 2881,
+   "with layer 1": 1527,
+   "with layer 2": 1497,
+   "with layer 3": 120,
+   "linked to India only": 839,
+   "links layer 1": 3578,
+   "ambiguous layer 1": 0,
+   "links layer 2": 2488,
+   "ambiguous layer 2": 310,
+   "links layer 3": 131,
+   "ambiguous layer 3": 2
+  },
+  "cleveland_seeds_v1": {
+   "records": 124,
+   "with layer 1": 124,
+   "with layer 2": 105,
+   "with layer 3": 29,
+   "linked to India only": 0,
+   "links layer 1": 249,
+   "ambiguous layer 1": 0,
+   "links layer 2": 314,
+   "ambiguous layer 2": 24,
+   "links layer 3": 52,
+   "ambiguous layer 3": 0
+  },
+  "cleveland_place_v1": {
+   "records": 3201,
+   "with layer 1": 2800,
+   "with layer 2": 2429,
+   "with layer 3": 302,
+   "linked to India only": 67,
+   "links layer 1": 2807,
+   "ambiguous layer 1": 0,
+   "links layer 2": 6074,
+   "ambiguous layer 2": 176,
+   "links layer 3": 522,
+   "ambiguous layer 3": 6
+  },
+  "artic_place_v1": {
+   "records": 347,
+   "with layer 1": 0,
+   "with layer 2": 110,
+   "with layer 3": 19,
+   "linked to India only": 238,
+   "links layer 2": 199,
+   "ambiguous layer 2": 26,
+   "links layer 3": 29,
+   "ambiguous layer 3": 0
+  }
+ },
+ "links": 16673,
+ "links_by_layer_and_type": {
+  "layer 1: not in gazetteer (museum link)": 6603,
+  "layer 2: polity": 5179,
+  "layer 2: place": 3961,
+  "layer 3: person": 352,
+  "layer 3: place": 263,
+  "layer 1: culture": 63,
+  "layer 1: polity": 62,
+  "layer 3: site": 55,
+  "layer 3: culture": 38,
+  "layer 1: person": 34,
+  "layer 1: site": 26,
+  "layer 3: polity": 21,
+  "layer 2: culture": 8,
+  "layer 3: style": 6,
+  "layer 1: style": 2
+ },
+ "check_sample": 199
+}
