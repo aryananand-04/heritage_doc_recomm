@@ -13,12 +13,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v3
-      # src/ has ~320 pre-existing violations; fix those in a separate refactor/ branch.
-      # Until then, enforce lint only on the directories we actively maintain.
+      # The inherited folders in src/ have ~320 pre-existing violations; fix those in a separate
+      # refactor/ branch. Until then, enforce lint only on the code we actively maintain.
       - name: Run ruff check
-        run: uvx ruff check api/ tests/
+        run: uvx ruff check api/ tests/ src/corpus/
       - name: Run ruff format check
-        run: uvx ruff format --check api/ tests/
+        run: uvx ruff format --check api/ tests/ src/corpus/
 
   test:
     name: Test

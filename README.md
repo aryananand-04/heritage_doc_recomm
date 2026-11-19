@@ -1,172 +1,118 @@
-# Heritage Document Recommendation System
+# HeritageRec
 
-A multi-source heritage document recommendation system using Knowledge Graphs, autoencoders, and graph-based ranking algorithms.
+A reproducible retrieval and recommendation study for Indian heritage: does knowledge-graph
+evidence help people find documents about Indian heritage better than text alone, in English,
+Hindi and Kannada?
 
-## 🎯 Project Overview
+HeritageRec builds a multilingual corpus of Indian heritage documents (sites, objects,
+manuscripts and texts, inscriptions, cultural practices, people and dynasties), links every
+document to Wikidata entities, and compares text, graph and hybrid retrieval on a public
+benchmark.
 
-This system collects heritage documents from multiple authoritative sources, constructs a rich Knowledge Graph, and provides intelligent recommendations based on semantic similarity and graph topology.
+> **Status:** corpus v1 is being built (November 2026 to January 2027); the benchmark and
+> results follow. The earlier conference version (ICICACS 2026) is superseded; its files are
+> kept in [`legacy/`](legacy/) for traceability only.
 
-### Key Features
-- **Multi-source data collection**: Wikipedia, UNESCO, Indian Heritage, Archive.org
-- **Automated metadata extraction**: Using NLP and entity recognition
-- **Deep learning classification**: Autoencoder-based document clustering
-- **Rich Knowledge Graph**: Lesk similarity + external KG integration
-- **Advanced ranking**: SimRank + Horn's Index + Firework Algorithm
+<!-- Add an overview figure here: docs/figures/overview.png -->
 
-## 📊 Dataset Statistics
+## Research questions
 
-- **Total Documents**: 150-200 heritage documents
-- **Sources**: 4 diverse heritage databases
-- **Coverage**: Global + India-specific monuments
-- **Metadata**: Categories, entities, temporal data, geographic info
+| # | Question |
+| --- | --- |
+| RQ1 | Does graph evidence (Personalized PageRank, SimRank, meta-paths) improve ranking over BM25 and multilingual dense retrieval? |
+| RQ2 | Does combining graph and text signals beat each alone, and which signals matter? |
+| RQ3 | Do graph signals help Hindi and Kannada queries find English documents? |
+| RQ4 | Are graph-path explanations faithful to the ranking? |
 
-## 🏗️ Architecture
-```
-Data Collection → Metadata Extraction → Classification (Autoencoder) 
-→ Knowledge Graph Construction → Ranking (SimRank + Horn's Index) 
-→ Query Processing → Recommendations
-```
+The full design is in [`docs/plan/specification.md`](docs/plan/specification.md).
 
-## 📁 Project Structure
-```
-heritage-doc-recommender/
-├── data/                      # Data storage
-│   ├── raw/                   # Raw collected documents
-│   ├── cleaned/               # Preprocessed documents
-│   └── metadata/              # Extracted metadata
-├── src/                       # Source code
-│   ├── 1a_collect_wikipedia.py
-│   ├── 1b_collect_unesco.py
-│   ├── 1c_collect_indian_heritage.py
-│   ├── 1d_collect_archives.py
-│   ├── 1_collect_all_sources.py
-│   ├── 2_data_cleaning.py
-│   ├── 3_metadata_extraction.py
-│   ├── 4_autoencoder_classification.py
-│   ├── 5_kg_construction.py
-│   ├── 6_kg_integration.py
-│   ├── 7_ranking_simrank.py
-│   ├── 8_firework_algorithm.py
-│   └── 9_query_processing.py
-├── models/                    # Trained models
-├── knowledge_graph/           # KG data and visualizations
-├── utils/                     # Utility functions
-├── requirements.txt
-└── README.md
-```
+## The corpus
 
-## 🚀 Installation
+Every document is about the heritage of the Republic of India, carries its source, licence and
+the raw response it came from, and is linked to at least one Wikidata entity. Counts by source,
+language, document type, licence and state are in the generated **[data card](docs/data_card.md)**.
 
-### Prerequisites
-- Python 3.8+
-- pip
+| Source | What it gives | Licence of the text |
+| --- | --- | --- |
+| Wikipedia (en, hi, kn) | Articles on sites, dynasties, people, styles and cultural forms | CC BY-SA 4.0 |
+| The Metropolitan Museum of Art | Public-domain objects from India | CC0 |
+| Cleveland Museum of Art | CC0 objects from India | CC0 |
+| Art Institute of Chicago | Public-domain artworks from India | CC0 (descriptions CC BY 4.0) |
+| Wellcome Collection | Catalogue records of pictures | CC0 |
+| Internet Archive | Public-domain books, including the Imperial Gazetteer of India | Public domain |
 
-### Setup
+How the documents were chosen:
 
-1. Clone the repository:
+1. **Entities from Wikidata, by recorded rules:** World Heritage and Tentative List sites, ASI
+   monuments, dynasties, cultural forms, styles and historical people; entities one link away
+   that are heritage; and Indian temples, forts, mosques and palaces by class.
+2. **Wikipedia text** for each entity in English, Hindi and Kannada, with revision IDs.
+3. **Museum objects collected by place** (India), then linked to entities in three layers: links
+   the museum gives, structured fields matched against a Wikidata gazetteer, and names in free text.
+4. **Strict scope and licence rules:** only public-domain, CC0 or CC BY(-SA) material; nothing
+   synthetic or translated by machine.
+
+Every hand decision and every rule added because of something found in the data is logged in
+[`docs/data_notes.md`](docs/data_notes.md). Design decisions, each with the options considered,
+are in [`docs/decisions/`](docs/decisions/).
+
+## Rebuilding the corpus
+
+Requires Python 3.11+ and [uv](https://docs.astral.sh/uv/).
+
 ```bash
-git clone https://github.com/YOUR_USERNAME/heritage-doc-recommender.git
-cd heritage-doc-recommender
+git clone https://github.com/azzs11/heritagerec.git
+cd heritagerec
+uv sync
+cp .env.example .env    # set CONTACT_EMAIL (sent in the User-Agent, as Wikimedia asks)
+bash scripts/build_corpus.sh
 ```
 
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+A first run downloads from the public APIs and takes several hours. Every response is saved
+under `data/raw/` before it is used, so later runs make no requests and rebuild a byte-identical
+snapshot. Re-downloading later gives a different corpus (articles and catalogues change), so the
+frozen snapshot, not a fresh run, is the reference version.
 
-3. Download NLTK data:
-```python
-python -c "import nltk; nltk.download('wordnet'); nltk.download('omw-1.4'); nltk.download('stopwords')"
-```
+## Data availability
 
-## 📖 Usage
+The full snapshot and the raw responses will be archived on Zenodo with a DOI, and the
+benchmark published on Hugging Face, at the v1.0 release. The repository holds the code, the
+data card, the manifest (record counts and SHA-256 checksums of the snapshot and of every raw
+file) and the collection reports, so a downloaded copy can be checked against it.
 
-### 1. Data Collection
-Collect heritage documents from multiple sources:
-```bash
-python src/1_collect_all_sources.py
-```
+## Results
 
-This will scrape:
-- Wikipedia heritage articles
-- UNESCO World Heritage Sites
-- Indian monuments and archaeological sites
-- Archive.org historical documents
+<!-- Results tables and figures will be added at the v1.0 release, generated from results/paper_v1/. -->
 
-### 2. Data Preprocessing
-Clean and normalize collected documents:
-```bash
-python src/2_data_cleaning.py
-```
+To be added.
 
-### 3. Metadata Extraction
-Extract categories, entities, and keywords:
-```bash
-python src/3_metadata_extraction.py
-```
+## Repository layout
 
-### 4. Document Classification
-Train autoencoder and classify documents:
-```bash
-python src/4_autoencoder_classification.py
-```
+| Path | Contents |
+| --- | --- |
+| `src/corpus/` | Corpus v1: seed selection, probes, entity lists, collectors, gazetteer, linking, snapshot, data card |
+| `data/seeds/` | Entity lists and the hand-scan files in `curated/` |
+| `data/corpus_v1/` | Manifest and links; the snapshot itself is rebuilt locally or downloaded at release |
+| `results/` | Probe counts, collection and linking reports, audit of the old corpus |
+| `docs/` | Data card, data notes, decision records, specification |
+| `tests/` | Tests (`uv run --group dev pytest tests/`) |
+| `legacy/` | Superseded conference-version files, kept for traceability |
+| `api/`, `frontend/` | Demo application from the conference version |
 
-### 5. Knowledge Graph Construction
-Build and integrate Knowledge Graph:
-```bash
-python src/5_kg_construction.py
-python src/6_kg_integration.py
-```
+## Licence
 
-### 6. Query and Recommend
-Process queries and get recommendations:
-```bash
-python src/9_query_processing.py
-```
+The code is released under the [Apache License 2.0](LICENSE). The documents keep the licences
+of their sources (CC BY-SA 4.0, CC BY 4.0, CC0 or public domain), recorded on every record and
+summarised in the [data card](docs/data_card.md).
 
-## 🔬 Methodology
+## Citation
 
-### Data Collection
-- **Automated scraping** from 4 diverse sources
-- **Validation pipeline** to ensure content quality
-- **Deduplication** across sources
+<!-- Add the paper and the Zenodo DOI here at release. -->
 
-### Knowledge Graph
-- **Entities**: Documents, monuments, locations, time periods, cultural themes
-- **Relationships**: part_of, similar_to, located_in, belongs_to_period
-- **Enrichment**: Integration with Google Knowledge Graph API
+To be added at release.
 
-### Ranking Algorithm
-1. **SimRank**: Structural similarity in KG
-2. **Horn's Index**: Entity importance weighting  
-3. **Firework Algorithm**: Metaheuristic optimization
+## Authors
 
-## 📊 Evaluation Metrics
+<!-- Confirm the author list and order with the co-authors. -->
 
-- Precision@K
-- Recall@K
-- NDCG (Normalized Discounted Cumulative Gain)
-- Mean Average Precision (MAP)
-- Knowledge Graph density and connectivity
-
-## 🎓 Academic Context
-
-This project was developed as a final year project and is intended for submission to Conference.
-
-
-## 🤝 Contributing
-
-Contributions welcome! Please:
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
-
-
-## 👤 Author
-
-**Akchhya Singh**
-- Email: akchhya1108@gmail.com
-
-**Status**: 🚧 In Development | **Version**: 1.0.0 | **Last Updated**: October 2025
+Akchhya Singh, with Aryan Anand and the co-authors of the conference version.

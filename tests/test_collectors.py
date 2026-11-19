@@ -79,3 +79,26 @@ def test_ia_year_from_title_and_undated_items():
     assert ia.item_year({"date": "1888"}) == 1888
     assert ia.item_year({"title": "Rajput Painting By Basil Gray Indian Art 1948 London"}) == 1948
     assert ia.item_year({"title": "An Album Of Nandalal Bose"}) is None
+
+
+def test_repeat_scans_keep_the_longest_copy():
+    from datetime import UTC, datetime
+
+    from src.corpus.ia_series_collector import drop_repeat_scans
+    from src.corpus.records import Record, sha256
+
+    words = " ".join(f"word{i} alpha beta gamma delta" for i in range(60000))
+
+    def rec(i, text):
+        return Record(
+            id=f"internet_archive:v{i}", title="Imperial Gazetteer", text=text, language="en",
+            doc_type="manuscript_text", source="internet_archive", url="https://archive.org/details/x",
+            licence="https://creativecommons.org/publicdomain/mark/1.0/", entity_ids=["Q668"],
+            fetched_at=datetime(2026, 11, 19, tzinfo=UTC), sha256=sha256(text), raw_ref="x",
+        )  # fmt: skip
+
+    kept, groups = drop_repeat_scans(
+        [rec(1, words), rec(2, words + " extra page"), rec(3, words.replace("alpha", "zeta"))]
+    )
+    assert [r.id for r in kept] == ["internet_archive:v2", "internet_archive:v3"]
+    assert groups == [["internet_archive:v2", "internet_archive:v1"]]
