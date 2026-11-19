@@ -1,0 +1,149 @@
+{
+ "date": "2026-11-19",
+ "commit": "90e4f52b4587ee55ee741734ec4aa60300eb22d3",
+ "entities_file": "data/seeds/seeds_v1.csv",
+ "entities": 20,
+ "sample": 20,
+ "articles_with_sitelink": {
+  "en": 18,
+  "hi": 11,
+  "kn": 5
+ },
+ "outcomes": {
+  "en kept": 18,
+  "hi kept": 11,
+  "kn kept": 5
+ },
+ "records": 34,
+ "records_by_doc_type": {
+  "person_dynasty_style": 17,
+  "site": 13,
+  "culture": 4
+ },
+ "text_length_chars": {
+  "en": {
+   "median": 2477.0,
+   "min": 363,
+   "max": 25836
+  },
+  "hi": {
+   "median": 1046,
+   "min": 23,
+   "max": 5458
+  },
+  "kn": {
+   "median": 3006,
+   "min": 594,
+   "max": 7458
+  }
+ },
+ "most_common_last_headings": {
+  "en": [
+   [
+    "reign",
+    3
+   ],
+   [
+    "museum",
+    1
+   ],
+   [
+    "notable people buried",
+    1
+   ],
+   [
+    "later days",
+    1
+   ],
+   [
+    "access",
+    1
+   ],
+   [
+    "trade",
+    1
+   ],
+   [
+    "arani handloom silk cluster",
+    1
+   ],
+   [
+    "administration",
+    1
+   ],
+   [
+    "transport",
+    1
+   ],
+   [
+    "vijayaditya ii",
+    1
+   ],
+   [
+    "weather",
+    1
+   ],
+   [
+    "temple plan",
+    1
+   ],
+   [
+    "features",
+    1
+   ],
+   [
+    "historical sources",
+    1
+   ],
+   [
+    "relationship with other art forms",
+    1
+   ]
+  ],
+  "hi": [
+   [
+    "सूरी सुल्तानों की सूची",
+    1
+   ],
+   [
+    "शासकों की सूची",
+    1
+   ],
+   [
+    "निर्माण",
+    1
+   ],
+   [
+    "शासकों के नाम",
+    1
+   ],
+   [
+    "रायगढ़ घराना",
+    1
+   ]
+  ],
+  "kn": [
+   [
+    "ಪ್ರವೇಶ",
+    1
+   ],
+   [
+    "ಸಾರಿಗೆ",
+    1
+   ],
+   [
+    "ಉಪಸಂಹಾರ",
+    1
+   ],
+   [
+    "ನಾಟ್ಯ (ನೃತ್ಯನಾಟಕ)",
+    1
+   ]
+  ]
+ },
+ "requests": {
+  "fetched": 0,
+  "reused": 35
+ },
+ "output": "data/corpus_v1/staging/wikipedia_sample.jsonl.gz"
+}

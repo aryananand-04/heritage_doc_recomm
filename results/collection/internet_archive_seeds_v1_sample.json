@@ -1,0 +1,28 @@
+{
+ "date": "2026-11-19",
+ "commit": "90e4f52b4587ee55ee741734ec4aa60300eb22d3",
+ "seeds": 30,
+ "sample": 30,
+ "cap": 5,
+ "looked_at_per_seed": 20,
+ "outcomes": {
+  "does not name the seed or India": 38,
+  "dated 1950 or later": 30,
+  "text not in English, Hindi or Kannada": 4,
+  "kept": 1
+ },
+ "seeds_with_records": 1,
+ "records": 1,
+ "records_by_language": {
+  "hi": 1
+ },
+ "text_length_chars": {
+  "median": 43208,
+  "min": 43208,
+  "max": 43208
+ },
+ "requests": {
+  "fetched": 0,
+  "reused": 40
+ }
+}

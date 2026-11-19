@@ -1,0 +1,32 @@
+{
+ "date": "2026-11-19",
+ "commit": "90e4f52b4587ee55ee741734ec4aa60300eb22d3",
+ "seeds": 696,
+ "sample": null,
+ "cap": 5,
+ "looked_at_per_seed": 20,
+ "outcomes": {
+  "does not name the seed or India": 985,
+  "dated 1950 or later": 585,
+  "dynasty name without a dynasty word": 515,
+  "undated (public-domain status cannot be checked)": 90,
+  "kept": 44,
+  "text not in English, Hindi or Kannada": 28,
+  "kept (also for another seed)": 2
+ },
+ "seeds_with_records": 26,
+ "records": 44,
+ "records_by_language": {
+  "en": 40,
+  "hi": 4
+ },
+ "text_length_chars": {
+  "median": 420115.5,
+  "min": 4118,
+  "max": 2063090
+ },
+ "requests": {
+  "fetched": 0,
+  "reused": 840
+ }
+}
