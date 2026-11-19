@@ -11,7 +11,7 @@ from typing import Literal
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
 DocType = Literal["site", "object", "manuscript_text", "inscription", "culture", "person_dynasty_style"]
-Source = Literal["wikipedia", "met", "cleveland", "wellcome", "internet_archive", "siddham", "wikisource"]
+Source = Literal["wikipedia", "met", "cleveland", "artic", "wellcome", "internet_archive", "siddham", "wikisource"]
 Language = Literal["en", "hi", "kn"]
 
 
