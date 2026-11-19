@@ -22,13 +22,16 @@ SEED_LISTS = {
     "seeds": ROOT / "data/seeds/seeds_v1.csv",
     "ASI remainder": ROOT / "data/seeds/asi_remainder_v1.csv",
     "neighbours": ROOT / "data/seeds/neighbours_v1.csv",
+    "class list": ROOT / "data/seeds/class_list_v1.csv",
 }
+LINKS_REPORT = ROOT / "results/linking/object_links_v1.json"
 SEED_REPORT = ROOT / "data/seeds/seed_report.md"
 OUT = ROOT / "docs/data_card.md"
 LICENCE_NAMES = {
     "https://creativecommons.org/licenses/by-sa/4.0/": "CC BY-SA 4.0",
     "https://creativecommons.org/publicdomain/zero/1.0/": "CC0 1.0",
     "https://creativecommons.org/publicdomain/mark/1.0/": "Public Domain Mark 1.0",
+    "https://creativecommons.org/licenses/by/4.0/": "CC BY 4.0",
 }
 
 
@@ -44,6 +47,39 @@ def fmt(n) -> str:
     return f"{n:,}" if isinstance(n, int) else str(n)
 
 
+def target_sentence(n: int) -> str:
+    if n >= 10_000:
+        return (
+            "The specification's target was about 10,000 documents; the corpus meets it without out-of-scope"
+            " documents (decisions 0015, 0017, 0018)."
+        )
+    return (
+        "The specification's target was about 10,000 documents. The corpus is smaller; it is not padded with"
+        " out-of-scope documents (decisions 0015, 0017, 0018)."
+    )
+
+
+def linking_section() -> list[str]:
+    if not LINKS_REPORT.exists():
+        return []
+    rep = json.load(open(LINKS_REPORT, encoding="utf-8"))
+    rows = []
+    for name, c in rep["by_file"].items():
+        if isinstance(c, dict):
+            rows.append([name, fmt(c["records"]), fmt(c.get("with layer 1", 0)), fmt(c.get("with layer 2", 0)),
+                         fmt(c.get("with layer 3", 0)), fmt(c.get("linked to India only", 0))])  # fmt: skip
+    return [
+        "## Entity links of museum objects (decision 0017)",
+        "",
+        "Layer 1: links the museum gives. Layer 2: structured fields matched against the gazetteer by entity type."
+        " Layer 3: names in titles and descriptions, kept as mentions in `data/corpus_v1/links_v1.jsonl.gz` only."
+        " Precision per layer comes from the author's check of `results/linking/link_check_sample_v1.csv`.",
+        "",
+        *table(["Staging file", "Records", "Layer 1", "Layer 2", "Layer 3", "India only"], rows),
+        "",
+    ]
+
+
 def main() -> None:
     records = [json.loads(line) for line in gzip.open(SNAPSHOT, "rt", encoding="utf-8")]
     manifest = json.load(open(MANIFEST, encoding="utf-8"))
@@ -57,7 +93,9 @@ def main() -> None:
                 state[r["qid"]] = r["state"]
 
     by = {k: Counter(r[k] for r in records) for k in ("source", "language", "doc_type")}
-    by_list = Counter(lists.get(r["entity_ids"][0], "other") for r in records)
+    by_list = Counter(
+        lists.get(r["entity_ids"][0], "museum objects collected by place (decision 0017)") for r in records
+    )
     by_licence = Counter(LICENCE_NAMES.get(r["licence"], r["licence"]) for r in records)
     by_state = Counter(state[r["entity_ids"][0]] for r in records if r["entity_ids"][0] in state)
     with_state = sum(by_state.values())
@@ -94,10 +132,7 @@ def main() -> None:
         f" entity. Raw API responses: {fmt(manifest['raw_files']['count'])} files,"
         f" {fmt(manifest['raw_files']['bytes'])} bytes, each listed with its SHA-256 in `data/corpus_v1/manifest.json`.",
         "",
-        "The specification's target was about 10,000 documents. The corpus is smaller because entities one hop from"
-        " the seeds are mostly places and institutions, not heritage (decision 0015), and because museum and library"
-        " records are kept only when they name a seed and India (`src/corpus/matching.py`). It is not padded with"
-        " out-of-scope documents.",
+        target_sentence(n),
         "",
         "## Documents by source, language, type and licence",
         "",
@@ -118,6 +153,7 @@ def main() -> None:
         "",
         f"{fmt(manifest['duplicates_merged'])} pages reached from two lists were merged into one record each.",
         "",
+        *linking_section(),
         "## Text length (characters)",
         "",
         *table(
