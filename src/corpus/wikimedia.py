@@ -33,15 +33,25 @@ class Wikimedia:
         self.session.headers["User-Agent"] = f"HeritageRec-Corpus/1.0 ({REPO_URL}; contact: {email or 'unset'})"
         self.can_fetch = bool(email)
 
-    def _cached(self, name: str, request: dict, fetch) -> dict:
-        # The file name carries a hash of the exact request, so a changed query
-        # never silently reuses an old answer.
+    def raw_path(self, name: str, request: dict, suffix: str = ".json.gz") -> Path:
+        """Where the raw response to this exact request is saved.
+
+        The file name carries a hash of the exact request, so a changed query
+        never silently reuses an old answer.
+        """
         digest = hashlib.sha1(json.dumps(request, sort_keys=True).encode()).hexdigest()[:10]
-        path = self.raw_dir / f"{name}_{digest}.json.gz"
+        return self.raw_dir / f"{name}_{digest}{suffix}"
+
+    def wiki_request(self, params: dict, lang: str = "en") -> dict:
+        """The request record `wiki` caches under, for finding its raw file."""
+        return {"url": f"https://{lang}.wikipedia.org/w/api.php", "format": "json", "formatversion": "2", **params}
+
+    def _cached(self, name: str, request: dict, fetch, as_json: bool = True):
+        path = self.raw_path(name, request, ".json.gz" if as_json else ".txt.gz")
         if path.exists():
             self.reused += 1
             with gzip.open(path, "rt", encoding="utf-8") as f:
-                return json.load(f)
+                return json.load(f) if as_json else f.read()
         if not self.can_fetch:
             raise SystemExit(f"No cached response {path.name} and CONTACT_EMAIL is not set in .env")
         time.sleep(self.pause)
@@ -57,7 +67,7 @@ class Wikimedia:
         with gzip.open(path, "wt", encoding="utf-8") as f:
             f.write(r.text)
         self.fetched += 1
-        return r.json()
+        return r.json() if as_json else r.text
 
     def sparql(self, name: str, query: str) -> list[dict]:
         """Run a SPARQL query and return its bindings as plain {var: value} dicts."""
@@ -75,13 +85,18 @@ class Wikimedia:
 
     def wiki(self, name: str, params: dict, lang: str = "en") -> dict:
         """Call the MediaWiki action API of the given language edition."""
-        url = f"https://{lang}.wikipedia.org/w/api.php"
-        full = {"format": "json", "formatversion": "2", **params}
-        return self._cached(name, {"url": url, **full}, lambda: self.session.get(url, params=full, timeout=120))
+        request = self.wiki_request(params, lang)
+        url = request["url"]
+        full = {k: v for k, v in request.items() if k != "url"}
+        return self._cached(name, request, lambda: self.session.get(url, params=full, timeout=120))
 
     def get_json(self, name: str, url: str, params: dict) -> dict:
         """Cached GET of any JSON API (museum and archive collections use the same politeness rules)."""
         return self._cached(name, {"url": url, **params}, lambda: self.session.get(url, params=params, timeout=120))
+
+    def get_text(self, name: str, url: str) -> str:
+        """Cached GET of a plain-text file (for example an OCR text), saved as .txt.gz."""
+        return self._cached(name, {"url": url}, lambda: self.session.get(url, timeout=300), as_json=False)
 
 
 def qid(uri: str) -> str:
