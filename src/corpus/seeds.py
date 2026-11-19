@@ -32,6 +32,8 @@ RAW_DIR = ROOT / "data/raw" / RUN
 OUT_DIR = ROOT / "data/seeds"
 SCAN_FILE = OUT_DIR / "curated/culture_scan.csv"
 DYNASTY_SCAN_FILE = OUT_DIR / "curated/dynasty_scan.csv"
+PEOPLE_SCAN_FILE = OUT_DIR / "curated/people_scan.csv"
+STYLE_SCAN_FILE = OUT_DIR / "curated/style_scan.csv"
 
 RANDOM_SEED = 20261118
 ASI_TOTAL = 500
@@ -91,6 +93,12 @@ class Seed:
     @property
     def doc_type(self) -> str:
         return DOC_TYPE[self.stratum]
+
+
+def scan_removed(path) -> set[str]:
+    """QIDs the author marked 'remove' in a hand-scan file (qid, label, decision, reason)."""
+    with open(path, encoding="utf-8") as f:
+        return {r["qid"] for r in csv.DictReader(f) if r["decision"] == "remove"}
 
 
 def batches(items, size=200):
@@ -832,10 +840,15 @@ def build() -> tuple[list[Seed], dict]:
         hints[q] = gi_state[q]
         add(q, gi_label[q], "culture", "gi_craft")
 
-    # Styles reached in one hop from the seeded sites
+    # Styles reached in one hop from the seeded sites. Global styles whose articles are
+    # not about Indian heritage (Gothic, baroque, brutalist ...) are removed as document
+    # seeds (hand scan, recorded in STYLE_SCAN_FILE with its reasons); they stay graph nodes.
     sites = [q for q, s in seeds.items() if s.doc_type == "site"]
+    styles_removed = scan_removed(STYLE_SCAN_FILE)
+    notes["styles_removed"] = len(styles_removed)
     for q, label in one_hop(wm, "styles", sites, "wdt:P149|wdt:P135").items():
-        add(q, label, "style")
+        if q not in styles_removed:
+            add(q, label, "style")
 
     # Princely states (author decision): kept when a Wikidata statement links them to a
     # site or cultural seed, or when their capital lies in the same district as a seeded site.
@@ -870,6 +883,11 @@ def build() -> tuple[list[Seed], dict]:
     dyn = [q for q, s in seeds.items() if s.stratum == "dynasty"]
     people = one_hop(wm, "people_sites", sites, "wdt:P88|wdt:P84|wdt:P112", "?i wdt:P31 wd:Q5 .")
     people |= one_hop(wm, "people_dynasties", dyn, "^wdt:P53", "?i wdt:P31 wd:Q5 .")
+    # Hand-scan removals (recorded in PEOPLE_SCAN_FILE with their reasons): legendary
+    # figures, and people the one-hop links reach who are not Indian heritage.
+    people_removed = scan_removed(PEOPLE_SCAN_FILE)
+    people = {q: v for q, v in people.items() if q not in people_removed}
+    notes["people_removed"] = len(people_removed)
     years = life_years(wm, people)
     undated = [q for q in people if not years.get(q)]
     ended = dynasty_end_years(wm, "people_dynasty_ends", undated, dyn)
@@ -1019,7 +1037,10 @@ def write_report(seeds: list[Seed], notes: dict) -> None:
         f"- People: {notes['people']['candidates']} candidates; kept {notes['people']['kept']}"
         f" ({notes['people']['by_dates']} by a birth, death or floruit date before {PEOPLE_BORN_BEFORE},"
         f" {notes['people']['by_dynasty_end']} undated members of a seeded dynasty that ended before {PEOPLE_BORN_BEFORE});"
-        f" undated and left out: {notes['people']['undated_left_out']}.",
+        f" undated and left out: {notes['people']['undated_left_out']};"
+        f" removed by hand scan: {notes['people_removed']} (reasons in curated/people_scan.csv).",
+        f"- Styles: {notes['styles_removed']} global styles removed as document seeds by hand scan"
+        " (reasons in curated/style_scan.csv); they stay in the knowledge graph as style nodes.",
         "- People near the date limit (a date from 1850 on): " + ("; ".join(notes["people"]["borderline"]) or "none"),
         "- People kept through a dynasty end date: " + ("; ".join(notes["people"]["via_dynasty"]) or "none"),
         "- Top-up for thin states and union territories (from 'Culture of', 'Monuments and memorials in' and"
