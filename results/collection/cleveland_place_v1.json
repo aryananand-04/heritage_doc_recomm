@@ -1,0 +1,18 @@
+{
+ "date": "2026-11-19",
+ "commit": "8bba2af7bd00c81cd1c7ba4b1e750d17846178e9",
+ "search_totals": {
+  "India": 3202,
+  "South Asia": 4
+ },
+ "outcomes": {
+  "kept": 3201,
+  "culture does not name India": 5
+ },
+ "records": 3201,
+ "records_with_layer1_links": 2800,
+ "requests": {
+  "fetched": 5,
+  "reused": 0
+ }
+}

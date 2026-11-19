@@ -19,13 +19,13 @@ The headline RQ1 result uses the Wikidata edge layer only (Section 4). The other
 
 ## 2. Document types
 
-Six types, so results cover the whole of heritage rather than only monuments. Every document enters through a Wikidata entity and carries a `doc_type`.
+Six types, so results cover the whole of heritage rather than only monuments. Every document carries a `doc_type` and at least one Wikidata entity link. Wikipedia articles and seed-name records enter through an entity; museum objects are collected by place (India) and linked to entities afterwards, in three layers (decision 0017).
 
 | Type | What it covers | Example | Main sources | Typical length |
 | --- | --- | --- | --- | --- |
 | Site | Monuments, temples, forts, caves, archaeological sites, historic towns | Hampi; Brihadisvara Temple | Wikipedia (en, hi, kn) | Long |
-| Object | Sculptures, paintings, bronzes, coins, textiles, arms | A Chola Nataraja bronze; a Mughal album folio | Met, Cleveland open access | Short |
-| Manuscript and text | Manuscripts, historical reports, gazetteers, classical texts | An ASI annual report; a Sanskrit medical manuscript | Wellcome, Internet Archive (public domain); Wikisource (proposed) | Short to very long |
+| Object | Sculptures, paintings, bronzes, coins, textiles, arms | A Chola Nataraja bronze; a Mughal album folio | Met, Cleveland, Art Institute of Chicago open access | Short |
+| Manuscript and text | Manuscripts, historical reports, gazetteers, classical texts | The Imperial Gazetteer of India; a Sanskrit medical manuscript | Wellcome, Internet Archive (public domain); Wikisource (proposed) | Short to very long |
 | Inscription | Stone and copper-plate inscriptions | A Hoysala grant inscription | SIDDHAM (proposed; licence checked per record) | Short |
 | Culture | Living and intangible heritage: performing arts, festivals, crafts, painting schools, culinary and textile traditions | Yakshagana; Kalamkari; Tanjore painting | Wikipedia | Medium |
 | Person, dynasty, style | Rulers, patrons, architects, dynasties, architectural and art styles | Shah Jahan; Hoysala architecture | Wikipedia | Medium to long |
@@ -34,7 +34,7 @@ Document length differs a lot by type, so results are reported per document type
 
 ## 3. Corpus
 
-Target: about 10,000 documents, Republic of India only (decision 0001), from the 1,196 seed entities (decision 0002, after the people and style hand scans) plus the entities one hop away from them along selected Wikidata relations (decision 0005). The probes of 19 November 2026 (decision 0015) set three entity lists: the 1,196 seeds, 469 further ASI monuments and 568 heritage neighbours. The corpus size is the number the collectors produce from them, likely below 10,000, and is never padded with out-of-scope documents.
+Target: about 10,000 documents, Republic of India only (decision 0001), from the 1,196 seed entities (decision 0002, after the people and style hand scans) plus the entities one hop away from them along selected Wikidata relations (decision 0005). The probes of 19 November 2026 set four entity lists: the seeds, the further ASI monuments and the heritage neighbours (decision 0015), and Indian heritage buildings and sites by Wikidata class (decision 0018). With museum objects collected by place (decision 0017) and the Imperial Gazetteer of India (decision 0016), the corpus meets the target without out-of-scope documents; its counts are in `docs/data_card.md`, generated from the snapshot.
 
 | Seed stratum | Rule | Take |
 | --- | --- | --- |
@@ -48,7 +48,7 @@ Target: about 10,000 documents, Republic of India only (decision 0001), from the
 
 **One-hop expansion (decision 0005).** Entities linked to a seed by the relations in Section 4 (for example built by, located in, member of dynasty, style) are added when they pass the India scope rule and have a Wikipedia article in English, Hindi or Kannada. A random sample of added entities is checked by hand for scope drift, and the drift rate is reported.
 
-**Sources and caps (decision 0013).** Wikipedia (en, hi, kn) for every seed and added entity; Met, Cleveland, Wellcome and Internet Archive per seed, under per-source caps so famous places cannot flood the corpus. Wikisource and SIDDHAM, with per-record licence checks, are proposed: they are collected only if the corpus gates leave time.
+**Sources and caps (decisions 0013, 0015, 0017).** Wikipedia (en, hi, kn) for every entity in the four lists; Met, Cleveland, Wellcome and Internet Archive per seed by name, under per-source caps; and every public-domain or CC0 object from India at the Met, Cleveland and the Art Institute of Chicago, collected by place. Wikisource and SIDDHAM, with per-record licence checks, are proposed: they are collected only if the corpus gates leave time.
 
 All IDs are verified on Wikidata before use; counts come from probes, never estimates. Wikipedia text comes through the TextExtracts API (decision 0003). Each record follows one schema (decision 0004): id, title, text, language, doc\_type, source, url, licence URI, entity IDs, coordinates, period start and end, fetch date, SHA-256, raw-response pointer.
 

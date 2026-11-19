@@ -1,0 +1,190 @@
+{
+ "date": "2026-11-19",
+ "commit": "5fa2251939d5984a9551dca396e61054b545ca27",
+ "series": "title:(\"Imperial Gazetteer of India\")",
+ "items_found": 118,
+ "outcomes": {
+  "passed the rules": 118,
+  "repeat scan of a kept volume": 66
+ },
+ "records": 52,
+ "records_linked_to_a_place": 0,
+ "repeat_scan_groups": [
+  [
+   "internet_archive:imperialgazette03offigoog",
+   "internet_archive:imperialgazette01offigoog",
+   "internet_archive:imperialgazettee14greauoft",
+   "internet_archive:imperialgazettee14grea"
+  ],
+  [
+   "internet_archive:imperialgazette06unkngoog",
+   "internet_archive:imperialgazettee10greauoft",
+   "internet_archive:imperialgazettee10grea",
+   "internet_archive:imperialgazette06offigoog",
+   "internet_archive:imperialgazette00meyegoog"
+  ],
+  [
+   "internet_archive:imperialgazette16huntgoog",
+   "internet_archive:imperialgazette11huntgoog",
+   "internet_archive:imperialgazettee07hunt",
+   "internet_archive:imperialgazettee07huntuoft"
+  ],
+  [
+   "internet_archive:imperialgazettee21greauoft",
+   "internet_archive:imperialgazettee21grea"
+  ],
+  [
+   "internet_archive:imperialgazette24huntgoog",
+   "internet_archive:imperialgazette06huntgoog",
+   "internet_archive:imperialgazettee09hunt",
+   "internet_archive:imperialgazettee09huntuoft",
+   "internet_archive:imperialgazette12huntgoog"
+  ],
+  [
+   "internet_archive:imperialgazette25huntgoog",
+   "internet_archive:imperialgazette04unkngoog",
+   "internet_archive:imperialgazette04huntgoog",
+   "internet_archive:imperialgazettee04huntuoft",
+   "internet_archive:imperialgazettee04hunt"
+  ],
+  [
+   "internet_archive:imperialgazettee25greauoft",
+   "internet_archive:imperialgazettee25grea"
+  ],
+  [
+   "internet_archive:imperialgazettee14huntuoft",
+   "internet_archive:imperialgazettee14hunt"
+  ],
+  [
+   "internet_archive:imperialgazette00unkngoog",
+   "internet_archive:imperialgazettee03huntuoft",
+   "internet_archive:imperialgazette07huntgoog",
+   "internet_archive:imperialgazettee03hunt"
+  ],
+  [
+   "internet_archive:imperialgazettee06huntuoft",
+   "internet_archive:imperialgazettee06hunt",
+   "internet_archive:imperialgazette18huntgoog",
+   "internet_archive:imperialgazette02huntgoog"
+  ],
+  [
+   "internet_archive:imperialgazettee22greauoft",
+   "internet_archive:imperialgazettee22grea"
+  ],
+  [
+   "internet_archive:imperialgazettee23greauoft",
+   "internet_archive:imperialgazettee23grea"
+  ],
+  [
+   "internet_archive:imperialgazettee07greauoft",
+   "internet_archive:imperialgazettee07grea",
+   "internet_archive:imperialgazette00offigoog"
+  ],
+  [
+   "internet_archive:imperialgazette22huntgoog",
+   "internet_archive:imperialgazette20huntgoog",
+   "internet_archive:imperialgazettee12hunt",
+   "internet_archive:imperialgazette13huntgoog",
+   "internet_archive:imperialgazette09huntgoog"
+  ],
+  [
+   "internet_archive:imperialgazettee16greauoft",
+   "internet_archive:imperialgazettee16grea"
+  ],
+  [
+   "internet_archive:imperialgazettee20greauoft",
+   "internet_archive:imperialgazettee20grea"
+  ],
+  [
+   "internet_archive:imperialgazettee18grea",
+   "internet_archive:imperialgazettee18greauoft"
+  ],
+  [
+   "internet_archive:imperialgazettee02hunt",
+   "internet_archive:imperialgazette03huntgoog"
+  ],
+  [
+   "internet_archive:imperialgazettee09grea",
+   "internet_archive:imperialgazettee09greauoft"
+  ],
+  [
+   "internet_archive:imperialgazette01unkngoog",
+   "internet_archive:imperialgazettee11huntuoft",
+   "internet_archive:imperialgazettee11hunt"
+  ],
+  [
+   "internet_archive:imperialgazette02offigoog",
+   "internet_archive:imperialgazettee13greauoft",
+   "internet_archive:imperialgazettee13grea"
+  ],
+  [
+   "internet_archive:imperialgazette21huntgoog",
+   "internet_archive:imperialgazette03unkngoog",
+   "internet_archive:imperialgazettee05huntuoft",
+   "internet_archive:imperialgazettee05hunt",
+   "internet_archive:imperialgazette14huntgoog"
+  ],
+  [
+   "internet_archive:imperialgazette05offigoog",
+   "internet_archive:imperialgazettee06greauoft",
+   "internet_archive:imperialgazettee06grea"
+  ],
+  [
+   "internet_archive:imperialgazettee12greauoft",
+   "internet_archive:imperialgazettee12grea"
+  ],
+  [
+   "internet_archive:imperialgazette02meyegoog",
+   "internet_archive:imperialgazettee19greauoft",
+   "internet_archive:imperialgazettee19grea"
+  ],
+  [
+   "internet_archive:imperialgazette05huntgoog",
+   "internet_archive:imperialgazettee08hunt"
+  ],
+  [
+   "internet_archive:imperialgazettee24greauoft",
+   "internet_archive:imperialgazettee24grea",
+   "internet_archive:bub_gb_O39DAAAAYAAJ"
+  ],
+  [
+   "internet_archive:imperialgazettee01hunt",
+   "internet_archive:imperialgazette15huntgoog"
+  ],
+  [
+   "internet_archive:imperialgazettee13huntuoft",
+   "internet_archive:imperialgazettee13hunt",
+   "internet_archive:imperialgazette19huntgoog",
+   "internet_archive:imperialgazette08huntgoog"
+  ],
+  [
+   "internet_archive:imperialgazettee17grea",
+   "internet_archive:imperialgazettee17greauoft"
+  ],
+  [
+   "internet_archive:imperialgazette03meyegoog",
+   "internet_archive:imperialgazettee01grea"
+  ],
+  [
+   "internet_archive:imperialgazettee08greauoft",
+   "internet_archive:imperialgazettee08grea"
+  ],
+  [
+   "internet_archive:imperialgazette01meyegoog",
+   "internet_archive:bub_gb_UT0KAQAAIAAJ"
+  ],
+  [
+   "internet_archive:imperialgazettee15greauoft",
+   "internet_archive:imperialgazette04offigoog",
+   "internet_archive:imperialgazettee15grea"
+  ]
+ ],
+ "text_length_chars": {
+  "median": 1352335.5,
+  "max": 2885894
+ },
+ "requests": {
+  "fetched": 0,
+  "reused": 237
+ }
+}

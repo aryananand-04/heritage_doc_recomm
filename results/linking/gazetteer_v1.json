@@ -1,0 +1,27 @@
+{
+ "date": "2026-11-19",
+ "commit": "8bba2af7bd00c81cd1c7ba4b1e750d17846178e9",
+ "entries": 8451,
+ "by_type": {
+  "site": 4985,
+  "place": 2702,
+  "culture": 261,
+  "person": 248,
+  "polity": 238,
+  "style": 17
+ },
+ "entries_with_names": {
+  "en": 8419,
+  "hi": 4511,
+  "kn": 2246
+ },
+ "names": {
+  "en": 13415,
+  "hi": 5856,
+  "kn": 2675
+ },
+ "requests": {
+  "fetched": 39,
+  "reused": 25
+ }
+}

@@ -105,12 +105,22 @@ After the people and style scans, the seeds went from 1,215 to 1,196.
 | A city and its district share a name | Lucknow and Lucknow district | A full name wins over a short form made from another entity's name | same file | Rule |
 | Two different places share a name | Patan (two towns), Bijapur | Kept as candidates in the links file with confidence 1/n, not in the record's entity links | same file | Rule |
 | A qualified entity also has unqualified aliases | Pala dynasty (Kamarupa) also has the alias "Pala dynasty" | The qualifier applies to all of an entity's names | same file | Rule |
-| Most Chicago records give only "India" as their place | 239 of 347 linked to India only | Accepted; reported | `results/linking/object_links_v1.json` | Accepted limit |
+| Most Chicago records give only "India" as their place | 238 of 347 linked to India only | Accepted; reported | `results/linking/object_links_v1.json` | Accepted limit |
+| The Met's culture field names periods as well as places | "Indian, Mughal" on arms and armour | The Met culture field is also read as a period field, matched only against polities (period links 335 → 552) | `src/corpus/link_objects.py` | Rule |
+| Many Met objects say only "Indian" or nothing finer | 839 of 2,881, mostly Islamic Art and Arms and Armor | Linked to India only and counted as unlinked; no detail is invented | `results/linking/object_links_v1.json`, `docs/data_card.md` | Accepted limit |
+| A place name is also an ordinary word in an object's title | "Kangan" (a town) matched objects titled "Kangan (Bracelet)", *kangan* being a bangle | Left as a layer 3 mention (never a core link); measured by the link check | `data/corpus_v1/links_v1.jsonl.gz` | Accepted limit |
+
+## 8. The snapshot
+
+| Found | Example | Change | Recorded in | Decided by |
+| --- | --- | --- | --- | --- |
+| The same object or page was reached by more than one collector or list | Objects found by seed name and again by place; temples in the class list that are also another entity's article | Merged into one record with all entity links (176) | `data/corpus_v1/manifest.json` | Rule |
+| The snapshot passed the 50 MB limit for git (52 MB) | — | Kept out of git; the manifest, a 103-record sample and the data card stay in git; the snapshot and raw responses go to Zenodo and Hugging Face at release | decision 0004, `.gitignore` | Author |
 
 Link precision per layer is measured on the author's check of
 `results/linking/link_check_sample_v1.csv` (200 links).
 
-## 8. Checks waiting for the author
+## 9. Checks waiting for the author
 
 - Scope of the neighbour sample: `results/probes/neighbour_select_v1.md` (50 entities).
 - Scope of the class-based list sample: `results/probes/class_list_sample_v1.md` (50 entities).
