@@ -140,7 +140,9 @@ def met_fields(o: dict) -> dict[str, tuple[str, set, bool]]:
     place = ", ".join(
         str(o.get(k) or "") for k in ("culture", "country", "region", "subregion", "state", "county", "city")
     )
-    period = ", ".join(str(o.get(k) or "") for k in ("period", "dynasty", "reign"))
+    # The Met's culture field names periods too ("Indian, Mughal"), so it is read as a period
+    # field as well, where it is matched only against polities.
+    period = ", ".join(str(o.get(k) or "") for k in ("period", "dynasty", "reign", "culture"))
     form = ", ".join(str(o.get(k) or "") for k in ("objectName", "classification"))
     return {
         "place": (place, PLACE_TYPES, True),

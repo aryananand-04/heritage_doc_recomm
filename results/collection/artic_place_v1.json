@@ -1,0 +1,17 @@
+{
+ "date": "2026-11-19",
+ "commit": "8bba2af7bd00c81cd1c7ba4b1e750d17846178e9",
+ "api_licence_text": "The `description` field in this response is licensed under a Creative Commons Attribution 4.0 Generic License (CC-By) and the Terms and Conditions of artic.edu. All other data in this response is licensed under a Creative Commons Zero (CC0) 1.0 designation and the Terms and Conditions of artic.edu.",
+ "outcomes": {
+  "kept": 347
+ },
+ "records": 347,
+ "records_by_licence": {
+  "https://creativecommons.org/publicdomain/zero/1.0/": 319,
+  "https://creativecommons.org/licenses/by/4.0/": 28
+ },
+ "requests": {
+  "fetched": 4,
+  "reused": 0
+ }
+}
